@@ -1,0 +1,55 @@
+{
+	"title": "The Interpretation of Dreams",
+	"authors": [ "Sigmund Freud" ],
+	"translators": [ "A. A. Brill" ],
+	"edition": 3,
+	"publisher": "The Macmillan Company",
+	"publication_year": 1913,
+	"publication_city": "New York",
+	"language": "en",
+	"description": "A book describing Sigmund Freud's theory of the unconcious with respect to dream interpretation.",
+	"source": "Freud - The interpretation of dreams.djvu",
+	"permission": "PD-US",
+	"sections": [
+		{
+			"name": "The Interpretation of Dreams",
+			"pages": [ 7, [ 9, 16 ] ]
+		},
+		{
+			"name": "The Scientific Literature on the Problems of the Dream",
+			"pages": [ [ 19, 97 ] ]
+		},
+		{
+			"name": "Method of Dream Interpretation: The Analysis of a Sample Dream",
+			"pages": [ [ 98, 120 ] ]
+		},
+		{
+			"name": "The Dream is the Fulfilment of a Wish",
+			"pages": [ [ 121, 130 ] ]
+		},
+		{
+			"name": "Distortion in Dreams",
+			"pages": [ [ 131, 155 ] ]
+		},
+		{
+			"name": "The Material and Sources of Dreams",
+			"pages": [ [ 156, 277 ] ]
+		},
+		{
+			"name": "The Dream-Work",
+			"pages": [ [ 278, 420 ] ]
+		},
+		{
+			"name": "The Psychology of the Dream Activities",
+			"pages": [ [ 421, 511 ] ]
+		},
+		{
+			"name": "Literary Index",
+			"pages": [ [ 512, 517 ] ]
+		},
+		{
+			"name": "Index",
+			"pages": [ [ 519, 528 ] ]
+		}
+	]
+}
