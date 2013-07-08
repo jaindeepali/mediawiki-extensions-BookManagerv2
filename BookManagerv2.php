@@ -42,6 +42,8 @@ define( 'NS_BOOK_TALK', 241 );
 
 //Configuration
 
+$dir = __DIR__;
+
 /**
  * @var bool|string: URI or false if not set.
  * URI of api.php on schema wiki.
@@ -74,7 +76,7 @@ function beautifyJson( $json ) {
 function jsonValidate( $object, $schema = NULL ) {
 	if ( NULL == $schema ) {
 		//Default to using JSON schema
-		$json = file_get_contents( __DIR__ . '/schemas/bookschema.json' );
+		$json = file_get_contents( $dir . '/schemas/bookschema.json' );
 		$schema = FormatJson::decode( $json, true );
 	}
 
@@ -88,21 +90,21 @@ function jsonValidate( $object, $schema = NULL ) {
 // Register files
 $wgAutoloadClasses += array(
 	//Hooks
-	'BookManagerv2Hooks' => __DIR__ . '/BookManagerv2.hooks.php',
-	'JsonHooks' => __DIR__ . '/includes/JsonHooks.php',
+	'BookManagerv2Hooks' => $dir . '/BookManagerv2.hooks.php',
+	'JsonHooks' => $dir . '/includes/JsonHooks.php',
 
 	//ContentHandler
-	'JsonBookContent' => __DIR__ . '/includes/JsonContent.php',
+	'JsonBookContent' => $dir . '/includes/JsonContent.php',
 
 	//ResourceLoaderModule
-	'RemoteSchema' => __DIR__ . '/includes/RemoteSchema.php',
+	'RemoteSchema' => $dir . '/includes/RemoteSchema.php',
 
 	//Json
-	'JsonTreeRef' => __DIR__ . '/includes/JsonSchema.php',
-	'JsonSchemaException' => __DIR__ . '/includes/JsonSchema.php',
+	'JsonTreeRef' => $dir . '/includes/JsonSchema.php',
+	'JsonSchemaException' => $dir . '/includes/JsonSchema.php',
 
 	//API
-	'ApiJsonSchema' => __DIR__ . '/includes/ApiJsonSchema.php',
+	'ApiJsonSchema' => $dir . '/includes/ApiJsonSchema.php',
 );
 
 // Register hooks
