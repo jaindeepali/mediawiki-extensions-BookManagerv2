@@ -1,0 +1,205 @@
+{
+    "description": "Schema against which BookManagerv2 book blocks should be checked.",
+    "properties": {
+        "title": {
+            "description": "Title of the work",
+            "type": "string",
+            "required": true
+        },
+        "alternate_titles": {
+            "description": "List of other titles by which the work is known",
+            "type": "array",
+            "required": false,
+            "items": [
+                {
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        "authors": {
+            "description": "List of contributors to the work",
+            "type": "array",
+            "required": false,
+            "items": [
+                {
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        "translators": {
+            "description": "List of translators who contributed to the work",
+            "type": "array",
+            "required": false,
+            "items": [
+                {
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        "editors": {
+            "description": "List of editors who contributed to the work",
+            "type": "array",
+            "required": false,
+            "items": [
+                {
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        "illustrators": {
+            "description": "List of illustrators who contributed to the work",
+            "type": "array",
+            "required": false,
+            "items": [
+                {
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        "subtitle": {
+            "description": "Subtitle to the title of the work",
+            "type": "string",
+            "required": false
+        },
+        "series_title": {
+            "description": "Title of the series of which this work is a member",
+            "type": "string",
+            "required": false
+        },
+        "volume": {
+            "description": "Volume number of the work",
+            "type": "number",
+            "required": false
+        },
+        "edition": {
+            "description": "Edition number of the work",
+            "type": "number",
+            "required": false
+        },
+        "publisher": {
+            "description": "Name of the publisher of this work",
+            "type": "string",
+            "required": false
+        },
+        "printer": {
+            "description": "Name of the printer of this work",
+            "type": "string",
+            "required": false
+        },
+        "publication_year": {
+            "description": "Year of publication of the work",
+            "type": "integer",
+            "required": false
+        },
+        "publication_month": {
+            "description": "Month of publication of the work",
+            "type": "integer",
+            "required": false
+        },
+        "publication_day": {
+            "description": "Day of publication of the work",
+            "type": "integer",
+            "required": false
+        },
+        "publication_city": {
+            "description": "City in which the work was published",
+            "type": "string",
+            "required": false
+        },
+        "language": {
+            "description": "Primary language of the work",
+            "type": "string",
+            "required": false
+        },
+        "description": {
+            "description": "Short description of the work",
+            "type": "string",
+            "required": false
+        },
+        "source": {
+            "description": "Source of the work",
+            "type": "string",
+            "required": false
+        },
+        "permission": {
+            "description": "Licensing permission for works not created on-wiki",
+            "type": "string",
+            "required": false
+        },
+        "other_versions": {
+            "description": "Lists of other versions of this work that are available on the wiki",
+            "type": "array",
+            "required": false,
+            "items": [
+                {
+                    "type": "string",
+                    "required": false
+                }
+            ]
+        },
+        "isbn": {
+            "description": "International Standard Book Number of the work",
+            "type": "string",
+            "required": false
+        },
+        "lccn": {
+            "description": "Library of Congress Control Number of the work",
+            "type": "string",
+            "required": false
+        },
+        "oclc": {
+            "description": "Online Computer Library Center identifier of the work",
+            "type": "string",
+            "required": false
+        },
+        "sections": {
+            "description": "List of objects representing the sections of the work",
+            "type": "array",
+            "required": true,
+            "items": [
+                {
+                    "type": "object",
+                    "required": false,
+                    "properties": {
+                        "name": {
+                            "description": "Name of the section",
+                            "type": "string",
+                            "required": true
+                        },
+                        "pages": {
+                            "description": "Page numbers in the section. Can either be an array of numbers, or there can be arrays in the list. These sub-arrays are interpreted as a range, so [1,5] is intepreted as pages 1, 2, 3, 4, and 5.",
+                            "type": "array",
+                            "required": true,
+                            "items": [
+                                {
+                                    "type": "integer",
+                                    "required": false
+                                },
+                                {
+                                    "type": "array",
+                                    "required": false,
+                                    "items": [
+                                        {
+                                            "type": "integer",
+                                            "required": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        "source": {
+                            "description": "The source of the particular section",
+                            "required": false,
+                            "type": "string"
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}
