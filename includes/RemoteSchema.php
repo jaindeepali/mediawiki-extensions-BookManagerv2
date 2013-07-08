@@ -45,13 +45,14 @@ class RemoteSchama {
 	 * @param Http $http (optional) HTTP client
 	 */
 	function __construct( $title, $revision, $cache = NULL, $http = NULL ) {
-		global $wgBookManagerv2DBname;
+		$dbr = wfGetDB( DB_SLAVE );
+		$BookManagerv2DBName = $dbr->getDBname();
 
 		$this->title = $title;
 		$this->revision = $revision;
 		$this->cache = $cache ?: wfGetCache( CACHE_ANYTHING );
 		$this->http = $http ?: new Http();
-		$this->key = "schema:{$wgBookManagerv2DBname}:{$title}:{$revision}";
+		$this->key = "schema:{$BookManagerv2DBname}:{$title}:{$revision}";
 	}
 
 	/**

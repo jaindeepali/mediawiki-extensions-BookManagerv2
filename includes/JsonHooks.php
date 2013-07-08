@@ -30,24 +30,17 @@ class JsonHooks {
 	 * @return bool: Whether hooks and handler were registered.
 	 */
 	static function registerHandlers() {
-		global $wgHooks, $wgContentHandlers, $wgBookManagerv2DBname,
-			$wgDBname;
+		global $wgHooks, $wgContentHandlers;
 
-		if ( $wgBookManagerv2DBname === $wgDBname ) {
-			$wgContentHandlers[ 'JsonBook' ] =
-				'JsonBookContentHandler';
+		$wgContentHandlers[ 'JsonBook' ] =
+			'JsonBookContentHandler';
 
-			#$wgHooks[ 'BeforePageDisplay' ][] =
-			#	'JsonHooks::onBeforePageDisplay';
-			$wgHooks[ 'CanonicalNamespaces' ][] =
-				'JsonHooks::onCanonicalNamespaces';
-			$wgHooks[ 'EditFilterMerged' ][] =
+		$wgHooks[ 'CanonicalNamespaces' ][] =
+			'JsonHooks::onCanonicalNamespaces';
+		$wgHooks[ 'EditFilterMerged' ][] =
 				'JsonHooks::onEditFilterMerged';
 
-			return true;
-		}
-
-		return false;
+		return true;
 	}
 
 	/**

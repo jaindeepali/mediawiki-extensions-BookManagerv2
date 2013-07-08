@@ -51,12 +51,6 @@ define( 'NS_BOOK_TALK', 241 );
 $wgBookManagerv2SchemaApiUri = 'http://meta.wikimedia.org/w/api.php';
 
 /**
- * @var bool|string: Value of $wgDBname for the MediaWiki instance housing
- * schemas; false if not set.
- */
-$wgBookManagerv2DBname = 'wikidb';
-
-/**
  * Takes a string of JSON and formats it for readability.
  * @param string $json
  * @return string|null: Formatted JSON or null if input was invalid
