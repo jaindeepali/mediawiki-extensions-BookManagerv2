@@ -42,8 +42,6 @@ define( 'NS_BOOK_TALK', 241 );
 
 //Configuration
 
-$dir = __DIR__;
-
 /**
  * @var bool|string: URI or false if not set.
  * URI of api.php on schema wiki.
@@ -90,21 +88,21 @@ function jsonValidate( $object, $schema = NULL ) {
 // Register files
 $wgAutoloadClasses += array(
 	//Hooks
-	'BookManagerv2Hooks' => $dir . '/BookManagerv2.hooks.php',
-	'JsonHooks' => $dir . '/includes/JsonHooks.php',
+	'BookManagerv2Hooks' => __DIR__ . '/BookManagerv2.hooks.php',
+	'JsonHooks' => __DIR__ . '/includes/JsonHooks.php',
 
 	//ContentHandler
-	'JsonBookContent' => $dir . '/includes/JsonContent.php',
+	'JsonBookContent' => __DIR__ . '/includes/JsonContent.php',
 
 	//ResourceLoaderModule
-	'RemoteSchema' => $dir . '/includes/RemoteSchema.php',
+	'RemoteSchema' => __DIR__ . '/includes/RemoteSchema.php',
 
 	//Json
-	'JsonTreeRef' => $dir . '/includes/JsonSchema.php',
-	'JsonSchemaException' => $dir . '/includes/JsonSchema.php',
+	'JsonTreeRef' => __DIR__ . '/includes/JsonSchema.php',
+	'JsonSchemaException' => __DIR__ . '/includes/JsonSchema.php',
 
 	//API
-	'ApiJsonSchema' => $dir . '/includes/ApiJsonSchema.php',
+	'ApiJsonSchema' => __DIR__ . '/includes/ApiJsonSchema.php',
 );
 
 // Register hooks
