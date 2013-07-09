@@ -105,6 +105,13 @@ $wgAutoloadClasses += array(
 	'ApiJsonSchema' => __DIR__ . '/includes/ApiJsonSchema.php',
 );
 
+//Messages
+$wgExtensionMessagesFiles += array(
+	'BookManagerv2' => __DIR__ . '/BookManagerv2.i18n.php',
+	'BookManagerv2Namespaces' => __DIR__ . '/BookManagerv2.namespaces.php',
+	'JsonSchema' => __DIR__ . '/includes/JsonSchema.i18n.php'
+);
+
 // Register hooks
 $wgHooks['BeforePageDisplay'][] = 'BookManagerv2Hooks::onBeforePageDisplay';
 
