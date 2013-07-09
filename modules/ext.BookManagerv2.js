@@ -1,4 +1,4 @@
-/**
+ /**
  * @file
  * @section LICENSE
  * This program is free software; you can redistribute it and/or
@@ -16,17 +16,20 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  **/
 
-$(function () {
-	$('a.mw-bookmanagerv2-nav-data').click( function() {
-		if ( $('div.mw-bookmanagerv2-nav-toc').is(':visible') ) {
-			$('div.mw-bookmanagerv2-nav-toc').hide();
-		}
-		$('div.mw-bookmanagerv2-nav-data').toggle();
+(function ( $ ) {
+
+	// When the metadata icon is clicked, hide the table
+	// of contents dropdown and toggle the metadata one
+	$( 'a.mw-bookmanagerv2-nav-data' ).click( function () {
+		$( 'div.mw-bookmanagerv2-nav-toc' ).hide();
+		$( 'div.mw-bookmanagerv2-nav-data' ).toggle();
 	});
-	$('a.mw-bookmanagerv2-nav-toc').click( function() {
-		if ( $('div.mw-bookmanagerv2-nav-data').is(':visible') ) {
-			$('div.mw-bookmanagerv2-nav-data').hide();
-		}
-		$('div.mw-bookmanagerv2-nav-toc').toggle();
+
+	// When the contents icon is clicked, hide the metadata
+	// dropdown and toggle the table of contents one
+	$( 'a.mw-bookmanagerv2-nav-toc' ).click( function () {
+		$( 'div.mw-bookmanagerv2-nav-data' ).hide();
+		$( 'div.mw-bookmanagerv2-nav-toc' ).toggle();
 	});
-});
+
+}(jQuery));

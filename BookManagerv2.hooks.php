@@ -165,11 +165,11 @@ class BookManagerv2Hooks {
 	 * @return string HTML list item element
 	 */
 	public static function addDate( $year, $month, $day ) {
-		//TODO: This needs to be localized.
+		// TODO: This needs to be localized.
 		$output = array();
 		$output[] = Html::openElement( 'li', array() );
 		if ( $day && !$month ) {
-			//Having a day without a month doesn't make much sense
+			// Having a day without a month doesn't make much sense
 			$date = $year;
 		} else {
 			$date = array();
@@ -222,7 +222,7 @@ class BookManagerv2Hooks {
 		$metadata[] = Html::openElement( 'ul', array() );
 		$metadata[] = Html::openElement( 'li', array() );
 		$metadata[] = wfMessage( 'bookmanagerv2-title',
-			$jsonBook->title)->text();
+			$jsonBook->title )->text();
 		$metadata[] = Html::closeElement( 'li' );
 		if ( isset( $jsonBook->alternate_titles ) ) {
 			$metadata[] = self::addArray( "alternate-titles",
@@ -277,7 +277,7 @@ class BookManagerv2Hooks {
 			$metadata[] = self::addString( "printer", $jsonBook->printer );
 		}
 		if ( isset( $jsonBook->language ) ) {
-			//TODO: Transform the language code to the correct long-form language
+			// TODO: Transform the language code to the correct long-form language
 			$metadata[] = self::addString( "language", $jsonBook->language );
 		}
 		if ( isset( $jsonBook->description ) ) {
@@ -312,7 +312,7 @@ class BookManagerv2Hooks {
 				$categories = $out->getCategories();
 				$namespace = $wgContLang->convertNamespace( NS_BOOK ) . ":";
 				foreach ( $categories as $cat ) {
-					if ( substr( $cat, 0, strlen($namespace) ) === $namespace ) {
+					if ( substr( $cat, 0, strlen( $namespace ) ) === $namespace ) {
 						$jsonPageTitle = Title::newFromText( $cat );
 						$jsonBook = self::getJson( $jsonPageTitle );
 						if ( $jsonBook ) {
@@ -321,7 +321,7 @@ class BookManagerv2Hooks {
 							$prev = (object) array();
 							$next = (object) array();
 
-							//Get the previous/next pages
+							// Get the previous/next pages
 							foreach ( $jsonBook->sections as $key => $val ) {
 								if ( $val->link === $currentPageTitle ) {
 									if ( $key !== 0 ) {
