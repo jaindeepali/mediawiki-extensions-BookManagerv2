@@ -76,7 +76,7 @@ function beautifyJson( $json ) {
 function jsonValidate( $object, $schema = NULL ) {
 	if ( NULL == $schema ) {
 		//Default to using JSON schema
-		$json = file_get_contents( $dir . '/schemas/bookschema.json' );
+		$json = file_get_contents( __DIR__ . '/schemas/bookschema.json' );
 		$schema = FormatJson::decode( $json, true );
 	}
 
