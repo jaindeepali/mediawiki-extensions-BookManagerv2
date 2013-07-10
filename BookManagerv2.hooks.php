@@ -24,7 +24,9 @@
 class BookManagerv2Hooks {
 	
 	public static function readingInterfaceUX( $out, $prev, $next, $chapterList, $metadata ) {
-		
+		global $wgExtensionAssetsPath;
+		$imagePath = $wgExtensionAssetsPath . "/BookManagerv2/images/";
+
 		$html = Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-wrap' ) )
 			. Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-constrain' ) )
 			. Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-bar' ) )
@@ -36,7 +38,7 @@ class BookManagerv2Hooks {
 			)
 			. Html::element( 'img', array(
 				'class' => 'mw-bookmanagerv2-nav-data',
-				'src' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/f1/Info_sign_font_awesome.svg/20px-Info_sign_font_awesome.svg.png'
+				'src' => $imagePath . 'Info_sign_font_awesome.png'
 			), '' )
 			. Html::closeElement( 'a' )
 			. Html::openElement( 'a', array(
@@ -47,7 +49,7 @@ class BookManagerv2Hooks {
 			)
 			. Html::element( 'img', array(
 				'class' => 'mw-bookmanagerv2-nav-toc',
-				'src' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5e/Ul_font_awesome.svg/20px-Ul_font_awesome.svg.png'
+				'src' => $imagePath . 'Ul_font_awesome.png'
 			), '' )
 			. Html::closeElement( 'a' )
 			. Html::openElement( 'a', array(
@@ -56,7 +58,7 @@ class BookManagerv2Hooks {
 			)
 			. Html::element( 'img', array(
 				'class' => 'mw-bookmanagerv2-nav-prev',
-				'src' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Chevron_left_font_awesome.svg/15px-Chevron_left_font_awesome.svg.png'
+				'src' => $imagePath . 'Angle_left_font_awesome.png'
 			), '' )
 			. $prev->title
 			. Html::closeElement( 'a' )
@@ -67,7 +69,7 @@ class BookManagerv2Hooks {
 			. $next->title
 			. Html::element( 'img', array(
 				'class' => 'mw-bookmanagerv2-nav-next',
-				'src' => 'https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Chevron_right_font_awesome.svg/15px-Chevron_right_font_awesome.svg.png'
+				'src' => $imagePath . 'Angle_right_font_awesome.png'
 			), '' )
 			. Html::closeElement( 'a' )
 			. Html::closeElement( 'div' )
