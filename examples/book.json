@@ -13,42 +13,52 @@
 	"sections": [
 		{
 			"name": "The Interpretation of Dreams",
+                        "link": "The Interpretation of Dreams",
 			"pages": [ 7, [ 9, 16 ] ]
 		},
 		{
 			"name": "The Scientific Literature on the Problems of the Dream",
+                        "link": "The Interpretation of Dreams/Chapter 1",
 			"pages": [ [ 19, 97 ] ]
 		},
 		{
 			"name": "Method of Dream Interpretation: The Analysis of a Sample Dream",
+                        "link": "The Interpretation of Dreams/Chapter 2",
 			"pages": [ [ 98, 120 ] ]
 		},
 		{
 			"name": "The Dream is the Fulfilment of a Wish",
+                        "link": "The Interpretation of Dreams/Chapter 3",
 			"pages": [ [ 121, 130 ] ]
 		},
 		{
 			"name": "Distortion in Dreams",
+                        "link": "The Interpretation of Dreams/Chapter 4",
 			"pages": [ [ 131, 155 ] ]
 		},
 		{
 			"name": "The Material and Sources of Dreams",
+                        "link": "The Interpretation of Dreams/Chapter 5",
 			"pages": [ [ 156, 277 ] ]
 		},
 		{
 			"name": "The Dream-Work",
+                        "link": "The Interpretation of Dreams/Chapter 6",
 			"pages": [ [ 278, 420 ] ]
 		},
 		{
 			"name": "The Psychology of the Dream Activities",
+                        "link": "The Interpretation of Dreams/Chapter 7",
 			"pages": [ [ 421, 511 ] ]
 		},
 		{
 			"name": "Literary Index",
+                        "link": "The Interpretation of Dreams/Chapter 8",
 			"pages": [ [ 512, 517 ] ]
 		},
 		{
 			"name": "Index",
+                        "link": "The Interpretation of Dreams/Index",
 			"pages": [ [ 519, 528 ] ]
 		}
 	]
