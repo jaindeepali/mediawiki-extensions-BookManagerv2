@@ -18,11 +18,13 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Shirayuki
  * @author mollywhite
  */
 $messages['qqq'] = array(
 	'bookmanagerv2-desc' => '{{desc|name=BookManagerv2|url=http://www.mediawiki.org/wiki/Extension:BookManagerv2}}',
-	'bookmanagerv2-invalid-json' => 'Error message shown when an editor tries to save an invalid JSON block',
+	'bookmanagerv2-invalid-json' => 'Error message shown when an editor tries to save an invalid JSON block.
+{{Identical|Invalid JSON}}',
 );
 
 /** German (Deutsch)
@@ -49,12 +51,34 @@ $messages['gl'] = array(
 	'bookmanagerv2-invalid-json' => 'JSON non válido',
 );
 
+/** Japanese (日本語)
+ * @author Shirayuki
+ */
+$messages['ja'] = array(
+	'bookmanagerv2-invalid-json' => '無効な JSON',
+);
+
+/** Macedonian (македонски)
+ * @author Bjankuloski06
+ */
+$messages['mk'] = array(
+	'bookmanagerv2-desc' => 'Дава можност за внесување и складирање на метаподатоци и структура за книги',
+	'bookmanagerv2-invalid-json' => 'Неважечки JSON',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
  */
 $messages['ms'] = array(
 	'bookmanagerv2-desc' => 'Menambahkan kefungsian untuk memasukkan dan menympan metadata dan struktur buku',
 	'bookmanagerv2-invalid-json' => 'JSON tidak sah',
+);
+
+/** Dutch (Nederlands)
+ * @author Siebrand
+ */
+$messages['nl'] = array(
+	'bookmanagerv2-invalid-json' => 'Ongeldige JSON',
 );
 
 /** tarandíne (tarandíne)
