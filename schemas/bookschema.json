@@ -174,7 +174,7 @@
                         "pages": {
                             "description": "Page numbers in the section. Can either be an array of numbers, or there can be arrays in the list. These sub-arrays are interpreted as a range, so [1,5] is intepreted as pages 1, 2, 3, 4, and 5.",
                             "type": "array",
-                            "required": true,
+                            "required": false,
                             "items": [
                                 {
                                     "type": "integer",
