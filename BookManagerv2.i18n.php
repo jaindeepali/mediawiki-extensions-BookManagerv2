@@ -35,6 +35,14 @@ $messages['de'] = array(
 	'bookmanagerv2-invalid-json' => 'Ungültiges JSON',
 );
 
+/** Spanish (español)
+ * @author Luis Felipe Schenone
+ */
+$messages['es'] = array(
+	'bookmanagerv2-desc' => 'Agrega funcionalidad para ingresar y guardar metainformación sobre libros',
+	'bookmanagerv2-invalid-json' => 'JSON inválido',
+);
+
 /** French (français)
  * @author Gomoko
  */
@@ -79,6 +87,14 @@ $messages['ms'] = array(
  */
 $messages['nl'] = array(
 	'bookmanagerv2-invalid-json' => 'Ongeldige JSON',
+);
+
+/** Polish (polski)
+ * @author Woytecr
+ */
+$messages['pl'] = array(
+	'bookmanagerv2-desc' => 'Dodaje funkcję do wprowadzania i przechowywania metadanych i struktury książek',
+	'bookmanagerv2-invalid-json' => 'Nieprawidłowy JSON',
 );
 
 /** tarandíne (tarandíne)
