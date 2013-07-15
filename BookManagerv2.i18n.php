@@ -63,6 +63,7 @@ $messages['gl'] = array(
  * @author Shirayuki
  */
 $messages['ja'] = array(
+	'bookmanagerv2-desc' => '書籍のメタデータおよび構造を入力および格納する機能を追加する',
 	'bookmanagerv2-invalid-json' => '無効な JSON',
 );
 
@@ -86,6 +87,7 @@ $messages['ms'] = array(
  * @author Siebrand
  */
 $messages['nl'] = array(
+	'bookmanagerv2-desc' => 'Voegt functies toe om de metadata en structuur van boeken in te voeren en op te slaan',
 	'bookmanagerv2-invalid-json' => 'Ongeldige JSON',
 );
 
