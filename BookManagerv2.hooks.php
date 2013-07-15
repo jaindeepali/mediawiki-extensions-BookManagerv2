@@ -316,7 +316,8 @@ class BookManagerv2Hooks {
 						$jsonPageTitle = Title::newFromText( $cat );
 						$jsonBook = self::getJson( $jsonPageTitle );
 						if ( $jsonBook ) {
-							$out->addModules( "ext.BookManagerv2" );
+							$out->addModuleStyles( "ext.BookManagerv2" );
+							$out->addModules( "ext.BookManagerv2js" );
 							$currentPageTitle = $out->getTitle()->getText();
 							$prev = (object) array();
 							$next = (object) array();

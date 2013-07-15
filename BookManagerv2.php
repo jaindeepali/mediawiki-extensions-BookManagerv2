@@ -118,9 +118,14 @@ $wgHooks['BeforePageDisplay'][] = 'BookManagerv2Hooks::onBeforePageDisplay';
 
 // Load resources
 $wgResourceModules['ext.BookManagerv2'] = array(
-	'scripts' => 'ext.BookManagerv2.js',
 	'styles' => 'ext.BookManagerv2.css',
 	'localBasePath' => dirname( __FILE__ ) . '/modules',
+	'remoteExtPath' => 'BookManagerv2/modules'
+);
+$wgResourceModules['ext.BookManagerv2js'] = array(
+	'scripts' => 'ext.BookManagerv2.js',
+	'styles' => 'ext.BookManagerv2js.css',
+	'localBasePath' => dirname(__FILE__) . '/modules',
 	'remoteExtPath' => 'BookManagerv2/modules'
 );
 

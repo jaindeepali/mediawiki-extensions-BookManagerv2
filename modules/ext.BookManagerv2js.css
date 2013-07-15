@@ -15,50 +15,44 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  **/
-
-div.mw-bookmanagerv2-nav-wrap {
-	width: 100%;
-	text-align: center;
-}
-div.mw-bookmanagerv2-nav-constrain {
-	display:inline-block;
-	position: relative;
-}
-div.mw-bookmanagerv2-nav-bar {
-	display: inline-block;
+div.mw-bookmanagerv2-nav-dropdown {
+	position: absolute;
+	width: 300px;
+	min-height: 100px;
 	background-color: #f5f5f5;
 	border: 1px solid #dcdcdc;
 	border-radius: 5px;
-	padding: 3px 5px;
+	margin-top: 8px;
+	text-align: left;
+	padding: 5px 8px;
 }
-.mw-bookmanagerv2-nav-bar p {
-	margin: 5px 0;
-	padding: 0;
+div.mw-bookmanagerv2-nav-dropdown:after, .mw-bookmanagerv2-nav-dropdown:before {
+	bottom: 100%;
+	border: solid transparent;
+	content: " ";
+	height: 0;
+	width: 0;
+	position: absolute;
+	pointer-events: none;
 }
-.mw-bookmanagerv2-nav-bar ol {
-	padding-left: 30px;
+div.mw-bookmanagerv2-nav-dropdown:after {
+	border-color: rgba(245, 245, 245, 0);
+	border-bottom-color: #f5f5f5;
+	border-width: 5px;
+	left: 50%;
+	margin-left: -140px;
 }
-.mw-bookmanagerv2-nav-bar li {
-	margin: 7px 0;
-	list-style-type: upper-roman;
+div.mw-bookmanagerv2-nav-dropdown:before {
+	border-color: rgba(220, 220, 220, 0);
+	border-bottom-color: #dcdcdc;
+	border-width: 6px;
+	left: 50%;
+	margin-left: -141px;
 }
-a.mw-bookmanagerv2-nav-icon, a.mw-bookmanagerv2-nav-icon img {
-	display: inline;
-	vertical-align: middle;
-	cursor: pointer;
+
+div.mw-bookmanagerv2-nav-toc {
+	margin-left: 45px;
 }
-.mw-bookmanagerv2-nav-bar img {
-	margin: 0 10px 2px 10px;
-}
-img.mw-bookmanagerv2-nav-data {
-	margin-left: 5px;
-}
-img.mw-bookmanagerv2-nav-next {
-	margin-right: 5px;
-}
-a.mw-bookmanagerv2-nav-prev {
-	margin-right: 20px;
-}
-div.mw-bookmanagerv2-nav-dropdown {
-	display: none;
+div.mw-bookmanagerv2-nav-dropdown .title {
+	font-style: italic;
 }
