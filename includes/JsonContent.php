@@ -24,7 +24,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-/** 
+/**
  * Represents the content of a JSON book page
  */
 class JsonBookContent extends TextContent {
@@ -47,7 +47,7 @@ class JsonBookContent extends TextContent {
 	 */
 	function validate() {
 		$block = $this->getJsonData();
-		if ( !is_array( $block ) ) { 
+		if ( !is_array( $block ) ) {
 			throw new JsonSchemaException(
 				wfMessage( 'bookmanagerv2-invalid-json' )->parse() );
 		}
@@ -104,7 +104,7 @@ class JsonBookContent extends TextContent {
 	static function objectRow( $key, $val ) {
 		$th = Xml::elementClean( 'th', array(), $key );
 		if ( is_array( $val ) ) {
-			$td = Xml::tags( 'td', array(), 
+			$td = Xml::tags( 'td', array(),
 				self::objectTable( $val ) );
 		} else {
 			if ( is_string( $val ) ) {
@@ -113,7 +113,7 @@ class JsonBookContent extends TextContent {
 				$val = FormatJson::encode( $val );
 			}
 
-			$td = Xml::elementClean( 'td', 
+			$td = Xml::elementClean( 'td',
 				array( 'class' => 'value' ), $val );
 		}
 
@@ -144,5 +144,5 @@ class JsonBookContent extends TextContent {
 	function getHighlightHtml() {
 		$schema = $this->getJsonData();
 		return is_array( $block ) ? self::objectTable( $block ) : '';
-	}			
+	}
 }

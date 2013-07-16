@@ -23,7 +23,7 @@
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
- * 
+ *
  */
 
 $wgExtensionCredits['parserhook'][] = array(
@@ -40,7 +40,7 @@ $wgExtensionCredits['parserhook'][] = array(
 define( 'NS_BOOK', 240 );
 define( 'NS_BOOK_TALK', 241 );
 
-//Configuration
+// Configuration
 
 /**
  * @var bool|string: URI or false if not set.
@@ -73,7 +73,7 @@ function beautifyJson( $json ) {
  */
 function jsonValidate( $object, $schema = NULL ) {
 	if ( NULL == $schema ) {
-		//Default to using JSON schema
+		// Default to using JSON schema
 		$json = file_get_contents( __DIR__ . '/schemas/bookschema.json' );
 		$schema = FormatJson::decode( $json, true );
 	}
@@ -87,25 +87,26 @@ function jsonValidate( $object, $schema = NULL ) {
 
 // Register files
 $wgAutoloadClasses += array(
-	//Hooks
+	// Hooks
 	'BookManagerv2Hooks' => __DIR__ . '/BookManagerv2.hooks.php',
 	'JsonHooks' => __DIR__ . '/includes/JsonHooks.php',
 
-	//ContentHandler
+	// ContentHandler
 	'JsonBookContent' => __DIR__ . '/includes/JsonContent.php',
+	'JsonBookContentHandler' => __DIR__ . '/includes/JsonBookContentHandler.php',
 
-	//ResourceLoaderModule
+	// ResourceLoaderModule
 	'RemoteSchema' => __DIR__ . '/includes/RemoteSchema.php',
 
-	//Json
+	// Json
 	'JsonTreeRef' => __DIR__ . '/includes/JsonSchema.php',
 	'JsonSchemaException' => __DIR__ . '/includes/JsonSchema.php',
 
-	//API
+	// API
 	'ApiJsonSchema' => __DIR__ . '/includes/ApiJsonSchema.php',
 );
 
-//Messages
+// Messages
 $wgExtensionMessagesFiles += array(
 	'BookManagerv2' => __DIR__ . '/BookManagerv2.i18n.php',
 	'BookManagerv2Namespaces' => __DIR__ . '/BookManagerv2.namespaces.php',
@@ -119,7 +120,7 @@ $wgHooks['BeforePageDisplay'][] = 'BookManagerv2Hooks::onBeforePageDisplay';
 $wgResourceModules['ext.BookManagerv2'] = array(
 	'scripts' => 'ext.BookManagerv2.js',
 	'styles' => 'ext.BookManagerv2.css',
-	'localBasePath' => dirname(__FILE__) . '/modules',
+	'localBasePath' => dirname( __FILE__ ) . '/modules',
 	'remoteExtPath' => 'BookManagerv2/modules'
 );
 

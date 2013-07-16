@@ -27,7 +27,7 @@
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  */
 
-class RemoteSchama {
+class RemoteSchema {
 
 	const LOCK_TIMEOUT = 20;
 
@@ -50,8 +50,8 @@ class RemoteSchama {
 
 		$this->title = $title;
 		$this->revision = $revision;
-		$this->cache = $cache ?: wfGetCache( CACHE_ANYTHING );
-		$this->http = $http ?: new Http();
+		$this->cache = $cache ? : wfGetCache( CACHE_ANYTHING );
+		$this->http = $http ? : new Http();
 		$this->key = "schema:{$BookManagerv2DBname}:{$title}:{$revision}";
 	}
 
@@ -123,14 +123,14 @@ class RemoteSchama {
 
 		return wfAppendQuery( $wgBookManagerv2SchemaApiUri, $q );
 	}
-	
+
 	/**
 	 * Returns an object containing serializable properties.
 	 * @implements JsonSerializeable
 	 */
 	function jsonSerialize() {
 		return array(
-			'schema' => $this->get() ?: new StdClass(),
+			'schema' => $this->get() ? : new StdClass(),
 			'revision' => $this->revision
 		);
 	}
@@ -141,11 +141,11 @@ class RemoteSchama {
 	 * @return array|boolean: Schema or false if unable to fetch.
 	 */
 	function httpGet() {
-		if ( !this->lock() ) {
+		if ( !$this->lock() ) {
 			return false;
 		}
 		$raw = $this->http->get( $this->getUri(), self::LOCK_TIMEOUT * 0.8 );
-		return FormatJson::decode( $raw, true ) ?: false;
+		return FormatJson::decode( $raw, true ) ? : false;
 	}
 }
 

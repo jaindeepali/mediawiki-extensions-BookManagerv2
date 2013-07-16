@@ -160,7 +160,7 @@ class JsonUtil {
 	 * Note: this merely acts as a passthrough to MediaWiki's wfMessage call.
 	 */
 	public static function uiMessage() {
-		if( function_exists( 'wfMessage' ) ) {
+		if ( function_exists( 'wfMessage' ) ) {
 			return call_user_func_array( 'wfMessage', $params = func_get_args() );
 		}
 		else {
@@ -265,7 +265,7 @@ class JsonTreeRef {
 	 * infer it from the data.
 	 */
 	public function getType() {
-		if( array_key_exists( 'type', $this->schemaref->node ) ) {
+		if ( array_key_exists( 'type', $this->schemaref->node ) ) {
 			$nodetype = $this->schemaref->node['type'];
 		}
 		else {
@@ -320,7 +320,7 @@ class JsonTreeRef {
 	 */
 	public function getDataPathAsString() {
 		$retval = "";
-		foreach( $this->getDataPath() as $item ) {
+		foreach ( $this->getDataPath() as $item ) {
 			$retval .= '[' . json_encode( $item ) . ']';
 		}
 		return $retval;
@@ -345,7 +345,7 @@ class JsonTreeRef {
 	public function getMappingChildRef( $key ) {
 		$snode = $this->schemaref->node;
 		$nodename = null;
-		if( array_key_exists( 'properties', $snode ) &&
+		if ( array_key_exists( 'properties', $snode ) &&
 			array_key_exists( $key, $snode['properties'] ) ) {
 			$schemadata = $snode['properties'][$key];
 			$nodename = isset( $schemadata['title'] ) ? $schemadata['title'] : $key;
@@ -379,7 +379,7 @@ class JsonTreeRef {
 	 */
 	public function getSequenceChildRef( $i ) {
 		// TODO: make this conform to draft-03 by also allowing single object
-		if( array_key_exists( 'items', $this->schemaref->node ) ) {
+		if ( array_key_exists( 'items', $this->schemaref->node ) ) {
 			$schemanode = $this->schemaref->node['items'][0];
 		}
 		else {
@@ -397,7 +397,7 @@ class JsonTreeRef {
 	 * Return true on success, and throw a JsonSchemaException on failure.
 	 */
 	public function validate() {
-		if( array_key_exists( 'enum', $this->schemaref->node ) &&
+		if ( array_key_exists( 'enum', $this->schemaref->node ) &&
 			!in_array( $this->node, $this->schemaref->node['enum']  ) ) {
 				$msg = JsonUtil::uiMessage( 'jsonschema-invalid-notinenum', $this->node, $this->getDataPathTitles() );
 				$e = new JsonSchemaException( $msg );
@@ -411,12 +411,12 @@ class JsonTreeRef {
 			$datatype = 'object';
 		}
 		if ( $datatype == 'number' && $schematype == 'integer' &&
-			 $this->node == (int)$this->node) {
+			 $this->node == (int)$this->node ) {
 			// Alright, it'll work as an int
 			$datatype = 'integer';
 		}
 		if ( $datatype != $schematype ) {
-			if ( is_null( $datatype ) && !is_object( $this->parent )) {
+			if ( is_null( $datatype ) && !is_object( $this->parent ) ) {
 				$msg = JsonUtil::uiMessage( 'jsonschema-invalidempty' );
 				$e = new JsonSchemaException( $msg );
 				$e->subtype = "validate-fail-null";
@@ -446,7 +446,7 @@ class JsonTreeRef {
 		if ( array_key_exists( 'properties', $this->schemaref->node ) ) {
 			foreach ( $this->schemaref->node['properties'] as $skey => $svalue ) {
 				$keyRequired = array_key_exists( 'required', $svalue ) ? $svalue['required'] : false;
-				if( $keyRequired && !array_key_exists( $skey, $this->node ) ) {
+				if ( $keyRequired && !array_key_exists( $skey, $this->node ) ) {
 					$msg = JsonUtil::uiMessage( 'jsonschema-invalid-missingfield', $skey );
 					$e = new JsonSchemaException( $msg );
 					$e->subtype = "validate-fail-missingfield";
@@ -500,7 +500,7 @@ class JsonSchemaIndex {
 	 * index.
 	 */
 	public function indexSubtree( $schemanode ) {
-		if( !array_key_exists( 'type', $schemanode ) ) {
+		if ( !array_key_exists( 'type', $schemanode ) ) {
 			$schemanode['type'] = 'any';
 		}
 		$nodetype = $schemanode['type'];

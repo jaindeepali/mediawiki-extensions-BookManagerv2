@@ -123,7 +123,7 @@ class ApiJsonSchema extends ApiBase {
 
 		$result = $this->getResult();
 		$result->addValue( null, 'title', $title->getText() );
-		foreach( $schema as $k => &$v ) {
+		foreach ( $schema as $k => &$v ) {
 			$result->addValue( null, $k, $v );
 		}
 	}
