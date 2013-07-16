@@ -59,6 +59,14 @@ $messages['gl'] = array(
 	'bookmanagerv2-invalid-json' => 'JSON non válido',
 );
 
+/** Italian (italiano)
+ * @author Beta16
+ */
+$messages['it'] = array(
+	'bookmanagerv2-desc' => 'Aggiunge funzionalità per inserire e memorizzare la struttura e i metadati di un libro',
+	'bookmanagerv2-invalid-json' => 'JSON non valido',
+);
+
 /** Japanese (日本語)
  * @author Shirayuki
  */
