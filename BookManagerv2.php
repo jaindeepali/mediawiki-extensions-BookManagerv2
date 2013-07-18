@@ -128,10 +128,19 @@ $wgResourceModules['ext.BookManagerv2'] = array(
 $wgResourceModules['ext.BookManagerv2js'] = array(
 	'scripts' => 'ext.BookManagerv2.js',
 	'styles' => 'ext.BookManagerv2js.css',
-	'localBasePath' => dirname(__FILE__) . '/modules',
+	'localBasePath' => dirname( __FILE__ ) . '/modules',
 	'remoteExtPath' => 'BookManagerv2/modules'
 );
 
 // Register hook and content handlers for the JSON schema content iff
 // running on the MediaWiki instance housing the schemas.
 $wgExtensionFunctions[] = 'JsonHooks::registerHandlers';
+
+// User configuration
+
+/**
+ * @var bool
+ * If enabled, this adds an example navigation bar to every mainspace
+ * page, drawing the information from examples/book.json
+ */
+$wgBookManagerv2ExampleNavigation = false;

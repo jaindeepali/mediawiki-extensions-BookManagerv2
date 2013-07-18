@@ -308,54 +308,75 @@ class BookManagerv2Hooks {
 		// Check that the navigation bar is only added to mainspace pages.
 		if ( $out->getTitle()->getNamespace() === NS_MAIN ) {
 			if ( $out->getRevisionId() !== null ) {
-				global $wgContLang;
+				global $wgContLang, $wgBookManagerv2ExampleNavigation;
 				$categories = $out->getCategories();
 				$namespace = $wgContLang->convertNamespace( NS_BOOK ) . ":";
+				$out->addModuleStyles( "ext.BookManagerv2" );
+				$out->addModules( "ext.BookManagerv2js" );
+				$currentPageTitle = $out->getTitle()->getText();
+				$prev = $next = $jsonBook = null;
 				foreach ( $categories as $cat ) {
 					if ( substr( $cat, 0, strlen( $namespace ) ) === $namespace ) {
 						$jsonPageTitle = Title::newFromText( $cat );
-						$jsonBook = self::getJson( $jsonPageTitle );
-						if ( $jsonBook ) {
-							$out->addModuleStyles( "ext.BookManagerv2" );
-							$out->addModules( "ext.BookManagerv2js" );
-							$currentPageTitle = $out->getTitle()->getText();
-							$prev = (object) array();
-							$next = (object) array();
-
-							// Get the previous/next pages
-							foreach ( $jsonBook->sections as $key => $val ) {
-								if ( $val->link === $currentPageTitle ) {
-									if ( $key !== 0 ) {
-										$prev->title =
-											$jsonBook->sections[ $key - 1 ]->name;
-										$prev->link =
-											$jsonBook->sections[ $key - 1 ]->link;
-									} else {
-										$prev = null;
-									}
-									if ( $key !== count( $jsonBook->sections ) ) {
-										$next->title =
-											$jsonBook->sections[ $key + 1 ]->name;
-										$next->link =
-											$jsonBook->sections[ $key + 1 ]->link;
-									} else {
-										$next = null;
-									}
-									break;
-								}
-							}
-
-							$chapterList = self::formatChapterList(
-								$jsonBook->sections, $currentPageTitle );
-							$metadata = self::formatMetadata( $jsonBook );
-
-							$navbar = self::readingInterfaceUX( $prev, $next,
-								$chapterList, $metadata );
-							$out->prependHtml( $navbar );
-							return true;
+						if ( $jsonPageTitle->exists() ) {
+							$jsonBook = self::getJson( $jsonPageTitle );
+							break;
 						}
 					}
 				}
+
+				if ( !$jsonBook && $wgBookManagerv2ExampleNavigation ) {
+					$jsonBook = json_decode(
+						file_get_contents( __DIR__ . '/examples/book.json' ) );
+					$out->setSubtitle(
+						wfMessage( 'bookmanagerv2-example-nav' )->text() );
+				}
+
+				if ( !$jsonBook ) {
+					// No Category:Book on this page, and the example
+					// navigation is disabled
+					return true;
+				}
+
+				// Get the previous/next pages
+				$currentPageNumber = null;
+				foreach ( $jsonBook->sections as $key => $val ) {
+					if ( $val->link === $currentPageTitle ) {
+						$currentPageNumber = $key;
+						if ( $key !== 0 ) {
+							$prev = (object) array();
+							$prev->title =
+								$jsonBook->sections[ $key - 1 ]->name;
+							$prev->link =
+								$jsonBook->sections[ $key - 1 ]->link;
+						}
+						if ( $key !== count( $jsonBook->sections ) ) {
+							$next = (object) array();
+							$next->title =
+								$jsonBook->sections[ $key + 1 ]->name;
+							$next->link =
+								$jsonBook->sections[ $key + 1 ]->link;
+						}
+						break;
+					}
+				}
+
+				if ( $currentPageNumber === null
+					&& count( $jsonBook->sections ) > 0
+				) {
+					$next = (object) array();
+					$next->title =
+						$jsonBook->sections[ 0 ]->name;
+					$next->link =
+						$jsonBook->sections[ 0 ]->link;
+				}
+
+				$chapterList = self::formatChapterList( $jsonBook->sections,
+					$currentPageTitle );
+				$metadata = self::formatMetadata( $jsonBook );
+				$navbar = self::readingInterfaceUX( $prev, $next, $chapterList,
+					$metadata );
+				$out->prependHtml( $navbar );
 			}
 		}
 		return true;
