@@ -50,6 +50,10 @@ div.mw-bookmanagerv2-nav-dropdown:before {
 	margin-left: -141px;
 }
 
+div.mw-bookmanagerv2-nav-dropdown ol, div.mw-bookmanagerv2-nav-dropdown ul {
+	list-style: none;
+	margin: 0;
+}
 div.mw-bookmanagerv2-nav-toc {
 	margin-left: 45px;
 }
