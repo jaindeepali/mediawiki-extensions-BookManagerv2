@@ -166,17 +166,39 @@ $messages['de'] = array(
 );
 
 /** Spanish (español)
+ * @author Larjona
  * @author Luis Felipe Schenone
  */
 $messages['es'] = array(
 	'bookmanagerv2-desc' => 'Agrega funcionalidad para ingresar y guardar metainformación sobre libros',
 	'bookmanagerv2-invalid-json' => 'JSON inválido',
+	'bookmanagerv2-title' => 'Título: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Traductor|Traductores}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Editor|Editores}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Illustrador|Illustradores}}: $2',
+	'bookmanagerv2-subtitle' => 'Subtítulo: $1',
+	'bookmanagerv2-series-title' => 'Título de la serie: $1',
+	'bookmanagerv2-volume' => 'Volumen: $1',
+	'bookmanagerv2-edition' => 'Edición: $1',
+	'bookmanagerv2-publisher' => 'Publicado por: $1',
+	'bookmanagerv2-printer' => 'Impreso por: $1',
+	'bookmanagerv2-publication-date' => 'Fecha de publicación: $1',
+	'bookmanagerv2-publication-city' => 'Ciudad de publicación: $1',
+	'bookmanagerv2-language' => 'Idioma: $1',
+	'bookmanagerv2-description' => 'Descripción: $1',
+	'bookmanagerv2-source' => 'Fuente: $1',
+	'bookmanagerv2-permission' => 'Permiso: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Otra versión|Otras versiones}}: $2',
 );
 
 /** Persian (فارسی)
+ * @author Alireza
  * @author Mahdiz
  */
 $messages['fa'] = array(
+	'bookmanagerv2-invalid-json' => 'JSON نامعتبر',
 	'bookmanagerv2-title' => 'عنوان: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|دیگرعنوان|دیگر عناوین}}:$2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|نویسنده|نویسنده ها}}:$2',
@@ -289,12 +311,51 @@ $messages['ja'] = array(
 	'bookmanagerv2-oclc' => 'OCLC: $1',
 );
 
+/** Luxembourgish (Lëtzebuergesch)
+ * @author Robby
+ */
+$messages['lb'] = array(
+	'bookmanagerv2-desc' => "Setzt d'Fonctionalitéit derbäi fir Metadate a Strukture vu Bicher anzeginn",
+	'bookmanagerv2-title' => 'Titel: $1',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Auteur|Auteuren}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Iwwersetzer}}: $2',
+	'bookmanagerv2-subtitle' => 'Ënnertitel: $1',
+	'bookmanagerv2-edition' => 'Editioun: $1',
+	'bookmanagerv2-printer' => 'Dréckerei: $1',
+	'bookmanagerv2-publication-date' => 'Datum vun der Publikatioun: $1',
+	'bookmanagerv2-publication-city' => 'Stad vun der Publikatioun: $1',
+	'bookmanagerv2-language' => 'Sprooch: $1',
+	'bookmanagerv2-description' => 'Beschreiwung: $1',
+	'bookmanagerv2-source' => 'Quell: $1',
+	'bookmanagerv2-permission' => 'Autorisatioun: $1',
+	'bookmanagerv2-other-versions' => 'Aner {{PLURAL:$1|Versioun|Versiounen}}: $2',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
 	'bookmanagerv2-desc' => 'Дава можност за внесување и складирање на метаподатоци и структура за книги',
 	'bookmanagerv2-invalid-json' => 'Неважечки JSON',
+	'bookmanagerv2-title' => 'Наслов: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Друг наслов|Други наслови}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Автор|Автори}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Преведувач|Преведувачи}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Уредник|Уредници}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Илустратор|Илустратори}}: $2',
+	'bookmanagerv2-subtitle' => 'Поднаслов: $1',
+	'bookmanagerv2-series-title' => 'Едиција: $1',
+	'bookmanagerv2-volume' => 'Том: $1',
+	'bookmanagerv2-edition' => 'Издание: $1',
+	'bookmanagerv2-publisher' => 'Издавач: $1',
+	'bookmanagerv2-printer' => 'Печатар: $1',
+	'bookmanagerv2-publication-date' => 'Година на издавање: $1',
+	'bookmanagerv2-publication-city' => 'Место на издавање: $1',
+	'bookmanagerv2-language' => 'Јазик: $1',
+	'bookmanagerv2-description' => 'Опис: $1',
+	'bookmanagerv2-source' => 'Извор: $1',
+	'bookmanagerv2-permission' => 'Дозвола: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Друга верзија|Други верзии}}: $2',
 );
 
 /** Malay (Bahasa Melayu)
@@ -338,6 +399,18 @@ $messages['nl'] = array(
 $messages['pl'] = array(
 	'bookmanagerv2-desc' => 'Dodaje funkcję do wprowadzania i przechowywania metadanych i struktury książek',
 	'bookmanagerv2-invalid-json' => 'Nieprawidłowy JSON',
+	'bookmanagerv2-title' => 'Tytuł: $1',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autorów}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Tłumacz|Tłumaczów}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Redaktor|Redaktorów}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Ilustrator|Ilustratorów}}: $2',
+	'bookmanagerv2-subtitle' => 'Podtytuł: $1',
+	'bookmanagerv2-edition' => 'Edycja: $1',
+	'bookmanagerv2-publication-date' => 'Data publikacji: $1',
+	'bookmanagerv2-language' => 'Język: $1',
+	'bookmanagerv2-description' => 'Opis: $1',
+	'bookmanagerv2-source' => 'Źródło: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Inna wersja|Inne wersje}}: $2',
 );
 
 /** tarandíne (tarandíne)
@@ -346,6 +419,63 @@ $messages['pl'] = array(
 $messages['roa-tara'] = array(
 	'bookmanagerv2-desc' => "Aggiunge 'na funzionalità pe sckaffà e reggistrà metadate de libbre e strutture",
 	'bookmanagerv2-invalid-json' => 'JSON invalide',
+	'bookmanagerv2-title' => 'Titole: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Titole alternative}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Autore|Auture}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Traduttore|Tradutture}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Editore|Editure}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Illustratore|Illustrature}}: $2',
+	'bookmanagerv2-subtitle' => 'Sottotitole: $1',
+	'bookmanagerv2-series-title' => "Titole d'a serie: $1",
+	'bookmanagerv2-volume' => 'Volume: $1',
+	'bookmanagerv2-edition' => 'Edizione: $1',
+	'bookmanagerv2-publisher' => 'Pubblecatore: $1',
+	'bookmanagerv2-printer' => 'Stambatore: $1',
+	'bookmanagerv2-publication-date' => 'Date de pubblecazione: $1',
+	'bookmanagerv2-publication-city' => 'Cetate de pubblecazione: $1',
+	'bookmanagerv2-language' => 'Lènghe: $1',
+	'bookmanagerv2-description' => 'Descrizione: $1',
+	'bookmanagerv2-source' => 'Origgene: $1',
+	'bookmanagerv2-permission' => 'Permesse: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Otra versione|Otre versiune}}: $2',
+);
+
+/** Swedish (svenska)
+ * @author Jopparn
+ */
+$messages['sv'] = array(
+	'bookmanagerv2-subtitle' => 'Undertext: $1',
+	'bookmanagerv2-language' => 'Språk: $1',
+	'bookmanagerv2-description' => 'Beskrivning: $1',
+	'bookmanagerv2-source' => 'Källa: $1',
+	'bookmanagerv2-permission' => 'Behörighet: $1',
+);
+
+/** Ukrainian (українська)
+ * @author Ата
+ */
+$messages['uk'] = array(
+	'bookmanagerv2-desc' => 'Додає функціональність до введення і зберігання метаданих і структури книги',
+	'bookmanagerv2-invalid-json' => 'Неприпустимий JSON',
+	'bookmanagerv2-title' => 'Назва: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Альтернативна назва|Альтернативні назви}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Автор|Автори}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Перекладач|Перекладачі}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Редактор|Редактори}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Ілюстратор|Ілюстратори}}: $2',
+	'bookmanagerv2-subtitle' => 'Підзаголовок: $1',
+	'bookmanagerv2-series-title' => 'Назва серії: $1',
+	'bookmanagerv2-volume' => 'Том: $1',
+	'bookmanagerv2-edition' => 'Видання: $1',
+	'bookmanagerv2-publisher' => 'Видавництво: $1',
+	'bookmanagerv2-printer' => 'Друк: $1',
+	'bookmanagerv2-publication-date' => 'Дата видання: $1',
+	'bookmanagerv2-publication-city' => 'Місто видання: $1',
+	'bookmanagerv2-language' => 'Мова: $1',
+	'bookmanagerv2-description' => 'Опис: $1',
+	'bookmanagerv2-source' => 'Джерело: $1',
+	'bookmanagerv2-permission' => 'Дозвіл: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Інша версія|Інші версії}}: $2',
 );
 
 /** Simplified Chinese (中文（简体）‎)
