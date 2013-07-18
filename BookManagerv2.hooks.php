@@ -306,7 +306,8 @@ class BookManagerv2Hooks {
 	 */
 	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		// Check that the navigation bar is only added to mainspace pages.
-		if ( $out->getTitle()->getNamespace() === NS_MAIN ) {
+		global $wgContentNamespaces;
+		if ( in_array( $out->getTitle()->getNamespace(), $wgContentNamespaces ) ) {
 			if ( $out->getRevisionId() !== null ) {
 				global $wgContLang, $wgBookManagerv2ExampleNavigation;
 				$categories = $out->getCategories();
