@@ -101,6 +101,9 @@ $wgAutoloadClasses += array(
 	// Json
 	'JsonTreeRef' => __DIR__ . '/includes/JsonSchema.php',
 	'JsonSchemaException' => __DIR__ . '/includes/JsonSchema.php',
+	'JsonUtil' => __DIR__ . '/includes/JsonSchema.php',
+	'TreeRef' => __DIR__ . '/includes/JsonSchema.php',
+	'JsonSchemaIndex' => __DIR__ . '/includes/JsonSchema.php',
 
 	// API
 	'ApiJsonSchema' => __DIR__ . '/includes/ApiJsonSchema.php',
