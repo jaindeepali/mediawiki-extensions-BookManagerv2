@@ -350,7 +350,7 @@ class BookManagerv2Hooks {
 							$prev->link =
 								$jsonBook->sections[ $key - 1 ]->link;
 						}
-						if ( $key !== count( $jsonBook->sections ) ) {
+						if ( $key !== ( count( $jsonBook->sections ) - 1 ) ) {
 							$next = (object) array();
 							$next->title =
 								$jsonBook->sections[ $key + 1 ]->name;
