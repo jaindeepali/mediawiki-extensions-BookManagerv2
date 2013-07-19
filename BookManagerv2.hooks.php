@@ -100,13 +100,18 @@ class BookManagerv2Hooks {
 				),
 				$metadata
 			);
-		$html[] = Html::rawElement( 'div', array(
+		$html[] = Html::openElement( 'div', array(
 				'class' => array(
 					'mw-bookmanagerv2-nav-dropdown',
 					'mw-bookmanagerv2-nav-toc' )
-				),
+				)
+			);
+		$html[] = Html::rawElement( 'div', array(
+			'class' => 'mw-bookmanagerv2-nav-scrollable'
+			),
 				$chapterList
 			);
+		$html[] = Html::closeElement( 'div' );
 		$html[] = Html::closeElement( 'div' );
 		$html[] = Html::closeElement( 'div' );
 		return implode( $html );

@@ -60,3 +60,7 @@ div.mw-bookmanagerv2-nav-toc {
 div.mw-bookmanagerv2-nav-dropdown .title {
 	font-style: italic;
 }
+div.mw-bookmanagerv2-nav-scrollable {
+	max-height: 300px;
+	overflow: auto;
+}
