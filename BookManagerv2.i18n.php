@@ -138,12 +138,30 @@ See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
 );
 
+/** Bengali (বাংলা)
+ * @author Aftab1995
+ */
+$messages['bn'] = array(
+	'bookmanagerv2-title' => 'শিরোনাম: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|বিকল্প শিরোনাম|বিকল্প শিরোনামগুলি}}: $2',
+	'bookmanagerv2-volume' => 'ভলিউম: $1',
+	'bookmanagerv2-edition' => 'সংস্করণ: $1',
+	'bookmanagerv2-publisher' => 'প্রকাশক: $1',
+	'bookmanagerv2-publication-date' => 'প্রকাশনার তারিখ: $1',
+	'bookmanagerv2-language' => 'ভাষা: $1',
+	'bookmanagerv2-description' => 'বিবরণ: $1',
+	'bookmanagerv2-source' => 'উত্স: $1',
+	'bookmanagerv2-permission' => 'অনুমতি: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|অন্যান্য সংস্করণ}}: $2',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
 $messages['de'] = array(
 	'bookmanagerv2-desc' => 'Ergänzt die Funktionalität zur Eingabe und Speicherung von Buch-Metadaten und -Strukturen',
 	'bookmanagerv2-invalid-json' => 'Ungültiges JSON',
+	'bookmanagerv2-example-nav' => 'Die Navigationsleiste erscheint auf dieser Seite, da $wgBookManagerv2ExampleNavigation in LocalSettings.php auf „wahr“ gesetzt ist.',
 	'bookmanagerv2-title' => 'Titel: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Alternativer|Alternative}} Titel: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autoren}}: $2',
@@ -226,6 +244,7 @@ $messages['fa'] = array(
 $messages['fr'] = array(
 	'bookmanagerv2-desc' => 'Ajoute une fonctionnalité pour saisir et stocker les métadonnées et la structure d’un livre',
 	'bookmanagerv2-invalid-json' => 'JSON non valide',
+	'bookmanagerv2-example-nav' => 'La barre de navigation apparaît sur cette page parce que $wgBookManagerv2ExampleNavigation est à vrai dans LocalSettings.php.',
 	'bookmanagerv2-title' => 'Titre : $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Titre alternatif|Titres alternatifs}} : $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Auteur|Auteurs}} : $2',
@@ -331,12 +350,35 @@ $messages['lb'] = array(
 	'bookmanagerv2-other-versions' => 'Aner {{PLURAL:$1|Versioun|Versiounen}}: $2',
 );
 
+/** Lithuanian (lietuvių)
+ * @author Eitvys200
+ */
+$messages['lt'] = array(
+	'bookmanagerv2-invalid-json' => 'Neleistinas JSON',
+	'bookmanagerv2-title' => 'Pavadinimas: $1',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Autorius|Authoriai}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Vertėjas|Vertėjai}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Redaktorius|Redaktoriai}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Iliustratorius|Iliusratoriai}}: $2',
+	'bookmanagerv2-volume' => 'Tomas: $1',
+	'bookmanagerv2-edition' => 'Leidimas: $1',
+	'bookmanagerv2-publisher' => 'Leidėjas: $1',
+	'bookmanagerv2-publication-date' => 'Leidimo data: $1',
+	'bookmanagerv2-publication-city' => 'Leidimo miestas: $1',
+	'bookmanagerv2-language' => 'Kalba: $1',
+	'bookmanagerv2-description' => 'Aprašymas: $1',
+	'bookmanagerv2-source' => 'Šaltinis: $1',
+	'bookmanagerv2-permission' => 'Leidimas: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Kita versija|Kitos versijos}}: $2',
+);
+
 /** Macedonian (македонски)
  * @author Bjankuloski06
  */
 $messages['mk'] = array(
 	'bookmanagerv2-desc' => 'Дава можност за внесување и складирање на метаподатоци и структура за книги',
 	'bookmanagerv2-invalid-json' => 'Неважечки JSON',
+	'bookmanagerv2-example-nav' => 'Навигационата лента на оваа страница се појавува бидејќи $wgBookManagerv2ExampleNavigation е наместено на „true“ во LocalSettings.php.',
 	'bookmanagerv2-title' => 'Наслов: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Друг наслов|Други наслови}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Автор|Автори}}: $2',
@@ -442,13 +484,29 @@ $messages['roa-tara'] = array(
 
 /** Swedish (svenska)
  * @author Jopparn
+ * @author Liftarn
  */
 $messages['sv'] = array(
+	'bookmanagerv2-invalid-json' => 'Ogiltig JSON',
+	'bookmanagerv2-title' => 'Titel: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Alternativ titel|Alternativa titlar}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Författare|Författare}}: $2', # Fuzzy
+	'bookmanagerv2-translators' => '{{PLURAL:$2|Översättare|Översättare}}: $1', # Fuzzy
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Redaktör|Redaktörer}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Illustratör|Illustratörer}}: $2',
 	'bookmanagerv2-subtitle' => 'Undertext: $1',
+	'bookmanagerv2-series-title' => 'Seriens titel: $1',
+	'bookmanagerv2-volume' => 'Volym: $1',
+	'bookmanagerv2-edition' => 'Utgåva: $1',
+	'bookmanagerv2-publisher' => 'Utgivare: $1',
+	'bookmanagerv2-printer' => 'Tryckeri: $1',
+	'bookmanagerv2-publication-date' => 'Utgivningsdatum: $1',
+	'bookmanagerv2-publication-city' => 'Utgivningsort: $1',
 	'bookmanagerv2-language' => 'Språk: $1',
 	'bookmanagerv2-description' => 'Beskrivning: $1',
 	'bookmanagerv2-source' => 'Källa: $1',
 	'bookmanagerv2-permission' => 'Behörighet: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Annan version|Andra versioner}}: $2',
 );
 
 /** Ukrainian (українська)
