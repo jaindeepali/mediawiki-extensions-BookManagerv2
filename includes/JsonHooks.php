@@ -69,17 +69,29 @@ class JsonHooks {
 	 * @return True
 	 */
 	static function onEditFilterMerged( $editor, $text, &$error, $summary ) {
-		if ( $editor->getTitle()->getNamespace() !== NS_BOOK ) {
+		$pageTitle = $editor->getTitle();
+		if ( $pageTitle->getNamespace() !== NS_BOOK ) {
 			return true;
 		}
 
+		global $wgMemc;
 		$content = new JsonBookContent( $text );
 
 		try {
 			$content->validate();
+			$blockIsValid = true;
 		} catch ( JsonSchemaException $e ) {
 			$error = $e->getMessage();
+			$blockIsValid = false;
 		}
+
+		if ( $blockIsValid ) {
+			//Add to cache
+			$cacheKey = wfMemcKey( 'BookManagerv2', $pageTitle->getArticleID(), 'json' );
+			$wgMemc->set( wfMemcKey( $cacheKey ),
+				FormatJson::decode( $content->getNativeData(), false ));
+		}
+
 		return true;
 	}
 }
