@@ -155,6 +155,13 @@ $messages['bn'] = array(
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|অন্যান্য সংস্করণ}}: $2',
 );
 
+/** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
+ * @author ОйЛ
+ */
+$messages['cu'] = array(
+	'bookmanagerv2-language' => 'ѩꙁꙑкъ : $1',
+);
+
 /** German (Deutsch)
  * @author Metalhead64
  */
@@ -186,10 +193,12 @@ $messages['de'] = array(
 /** Spanish (español)
  * @author Larjona
  * @author Luis Felipe Schenone
+ * @author Miguel2706
  */
 $messages['es'] = array(
 	'bookmanagerv2-desc' => 'Agrega funcionalidad para ingresar y guardar metainformación sobre libros',
 	'bookmanagerv2-invalid-json' => 'JSON inválido',
+	'bookmanagerv2-example-nav' => 'La barra de navegación en esta página se muestra porque $wgBookManagerv2ExampleNavigation se establece en verdadero en LocalSettings.php.',
 	'bookmanagerv2-title' => 'Título: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
@@ -272,6 +281,7 @@ $messages['fr'] = array(
 $messages['gl'] = array(
 	'bookmanagerv2-desc' => 'Engade unha funcionalidade para inserir e almacenar os metadatos e a estrutura dun libro',
 	'bookmanagerv2-invalid-json' => 'JSON non válido',
+	'bookmanagerv2-example-nav' => 'A barra de navegación desta páxina aparece porque $wgBookManagerv2ExampleNavigation está definido como "true" en LocalSettings.php.',
 	'bookmanagerv2-title' => 'Título: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
