@@ -495,13 +495,14 @@ $messages['roa-tara'] = array(
 /** Swedish (svenska)
  * @author Jopparn
  * @author Liftarn
+ * @author WikiPhoenix
  */
 $messages['sv'] = array(
 	'bookmanagerv2-invalid-json' => 'Ogiltig JSON',
 	'bookmanagerv2-title' => 'Titel: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Alternativ titel|Alternativa titlar}}: $2',
-	'bookmanagerv2-authors' => '{{PLURAL:$1|Författare|Författare}}: $2', # Fuzzy
-	'bookmanagerv2-translators' => '{{PLURAL:$2|Översättare|Översättare}}: $1', # Fuzzy
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Författare}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$2|Översättare}}: $1',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|Redaktör|Redaktörer}}: $2',
 	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Illustratör|Illustratörer}}: $2',
 	'bookmanagerv2-subtitle' => 'Undertext: $1',
