@@ -305,10 +305,12 @@ $messages['gl'] = array(
 
 /** Italian (italiano)
  * @author Beta16
+ * @author Wim b
  */
 $messages['it'] = array(
 	'bookmanagerv2-desc' => 'Aggiunge funzionalità per inserire e memorizzare la struttura e i metadati di un libro',
 	'bookmanagerv2-invalid-json' => 'JSON non valido',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Altra versione|Altre versioni}}: $2',
 );
 
 /** Japanese (日本語)
@@ -501,8 +503,8 @@ $messages['sv'] = array(
 	'bookmanagerv2-invalid-json' => 'Ogiltig JSON',
 	'bookmanagerv2-title' => 'Titel: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Alternativ titel|Alternativa titlar}}: $2',
-	'bookmanagerv2-authors' => '{{PLURAL:$1|Författare}}: $2',
-	'bookmanagerv2-translators' => '{{PLURAL:$2|Översättare}}: $1',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Författare|Författare}}: $2', # Fuzzy
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Översättare|Översättare}}: $2', # Fuzzy
 	'bookmanagerv2-editors' => '{{PLURAL:$1|Redaktör|Redaktörer}}: $2',
 	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Illustratör|Illustratörer}}: $2',
 	'bookmanagerv2-subtitle' => 'Undertext: $1',
