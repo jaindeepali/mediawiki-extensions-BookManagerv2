@@ -500,6 +500,7 @@ $messages['roa-tara'] = array(
  * @author WikiPhoenix
  */
 $messages['sv'] = array(
+	'bookmanagerv2-desc' => 'Lägger till funktioner för att ange och lagra metadata och struktur för böcker',
 	'bookmanagerv2-invalid-json' => 'Ogiltig JSON',
 	'bookmanagerv2-title' => 'Titel: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Alternativ titel|Alternativa titlar}}: $2',
@@ -551,7 +552,19 @@ $messages['uk'] = array(
 
 /** Simplified Chinese (中文（简体）‎)
  * @author Byfserag
+ * @author Qiyue2001
  */
 $messages['zh-hans'] = array(
 	'bookmanagerv2-invalid-json' => '无效的JSON',
+	'bookmanagerv2-title' => '标题：$1',
+	'bookmanagerv2-subtitle' => '副标题:$1',
+	'bookmanagerv2-series-title' => '系列标题：$1',
+	'bookmanagerv2-volume' => '容量：$1',
+	'bookmanagerv2-publisher' => '出版商：$1',
+	'bookmanagerv2-publication-date' => '出版日期：$1',
+	'bookmanagerv2-publication-city' => '出版城市：$1',
+	'bookmanagerv2-language' => '语言：$1',
+	'bookmanagerv2-source' => '来源：$1',
+	'bookmanagerv2-permission' => '权限:$1',
+	'bookmanagerv2-other-versions' => '其他版本：$2', # Fuzzy
 );
