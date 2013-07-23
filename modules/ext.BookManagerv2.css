@@ -31,10 +31,6 @@ div.mw-bookmanagerv2-nav-bar {
 	border-radius: 5px;
 	padding: 3px 5px;
 }
-.mw-bookmanagerv2-nav-bar p {
-	margin: 5px 0;
-	padding: 0;
-}
 .mw-bookmanagerv2-nav-bar ol {
 	padding-left: 30px;
 }
@@ -44,20 +40,20 @@ div.mw-bookmanagerv2-nav-bar {
 }
 a.mw-bookmanagerv2-nav-icon, a.mw-bookmanagerv2-nav-icon img {
 	display: inline;
-	vertical-align: middle;
 	cursor: pointer;
 }
-.mw-bookmanagerv2-nav-bar img {
-	margin: 0 10px 2px 10px;
-}
-img.mw-bookmanagerv2-nav-data {
-	margin-left: 5px;
-}
-img.mw-bookmanagerv2-nav-next {
-	margin-right: 5px;
+a.mw-bookmanagerv2-nav-icon {
+	margin: 0 10px;
 }
 a.mw-bookmanagerv2-nav-prev {
-	margin-right: 20px;
+	margin-right: 10px;
+	background: transparent url('../images/Angle_left_font_awesome.png') no-repeat left center;
+	padding-left: 25px;
+}
+a.mw-bookmanagerv2-nav-next {
+	margin-left: 10px;
+	background: transparent url('../images/Angle_right_font_awesome.png') no-repeat right center;
+	padding-right: 25px;
 }
 div.mw-bookmanagerv2-nav-dropdown {
 	display: none;

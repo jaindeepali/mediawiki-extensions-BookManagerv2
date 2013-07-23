@@ -52,7 +52,9 @@ class BookManagerv2Hooks {
 			);
 		$html[] = Html::element( 'img', array(
 				'class' => 'mw-bookmanagerv2-nav-data',
-				'src' => $imagePath . 'Info_sign_font_awesome.png'
+				'src' => $imagePath . 'Info_sign_font_awesome.png',
+				'alt' => wfMessage( 'bookmanagerv2-metadata' )->text(),
+				'title' => wfMessage( 'bookmanagerv2-metadata' )->text()
 			), '' );
 		$html[] = Html::closeElement( 'a' );
 		$html[] = Html::openElement( 'a', array(
@@ -63,32 +65,22 @@ class BookManagerv2Hooks {
 			);
 		$html[] = Html::element( 'img', array(
 				'class' => 'mw-bookmanagerv2-nav-toc',
-				'src' => $imagePath . 'Ul_font_awesome.png'
+				'src' => $imagePath . 'Ul_font_awesome.png',
+				'alt' => wfMessage( 'bookmanagerv2-contents' )->text(),
+				'title' => wfMessage( 'bookmanagerv2-contents' )->text()
 			), '' );
 		$html[] = Html::closeElement( 'a' );
 		if ( $prev ) {
-			$linkContents = array();
-		    $linkContents[] = Html::element( 'img', array(
-					'class' => 'mw-bookmanagerv2-nav-prev',
-					'src' => $imagePath . 'Angle_left_font_awesome.png'
-				), '' );
-			$linkContents[] = $prev->title;
 			$html[] = Linker::link(
 				Title::newFromText( $prev->link ),
-				implode( $linkContents ),
+				$prev->title,
 				array( 'class' => 'mw-bookmanagerv2-nav-prev' )
 			);
 		}
 		if ( $next ) {
-			$linkContents = array();
-		    $linkContents[] = $next->title;
-			$linkContents[] = Html::element( 'img', array(
-					'class' => 'mw-bookmanagerv2-nav-next',
-					'src' => $imagePath . 'Angle_right_font_awesome.png'
-				), '' );
 			$html[] = Linker::link(
 				Title::newFromText( $next->link ),
-				implode( $linkContents ),
+				$next->title,
 				array( 'class' => 'mw-bookmanagerv2-nav-next' )
 			);
 		}
