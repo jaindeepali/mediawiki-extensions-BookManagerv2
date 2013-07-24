@@ -159,6 +159,7 @@ $messages['bn'] = array(
  * @author ОйЛ
  */
 $messages['cu'] = array(
+	'bookmanagerv2-authors' => '{{PLURAL:$1|творьць|творьца|творьци}} : $2',
 	'bookmanagerv2-language' => 'ѩꙁꙑкъ : $1',
 );
 
@@ -473,6 +474,7 @@ $messages['pl'] = array(
 $messages['roa-tara'] = array(
 	'bookmanagerv2-desc' => "Aggiunge 'na funzionalità pe sckaffà e reggistrà metadate de libbre e strutture",
 	'bookmanagerv2-invalid-json' => 'JSON invalide',
+	'bookmanagerv2-example-nav' => "'A barre de navigazzione sus a sta pàgene iesse purcé \$wgBookManagerv2ExampleNavigation jè 'mbostate a vere jndr'à LocalSettings.php.",
 	'bookmanagerv2-title' => 'Titole: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Titole alternative}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autore|Auture}}: $2',
