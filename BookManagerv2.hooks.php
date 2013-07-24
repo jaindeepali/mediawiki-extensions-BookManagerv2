@@ -314,7 +314,7 @@ class BookManagerv2Hooks {
 		global $wgContentNamespaces;
 		if ( in_array( $out->getTitle()->getNamespace(), $wgContentNamespaces ) ) {
 			if ( $out->getRevisionId() !== null ) {
-				global $wgContLang, $wgBookManagerv2ExampleNavigation;
+				global $wgContLang, $wgBookManagerv2ExampleNavigation, $wgMemc;
 				$categories = $out->getCategories();
 				$namespace = $wgContLang->convertNamespace( NS_BOOK ) . ":";
 				$out->addModuleStyles( "ext.BookManagerv2" );
@@ -325,7 +325,14 @@ class BookManagerv2Hooks {
 					if ( substr( $cat, 0, strlen( $namespace ) ) === $namespace ) {
 						$jsonPageTitle = Title::newFromText( $cat );
 						if ( $jsonPageTitle->exists() ) {
-							$jsonBook = self::getJson( $jsonPageTitle );
+							// Check for cached version of the JSON block, otherwise
+							// get it from the DB and set the value in the cache.
+							$cacheKey = wfMemcKey(  'BookManagerv2', $jsonPageTitle->getArticleID(), 'json' );
+							$jsonBook = $wgMemc->get( $cacheKey );
+							if ( $jsonBook === false ) {
+								$jsonBook = self::getJson( $jsonPageTitle );
+								$wgMemc->set( $cacheKey, $jsonBook );
+							}
 							break;
 						}
 					}
