@@ -88,7 +88,7 @@ class JsonHooks {
 		if ( $blockIsValid ) {
 			//Add to cache
 			$cacheKey = wfMemcKey( 'BookManagerv2', $pageTitle->getArticleID(), 'json' );
-			$wgMemc->set( wfMemcKey( $cacheKey ),
+			$wgMemc->set( $cacheKey,
 				FormatJson::decode( $content->getNativeData(), false ));
 		}
 
