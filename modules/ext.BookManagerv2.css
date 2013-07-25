@@ -31,13 +31,6 @@ div.mw-bookmanagerv2-nav-bar {
 	border-radius: 5px;
 	padding: 3px 5px;
 }
-.mw-bookmanagerv2-nav-bar ol {
-	padding-left: 30px;
-}
-.mw-bookmanagerv2-nav-bar li {
-	margin: 7px 0;
-	list-style-type: upper-roman;
-}
 a.mw-bookmanagerv2-nav-icon, a.mw-bookmanagerv2-nav-icon img {
 	display: inline;
 	cursor: pointer;
