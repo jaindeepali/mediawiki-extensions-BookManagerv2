@@ -230,6 +230,7 @@ $messages['es'] = array(
 /** Persian (فارسی)
  * @author Alireza
  * @author Mahdiz
+ * @author Taha
  */
 $messages['fa'] = array(
 	'bookmanagerv2-invalid-json' => 'JSON نامعتبر',
@@ -241,6 +242,7 @@ $messages['fa'] = array(
 	'bookmanagerv2-illustrators' => '{{PLURAL:$1|تصویرگر|تصویرگران}}:$2',
 	'bookmanagerv2-subtitle' => 'زیرعنوان: $1',
 	'bookmanagerv2-series-title' => 'عنوان مجموعه:$1',
+	'bookmanagerv2-volume' => 'جلد: $1',
 	'bookmanagerv2-edition' => 'در حال ویرایش $1',
 	'bookmanagerv2-publisher' => 'ناشر: $1',
 	'bookmanagerv2-printer' => 'چاپگر: $1',
@@ -344,6 +346,7 @@ $messages['it'] = array(
 );
 
 /** Japanese (日本語)
+ * @author Fryed-peach
  * @author Shirayuki
  */
 $messages['ja'] = array(
@@ -355,7 +358,7 @@ $messages['ja'] = array(
 	'bookmanagerv2-authors' => '{{PLURAL:$1|著者}}: $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|翻訳者}}: $2',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|編集者}}: $2',
-	'bookmanagerv2-illustrators' => '挿絵画家: $2', # Fuzzy
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|挿絵画家}}: $2',
 	'bookmanagerv2-subtitle' => 'サブタイトル: $1',
 	'bookmanagerv2-series-title' => 'シリーズ名: $1',
 	'bookmanagerv2-volume' => '巻: $1',
@@ -423,6 +426,8 @@ $messages['mk'] = array(
 	'bookmanagerv2-desc' => 'Дава можност за внесување и складирање на метаподатоци и структура за книги',
 	'bookmanagerv2-invalid-json' => 'Неважечки JSON',
 	'bookmanagerv2-example-nav' => 'Навигационата лента на оваа страница се појавува бидејќи $wgBookManagerv2ExampleNavigation е наместено на „true“ во LocalSettings.php.',
+	'bookmanagerv2-metadata' => 'Метаподатоци за делото',
+	'bookmanagerv2-contents' => 'Содржина на делото',
 	'bookmanagerv2-title' => 'Наслов: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Друг наслов|Други наслови}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Автор|Автори}}: $2',
