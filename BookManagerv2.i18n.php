@@ -43,6 +43,7 @@ $messages['en'] = array(
 );
 
 /** Message documentation (Message documentation)
+ * @author Raymond
  * @author Shirayuki
  * @author mollywhite
  */
@@ -50,7 +51,7 @@ $messages['qqq'] = array(
 	'bookmanagerv2-desc' => '{{desc|name=BookManagerv2|url=http://www.mediawiki.org/wiki/Extension:BookManagerv2}}',
 	'bookmanagerv2-invalid-json' => 'Error message shown when an editor tries to save an invalid JSON block.
 	{{Identical|Invalid JSON}}',
-	'bookmanagerv2-example-nav' => 'Message shown in the subtitle to explain why example navigation bars are appearing. The navigation bars appear on every page when $wgBookManagerv2ExampleNavigation is set to true; if it\'s disabled in LocalSettings.php, they will disappear.',
+	'bookmanagerv2-example-nav' => 'Message shown in the subtitle to explain why example navigation bars are appearing. The navigation bars appear on every page when <code>$wgBookManagerv2ExampleNavigation</code> is set to <code>true</code>; if it\'s disabled in <code>LocalSettings.php</code>, they will disappear.',
 	'bookmanagerv2-metadata' => "Alternate text for the navigation bar's metadata icon.",
 	'bookmanagerv2-contents' => "Alternate text for the navigation bar's table of contents icon.",
 	'bookmanagerv2-title' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
@@ -144,14 +145,25 @@ See screenshot for an example of this dropdown.
 
 /** Bengali (বাংলা)
  * @author Aftab1995
+ * @author Bellayet
  */
 $messages['bn'] = array(
+	'bookmanagerv2-metadata' => 'কর্মের মেটাডাটা',
+	'bookmanagerv2-contents' => 'কর্মের বিষয়বস্তু',
 	'bookmanagerv2-title' => 'শিরোনাম: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|বিকল্প শিরোনাম|বিকল্প শিরোনামগুলি}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|লেখক|লেখকবৃন্দ}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|অনুবাদক|অনুবাদকবৃন্দ}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|সম্পাদক|সম্পাদকবৃন্দ}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|অলঙ্কারিক|অলঙ্কারিকবৃন্দ}}: $2',
+	'bookmanagerv2-subtitle' => 'উপশিরোনাম: $1',
+	'bookmanagerv2-series-title' => 'ধারাবাহিক শিরোনাম: $1',
 	'bookmanagerv2-volume' => 'ভলিউম: $1',
 	'bookmanagerv2-edition' => 'সংস্করণ: $1',
 	'bookmanagerv2-publisher' => 'প্রকাশক: $1',
+	'bookmanagerv2-printer' => 'মুদ্রক: $1',
 	'bookmanagerv2-publication-date' => 'প্রকাশনার তারিখ: $1',
+	'bookmanagerv2-publication-city' => 'প্রকাশের শহর: $1',
 	'bookmanagerv2-language' => 'ভাষা: $1',
 	'bookmanagerv2-description' => 'বিবরণ: $1',
 	'bookmanagerv2-source' => 'উত্স: $1',
@@ -173,7 +185,7 @@ $messages['cu'] = array(
 $messages['de'] = array(
 	'bookmanagerv2-desc' => 'Ergänzt die Funktionalität zur Eingabe und Speicherung von Buch-Metadaten und -Strukturen',
 	'bookmanagerv2-invalid-json' => 'Ungültiges JSON',
-	'bookmanagerv2-example-nav' => 'Die Navigationsleiste erscheint auf dieser Seite, da $wgBookManagerv2ExampleNavigation in LocalSettings.php auf „wahr“ gesetzt ist.',
+	'bookmanagerv2-example-nav' => 'Die Navigationsleiste erscheint auf dieser Seite, da <code>$wgBookManagerv2ExampleNavigation</code> in <code>LocalSettings.php</code> auf „wahr“ gesetzt ist.',
 	'bookmanagerv2-metadata' => 'Metadaten des Werks',
 	'bookmanagerv2-contents' => 'Inhalte des Werks',
 	'bookmanagerv2-title' => 'Titel: $1',
@@ -205,7 +217,7 @@ $messages['de'] = array(
 $messages['es'] = array(
 	'bookmanagerv2-desc' => 'Agrega funcionalidad para ingresar y guardar metainformación sobre libros',
 	'bookmanagerv2-invalid-json' => 'JSON inválido',
-	'bookmanagerv2-example-nav' => 'La barra de navegación en esta página se muestra porque $wgBookManagerv2ExampleNavigation se establece en verdadero en LocalSettings.php.',
+	'bookmanagerv2-example-nav' => 'La barra de navegación en esta página se muestra porque <code>$wgBookManagerv2ExampleNavigation</code> se establece en verdadero en <code>LocalSettings.php</code>.',
 	'bookmanagerv2-title' => 'Título: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
@@ -262,7 +274,7 @@ $messages['fa'] = array(
 $messages['fr'] = array(
 	'bookmanagerv2-desc' => 'Ajoute une fonctionnalité pour saisir et stocker les métadonnées et la structure d’un livre',
 	'bookmanagerv2-invalid-json' => 'JSON non valide',
-	'bookmanagerv2-example-nav' => 'La barre de navigation apparaît sur cette page parce que $wgBookManagerv2ExampleNavigation est à vrai dans LocalSettings.php.',
+	'bookmanagerv2-example-nav' => 'La barre de navigation apparaît sur cette page parce que <code>$wgBookManagerv2ExampleNavigation</code> est à vrai dans <code>LocalSettings.php</code>.',
 	'bookmanagerv2-metadata' => 'Méta-données de travail',
 	'bookmanagerv2-contents' => 'Contenu du travail',
 	'bookmanagerv2-title' => 'Titre : $1',
@@ -292,7 +304,9 @@ $messages['fr'] = array(
 $messages['gl'] = array(
 	'bookmanagerv2-desc' => 'Engade unha funcionalidade para inserir e almacenar os metadatos e a estrutura dun libro',
 	'bookmanagerv2-invalid-json' => 'JSON non válido',
-	'bookmanagerv2-example-nav' => 'A barra de navegación desta páxina aparece porque $wgBookManagerv2ExampleNavigation está definido como "true" en LocalSettings.php.',
+	'bookmanagerv2-example-nav' => 'A barra de navegación desta páxina aparece porque <code>$wgBookManagerv2ExampleNavigation</code> está definido como "<code>true</code>" en <code>LocalSettings.php</code>.',
+	'bookmanagerv2-metadata' => 'Metadatos da obra',
+	'bookmanagerv2-contents' => 'Contidos da obra',
 	'bookmanagerv2-title' => 'Título: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
@@ -314,6 +328,36 @@ $messages['gl'] = array(
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Outra versión|Outras versións}}: $2',
 );
 
+/** Interlingua (interlingua)
+ * @author McDutchie
+ */
+$messages['ia'] = array(
+	'bookmanagerv2-desc' => 'Adde functionalitate pro inserer e immagazinar metadatos e structura de libros',
+	'bookmanagerv2-invalid-json' => 'JSON invalide',
+	'bookmanagerv2-example-nav' => 'Le barra de navigation sur iste pagina appare perque <code>$wgBookManagerv2ExampleNavigation</code> es definite como "<code>true</code>" in <code>LocalSettings.php</code>.',
+	'bookmanagerv2-metadata' => 'Metadatos del obra',
+	'bookmanagerv2-contents' => 'Contento del obra',
+	'bookmanagerv2-title' => 'Titulo: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Titulo|Titulos}} alternative: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Traductor|Traductores}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Redactor|Redactores}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Illustrator|Illustratores}}: $2',
+	'bookmanagerv2-subtitle' => 'Subtitulo: $1',
+	'bookmanagerv2-series-title' => 'Titulo del serie: $1',
+	'bookmanagerv2-volume' => 'Volumine: $1',
+	'bookmanagerv2-edition' => 'Edition: $1',
+	'bookmanagerv2-publisher' => 'Editor: $1',
+	'bookmanagerv2-printer' => 'Impressor: $1',
+	'bookmanagerv2-publication-date' => 'Data de edition: $1',
+	'bookmanagerv2-publication-city' => 'Citate de edition: $1',
+	'bookmanagerv2-language' => 'Lingua: $1',
+	'bookmanagerv2-description' => 'Description: $1',
+	'bookmanagerv2-source' => 'Fonte: $1',
+	'bookmanagerv2-permission' => 'Permission: $1',
+	'bookmanagerv2-other-versions' => 'Altere {{PLURAL:$1|version|versiones}}: $2',
+);
+
 /** Italian (italiano)
  * @author Beta16
  * @author Wim b
@@ -321,7 +365,7 @@ $messages['gl'] = array(
 $messages['it'] = array(
 	'bookmanagerv2-desc' => 'Aggiunge funzionalità per inserire e memorizzare la struttura e i metadati di un libro',
 	'bookmanagerv2-invalid-json' => 'JSON non valido',
-	'bookmanagerv2-example-nav' => "La barra di navigazione in questa pagina viene visualizzata perché \$wgBookManagerv2ExampleNavigation è impostata su 'true' in LocalSettings.php.",
+	'bookmanagerv2-example-nav' => "La barra di navigazione in questa pagina viene visualizzata perché <code>\$wgBookManagerv2ExampleNavigation</code> è impostata su '<code>true</code>' in <code>LocalSettings.php</code>.",
 	'bookmanagerv2-metadata' => "Metadati dell'opera",
 	'bookmanagerv2-contents' => "Contenuto dell'opera",
 	'bookmanagerv2-title' => 'Titolo: $1',
@@ -425,7 +469,7 @@ $messages['lt'] = array(
 $messages['mk'] = array(
 	'bookmanagerv2-desc' => 'Дава можност за внесување и складирање на метаподатоци и структура за книги',
 	'bookmanagerv2-invalid-json' => 'Неважечки JSON',
-	'bookmanagerv2-example-nav' => 'Навигационата лента на оваа страница се појавува бидејќи $wgBookManagerv2ExampleNavigation е наместено на „true“ во LocalSettings.php.',
+	'bookmanagerv2-example-nav' => 'Навигационата лента на оваа страница се појавува бидејќи <code>$wgBookManagerv2ExampleNavigation</code> е наместено на „<code>true</code>“ во <code>LocalSettings.php</code>.',
 	'bookmanagerv2-metadata' => 'Метаподатоци за делото',
 	'bookmanagerv2-contents' => 'Содржина на делото',
 	'bookmanagerv2-title' => 'Наслов: $1',
@@ -463,7 +507,7 @@ $messages['ms'] = array(
 $messages['nl'] = array(
 	'bookmanagerv2-desc' => 'Voegt functies toe om de metadata en structuur van boeken in te voeren en op te slaan',
 	'bookmanagerv2-invalid-json' => 'Ongeldige JSON',
-	'bookmanagerv2-example-nav' => 'De navigatiebalk op deze pagina wordt weergegeven omdat $wgBookManagerv2ExampleNavigation in LocalSettings.php is ingesteld op "true".',
+	'bookmanagerv2-example-nav' => 'De navigatiebalk op deze pagina wordt weergegeven omdat <code>$wgBookManagerv2ExampleNavigation</code> in <code>LocalSettings.php</code> is ingesteld op "<code>true</code>".',
 	'bookmanagerv2-title' => 'Titel: $1',
 	'bookmanagerv2-alternate-titles' => 'Alternatieve {{PLURAL:$1|titel|titels}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Auteur|Auteurs}}: $2',
@@ -505,13 +549,30 @@ $messages['pl'] = array(
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Inna wersja|Inne wersje}}: $2',
 );
 
+/** Brazilian Portuguese (português do Brasil)
+ * @author Luckas
+ */
+$messages['pt-br'] = array(
+	'bookmanagerv2-title' => 'Título: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Tradutor|Tradutores}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Editor|Editores}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Ilustrador|Ilustradores}}: $2',
+	'bookmanagerv2-subtitle' => 'Subtítulo: $1',
+	'bookmanagerv2-series-title' => 'Título da série: $1',
+	'bookmanagerv2-volume' => 'Volume: $1',
+	'bookmanagerv2-edition' => 'Edição: $1',
+	'bookmanagerv2-publication-date' => 'Data de publicação: $1',
+);
+
 /** tarandíne (tarandíne)
  * @author Joetaras
  */
 $messages['roa-tara'] = array(
 	'bookmanagerv2-desc' => "Aggiunge 'na funzionalità pe sckaffà e reggistrà metadate de libbre e strutture",
 	'bookmanagerv2-invalid-json' => 'JSON invalide',
-	'bookmanagerv2-example-nav' => "'A barre de navigazzione sus a sta pàgene iesse purcé \$wgBookManagerv2ExampleNavigation jè 'mbostate a vere jndr'à LocalSettings.php.",
+	'bookmanagerv2-example-nav' => "'A barre de navigazzione sus a sta pàgene iesse purcé <code>\$wgBookManagerv2ExampleNavigation</code> jè 'mbostate a vere jndr'à <code>LocalSettings.php</code>.",
 	'bookmanagerv2-metadata' => 'Metadate de fatìe',
 	'bookmanagerv2-contents' => 'Condenute de fatìe',
 	'bookmanagerv2-title' => 'Titole: $1',
