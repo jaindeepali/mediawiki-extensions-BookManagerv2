@@ -35,10 +35,14 @@ $wgExtensionCredits['parserhook'][] = array(
 	'descriptionmsg' => 'bookmanagerv2-desc',
 );
 
-// Define namespaces
+// Declare namespace & associated content handler.
 
 define( 'NS_BOOK', 240 );
 define( 'NS_BOOK_TALK', 241 );
+
+$wgExtraNamespaces[ NS_BOOK ] = 'Book';
+$wgExtraNamespaces[ NS_BOOK_TALK ] = 'Book_talk';
+$wgContentHandlers[ 'JsonBook' ] = 'JsonBookContentHandler';
 
 // Configuration
 
@@ -89,7 +93,6 @@ function jsonValidate( $object, $schema = NULL ) {
 $wgAutoloadClasses += array(
 	// Hooks
 	'BookManagerv2Hooks' => __DIR__ . '/BookManagerv2.hooks.php',
-	'JsonHooks' => __DIR__ . '/includes/JsonHooks.php',
 
 	// ContentHandler
 	'JsonBookContent' => __DIR__ . '/includes/JsonContent.php',
@@ -118,23 +121,20 @@ $wgExtensionMessagesFiles += array(
 
 // Register hooks
 $wgHooks['BeforePageDisplay'][] = 'BookManagerv2Hooks::onBeforePageDisplay';
+$wgHooks['EditFilterMerged'][] = 'BookManagerv2Hooks::onEditFilterMerged';
 
 // Load resources
 $wgResourceModules['ext.BookManagerv2'] = array(
 	'styles' => 'ext.BookManagerv2.css',
-	'localBasePath' => dirname( __FILE__ ) . '/modules',
+	'localBasePath' => __DIR__ . '/modules',
 	'remoteExtPath' => 'BookManagerv2/modules'
 );
 $wgResourceModules['ext.BookManagerv2js'] = array(
 	'scripts' => 'ext.BookManagerv2.js',
 	'styles' => 'ext.BookManagerv2js.css',
-	'localBasePath' => dirname( __FILE__ ) . '/modules',
+	'localBasePath' => __DIR__ . '/modules',
 	'remoteExtPath' => 'BookManagerv2/modules'
 );
-
-// Register hook and content handlers for the JSON schema content iff
-// running on the MediaWiki instance housing the schemas.
-$wgExtensionFunctions[] = 'JsonHooks::registerHandlers';
 
 // User configuration
 
