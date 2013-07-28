@@ -197,18 +197,46 @@ class BookManagerv2Hooks {
 	 * @return string HTML list item element
 	 */
 	public static function addDate( $year, $month, $day ) {
-		// TODO: This needs to be localized.
-		$output = Html::openElement( 'li', array() );
-		if ( $day && !$month ) {
+		global $wgLang, $wgUser;
+
+		// Basic validation of inputs
+		if ( !$month || $month < 1 || $month > 12 ) {
+			$month = null;
+		} else {
+			$monthStr = str_pad( (string)$month, 2, "0", STR_PAD_LEFT );
+		}
+
+		if ( !$day || $day < 1 || $day > 31 ) {
+			$day = null;
+		} else {
+			$dayStr = str_pad( (string)$day, 2, "0", STR_PAD_LEFT );
+		}
+
+		if ( $year ) {
+			$yearStr = str_pad( (string)$year, 4, "0", STR_PAD_LEFT );
+		}
+
+		if ( $year && !$month ) {
 			// Having a day without a month doesn't make much sense
 			$date = $year;
+			$datetime = $year;
+		} else if ( $year && $month && !$day ) {
+			$ts = $yearStr . $monthStr . "01000000";
+			$format = $wgLang->getDateFormatString( 'monthonly',
+				$wgUser->getDatePreference() ?: 'default' );
+			$date = $wgLang->sprintfDate( $format, $ts );
+			$datetime = $yearStr . "-" . $monthStr;
 		} else {
-			$date = $day ? $day . "/" : "";
-			$date .= $month ? $month . "/" : "";
-			$date .= $year ? $year : "";
+			$ts = $yearStr . $monthStr . $dayStr . "000000";
+			$format = $wgLang->getDateFormatString( 'date',
+				$wgUser->getDatePreference() ?: 'default' );
+			$date = $wgLang->sprintfDate( $format, $ts );
+			$datetime = $yearStr . "-" . $monthStr . "-" . $dayStr;
 		}
-		$output .= wfMessage( 'bookmanagerv2-publication-date',
-			$date )->text()
+		$output = Html::openElement( 'li', array() )
+			. Html::openElement( 'time', array( 'datetime' => $datetime ) )
+			. wfMessage( 'bookmanagerv2-publication-date', $date )->text()
+			. Html::closeElement( 'time' )
 			. Html::closeElement( 'li' );
 		return $output;
 	}
