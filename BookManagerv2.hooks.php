@@ -76,73 +76,72 @@ class BookManagerv2Hooks {
 		global $wgExtensionAssetsPath;
 		$imagePath = $wgExtensionAssetsPath . "/BookManagerv2/images/";
 
-		$html = array();
-		$html[] = Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-wrap' ) );
-		$html[] = Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-constrain' ) );
-		$html[] = Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-bar' ) );
-		$html[] = Html::openElement( 'a', array(
+		$html = Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-wrap' ) )
+		. Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-constrain' ) )
+		. Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-bar' ) )
+		. Html::openElement( 'a', array(
 				'class' => array(
 					'mw-bookmanagerv2-nav-icon',
 					'mw-bookmanagerv2-nav-data' )
 				)
-			);
-		$html[] = Html::element( 'img', array(
+			)
+		. Html::element( 'img', array(
 				'class' => 'mw-bookmanagerv2-nav-data',
 				'src' => $imagePath . 'Info_sign_font_awesome.png',
 				'alt' => wfMessage( 'bookmanagerv2-metadata' )->text(),
 				'title' => wfMessage( 'bookmanagerv2-metadata' )->text()
-			), '' );
-		$html[] = Html::closeElement( 'a' );
-		$html[] = Html::openElement( 'a', array(
+			), '' )
+		. Html::closeElement( 'a' )
+		. Html::openElement( 'a', array(
 				'class' => array(
 					'mw-bookmanagerv2-nav-icon',
 					'mw-bookmanagerv2-nav-toc' )
 				)
-			);
-		$html[] = Html::element( 'img', array(
+			)
+		. Html::element( 'img', array(
 				'class' => 'mw-bookmanagerv2-nav-toc',
 				'src' => $imagePath . 'Ul_font_awesome.png',
 				'alt' => wfMessage( 'bookmanagerv2-contents' )->text(),
 				'title' => wfMessage( 'bookmanagerv2-contents' )->text()
-			), '' );
-		$html[] = Html::closeElement( 'a' );
+			), '' )
+		. Html::closeElement( 'a' );
 		if ( $prev ) {
-			$html[] = Linker::link(
+			$html .= Linker::link(
 				Title::newFromText( $prev->link ),
 				$prev->title,
 				array( 'class' => 'mw-bookmanagerv2-nav-prev' )
 			);
 		}
 		if ( $next ) {
-			$html[] = Linker::link(
+			$html .= Linker::link(
 				Title::newFromText( $next->link ),
 				$next->title,
 				array( 'class' => 'mw-bookmanagerv2-nav-next' )
 			);
 		}
-		$html[] = Html::closeElement( 'div' );
-		$html[] = Html::rawElement( 'div', array(
+		$html .= Html::closeElement( 'div' )
+		. Html::rawElement( 'div', array(
 				'class' => array(
 					'mw-bookmanagerv2-nav-dropdown',
 					'mw-bookmanagerv2-nav-data' )
 				),
 				$metadata
-			);
-		$html[] = Html::openElement( 'div', array(
+			)
+		. Html::openElement( 'div', array(
 				'class' => array(
 					'mw-bookmanagerv2-nav-dropdown',
 					'mw-bookmanagerv2-nav-toc' )
 				)
-			);
-		$html[] = Html::rawElement( 'div', array(
+			)
+		. Html::rawElement( 'div', array(
 			'class' => 'mw-bookmanagerv2-nav-scrollable'
 			),
 				$chapterList
-			);
-		$html[] = Html::closeElement( 'div' );
-		$html[] = Html::closeElement( 'div' );
-		$html[] = Html::closeElement( 'div' );
-		return implode( $html );
+			)
+		. Html::closeElement( 'div' )
+		. Html::closeElement( 'div' )
+		. Html::closeElement( 'div' );
+		return $html;
 	}
 
 	/**
@@ -199,22 +198,19 @@ class BookManagerv2Hooks {
 	 */
 	public static function addDate( $year, $month, $day ) {
 		// TODO: This needs to be localized.
-		$output = array();
-		$output[] = Html::openElement( 'li', array() );
+		$output = Html::openElement( 'li', array() );
 		if ( $day && !$month ) {
 			// Having a day without a month doesn't make much sense
 			$date = $year;
 		} else {
-			$date = array();
-			$date[] = $day ? $day . "/" : "";
-			$date[] = $month ? $month . "/" : "";
-			$date[] = $year ? $year : "";
-			$date = implode( $date );
+			$date = $day ? $day . "/" : "";
+			$date .= $month ? $month . "/" : "";
+			$date .= $year ? $year : "";
 		}
-		$output[] = wfMessage( 'bookmanagerv2-publication-date',
-			$date )->text();
-		$output[] = Html::closeElement( 'li' );
-		return implode( $output );
+		$output .= wfMessage( 'bookmanagerv2-publication-date',
+			$date )->text()
+			. Html::closeElement( 'li' );
+		return $output;
 	}
 
 	/**
@@ -226,22 +222,21 @@ class BookManagerv2Hooks {
 	 * @return string HTML ordered list element
 	 */
 	public static function formatChapterList( $sections, $currentPageTitle ) {
-		$html = array();
-		$html[] = Html::openElement( 'ol', array() );
+		$html = Html::openElement( 'ol', array() );
 		foreach ( $sections as $key => $val ) {
 			if ( $val->link !== $currentPageTitle ) {
-				$html[] = Html::openElement( 'li', array() );
-				$html[] = Linker::link(
+				$html .= Html::openElement( 'li', array() )
+				. Linker::link(
 						Title::newFromText( $val->link ),
 						$val->name
-					);
-				$html[] = Html::closeElement( 'li' );
+					)
+				. Html::closeElement( 'li' );
 			} else {
-				$html[] = Html::element( 'li', array(), $val->name );
+				$html .= Html::element( 'li', array(), $val->name );
 			}
 		}
-		$html[] = Html::closeElement( 'ol' );
-		return implode( $html );
+		$html .= Html::closeElement( 'ol' );
+		return $html;
 	}
 
 	/**
@@ -251,50 +246,49 @@ class BookManagerv2Hooks {
 	 * @return string HTML unordered list element
 	 */
 	public static function formatMetadata( $jsonBook ) {
-		$metadata = array();
-		$metadata[] = Html::openElement( 'ul', array() );
-		$metadata[] = Html::openElement( 'li', array() );
-		$metadata[] = wfMessage( 'bookmanagerv2-title',
-			$jsonBook->title )->text();
-		$metadata[] = Html::closeElement( 'li' );
+		$metadata = Html::openElement( 'ul', array() )
+		. Html::openElement( 'li', array() )
+		. wfMessage( 'bookmanagerv2-title',
+			$jsonBook->title )->text()
+		. Html::closeElement( 'li' );
 		if ( isset( $jsonBook->alternate_titles ) ) {
-			$metadata[] = self::addArray( "alternate-titles",
+			$metadata .= self::addArray( "alternate-titles",
 				$jsonBook->alternate_titles );
 		}
 		if ( isset( $jsonBook->authors ) ) {
-			$metadata[] = self::addArray( "authors", $jsonBook->authors );
+			$metadata .= self::addArray( "authors", $jsonBook->authors );
 		}
 		if ( isset( $jsonBook->translators ) ) {
-			$metadata[] = self::addArray( "translators",
+			$metadata .= self::addArray( "translators",
 				$jsonBook->translators );
 		}
 		if ( isset( $jsonBook->editors ) ) {
-			$metadata[] = self::addArray( "editors", $jsonBook->editors );
+			$metadata .= self::addArray( "editors", $jsonBook->editors );
 		}
 		if ( isset( $jsonBook->illustrators ) ) {
-			$metadata[] = self::addArray( "illustrators",
+			$metadata .= self::addArray( "illustrators",
 				$jsonBook->illustrators );
 		}
 		if ( isset( $jsonBook->subtitle ) ) {
-			$metadata[] = self::addString( "subtitle", $jsonBook->subtitle );
+			$metadata .= self::addString( "subtitle", $jsonBook->subtitle );
 		}
 		if ( isset( $jsonBook->series_title ) ) {
-			$metadata[] = self::addString( "series-title",
+			$metadata .= self::addString( "series-title",
 				$jsonBook->series_title );
 		}
 		if ( isset( $jsonBook->volume ) ) {
-			$metadata[] = self::addString( "volume",
+			$metadata .= self::addString( "volume",
 				(string)$jsonBook->volume );
 		}
 		if ( isset( $jsonBook->edition ) ) {
-			$metadata[] = self::addString( "edition",
+			$metadata .= self::addString( "edition",
 				(string)$jsonBook->edition );
 		}
 		if ( isset( $jsonBook->publisher ) ) {
-			$metadata[] = self::addString( "publisher", $jsonBook->publisher );
+			$metadata .= self::addString( "publisher", $jsonBook->publisher );
 		}
 		if ( isset( $jsonBook->publication_city ) ) {
-			$metadata[] = self::addString( "publication-city",
+			$metadata .= self::addString( "publication-city",
 				$jsonBook->publication_city );
 		}
 		if ( isset( $jsonBook->publication_year ) ) {
@@ -304,31 +298,31 @@ class BookManagerv2Hooks {
 				$jsonBook->publication_month : null;
 			$day = isset( $jsonBook->publication_day ) ?
 				$jsonBook->publication_day : null;
-			$metadata[] = self::addDate( $year, $month, $day );
+			$metadata .= self::addDate( $year, $month, $day );
 		}
 		if ( isset( $jsonBook->printer ) ) {
-			$metadata[] = self::addString( "printer", $jsonBook->printer );
+			$metadata .= self::addString( "printer", $jsonBook->printer );
 		}
 		if ( isset( $jsonBook->language ) ) {
 			// TODO: Transform the language code to the correct long-form language
-			$metadata[] = self::addString( "language", $jsonBook->language );
+			$metadata .= self::addString( "language", $jsonBook->language );
 		}
 		if ( isset( $jsonBook->description ) ) {
-			$metadata[] = self::addString( "description",
+			$metadata .= self::addString( "description",
 				$jsonBook->description );
 		}
 		if ( isset( $jsonBook->isbn ) ) {
-			$metadata[] = self::addString( "isbn", $jsonBook->isbn );
+			$metadata .= self::addString( "isbn", $jsonBook->isbn );
 		}
 		if ( isset( $jsonBook->lccn ) ) {
-			$metadata[] = self::addString( "lccn", $jsonBook->lccn );
+			$metadata .= self::addString( "lccn", $jsonBook->lccn );
 		}
 		if ( isset( $jsonBook->oclc ) ) {
-			$metadata[] = self::addString( "oclc", $jsonBook->oclc );
+			$metadata .= self::addString( "oclc", $jsonBook->oclc );
 		}
-		$metadata[] = Html::closeElement( 'ul' );
+		$metadata .= Html::closeElement( 'ul' );
 
-		return implode( $metadata );
+		return $metadata;
 	}
 
 	/**
