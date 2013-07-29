@@ -18,6 +18,13 @@
 
 (function ( $ ) {
 
+	// If the metadata dropdown doesn't exist and the table of
+	// contents one does, shift the TOC one left
+	if ( $( 'a.mw-bookmanagerv2-nav-data' ).length === 0
+			&& $( 'a.mw-bookmanagerv2-nav-toc' ).length !== 0 ) {
+		$( 'div.mw-bookmanagerv2-nav-toc' ).css( 'margin-left', '0px' );
+	}
+
 	// When the metadata icon is clicked, hide the table
 	// of contents dropdown and toggle the metadata one
 	$( 'a.mw-bookmanagerv2-nav-data' ).click( function () {

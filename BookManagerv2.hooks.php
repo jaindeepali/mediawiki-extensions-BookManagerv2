@@ -52,10 +52,10 @@ class BookManagerv2Hooks {
 		}
 
 		if ( $blockIsValid ) {
-			//Add to cache
+			// Add to cache
 			$cacheKey = wfMemcKey( 'BookManagerv2', $pageTitle->getArticleID(), 'json' );
 			$wgMemc->set( $cacheKey,
-				FormatJson::decode( $content->getNativeData(), false ));
+				FormatJson::decode( $content->getNativeData(), false ) );
 		}
 
 		return true;
@@ -73,38 +73,47 @@ class BookManagerv2Hooks {
 	 * @return string HTML string
 	 */
 	public static function readingInterfaceUX( $prev, $next, $chapterList, $metadata ) {
+		if ( $prev === null && $next === null && $chapterList === null
+				&& $metadata === null ) {
+			return '';
+		}
+
 		global $wgExtensionAssetsPath;
 		$imagePath = $wgExtensionAssetsPath . "/BookManagerv2/images/";
 
 		$html = Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-wrap' ) )
 		. Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-constrain' ) )
-		. Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-bar' ) )
-		. Html::openElement( 'a', array(
-				'class' => array(
-					'mw-bookmanagerv2-nav-icon',
-					'mw-bookmanagerv2-nav-data' )
+		. Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-bar' ) );
+		if ( $metadata ) {
+			$html .= Html::openElement( 'a', array(
+					'class' => array(
+						'mw-bookmanagerv2-nav-icon',
+						'mw-bookmanagerv2-nav-data' )
+					)
 				)
-			)
-		. Html::element( 'img', array(
-				'class' => 'mw-bookmanagerv2-nav-data',
-				'src' => $imagePath . 'Info_sign_font_awesome.png',
-				'alt' => wfMessage( 'bookmanagerv2-metadata' )->text(),
-				'title' => wfMessage( 'bookmanagerv2-metadata' )->text()
-			), '' )
-		. Html::closeElement( 'a' )
-		. Html::openElement( 'a', array(
-				'class' => array(
-					'mw-bookmanagerv2-nav-icon',
-					'mw-bookmanagerv2-nav-toc' )
+			. Html::element( 'img', array(
+					'class' => 'mw-bookmanagerv2-nav-data',
+					'src' => $imagePath . 'Info_sign_font_awesome.png',
+					'alt' => wfMessage( 'bookmanagerv2-metadata' )->text(),
+					'title' => wfMessage( 'bookmanagerv2-metadata' )->text()
+				), '' );
+		}
+		if ( $chapterList ) {
+			$html .= Html::closeElement( 'a' )
+			. Html::openElement( 'a', array(
+					'class' => array(
+						'mw-bookmanagerv2-nav-icon',
+						'mw-bookmanagerv2-nav-toc' )
+					)
 				)
-			)
-		. Html::element( 'img', array(
-				'class' => 'mw-bookmanagerv2-nav-toc',
-				'src' => $imagePath . 'Ul_font_awesome.png',
-				'alt' => wfMessage( 'bookmanagerv2-contents' )->text(),
-				'title' => wfMessage( 'bookmanagerv2-contents' )->text()
-			), '' )
-		. Html::closeElement( 'a' );
+			. Html::element( 'img', array(
+					'class' => 'mw-bookmanagerv2-nav-toc',
+					'src' => $imagePath . 'Ul_font_awesome.png',
+					'alt' => wfMessage( 'bookmanagerv2-contents' )->text(),
+					'title' => wfMessage( 'bookmanagerv2-contents' )->text()
+				), '' )
+			. Html::closeElement( 'a' );
+		}
 		if ( $prev ) {
 			$html .= Linker::link(
 				Title::newFromText( $prev->link ),
@@ -383,16 +392,26 @@ class BookManagerv2Hooks {
 				}
 
 				// Get the previous/next pages
-				$currentPageNumber = null;
-				foreach ( $jsonBook->sections as $key => $val ) {
-					if ( $val->link === $currentPageTitle ) {
-						$currentPageNumber = $key;
-						if ( $key !== 0 ) {
-							$prev = (object) array();
-							$prev->title =
-								$jsonBook->sections[ $key - 1 ]->name;
-							$prev->link =
-								$jsonBook->sections[ $key - 1 ]->link;
+				if ( $wgBookManagerv2PrevNext ) {
+					$currentPageNumber = null;
+					foreach ( $jsonBook->sections as $key => $val ) {
+						if ( $val->link === $currentPageTitle ) {
+							$currentPageNumber = $key;
+							if ( $key !== 0 ) {
+								$prev = (object) array();
+								$prev->title =
+									$jsonBook->sections[ $key - 1 ]->name;
+								$prev->link =
+									$jsonBook->sections[ $key - 1 ]->link;
+							}
+							if ( $key !== ( count( $jsonBook->sections ) - 1 ) ) {
+								$next = (object) array();
+								$next->title =
+									$jsonBook->sections[ $key + 1 ]->name;
+								$next->link =
+									$jsonBook->sections[ $key + 1 ]->link;
+							}
+							break;
 						}
 						if ( $key !== ( count( $jsonBook->sections ) - 1 ) ) {
 							$next = (object) array();
@@ -403,21 +422,31 @@ class BookManagerv2Hooks {
 						}
 						break;
 					}
+
+					if ( $currentPageNumber === null
+						&& count( $jsonBook->sections ) > 0
+					) {
+						$next = (object) array();
+						$next->title =
+							$jsonBook->sections[ 0 ]->name;
+						$next->link =
+							$jsonBook->sections[ 0 ]->link;
+					}
+				} else {
+					$prev = $next = null;
 				}
 
-				if ( $currentPageNumber === null
-					&& count( $jsonBook->sections ) > 0
-				) {
-					$next = (object) array();
-					$next->title =
-						$jsonBook->sections[ 0 ]->name;
-					$next->link =
-						$jsonBook->sections[ 0 ]->link;
+				if ( $wgBookManagerv2ChapterList ) {
+					$chapterList = self::formatChapterList( $jsonBook->sections,
+						$currentPageTitle );
+				} else {
+					$chapterList = null;
 				}
-
-				$chapterList = self::formatChapterList( $jsonBook->sections,
-					$currentPageTitle );
-				$metadata = self::formatMetadata( $jsonBook );
+				if ( $wgBookManagerv2Metadata ) {
+					$metadata = self::formatMetadata( $jsonBook );
+				} else {
+					$metadata = null;
+				}
 				$navbar = self::readingInterfaceUX( $prev, $next, $chapterList,
 					$metadata );
 				$out->prependHtml( $navbar );

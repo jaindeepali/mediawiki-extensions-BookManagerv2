@@ -162,3 +162,21 @@ $wgBookManagerv2ExampleNavigation = false;
  * namespaces in this array.
  */
 $wgBookManagerv2NavigationNamespaces = null;
+
+/**
+ * @var bool
+ * If set to false, this hides the metadata from the navigation bar.
+ */
+$wgBookManagerv2Metadata = true;
+
+/**
+ * @var bool
+ * If set to false, this hides the chapter list from the navigation bar.
+ */
+$wgBookManagerv2ChapterList = true;
+
+/**
+ * @var bool
+ * If set to false, this hides the previous/next links from the navigation bar.
+ */
+$wgBookManagerv2PrevNext = true;
