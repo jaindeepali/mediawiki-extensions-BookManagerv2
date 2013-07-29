@@ -415,7 +415,7 @@ $messages['ja'] = array(
 	'bookmanagerv2-description' => '説明: $1',
 	'bookmanagerv2-source' => '出典: $1',
 	'bookmanagerv2-permission' => '許可: $1',
-	'bookmanagerv2-other-versions' => '{{PLURAL:$1|その他のバージョン}}: $2',
+	'bookmanagerv2-other-versions' => 'その他の{{PLURAL:$1|バージョン}}: $2',
 	'bookmanagerv2-isbn' => 'ISBN: $1',
 	'bookmanagerv2-lccn' => 'LCCN: $1',
 	'bookmanagerv2-oclc' => 'OCLC: $1',
@@ -564,6 +564,12 @@ $messages['pt-br'] = array(
 	'bookmanagerv2-volume' => 'Volume: $1',
 	'bookmanagerv2-edition' => 'Edição: $1',
 	'bookmanagerv2-publication-date' => 'Data de publicação: $1',
+	'bookmanagerv2-publication-city' => 'Cidade de publicação: $1',
+	'bookmanagerv2-language' => 'Língua: $1',
+	'bookmanagerv2-description' => 'Descrição: $1',
+	'bookmanagerv2-source' => 'Fonte: $1',
+	'bookmanagerv2-permission' => 'Permissão: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Outra versão|Outras versões}}: $2',
 );
 
 /** tarandíne (tarandíne)
