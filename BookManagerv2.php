@@ -154,3 +154,11 @@ $wgResourceModules['ext.BookManagerv2js'] = array(
  * page, drawing the information from examples/book.json
  */
 $wgBookManagerv2ExampleNavigation = false;
+
+/**
+ * @var array|null
+ * If null, the navigation bars are added to the $wgContentNamespaces
+ * namespaces. Otherwise, the navigation bars are added to the
+ * namespaces in this array.
+ */
+$wgBookManagerv2NavigationNamespaces = null;
