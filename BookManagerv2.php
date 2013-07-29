@@ -39,9 +39,6 @@ $wgExtensionCredits['parserhook'][] = array(
 
 define( 'NS_BOOK', 240 );
 define( 'NS_BOOK_TALK', 241 );
-
-$wgExtraNamespaces[ NS_BOOK ] = 'Book';
-$wgExtraNamespaces[ NS_BOOK_TALK ] = 'Book_talk';
 $wgContentHandlers[ 'JsonBook' ] = 'JsonBookContentHandler';
 
 // Configuration
@@ -118,6 +115,19 @@ $wgExtensionMessagesFiles += array(
 	'BookManagerv2Namespaces' => __DIR__ . '/BookManagerv2.namespaces.php',
 	'JsonSchema' => __DIR__ . '/includes/JsonSchema.i18n.php'
 );
+
+// Declare namespace. If the namespace name has been localized, the
+// localized name will be used. If you'd like to override the default
+// and specify a custom namespace name for your wiki, you may do so
+// by adding these two lines to LocalSettings.php, immediately below
+// the code that loads the extension:
+//   $wgExtraNamespaces[NS_BOOK] = 'YourCustomName';
+//   $wgExtraNamespaces[NS_BOOK_TALK] = 'YourCustomName_talk';
+$wgHooks['CanonicalNamespaces'][] = function( array &$namespaces ) {
+	$namespaces[NS_BOOK] = 'Book';
+	$namespaces[NS_BOOK_TALK] = 'Book_talk';
+	return true;
+};
 
 // Register hooks
 $wgHooks['BeforePageDisplay'][] = 'BookManagerv2Hooks::onBeforePageDisplay';
