@@ -26,6 +26,42 @@
 class BookManagerv2Hooks {
 
 	/**
+	 * Validates that the revised contents of an NS_BOOK page are valid JSON.
+	 * If not valid, rejects edit with error message.
+	 * @param EditPage $editor
+	 * @param string $text Content of the revised article
+	 * @param string &$error Error message to return
+	 * @param string $summary Edit summary provided for edit.
+	 * @return True
+	 */
+	static function onEditFilterMerged( $editor, $text, &$error, $summary ) {
+		$pageTitle = $editor->getTitle();
+		if ( $pageTitle->getNamespace() !== NS_BOOK ) {
+			return true;
+		}
+
+		global $wgMemc;
+		$content = new JsonBookContent( $text );
+
+		try {
+			$content->validate();
+			$blockIsValid = true;
+		} catch ( JsonSchemaException $e ) {
+			$error = $e->getMessage();
+			$blockIsValid = false;
+		}
+
+		if ( $blockIsValid ) {
+			//Add to cache
+			$cacheKey = wfMemcKey( 'BookManagerv2', $pageTitle->getArticleID(), 'json' );
+			$wgMemc->set( $cacheKey,
+				FormatJson::decode( $content->getNativeData(), false ));
+		}
+
+		return true;
+	}
+
+	/**
 	 * Adds a navigation bar to the page
 	 *
 	 * @param object $prev Object representing the preceding page; contains
