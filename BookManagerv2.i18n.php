@@ -17,7 +17,9 @@ $messages['en'] = array(
 	'bookmanagerv2-invalid-json' => 'Invalid JSON',
 	'bookmanagerv2-example-nav' => 'The navigation bar on this page is appearing because <code>$wgBookManagerv2ExampleNavigation</code> is set to <code>true</code> in <code>LocalSettings.php</code>.',
 	'bookmanagerv2-metadata' => 'Metadata of work',
+	'bookmanagerv2-metadata-header' => 'Metadata',
 	'bookmanagerv2-contents' => 'Contents of work',
+	'bookmanagerv2-contents-header' => 'Contents',
 	'bookmanagerv2-title' => 'Title: $1',
 	'bookmanagerv2-alternate-titles' => 'Alternate {{PLURAL:$1|title|titles}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Author|Authors}}: $2',
@@ -53,7 +55,9 @@ $messages['qqq'] = array(
 	{{Identical|Invalid JSON}}',
 	'bookmanagerv2-example-nav' => 'Message shown in the subtitle to explain why example navigation bars are appearing. The navigation bars appear on every page when <code>$wgBookManagerv2ExampleNavigation</code> is set to <code>true</code>; if it\'s disabled in <code>LocalSettings.php</code>, they will disappear.',
 	'bookmanagerv2-metadata' => "Alternate text for the navigation bar's metadata icon.",
+	'bookmanagerv2-metadata-header' => 'Name of the section header for the section holding the metadata. This is shown when viewing the JSON block.',
 	'bookmanagerv2-contents' => "Alternate text for the navigation bar's table of contents icon.",
+	'bookmanagerv2-contents-header' => 'Name of the section header for the section holding the table of contents. This is shown when viewing the JSON block.',
 	'bookmanagerv2-title' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Title}}',

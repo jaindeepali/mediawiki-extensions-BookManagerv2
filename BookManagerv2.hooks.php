@@ -258,7 +258,7 @@ class BookManagerv2Hooks {
 	 * @param string $currentPageTitle Title of the page that's being viewed
 	 * @return string HTML ordered list element
 	 */
-	public static function formatChapterList( $sections, $currentPageTitle ) {
+	public static function formatChapterList( $sections, $currentPageTitle = null ) {
 		$html = Html::openElement( 'ol', array() );
 		foreach ( $sections as $key => $val ) {
 			if ( $val->link !== $currentPageTitle ) {
@@ -371,7 +371,7 @@ class BookManagerv2Hooks {
 	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		global $wgContentNamespaces, $wgBookManagerv2NavigationNamespaces,
 			$wgBookManagerv2Metadata, $wgBookManagerv2ChapterList,
-			$wgBookManagerv2PrevNext;
+			$wgBookManagerv2PrevNext, $wgBookManagerv2JsonFrontend;
 
 		// Navbars will be added to namespaces in the
 		// $wgBookManagerv2NavigationNamespaces array if it's set, otherwise
@@ -384,7 +384,7 @@ class BookManagerv2Hooks {
 
 		if ( $out->getTitle()->inNamespaces( $navigationNamespaces ) ) {
 			if ( $out->getRevisionId() !== null ) {
-				global $wgContLang, $wgBookManagerv2ExampleNavigation, $wgMemc;
+				global $wgContLang, $wgBookManagerv2ExampleNavigation, $wgMemc;	
 				$categories = $out->getCategories();
 				$namespace = $wgContLang->convertNamespace( NS_BOOK ) . ":";
 				$out->addModuleStyles( "ext.BookManagerv2" );
@@ -425,8 +425,10 @@ class BookManagerv2Hooks {
 				if ( $wgBookManagerv2PrevNext ) {
 					$currentPageNumber = null;
 					foreach ( $jsonBook->sections as $key => $val ) {
+						// Find the entry that corresponds to this page						
 						if ( $val->link === $currentPageTitle ) {
 							$currentPageNumber = $key;
+							// If this isn't the first section, set previous link
 							if ( $key !== 0 ) {
 								$prev = (object) array();
 								$prev->title =
@@ -434,6 +436,7 @@ class BookManagerv2Hooks {
 								$prev->link =
 									$jsonBook->sections[ $key - 1 ]->link;
 							}
+							// If this isn't the last section, set the next link
 							if ( $key !== ( count( $jsonBook->sections ) - 1 ) ) {
 								$next = (object) array();
 								$next->title =
@@ -443,16 +446,10 @@ class BookManagerv2Hooks {
 							}
 							break;
 						}
-						if ( $key !== ( count( $jsonBook->sections ) - 1 ) ) {
-							$next = (object) array();
-							$next->title =
-								$jsonBook->sections[ $key + 1 ]->name;
-							$next->link =
-								$jsonBook->sections[ $key + 1 ]->link;
-						}
-						break;
 					}
 
+					// Couldn't find this page in the section list; set the "next" link
+					// to the first section
 					if ( $currentPageNumber === null
 						&& count( $jsonBook->sections ) > 0
 					) {
@@ -480,6 +477,45 @@ class BookManagerv2Hooks {
 				$navbar = self::readingInterfaceUX( $prev, $next, $chapterList,
 					$metadata );
 				$out->prependHtml( $navbar );
+			}
+		} else if ( $out->getTitle()->inNamespace( NS_BOOK ) && $wgBookManagerv2JsonFrontend ) {
+			self::formatJsonView( $out, $skin );
+		}
+	return true;
+	}
+
+	/**
+	 * Formats the JSON page so that the metadata and chapter list are nicely
+	 * readable.
+	 *
+	 * @param OutputPage &$out OutputPage object
+	 * @param Skin &$skin Skin object
+	 * @return true
+	 **/
+	public static function formatJsonView( OutputPage &$out, Skin &$skin ) {
+		if ( $out->getRevisionId() !== null ) {
+			$currentPageTitle = $out->getTitle();
+			$json = json_decode( $out->getWikiPage()->getText( Revision::FOR_PUBLIC ) );
+			if ( $json ) {
+				$out->addModuleStyles( "ext.BookManagerv2" );
+				$out->clearHTML();
+				$metadata = Html::openElement( 'div',
+					array( 'class' => 'mw-bookmanagerv2-json-data' ) )
+					. self::formatMetadata( $json )
+					. Html::closeElement( 'div' );
+				$chapterList = Html::openElement( 'div',
+				array( 'class' => 'mw-bookmanagerv2-json-contents' ) )
+				. self::formatChapterList( $json->sections )
+				. Html::closeElement( 'div' );
+
+				$out->addWikiText( "==" .
+					wfMessage( 'bookmanagerv2-metadata-header' )->text()
+					. "==" );
+				$out->addHTML( $metadata );
+				$out->addWikiText( "==" .
+					wfMessage( 'bookmanagerv2-contents-header' )->text()
+					. "==" );
+				$out->addHTML( $chapterList );
 			}
 		}
 		return true;

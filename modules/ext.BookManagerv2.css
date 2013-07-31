@@ -20,10 +20,12 @@ div.mw-bookmanagerv2-nav-wrap {
 	width: 100%;
 	text-align: center;
 }
+
 div.mw-bookmanagerv2-nav-constrain {
 	display:inline-block;
 	position: relative;
 }
+
 div.mw-bookmanagerv2-nav-bar {
 	display: inline-block;
 	background-color: #f5f5f5;
@@ -31,26 +33,38 @@ div.mw-bookmanagerv2-nav-bar {
 	border-radius: 5px;
 	padding: 3px 5px;
 }
-a.mw-bookmanagerv2-nav-icon, a.mw-bookmanagerv2-nav-icon img {
+
+a.mw-bookmanagerv2-nav-icon,
+a.mw-bookmanagerv2-nav-icon img {
 	display: inline;
 	cursor: pointer;
 }
+
 a.mw-bookmanagerv2-nav-icon {
 	float: left;
 	margin: 0 10px;
 }
+
 a.mw-bookmanagerv2-nav-prev {
 	float: left;
 	margin-right: 10px;
 	background: transparent url('../images/Angle_left_font_awesome.png') no-repeat left center;
 	padding-left: 25px;
 }
+
 a.mw-bookmanagerv2-nav-next {
 	float: right;
 	margin-left: 10px;
 	background: transparent url('../images/Angle_right_font_awesome.png') no-repeat right center;
 	padding-right: 25px;
 }
+
 div.mw-bookmanagerv2-nav-dropdown {
 	display: none;
+}
+
+div.mw-bookmanagerv2-json-data ul,
+div.mw-bookmanagerv2-json-contents ol {
+	list-style: none;
+	margin: 0;
 }

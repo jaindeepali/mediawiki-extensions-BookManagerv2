@@ -127,7 +127,7 @@ $wgHooks['CanonicalNamespaces'][] = function( array &$namespaces ) {
 	$namespaces[NS_BOOK] = 'Book';
 	$namespaces[NS_BOOK_TALK] = 'Book_talk';
 	return true;
-};
+} ;
 
 // Register hooks
 $wgHooks['BeforePageDisplay'][] = 'BookManagerv2Hooks::onBeforePageDisplay';
@@ -180,3 +180,9 @@ $wgBookManagerv2ChapterList = true;
  * If set to false, this hides the previous/next links from the navigation bar.
  */
 $wgBookManagerv2PrevNext = true;
+
+/**
+ * @var bool
+ * If set to true, a view frontend overrides the raw JSON.
+ */
+$wgBookManagerv2JsonFrontend = false;
