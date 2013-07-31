@@ -421,6 +421,15 @@ $messages['ja'] = array(
 	'bookmanagerv2-oclc' => 'OCLC: $1',
 );
 
+/** Kurdish (Latin script) (Kurdî (latînî)‎)
+ * @author George Animal
+ */
+$messages['ku-latn'] = array(
+	'bookmanagerv2-title' => 'Sernav:$1',
+	'bookmanagerv2-language' => 'Ziman:$1',
+	'bookmanagerv2-description' => 'Danasîn:$1',
+);
+
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
  */
