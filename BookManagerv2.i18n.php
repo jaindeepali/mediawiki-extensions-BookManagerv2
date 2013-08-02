@@ -396,6 +396,7 @@ $messages['it'] = array(
 $messages['ja'] = array(
 	'bookmanagerv2-desc' => '書籍のメタデータおよび構造を入力および格納する機能を追加する',
 	'bookmanagerv2-invalid-json' => '無効な JSON',
+	'bookmanagerv2-example-nav' => 'このページでナビゲーションバーが表示されているのは、<code>LocalSettings.php</code> で <code>$wgBookManagerv2ExampleNavigation</code> が <code>true</code> に設定されているためです。',
 	'bookmanagerv2-metadata' => '作品のメタデータ',
 	'bookmanagerv2-contents' => '作品の内容',
 	'bookmanagerv2-title' => '書名: $1',
