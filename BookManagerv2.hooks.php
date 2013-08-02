@@ -36,7 +36,7 @@ class BookManagerv2Hooks {
 	 */
 	static function onEditFilterMerged( $editor, $text, &$error, $summary ) {
 		$pageTitle = $editor->getTitle();
-		if ( $pageTitle->getNamespace() !== NS_BOOK ) {
+		if ( $pageTitle->inNamespace( NS_BOOK ) ) {
 			return true;
 		}
 
@@ -382,7 +382,7 @@ class BookManagerv2Hooks {
 			$navigationNamespaces = $wgContentNamespaces;
 		}
 
-		if ( in_array( $out->getTitle()->getNamespace(), $navigationNamespaces ) ) {
+		if ( $out->getTitle()->inNamespaces( $navigationNamespaces ) ) {
 			if ( $out->getRevisionId() !== null ) {
 				global $wgContLang, $wgBookManagerv2ExampleNavigation, $wgMemc;
 				$categories = $out->getCategories();
