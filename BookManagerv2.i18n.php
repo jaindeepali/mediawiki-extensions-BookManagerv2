@@ -143,6 +143,36 @@ See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
 );
 
+/** Asturian (asturianu)
+ * @author Xuacu
+ */
+$messages['ast'] = array(
+	'bookmanagerv2-desc' => "Amiesta la función d'inxertar y guardar los metadatos y la estructura de llibros",
+	'bookmanagerv2-invalid-json' => 'JSON inválidu',
+	'bookmanagerv2-example-nav' => 'La barra de navegación d\'esta páxina apaez porque <code>$wgBookManagerv2ExampleNavigation</code> ta definíu como "<code>true</code>" en <code>LocalSettings.php</code>.',
+	'bookmanagerv2-metadata' => 'Metadatos de la obra',
+	'bookmanagerv2-contents' => 'Conteníu de la obra',
+	'bookmanagerv2-title' => 'Títulu: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Títulu alternativu|Títulos alternativos}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Traductor|Traductores}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Editor|Editores}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Ilustrador|Ilustradores}}: $2',
+	'bookmanagerv2-subtitle' => 'Subtítulu: $1',
+	'bookmanagerv2-series-title' => 'Títulu de la serie: $1',
+	'bookmanagerv2-volume' => 'Volume: $1',
+	'bookmanagerv2-edition' => 'Edición: $1',
+	'bookmanagerv2-publisher' => 'Editorial: $1',
+	'bookmanagerv2-printer' => 'Impresor: $1',
+	'bookmanagerv2-publication-date' => 'Data de publicación: $1',
+	'bookmanagerv2-publication-city' => 'Ciudá de publicación: $1',
+	'bookmanagerv2-language' => 'Llingua: $1',
+	'bookmanagerv2-description' => 'Descripción: $1',
+	'bookmanagerv2-source' => 'Fonte: $1',
+	'bookmanagerv2-permission' => 'Permisu: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Otra versión|Otres versiones}}: $2',
+);
+
 /** Bengali (বাংলা)
  * @author Aftab1995
  * @author Bellayet
@@ -210,6 +240,7 @@ $messages['de'] = array(
 );
 
 /** Spanish (español)
+ * @author Fitoschido
  * @author Larjona
  * @author Luis Felipe Schenone
  * @author Miguel2706
@@ -218,6 +249,7 @@ $messages['es'] = array(
 	'bookmanagerv2-desc' => 'Agrega funcionalidad para ingresar y guardar metainformación sobre libros',
 	'bookmanagerv2-invalid-json' => 'JSON inválido',
 	'bookmanagerv2-example-nav' => 'La barra de navegación en esta página se muestra porque <code>$wgBookManagerv2ExampleNavigation</code> se establece en verdadero en <code>LocalSettings.php</code>.',
+	'bookmanagerv2-contents' => 'Contenido del trabajo',
 	'bookmanagerv2-title' => 'Título: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
@@ -512,6 +544,7 @@ $messages['ms'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author Hansmuller
  * @author Siebrand
  */
 $messages['nl'] = array(
@@ -519,7 +552,7 @@ $messages['nl'] = array(
 	'bookmanagerv2-invalid-json' => 'Ongeldige JSON',
 	'bookmanagerv2-example-nav' => 'De navigatiebalk op deze pagina wordt weergegeven omdat <code>$wgBookManagerv2ExampleNavigation</code> in <code>LocalSettings.php</code> is ingesteld op "<code>true</code>".',
 	'bookmanagerv2-metadata' => 'Metagegevens van werk',
-	'bookmanagerv2-contents' => 'Eigenlijk werk',
+	'bookmanagerv2-contents' => 'Inhoud van het werk',
 	'bookmanagerv2-title' => 'Titel: $1',
 	'bookmanagerv2-alternate-titles' => 'Alternatieve {{PLURAL:$1|titel|titels}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Auteur|Auteurs}}: $2',
