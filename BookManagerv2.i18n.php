@@ -677,11 +677,13 @@ $messages['sv'] = array(
 );
 
 /** Ukrainian (українська)
+ * @author Andriykopanytsia
  * @author Ата
  */
 $messages['uk'] = array(
 	'bookmanagerv2-desc' => 'Додає функціональність до введення і зберігання метаданих і структури книги',
 	'bookmanagerv2-invalid-json' => 'Неприпустимий JSON',
+	'bookmanagerv2-contents' => 'Зміст роботи',
 	'bookmanagerv2-title' => 'Назва: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Альтернативна назва|Альтернативні назви}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Автор|Автори}}: $2',
