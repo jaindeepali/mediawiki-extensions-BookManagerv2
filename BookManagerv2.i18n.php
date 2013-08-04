@@ -201,6 +201,28 @@ $messages['bn'] = array(
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|অন্যান্য সংস্করণ}}: $2',
 );
 
+/** Breton (brezhoneg)
+ * @author Y-M D
+ */
+$messages['br'] = array(
+	'bookmanagerv2-title' => 'Titl : $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Titl|Titloù}} all : $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Skrivagner|Skrivagnerien}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Troer|Troerien}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Embanner|Embannerien}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Treser|Treserien}}: $2',
+	'bookmanagerv2-subtitle' => 'Istitloù : $1',
+	'bookmanagerv2-publisher' => 'Embanner : $1',
+	'bookmanagerv2-printer' => 'Mouller : $1',
+	'bookmanagerv2-publication-date' => 'Deiziad embann : $1',
+	'bookmanagerv2-publication-city' => "Lec'h embann : $1",
+	'bookmanagerv2-language' => 'Yezh : $1',
+	'bookmanagerv2-description' => 'Deskrivadur : $1',
+	'bookmanagerv2-source' => 'Mammenn : $1',
+	'bookmanagerv2-permission' => 'Aotre : $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Stumm|Stummoù}} all : $2',
+);
+
 /** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
