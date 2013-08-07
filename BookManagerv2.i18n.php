@@ -560,6 +560,14 @@ $messages['mk'] = array(
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Друга верзија|Други верзии}}: $2',
 );
 
+/** Marathi (मराठी)
+ * @author V.narsikar
+ */
+$messages['mr'] = array(
+	'bookmanagerv2-alternate-titles' => 'पर्यायी {{PLURAL:$1|मथळा|मथळे}}: $2',
+	'bookmanagerv2-other-versions' => 'ईतर{{PLURAL:$1|आवृत्ती|आवृत्त्या}}: $2',
+);
+
 /** Malay (Bahasa Melayu)
  * @author Anakmalaysia
  */
