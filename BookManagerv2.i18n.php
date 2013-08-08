@@ -42,7 +42,42 @@ $messages['en'] = array(
 	'bookmanagerv2-isbn' => 'ISBN: $1',
 	'bookmanagerv2-lccn' => 'LCCN: $1',
 	'bookmanagerv2-oclc' => 'OCLC: $1',
+	'bookmanagerv2-metadata-heading' => 'Metadata',
+	'bookmanagerv2-sections-heading' => 'Sections',
+	'bookmanagerv2-move-alt' => 'Move this section',
+	'bookmanagerv2-remove-alt' => 'Remove this section',
+	'bookmanagerv2-rename' => 'rename',
+	'bookmanagerv2-create' => 'create',
+	'bookmanagerv2-done' => 'Done',
+	'bookmanagerv2-add' => 'add',
 	'bookmanagerv2-read' => 'read',
+	'bookmanagerv2-section-name' => 'Section name:',
+	'bookmanagerv2-section-link' => 'Section link:',
+	'bookmanagerv2-title-field' => 'Title',
+	'bookmanagerv2-alternate-titles-field' => 'Alternate titles',
+	'bookmanagerv2-authors-field' => 'Authors',
+	'bookmanagerv2-translators-field' => 'Translators',
+	'bookmanagerv2-editors-field' => 'Editors',
+	'bookmanagerv2-illustrators-field' => 'Illustrators',
+	'bookmanagerv2-subtitle-field' => 'Subtitle',
+	'bookmanagerv2-series-title-field' => 'Series title',
+	'bookmanagerv2-volume-field' => 'Volume',
+	'bookmanagerv2-edition-field' => 'Edition',
+	'bookmanagerv2-publisher-field' => 'Publisher',
+	'bookmanagerv2-printer-field' => 'Printer',
+	'bookmanagerv2-publication-year-field' => 'Publication year',
+	'bookmanagerv2-publication-month-field' => 'Publication month',
+	'bookmanagerv2-publication-day-field' => 'Publication day',
+	'bookmanagerv2-publication-city-field' => 'Publication city',
+	'bookmanagerv2-language-field' => 'Language',
+	'bookmanagerv2-description-field' => 'Description',
+	'bookmanagerv2-source-field' => 'Source',
+	'bookmanagerv2-permission-field' => 'Permission',
+	'bookmanagerv2-other-versions-field' => 'Other versions',
+	'bookmanagerv2-isbn-field' => 'ISBN',
+	'bookmanagerv2-lccn-field' => 'LCCN',
+	'bookmanagerv2-oclc-field' => 'OCLC',
+	'bookmanagerv2-sections-field' => 'Sections',
 );
 
 /** Message documentation (Message documentation)
@@ -139,16 +174,49 @@ Parameters:
 * $1 - number of versions
 * $2 - ...
 {{Identical|Other version}}',
-	'bookmanagerv2-isbn' => 'Label for the International Standard Book Number, in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+	'bookmanagerv2-isbn' => 'Label for the International Standard Book Number, in the navigation bar metadata dropdown. [http://en.wikipedia.org/wiki/ISBN ISBN]. See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|ISBN}}',
-	'bookmanagerv2-lccn' => 'Label for the Library of Congress Control Number, in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+	'bookmanagerv2-lccn' => 'Label for the Library of Congress Control Number, in the navigation bar metadata dropdown. [http://en.wikipedia.org/wiki/LCCN LCCN]. See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
-	'bookmanagerv2-oclc' => 'Label for the Online Computer Library Center, in the navigation bar metadata dropdown.
+	'bookmanagerv2-oclc' => 'Label for the Online Computer Library Center, in the navigation bar metadata dropdown. [http://en.wikipedia.org/wiki/OCLC OCLC].
 
 See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
-	'bookmanagerv2-read' => 'Text for a link to view the metadata page'
+	'bookmanagerv2-metadata-heading' => 'Heading for the collapsible section of the JSON editor that holds the metadata (everything but the sections information).',
+	'bookmanagerv2-sections-heading' => 'Heading for the collapsible section of the JSON editor that holds information on the sections of the book.',
+	'bookmanagerv2-move-alt' => 'Alternate text for the move icon in the JSON editor section blocks. Instructs the user that dragging the section block will reorder the sections.',
+	'bookmanagerv2-remove-alt' => 'Alternate text for the remove (x) icon in the JSON editor section blocks. Instructs the user that clicking this will remove the section from the work.',
+	'bookmanagerv2-rename' => 'Link text to change the name of a section as it appears in the section list.',
+	'bookmanagerv2-create' => 'Link text to create a nonexistent section page.',
+	'bookmanagerv2-done' => 'Text to display on the button that the user clicks when they\'re finished naming or renaming a section.',
+	'bookmanagerv2-add' => 'Text to display in a link to add a new section or a new entry in a metadata field that accepts multiple values.',
+	'bookmanagerv2-read' => 'Text for a link to view the metadata page',
+	'bookmanagerv2-title-field' => 'JSON editor input field label',
+	'bookmanagerv2-alternate-titles-field' => 'JSON editor input field',
+	'bookmanagerv2-authors-field' => 'JSON editor input field label',
+	'bookmanagerv2-translators-field' => 'JSON editor input field label',
+	'bookmanagerv2-editors-field' => 'JSON editor input field label',
+	'bookmanagerv2-illustrators-field' => 'JSON editor input field label',
+	'bookmanagerv2-subtitle-field' => 'JSON editor input field label',
+	'bookmanagerv2-series-title-field' => 'JSON editor input field label',
+	'bookmanagerv2-volume-field' => 'JSON editor input field label',
+	'bookmanagerv2-edition-field' => 'JSON editor input field label',
+	'bookmanagerv2-publisher-field' => 'JSON editor input field label',
+	'bookmanagerv2-printer-field' => 'JSON editor input field label',
+	'bookmanagerv2-publication-year-field' => 'JSON editor input field label',
+	'bookmanagerv2-publication-month-field' => 'JSON editor input field label',
+	'bookmanagerv2-publication-day-field' => 'JSON editor input field label',
+	'bookmanagerv2-publication-city-field' => 'JSON editor input field label',
+	'bookmanagerv2-language-field' => 'JSON editor input field label',
+	'bookmanagerv2-description-field' => 'JSON editor input field label',
+	'bookmanagerv2-source-field' => 'JSON editor input field label',
+	'bookmanagerv2-permission-field' => 'JSON editor input field label',
+	'bookmanagerv2-other-versions-field' => 'JSON editor input field label',
+	'bookmanagerv2-isbn-field' => 'JSON editor input field label. ISBN is the International Standard Book Number ([http://en.wikipedia.org/wiki/ISBN ISBN])',
+	'bookmanagerv2-lccn-field' => 'JSON editor input field label. LCCN is the Library of Congress Control Number ([http://en.wikipedia.org/wiki/LCCN LCCN])',
+	'bookmanagerv2-oclc-field' => 'JSON editor input field label. OCLC is the Online Computer Library Center ([http://en.wikipedia.org/wiki/OCLC OCLC])',
+	'bookmanagerv2-sections-field' => 'JSON editor input field label',
 );
 
 /** Asturian (asturianu)

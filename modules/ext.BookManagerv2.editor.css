@@ -1,0 +1,63 @@
+/*
+ * @file
+ * @section LICENSE
+ * This program is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU General Public License
+ * as published by the Free Software Foundation; either version 2
+ * of the License, or (at your option) any later version.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
+ **/
+table.mw-bookmanagerv2-edit-form th {
+	text-align: left;
+}
+
+h2.mw-bookmanagerv2-sections-heading {
+	margin-top: 10px;
+}
+
+span.mw-bookmanagerv2-show-hide {
+	font-size: small;
+	float: right;
+}
+
+span.mw-bookmanagerv2-link-bracket,
+span.mw-bookmanagerv2-link-divider {
+	margin: 0 2px;
+}
+
+ul.mw-bookmanagerv2-section-list {
+	list-style: none;
+	margin: 0;
+}
+
+li.mw-bookmanagerv2-section,
+li.mw-bookmanagerv2-new-section {
+	background-color: #eeeeee;
+	border: 1px solid #919191;
+	width: 700px;
+	margin-bottom: 10px;
+	overflow: hidden;
+}
+
+li.mw-bookmanagerv2-section a.mw-bookmanagerv2-section-link {
+	display: inline-block;
+	vertical-align: middle;
+	float: left;
+	margin: 10px;
+}
+
+/* Hide JavaScript-dependent parts when the client does not
+ * have JavaScript enabled */
+html.client-nojs span.mw-bookmanagerv2-edit-rename,
+html.client-nojs span.mw-bookmanagerv2-show-hide,
+html.client-nojs span.mw-bookmanagerv2-add {
+	display: none;
+}

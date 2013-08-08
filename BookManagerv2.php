@@ -104,6 +104,7 @@ $wgAutoloadClasses += array(
 	'JsonUtil' => __DIR__ . '/includes/JsonSchema.php',
 	'TreeRef' => __DIR__ . '/includes/JsonSchema.php',
 	'JsonSchemaIndex' => __DIR__ . '/includes/JsonSchema.php',
+	'JsonEditor' => __DIR__ . '/JsonEditor.php',
 
 	// API
 	'ApiJsonSchema' => __DIR__ . '/includes/ApiJsonSchema.php',
@@ -132,6 +133,7 @@ $wgHooks['CanonicalNamespaces'][] = function( array &$namespaces ) {
 // Register hooks
 $wgHooks['BeforePageDisplay'][] = 'BookManagerv2Hooks::onBeforePageDisplay';
 $wgHooks['EditFilterMerged'][] = 'BookManagerv2Hooks::onEditFilterMerged';
+$wgHooks['CustomEditor'][] = 'BookManagerv2Hooks::onCustomEditor';
 
 // Load resources
 $wgResourceModules['ext.BookManagerv2'] = array(
@@ -144,6 +146,35 @@ $wgResourceModules['ext.BookManagerv2js'] = array(
 	'styles' => 'ext.BookManagerv2js.css',
 	'localBasePath' => __DIR__ . '/modules',
 	'remoteExtPath' => 'BookManagerv2/modules'
+);
+$wgResourceModules['ext.BookManagerv2.editor'] = array(
+	'styles' => 'ext.BookManagerv2.editor.css',
+	'localBasePath' => __DIR__ . '/modules',
+	'remoteExtPath' => 'BookManagerv2/modules',
+);
+$wgResourceModules['ext.BookManagerv2.editorjs'] = array(
+	'scripts' => 'ext.BookManagerv2.editor.js',
+	'styles' => 'ext.BookManagerv2.editorjs.css',
+	'localBasePath' => __DIR__ . '/modules',
+	'remoteExtPath' => 'BookManagerv2/modules',
+	'dependencies' => array(
+		'jquery.ui.sortable',
+		'mediawiki.jqueryMsg',
+		'jquery.json',
+		'mediawiki.util'
+	),
+	'messages' => array(
+		'bookmanagerv2-move-alt',
+		'bookmanagerv2-remove-alt',
+		'hidetoc',
+		'showtoc',
+		'bookmanagerv2-done',
+		'cancel',
+		'bookmanagerv2-section-name',
+		'bookmanagerv2-section-link',
+		'editlink',
+		'bookmanagerv2-rename'
+	)
 );
 
 // User configuration
@@ -187,9 +218,3 @@ $wgBookManagerv2ChapterList = true;
  * If set to false, this hides the previous/next links from the navigation bar.
  */
 $wgBookManagerv2PrevNext = true;
-
-/**
- * @var bool
- * If set to true, a view frontend overrides the raw JSON.
- */
-$wgBookManagerv2JsonFrontend = false;

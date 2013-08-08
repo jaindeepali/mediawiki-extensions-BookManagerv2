@@ -4,7 +4,10 @@
         "title": {
             "description": "Title of the work",
             "type": "string",
-            "required": true
+            "required": true,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-title-field"
+            }
         },
         "alternate_titles": {
             "description": "List of other titles by which the work is known",
@@ -15,7 +18,10 @@
                     "type": "string",
                     "required": false
                 }
-            ]
+            ],
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-alternate-titles-field"
+            }
         },
         "authors": {
             "description": "List of contributors to the work",
@@ -26,7 +32,10 @@
                     "type": "string",
                     "required": false
                 }
-            ]
+            ],
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-authors-field"
+            }
         },
         "translators": {
             "description": "List of translators who contributed to the work",
@@ -37,7 +46,10 @@
                     "type": "string",
                     "required": false
                 }
-            ]
+            ],
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-translators-field"
+            }
         },
         "editors": {
             "description": "List of editors who contributed to the work",
@@ -48,7 +60,10 @@
                     "type": "string",
                     "required": false
                 }
-            ]
+            ],
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-editors-field"
+            }
         },
         "illustrators": {
             "description": "List of illustrators who contributed to the work",
@@ -59,77 +74,122 @@
                     "type": "string",
                     "required": false
                 }
-            ]
+            ],
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-illustrators-field"
+            }
         },
         "subtitle": {
             "description": "Subtitle to the title of the work",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-subtitle-field"
+            }
         },
         "series_title": {
             "description": "Title of the series of which this work is a member",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-series-title-field"
+            }
         },
         "volume": {
             "description": "Volume number of the work",
             "type": "number",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-volume-field"
+            }
         },
         "edition": {
             "description": "Edition number of the work",
             "type": "number",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-edition-field"
+            }
         },
         "publisher": {
             "description": "Name of the publisher of this work",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-publisher-field"
+            }
         },
         "printer": {
             "description": "Name of the printer of this work",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-printer-field"
+            }
         },
         "publication_year": {
             "description": "Year of publication of the work",
             "type": "integer",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-publication-year-field"
+            }
         },
         "publication_month": {
             "description": "Month of publication of the work",
             "type": "integer",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-publication-month-field"
+            }
         },
         "publication_day": {
             "description": "Day of publication of the work",
             "type": "integer",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-publication-day-field"
+            }
         },
         "publication_city": {
             "description": "City in which the work was published",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-publication-city-field"
+            }
         },
         "language": {
             "description": "Primary language of the work",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-language-field"
+            }
         },
         "description": {
             "description": "Short description of the work",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-description-field"
+            }
         },
         "source": {
             "description": "Source of the work",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-source-field"
+            }
         },
         "permission": {
             "description": "Licensing permission for works not created on-wiki",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-permission-field"
+            }
         },
         "other_versions": {
             "description": "Lists of other versions of this work that are available on the wiki",
@@ -140,22 +200,34 @@
                     "type": "string",
                     "required": false
                 }
-            ]
+            ],
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-other-versions-field"
+            }
         },
         "isbn": {
             "description": "International Standard Book Number of the work",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-isbn-field"
+            }
         },
         "lccn": {
             "description": "Library of Congress Control Number of the work",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-lccn-field"
+            }
         },
         "oclc": {
             "description": "Online Computer Library Center identifier of the work",
             "type": "string",
-            "required": false
+            "required": false,
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-oclc-field"
+            }
         },
         "sections": {
             "description": "List of objects representing the sections of the work",
@@ -169,21 +241,33 @@
                         "name": {
                             "description": "Name of the section",
                             "type": "string",
-                            "required": true
+                            "required": true,
+                            "additionalProperties": {
+                                "i18n": "bookmanagerv2-name-field"
+                            }
                         },
                         "link": {
                             "description": "Name of the wiki page where this section is located",
                             "type": "string",
-                            "required": true
+                            "required": true,
+                            "additionalProperties": {
+                                "i18n": "bookmanagerv2-link-field"
+                            }
                         },
                         "source": {
                             "description": "The source of the particular section",
                             "required": false,
-                            "type": "string"
+                            "type": "string",
+                            "additionalProperties": {
+                                "i18n": "bookmanagerv2-source-field"
+                            }
                         }
                     }
                 }
-            ]
+            ],
+            "additionalProperties": {
+                "i18n": "bookmanagerv2-sections-field"
+            }
         }
     },
     "additionalProperties": false
