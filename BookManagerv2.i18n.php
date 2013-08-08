@@ -564,6 +564,7 @@ $messages['mk'] = array(
  * @author V.narsikar
  */
 $messages['mr'] = array(
+	'bookmanagerv2-contents' => 'कार्यांचा आशय',
 	'bookmanagerv2-alternate-titles' => 'पर्यायी {{PLURAL:$1|मथळा|मथळे}}: $2',
 	'bookmanagerv2-other-versions' => 'ईतर{{PLURAL:$1|आवृत्ती|आवृत्त्या}}: $2',
 );
