@@ -759,3 +759,17 @@ $messages['zh-hans'] = array(
 	'bookmanagerv2-permission' => '权限:$1',
 	'bookmanagerv2-other-versions' => '其他版本：$2', # Fuzzy
 );
+
+/** Traditional Chinese (中文（繁體）‎)
+ * @author Openerror
+ */
+$messages['zh-hant'] = array(
+	'bookmanagerv2-title' => '主標題：$1',
+	'bookmanagerv2-subtitle' => '副標題：$1',
+	'bookmanagerv2-publisher' => '出版商：$1',
+	'bookmanagerv2-printer' => '印刷商：$1',
+	'bookmanagerv2-publication-date' => '出版日期：$1',
+	'bookmanagerv2-publication-city' => '出版城市：$1',
+	'bookmanagerv2-language' => '語言：$1',
+	'bookmanagerv2-description' => '內容簡介：$1',
+);
