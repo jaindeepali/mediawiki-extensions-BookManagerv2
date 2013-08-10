@@ -36,7 +36,7 @@ class BookManagerv2Hooks {
 	 */
 	static function onEditFilterMerged( $editor, $text, &$error, $summary ) {
 		$pageTitle = $editor->getTitle();
-		if ( $pageTitle->inNamespace( NS_BOOK ) ) {
+		if ( !$pageTitle->inNamespace( NS_BOOK ) ) {
 			return true;
 		}
 
