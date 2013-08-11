@@ -493,6 +493,7 @@ $messages['lb'] = array(
 	'bookmanagerv2-metadata' => 'Metadate vum Wierk',
 	'bookmanagerv2-contents' => 'Inhalter vum Wierk',
 	'bookmanagerv2-title' => 'Titel: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Alternativen Titel|Alternativ Titelen}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Auteur|Auteuren}}: $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Iwwersetzer}}: $2',
 	'bookmanagerv2-subtitle' => 'Ënnertitel: $1',
@@ -565,7 +566,23 @@ $messages['mk'] = array(
  */
 $messages['mr'] = array(
 	'bookmanagerv2-contents' => 'कार्यांचा आशय',
+	'bookmanagerv2-title' => 'शीर्षक:$1',
 	'bookmanagerv2-alternate-titles' => 'पर्यायी {{PLURAL:$1|मथळा|मथळे}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|लेखक}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|भाषांतरकार}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|संपादक}}: $2',
+	'bookmanagerv2-subtitle' => 'उपशीर्षक:$1',
+	'bookmanagerv2-series-title' => 'मालिकेचे शीर्षक', # Fuzzy
+	'bookmanagerv2-volume' => 'खंड:$1',
+	'bookmanagerv2-edition' => 'आवृत्ती:$1',
+	'bookmanagerv2-publisher' => 'प्रकाशक:$1',
+	'bookmanagerv2-printer' => 'छापणारा:$1',
+	'bookmanagerv2-publication-date' => 'प्रकाशनाचा दिनांक:$1',
+	'bookmanagerv2-publication-city' => 'कोणत्या शहरातून प्रकाशित:$1',
+	'bookmanagerv2-language' => 'भाषा:$1',
+	'bookmanagerv2-description' => 'वर्णन:$1',
+	'bookmanagerv2-source' => 'स्रोत:$1',
+	'bookmanagerv2-permission' => 'परवानगी:$1',
 	'bookmanagerv2-other-versions' => 'ईतर{{PLURAL:$1|आवृत्ती|आवृत्त्या}}: $2',
 );
 
