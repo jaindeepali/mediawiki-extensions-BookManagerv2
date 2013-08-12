@@ -48,7 +48,7 @@ $messages['en'] = array(
  * @author mollywhite
  */
 $messages['qqq'] = array(
-	'bookmanagerv2-desc' => '{{desc|name=BookManagerv2|url=http://www.mediawiki.org/wiki/Extension:BookManagerv2}}',
+	'bookmanagerv2-desc' => '{{desc|name=Book Manager v2|url=http://www.mediawiki.org/wiki/Extension:BookManagerv2}}',
 	'bookmanagerv2-invalid-json' => 'Error message shown when an editor tries to save an invalid JSON block.
 	{{Identical|Invalid JSON}}',
 	'bookmanagerv2-example-nav' => 'Message shown in the subtitle to explain why example navigation bars are appearing. The navigation bars appear on every page when <code>$wgBookManagerv2ExampleNavigation</code> is set to <code>true</code>; if it\'s disabled in <code>LocalSettings.php</code>, they will disappear.',
