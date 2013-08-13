@@ -72,7 +72,9 @@ class BookManagerv2Hooks {
 	 * @param string $metadata String containing the metadata HTML
 	 * @return string HTML string
 	 */
-	public static function readingInterfaceUX( $prev, $next, $chapterList, $metadata ) {
+	public static function readingInterfaceUX( $prev, $next, $chapterList, $metadata,
+   		$currentPageTitle
+	) {
 		if ( $prev === null && $next === null && $chapterList === null
 				&& $metadata === null ) {
 			return '';
@@ -85,34 +87,38 @@ class BookManagerv2Hooks {
 		. Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-constrain' ) )
 		. Html::openElement( 'div', array( 'class' => 'mw-bookmanagerv2-nav-bar' ) );
 		if ( $metadata ) {
-			$html .= Html::openElement( 'a', array(
-					'class' => array(
-						'mw-bookmanagerv2-nav-icon',
-						'mw-bookmanagerv2-nav-data' )
-					)
-				)
-			. Html::element( 'img', array(
+			$imgHtml = Html::element( 'img', array(
 					'class' => 'mw-bookmanagerv2-nav-data',
 					'src' => $imagePath . 'Info_sign_font_awesome.png',
 					'alt' => wfMessage( 'bookmanagerv2-metadata' )->text(),
 					'title' => wfMessage( 'bookmanagerv2-metadata' )->text()
 				), '' );
+			$html .= Linker::link(
+				$currentPageTitle,
+				$imgHtml,
+				array( 'class' => array(
+						'mw-bookmanagerv2-nav-icon',
+						'mw-bookmanagerv2-nav-data' ) ),
+				array(),
+				array()
+			);
 		}
 		if ( $chapterList ) {
-			$html .= Html::closeElement( 'a' )
-			. Html::openElement( 'a', array(
-					'class' => array(
-						'mw-bookmanagerv2-nav-icon',
-						'mw-bookmanagerv2-nav-toc' )
-					)
-				)
-			. Html::element( 'img', array(
+			$imgHtml = Html::element( 'img', array(
 					'class' => 'mw-bookmanagerv2-nav-toc',
 					'src' => $imagePath . 'Ul_font_awesome.png',
 					'alt' => wfMessage( 'bookmanagerv2-contents' )->text(),
 					'title' => wfMessage( 'bookmanagerv2-contents' )->text()
-				), '' )
-			. Html::closeElement( 'a' );
+				), '' );
+			$html .= Linker::link(
+				$currentPageTitle,
+				$imgHtml,
+				array( 'class' => array(
+						'mw-bookmanagerv2-nav-icon',
+						'mw-bookmanagerv2-nav-toc' ) ),
+				array(),
+				array()
+			);
 		}
 		if ( $prev ) {
 			$html .= Linker::link(
@@ -232,13 +238,13 @@ class BookManagerv2Hooks {
 		} else if ( $year && $month && !$day ) {
 			$ts = $yearStr . $monthStr . "01000000";
 			$format = $wgLang->getDateFormatString( 'monthonly',
-				$wgUser->getDatePreference() ?: 'default' );
+				$wgUser->getDatePreference() ? : 'default' );
 			$date = $wgLang->sprintfDate( $format, $ts );
 			$datetime = $yearStr . "-" . $monthStr;
 		} else {
 			$ts = $yearStr . $monthStr . $dayStr . "000000";
 			$format = $wgLang->getDateFormatString( 'date',
-				$wgUser->getDatePreference() ?: 'default' );
+				$wgUser->getDatePreference() ? : 'default' );
 			$date = $wgLang->sprintfDate( $format, $ts );
 			$datetime = $yearStr . "-" . $monthStr . "-" . $dayStr;
 		}
@@ -384,7 +390,7 @@ class BookManagerv2Hooks {
 
 		if ( $out->getTitle()->inNamespaces( $navigationNamespaces ) ) {
 			if ( $out->getRevisionId() !== null ) {
-				global $wgContLang, $wgBookManagerv2ExampleNavigation, $wgMemc;	
+				global $wgContLang, $wgBookManagerv2ExampleNavigation, $wgMemc;
 				$categories = $out->getCategories();
 				$namespace = $wgContLang->convertNamespace( NS_BOOK ) . ":";
 				$out->addModuleStyles( "ext.BookManagerv2" );
@@ -425,7 +431,7 @@ class BookManagerv2Hooks {
 				if ( $wgBookManagerv2PrevNext ) {
 					$currentPageNumber = null;
 					foreach ( $jsonBook->sections as $key => $val ) {
-						// Find the entry that corresponds to this page						
+						// Find the entry that corresponds to this page
 						if ( $val->link === $currentPageTitle ) {
 							$currentPageNumber = $key;
 							// If this isn't the first section, set previous link
@@ -475,7 +481,7 @@ class BookManagerv2Hooks {
 					$metadata = null;
 				}
 				$navbar = self::readingInterfaceUX( $prev, $next, $chapterList,
-					$metadata );
+					$metadata, $jsonPageTitle );
 				$out->prependHtml( $navbar );
 			}
 		} else if ( $out->getTitle()->inNamespace( NS_BOOK ) && $wgBookManagerv2JsonFrontend ) {
