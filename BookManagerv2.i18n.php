@@ -55,9 +55,11 @@ $messages['qqq'] = array(
 	{{Identical|Invalid JSON}}',
 	'bookmanagerv2-example-nav' => 'Message shown in the subtitle to explain why example navigation bars are appearing. The navigation bars appear on every page when <code>$wgBookManagerv2ExampleNavigation</code> is set to <code>true</code>; if it\'s disabled in <code>LocalSettings.php</code>, they will disappear.',
 	'bookmanagerv2-metadata' => "Alternate text for the navigation bar's metadata icon.",
-	'bookmanagerv2-metadata-header' => 'Name of the section header for the section holding the metadata. This is shown when viewing the JSON block.',
+	'bookmanagerv2-metadata-header' => 'Name of the section header for the section holding the metadata. This is shown when viewing the JSON block.
+{{Identical|Metadata}}',
 	'bookmanagerv2-contents' => "Alternate text for the navigation bar's table of contents icon.",
-	'bookmanagerv2-contents-header' => 'Name of the section header for the section holding the table of contents. This is shown when viewing the JSON block.',
+	'bookmanagerv2-contents-header' => 'Name of the section header for the section holding the table of contents. This is shown when viewing the JSON block.
+{{Identical|Content}}',
 	'bookmanagerv2-title' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Title}}',
@@ -243,7 +245,9 @@ $messages['de'] = array(
 	'bookmanagerv2-invalid-json' => 'Ungültiges JSON',
 	'bookmanagerv2-example-nav' => 'Die Navigationsleiste erscheint auf dieser Seite, da <code>$wgBookManagerv2ExampleNavigation</code> in <code>LocalSettings.php</code> auf „wahr“ gesetzt ist.',
 	'bookmanagerv2-metadata' => 'Metadaten des Werks',
+	'bookmanagerv2-metadata-header' => 'Metadaten',
 	'bookmanagerv2-contents' => 'Inhalte des Werks',
+	'bookmanagerv2-contents-header' => 'Inhalte',
 	'bookmanagerv2-title' => 'Titel: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Alternativer|Alternative}} Titel: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autoren}}: $2',
@@ -263,6 +267,13 @@ $messages['de'] = array(
 	'bookmanagerv2-source' => 'Quelle: $1',
 	'bookmanagerv2-permission' => 'Genehmigung: $1',
 	'bookmanagerv2-other-versions' => 'Andere {{PLURAL:$1|Version|Versionen}}: $2',
+);
+
+/** Greek (Ελληνικά)
+ * @author Tifa93
+ */
+$messages['el'] = array(
+	'bookmanagerv2-contents-header' => 'Περιεχόμενα',
 );
 
 /** Spanish (español)
@@ -334,7 +345,9 @@ $messages['fr'] = array(
 	'bookmanagerv2-invalid-json' => 'JSON non valide',
 	'bookmanagerv2-example-nav' => 'La barre de navigation apparaît sur cette page parce que <code>$wgBookManagerv2ExampleNavigation</code> est à vrai dans <code>LocalSettings.php</code>.',
 	'bookmanagerv2-metadata' => 'Méta-données de travail',
+	'bookmanagerv2-metadata-header' => 'Métadonnées',
 	'bookmanagerv2-contents' => 'Contenu du travail',
+	'bookmanagerv2-contents-header' => 'Table de matières',
 	'bookmanagerv2-title' => 'Titre : $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Titre alternatif|Titres alternatifs}} : $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Auteur|Auteurs}} : $2',
@@ -456,7 +469,9 @@ $messages['ja'] = array(
 	'bookmanagerv2-invalid-json' => '無効な JSON',
 	'bookmanagerv2-example-nav' => 'このページでナビゲーションバーが表示されているのは、<code>LocalSettings.php</code> で <code>$wgBookManagerv2ExampleNavigation</code> が <code>true</code> に設定されているためです。',
 	'bookmanagerv2-metadata' => '作品のメタデータ',
+	'bookmanagerv2-metadata-header' => 'メタデータ',
 	'bookmanagerv2-contents' => '作品の内容',
+	'bookmanagerv2-contents-header' => '内容',
 	'bookmanagerv2-title' => '書名: $1',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|著者}}: $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|翻訳者}}: $2',
@@ -680,7 +695,9 @@ $messages['roa-tara'] = array(
 	'bookmanagerv2-invalid-json' => 'JSON invalide',
 	'bookmanagerv2-example-nav' => "'A barre de navigazzione sus a sta pàgene iesse purcé <code>\$wgBookManagerv2ExampleNavigation</code> jè 'mbostate a vere jndr'à <code>LocalSettings.php</code>.",
 	'bookmanagerv2-metadata' => 'Metadate de fatìe',
+	'bookmanagerv2-metadata-header' => 'Metadata',
 	'bookmanagerv2-contents' => 'Condenute de fatìe',
+	'bookmanagerv2-contents-header' => 'Condenute',
 	'bookmanagerv2-title' => 'Titole: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Titole alternative}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autore|Auture}}: $2',
