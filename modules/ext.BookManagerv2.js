@@ -30,6 +30,7 @@
 	$( 'a.mw-bookmanagerv2-nav-data' ).click( function () {
 		$( 'div.mw-bookmanagerv2-nav-toc' ).hide();
 		$( 'div.mw-bookmanagerv2-nav-data' ).toggle();
+		return false;
 	});
 
 	// When the contents icon is clicked, hide the metadata
@@ -37,6 +38,7 @@
 	$( 'a.mw-bookmanagerv2-nav-toc' ).click( function () {
 		$( 'div.mw-bookmanagerv2-nav-data' ).hide();
 		$( 'div.mw-bookmanagerv2-nav-toc' ).toggle();
+		return false;
 	});
 
 }(jQuery));
