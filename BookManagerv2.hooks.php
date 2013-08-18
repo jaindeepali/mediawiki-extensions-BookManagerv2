@@ -24,6 +24,7 @@
  */
 
 class BookManagerv2Hooks {
+
 	/**
 	 * Validates that the revised contents of an NS_BOOK page are valid JSON.
 	 * If not valid, rejects edit with error message.
@@ -59,7 +60,6 @@ class BookManagerv2Hooks {
 
 		return true;
 	}
-
 
 	/**
 	 * Adds a navigation bar to the page
@@ -192,6 +192,9 @@ class BookManagerv2Hooks {
 	 */
 	public static function addArray( $i18n, $array ) {
 		global $wgContLang;
+		// Give grep a chance to find the usages:
+		// bookmanagerv2-alternate-titles, bookmanagerv2-authors, bookmanagerv2-translators,
+		// bookmanagerv2-editors, bookmanagerv2-illustrators
 		$output = Html::element( 'li', array(),
 			wfMessage( $i18n )
 				->numParams( count( $array ) )
@@ -208,6 +211,11 @@ class BookManagerv2Hooks {
 	 * @return string HTML list item element
 	 */
 	public static function addString( $i18n, $string ) {
+		// Give grep a chance to find the usages:
+		// bookmanagerv2subtitle, bookmanagerv2-series-title, bookmanagerv2-volume,
+		// bookmanagerv2-edition, bookmanagerv2-publisher, bookmanagerv2-publication-city,
+		// bookmanagerv2-printer, bookmanagerv2-language, bookmanagerv2-description,
+		// bookmanagerv2-isbn, bookmanagerv2-lccn, bookmanagerv2-oclc
 		$output = Html::element( 'li', array(),
 			wfMessage( $i18n, $string )->text() );
 		return $output;
