@@ -338,6 +338,33 @@ $messages['fa'] = array(
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|نسخه دیگر|نسخه های دیگر}}: $2',
 );
 
+/** Faroese (føroyskt)
+ * @author EileenSanda
+ */
+$messages['fo'] = array(
+	'bookmanagerv2-desc' => 'Leggur afturat funksjónir fyri at geva og goyma metadáta og struktur fyri bøkur',
+	'bookmanagerv2-invalid-json' => 'Ógyldugt JSON',
+	'bookmanagerv2-example-nav' => 'Navigasjónsteigurin á hesi síðu kemur til sjóndar, tí <code>$wgBookManagerv2ExampleNavigation</code> er sett til <code>true</code> í <code>LocalSettings.php</code>.',
+	'bookmanagerv2-metadata' => 'Metadáta av arbeiði',
+	'bookmanagerv2-metadata-header' => 'Metadáta',
+	'bookmanagerv2-contents-header' => 'Innihaldsyvirlit',
+	'bookmanagerv2-title' => 'Heitið: $1',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Rithøvundur|Rithøvundar}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Týðari|Týðarar}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Redaktørur|Redaktørar}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Teknari|Teknarar}}: $2',
+	'bookmanagerv2-subtitle' => 'Undirheitið: $1',
+	'bookmanagerv2-publisher' => 'Útgevari: $1',
+	'bookmanagerv2-printer' => 'Prentað: $1',
+	'bookmanagerv2-publication-date' => 'Útgávudagur: $1',
+	'bookmanagerv2-publication-city' => 'Útgávubýur: $1',
+	'bookmanagerv2-language' => 'Mál: $1',
+	'bookmanagerv2-description' => 'Frágreiðing: $1',
+	'bookmanagerv2-source' => 'Kelda: $1',
+	'bookmanagerv2-permission' => 'Loyvið: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Onnur versjón|Aðrar versjónir}}: $2',
+);
+
 /** French (français)
  * @author Gomoko
  * @author Wyz
@@ -599,7 +626,7 @@ $messages['mr'] = array(
 	'bookmanagerv2-translators' => '{{PLURAL:$1|भाषांतरकार}}: $2',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|संपादक}}: $2',
 	'bookmanagerv2-subtitle' => 'उपशीर्षक:$1',
-	'bookmanagerv2-series-title' => 'मालिकेचे शीर्षक', # Fuzzy
+	'bookmanagerv2-series-title' => 'मालिकेचे शीर्षक: $1',
 	'bookmanagerv2-volume' => 'खंड:$1',
 	'bookmanagerv2-edition' => 'आवृत्ती:$1',
 	'bookmanagerv2-publisher' => 'प्रकाशक:$1',
