@@ -26,6 +26,7 @@ div.mw-bookmanagerv2-nav-dropdown {
 	text-align: left;
 	padding: 5px 8px;
 }
+
 div.mw-bookmanagerv2-nav-dropdown:after, .mw-bookmanagerv2-nav-dropdown:before {
 	bottom: 100%;
 	border: solid transparent;
@@ -35,6 +36,7 @@ div.mw-bookmanagerv2-nav-dropdown:after, .mw-bookmanagerv2-nav-dropdown:before {
 	position: absolute;
 	pointer-events: none;
 }
+
 div.mw-bookmanagerv2-nav-dropdown:after {
 	border-color: rgba(245, 245, 245, 0);
 	border-bottom-color: #f5f5f5;
@@ -42,6 +44,7 @@ div.mw-bookmanagerv2-nav-dropdown:after {
 	left: 50%;
 	margin-left: -140px;
 }
+
 div.mw-bookmanagerv2-nav-dropdown:before {
 	border-color: rgba(220, 220, 220, 0);
 	border-bottom-color: #dcdcdc;
@@ -54,13 +57,35 @@ div.mw-bookmanagerv2-nav-dropdown ol, div.mw-bookmanagerv2-nav-dropdown ul {
 	list-style: none;
 	margin: 0;
 }
+
 div.mw-bookmanagerv2-nav-toc {
 	margin-left: 45px;
 }
+
 div.mw-bookmanagerv2-nav-dropdown .title {
 	font-style: italic;
 }
+
 div.mw-bookmanagerv2-nav-scrollable {
 	max-height: 300px;
 	overflow: auto;
+}
+
+div.mw-bookmanagerv2-nav-dropdown div.mw-bookmanagerv2-dropdown-header {
+	border-bottom: 1px solid rgb(170, 170, 170);
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+div.mw-bookmanagerv2-dropdown-header span.mw-bookmanagerv2-header-name {
+	font-weight: bold;
+}
+
+div.mw-bookmanagerv2-nav-dropdown span.mw-bookmanagerv2-edit-json-link {
+	float: right;
+}
+
+span.mw-bookmanagerv2-link-bracket,
+span.mw-bookmanagerv2-link-divider {
+	margin: 0 2px;
 }
