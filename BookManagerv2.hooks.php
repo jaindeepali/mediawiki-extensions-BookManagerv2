@@ -256,6 +256,37 @@ class BookManagerv2Hooks {
 		return $output;
 	}
 
+	public static function addJsonPageLink( $jsonPageTitle, $title ) {
+		$html = Html::openElement( 'div', array(
+			'class' => 'mw-bookmanagerv2-dropdown-header' ) )
+			. Html::element( 'span', array(
+				'class' => 'mw-bookmanagerv2-header-name'
+			), wfMessage( $title )->text() )
+			. Html::openElement( 'span', array(
+				'class' => 'mw-bookmanagerv2-edit-json-link' ) )
+			. Html::element( 'span', array(
+				'class' => 'mw-bookmanagerv2-link-bracket'
+			), '[' )
+			. Linker::link( $jsonPageTitle,
+				wfMessage( 'bookmanagerv2-read' )->text()
+			)
+			. Html::element( 'span', array(
+				'class' => 'mw-bookmanagerv2-link-divider'
+			), '|' )
+			. Linker::link( $jsonPageTitle,
+				wfMessage( 'editlink' )->text(),
+				array(),
+				array( 'action' => 'edit' ),
+				array()
+			)
+			. Html::element( 'span', array(
+				'class' => 'mw-bookmanagerv2-link-bracket'
+			), ']' )
+			. Html::closeElement( 'span' )
+			. Html::closeElement( 'div' );
+		return $html;
+	}
+
 	/**
 	 * Generates HTML for the chapter list. All pages except the current one
 	 * will be linked.
@@ -264,8 +295,15 @@ class BookManagerv2Hooks {
 	 * @param string $currentPageTitle Title of the page that's being viewed
 	 * @return string HTML ordered list element
 	 */
-	public static function formatChapterList( $sections, $currentPageTitle = null ) {
-		$html = Html::openElement( 'ol', array() );
+	public static function formatChapterList( $sections, $jsonPageTitle = null,
+		$currentPageTitle = null )
+	{
+		$html = '';
+		if ( $jsonPageTitle !== null ) {
+			$html .= self::addJsonPageLink( $jsonPageTitle,
+				'bookmanagerv2-contents-header' );
+		}
+		$html .= Html::openElement( 'ol', array() );
 		foreach ( $sections as $key => $val ) {
 			if ( $val->link !== $currentPageTitle ) {
 				$html .= Html::openElement( 'li', array() )
@@ -288,8 +326,13 @@ class BookManagerv2Hooks {
 	 * @param object $jsonBook JSON representation of the book
 	 * @return string HTML unordered list element
 	 */
-	public static function formatMetadata( $jsonBook ) {
-		$metadata = Html::openElement( 'ul', array() )
+	public static function formatMetadata( $jsonBook, $jsonPageTitle = null ) {
+		$metadata = '';
+		if ( $jsonPageTitle !== null ) {
+			$metadata = self::addJsonPageLink( $jsonPageTitle,
+				'bookmanagerv2-metadata-header' );
+		}
+		$metadata .= Html::openElement( 'ul', array() )
 		. Html::openElement( 'li', array() )
 		. wfMessage( 'bookmanagerv2-title',
 			$jsonBook->title )->text()
@@ -363,6 +406,7 @@ class BookManagerv2Hooks {
 		if ( isset( $jsonBook->oclc ) ) {
 			$metadata .= self::addString( "oclc", $jsonBook->oclc );
 		}
+
 		$metadata .= Html::closeElement( 'ul' );
 
 		return $metadata;
@@ -476,12 +520,12 @@ class BookManagerv2Hooks {
 
 				if ( $wgBookManagerv2ChapterList ) {
 					$chapterList = self::formatChapterList( $jsonBook->sections,
-						$currentPageTitle );
+						$jsonPageTitle, $currentPageTitle );
 				} else {
 					$chapterList = null;
 				}
 				if ( $wgBookManagerv2Metadata ) {
-					$metadata = self::formatMetadata( $jsonBook );
+					$metadata = self::formatMetadata( $jsonBook, $jsonPageTitle );
 				} else {
 					$metadata = null;
 				}

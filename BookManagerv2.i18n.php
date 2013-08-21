@@ -42,6 +42,7 @@ $messages['en'] = array(
 	'bookmanagerv2-isbn' => 'ISBN: $1',
 	'bookmanagerv2-lccn' => 'LCCN: $1',
 	'bookmanagerv2-oclc' => 'OCLC: $1',
+	'bookmanagerv2-read' => 'read',
 );
 
 /** Message documentation (Message documentation)
@@ -147,6 +148,7 @@ Parameters:
 
 See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
+	'bookmanagerv2-read' => 'Text for a link to view the metadata page'
 );
 
 /** Asturian (asturianu)
