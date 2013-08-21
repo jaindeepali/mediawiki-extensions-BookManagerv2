@@ -377,7 +377,12 @@ class BookManagerv2Hooks {
 	public static function onBeforePageDisplay( OutputPage &$out, Skin &$skin ) {
 		global $wgContentNamespaces, $wgBookManagerv2NavigationNamespaces,
 			$wgBookManagerv2Metadata, $wgBookManagerv2ChapterList,
-			$wgBookManagerv2PrevNext, $wgBookManagerv2JsonFrontend;
+			$wgBookManagerv2PrevNext, $wgBookManagerv2JsonFrontend,
+			$wgBookManagerv2NavigationBars;
+
+		if ( !$wgBookManagerv2NavigationBars ) {
+			return true;
+		}
 
 		// Navbars will be added to namespaces in the
 		// $wgBookManagerv2NavigationNamespaces array if it's set, otherwise

@@ -150,8 +150,15 @@ $wgResourceModules['ext.BookManagerv2js'] = array(
 
 /**
  * @var bool
+ * If disabled, navigation bars will not be added to any pages.
+ */
+$wgBookManagerv2NavigationBars = true;
+
+/**
+ * @var bool
  * If enabled, this adds an example navigation bar to every mainspace
- * page, drawing the information from examples/book.json
+ * page, drawing the information from examples/book.json.
+ * $wgBookManagerv2NavigationBars must also be set to true.
  */
 $wgBookManagerv2ExampleNavigation = false;
 
