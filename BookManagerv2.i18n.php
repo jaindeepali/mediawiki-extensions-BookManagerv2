@@ -189,9 +189,10 @@ See screenshot for an example of this dropdown.
 	'bookmanagerv2-remove-alt' => 'Alternate text for the remove (x) icon in the JSON editor section blocks. Instructs the user that clicking this will remove the section from the work.',
 	'bookmanagerv2-rename' => 'Link text to change the name of a section as it appears in the section list.',
 	'bookmanagerv2-create' => 'Link text to create a nonexistent section page.',
-	'bookmanagerv2-done' => 'Text to display on the button that the user clicks when they\'re finished naming or renaming a section.',
+	'bookmanagerv2-done' => "Text to display on the button that the user clicks when they're finished naming or renaming a section.",
 	'bookmanagerv2-add' => 'Text to display in a link to add a new section or a new entry in a metadata field that accepts multiple values.',
-	'bookmanagerv2-read' => 'Text for a link to view the metadata page',
+	'bookmanagerv2-read' => 'Text for a link to view the metadata page.
+{{Identical|Read}}',
 	'bookmanagerv2-title-field' => 'JSON editor input field label',
 	'bookmanagerv2-alternate-titles-field' => 'JSON editor input field',
 	'bookmanagerv2-authors-field' => 'JSON editor input field label',
@@ -339,6 +340,7 @@ $messages['de'] = array(
 	'bookmanagerv2-source' => 'Quelle: $1',
 	'bookmanagerv2-permission' => 'Genehmigung: $1',
 	'bookmanagerv2-other-versions' => 'Andere {{PLURAL:$1|Version|Versionen}}: $2',
+	'bookmanagerv2-read' => 'lesen',
 );
 
 /** Greek (Ελληνικά)
@@ -466,6 +468,7 @@ $messages['fr'] = array(
 	'bookmanagerv2-source' => 'Source : $1',
 	'bookmanagerv2-permission' => 'Autorisation : $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Autre version|Autres versions}} : $2',
+	'bookmanagerv2-read' => 'lire',
 );
 
 /** Galician (galego)
@@ -561,6 +564,7 @@ $messages['it'] = array(
 	'bookmanagerv2-source' => 'Fonte: $1',
 	'bookmanagerv2-permission' => 'Autorizzazione: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Altra versione|Altre versioni}}: $2',
+	'bookmanagerv2-read' => 'leggi',
 );
 
 /** Japanese (日本語)
@@ -596,6 +600,7 @@ $messages['ja'] = array(
 	'bookmanagerv2-isbn' => 'ISBN: $1',
 	'bookmanagerv2-lccn' => 'LCCN: $1',
 	'bookmanagerv2-oclc' => 'OCLC: $1',
+	'bookmanagerv2-read' => '閲覧',
 );
 
 /** Kurdish (Latin script) (Kurdî (latînî)‎)
@@ -631,6 +636,7 @@ $messages['lb'] = array(
 	'bookmanagerv2-source' => 'Quell: $1',
 	'bookmanagerv2-permission' => 'Autorisatioun: $1',
 	'bookmanagerv2-other-versions' => 'Aner {{PLURAL:$1|Versioun|Versiounen}}: $2',
+	'bookmanagerv2-read' => 'liesen',
 );
 
 /** Lithuanian (lietuvių)
@@ -685,6 +691,7 @@ $messages['mk'] = array(
 	'bookmanagerv2-source' => 'Извор: $1',
 	'bookmanagerv2-permission' => 'Дозвола: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Друга верзија|Други верзии}}: $2',
+	'bookmanagerv2-read' => 'прочитајте',
 );
 
 /** Marathi (मराठी)
@@ -710,6 +717,7 @@ $messages['mr'] = array(
 	'bookmanagerv2-source' => 'स्रोत:$1',
 	'bookmanagerv2-permission' => 'परवानगी:$1',
 	'bookmanagerv2-other-versions' => 'ईतर{{PLURAL:$1|आवृत्ती|आवृत्त्या}}: $2',
+	'bookmanagerv2-read' => 'वाचा',
 );
 
 /** Malay (Bahasa Melayu)
@@ -886,6 +894,7 @@ $messages['uk'] = array(
 	'bookmanagerv2-source' => 'Джерело: $1',
 	'bookmanagerv2-permission' => 'Дозвіл: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Інша версія|Інші версії}}: $2',
+	'bookmanagerv2-read' => 'читати',
 );
 
 /** Simplified Chinese (中文（简体）‎)
