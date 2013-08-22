@@ -575,4 +575,22 @@ class BookManagerv2Hooks {
 		}
 		return true;
 	}
+
+	/**
+	 * Add a custom editor for JSON blocks.
+	 *
+	 * @param $article Article being edited
+	 * @param $user User performing the edit
+	 * @return bool True to use the normal editor, false to add the custom editor
+	 **/
+	public static function onCustomEditor( $article, $user ) {
+		// Set up custom edit form if the article is in the JSON namespace.
+		global $wgBookManagerv2JsonEditor;
+		if ( $article->getTitle()->inNamespace( NS_BOOK ) && $wgBookManagerv2JsonEditor ) {
+			$editor = new JsonEditor( $article );
+			$editor->edit();
+			return false;
+		}
+		return true;
+	}
 }
