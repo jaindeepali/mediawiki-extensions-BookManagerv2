@@ -268,13 +268,13 @@ class BookManagerv2Hooks {
 				'class' => 'mw-bookmanagerv2-link-bracket'
 			), '[' )
 			. Linker::link( $jsonPageTitle,
-				wfMessage( 'bookmanagerv2-read' )->text()
+				wfMessage( 'bookmanagerv2-read' )->escaped()
 			)
 			. Html::element( 'span', array(
 				'class' => 'mw-bookmanagerv2-link-divider'
 			), '|' )
 			. Linker::link( $jsonPageTitle,
-				wfMessage( 'editlink' )->text(),
+				wfMessage( 'editlink' )->escaped(),
 				array(),
 				array( 'action' => 'edit' ),
 				array()
