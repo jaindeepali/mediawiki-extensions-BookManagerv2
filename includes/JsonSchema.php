@@ -403,6 +403,11 @@ class JsonTreeRef {
 				$e = new JsonSchemaException( $msg );
 				$e->subtype = "validate-fail";
 				throw( $e );
+		} else if ( $this->parent == null && count( $this->node ) === 0 ) {
+			$msg = JsonUtil::uiMessage( 'jsonschema-empty-block' );
+			$e = new JsonSchemaException( $msg );
+			$e->subtype = "validate-fail";
+			throw( $e );
 		}
 		$datatype = JsonUtil::getType( $this->node );
 		$schematype = $this->getType();
