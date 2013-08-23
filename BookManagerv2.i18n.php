@@ -97,6 +97,9 @@ $messages['qqq'] = array(
 	'bookmanagerv2-contents-header' => 'Name of the section header for the section holding the table of contents. This is shown when viewing the JSON block.
 {{Identical|Content}}',
 	'bookmanagerv2-title' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+
+Parameters:
+* $1 - title
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Title}}',
 	'bookmanagerv2-alternate-titles' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
@@ -154,7 +157,8 @@ See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 
 Parameters:
-* $1 - ...',
+* $1 - ...
+{{Identical|Publication city}}',
 	'bookmanagerv2-language' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Language}}',
@@ -183,41 +187,75 @@ Parameters:
 
 See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
-	'bookmanagerv2-metadata-heading' => 'Heading for the collapsible section of the JSON editor that holds the metadata (everything but the sections information).',
-	'bookmanagerv2-sections-heading' => 'Heading for the collapsible section of the JSON editor that holds information on the sections of the book.',
+	'bookmanagerv2-metadata-heading' => 'Heading for the collapsible section of the JSON editor that holds the metadata (everything but the sections information).
+{{Identical|Metadata}}',
+	'bookmanagerv2-sections-heading' => 'Heading for the collapsible section of the JSON editor that holds information on the sections of the book.
+{{Identical|Section}}',
 	'bookmanagerv2-move-alt' => 'Alternate text for the move icon in the JSON editor section blocks. Instructs the user that dragging the section block will reorder the sections.',
 	'bookmanagerv2-remove-alt' => 'Alternate text for the remove (x) icon in the JSON editor section blocks. Instructs the user that clicking this will remove the section from the work.',
-	'bookmanagerv2-rename' => 'Link text to change the name of a section as it appears in the section list.',
-	'bookmanagerv2-create' => 'Link text to create a nonexistent section page.',
-	'bookmanagerv2-done' => "Text to display on the button that the user clicks when they're finished naming or renaming a section.",
-	'bookmanagerv2-add' => 'Text to display in a link to add a new section or a new entry in a metadata field that accepts multiple values.',
+	'bookmanagerv2-rename' => 'Link text to change the name of a section as it appears in the section list.
+{{Identical|Rename}}',
+	'bookmanagerv2-create' => 'Link text to create a nonexistent section page.
+{{Identical|Create}}',
+	'bookmanagerv2-done' => "Text to display on the button that the user clicks when they're finished naming or renaming a section.
+{{Identical|Done}}",
+	'bookmanagerv2-add' => 'Text to display in a link to add a new section or a new entry in a metadata field that accepts multiple values.
+{{Identical|Add}}',
 	'bookmanagerv2-read' => 'Text for a link to view the metadata page.
 {{Identical|Read}}',
-	'bookmanagerv2-title-field' => 'JSON editor input field label',
+	'bookmanagerv2-section-name' => '{{Identical|Section name}}',
+	'bookmanagerv2-title-field' => 'JSON editor input field label.
+{{Identical|Title}}',
 	'bookmanagerv2-alternate-titles-field' => 'JSON editor input field',
-	'bookmanagerv2-authors-field' => 'JSON editor input field label',
-	'bookmanagerv2-translators-field' => 'JSON editor input field label',
-	'bookmanagerv2-editors-field' => 'JSON editor input field label',
-	'bookmanagerv2-illustrators-field' => 'JSON editor input field label',
-	'bookmanagerv2-subtitle-field' => 'JSON editor input field label',
-	'bookmanagerv2-series-title-field' => 'JSON editor input field label',
-	'bookmanagerv2-volume-field' => 'JSON editor input field label',
-	'bookmanagerv2-edition-field' => 'JSON editor input field label',
-	'bookmanagerv2-publisher-field' => 'JSON editor input field label',
-	'bookmanagerv2-printer-field' => 'JSON editor input field label',
+	'bookmanagerv2-authors-field' => 'JSON editor input field label.
+{{Identical|Author}}',
+	'bookmanagerv2-translators-field' => 'JSON editor input field label.
+{{Identical|Translator}}',
+	'bookmanagerv2-editors-field' => 'JSON editor input field label.
+{{Identical|Editor}}',
+	'bookmanagerv2-illustrators-field' => 'JSON editor input field label.
+{{Identical|Illustrator}}',
+	'bookmanagerv2-subtitle-field' => 'JSON editor input field label.
+{{Identical|Subtitle}}',
+	'bookmanagerv2-series-title-field' => 'JSON editor input field label.
+{{Identical|Series title}}',
+	'bookmanagerv2-volume-field' => 'JSON editor input field label.
+{{Identical|Volume}}',
+	'bookmanagerv2-edition-field' => 'JSON editor input field label.
+{{Identical|Edition}}',
+	'bookmanagerv2-publisher-field' => 'JSON editor input field label.
+{{Identical|Publisher}}',
+	'bookmanagerv2-printer-field' => 'JSON editor input field label.
+{{Identical|Printer}}',
 	'bookmanagerv2-publication-year-field' => 'JSON editor input field label',
 	'bookmanagerv2-publication-month-field' => 'JSON editor input field label',
 	'bookmanagerv2-publication-day-field' => 'JSON editor input field label',
-	'bookmanagerv2-publication-city-field' => 'JSON editor input field label',
-	'bookmanagerv2-language-field' => 'JSON editor input field label',
-	'bookmanagerv2-description-field' => 'JSON editor input field label',
-	'bookmanagerv2-source-field' => 'JSON editor input field label',
-	'bookmanagerv2-permission-field' => 'JSON editor input field label',
-	'bookmanagerv2-other-versions-field' => 'JSON editor input field label',
+	'bookmanagerv2-publication-city-field' => 'JSON editor input field label.
+{{Identical|Publication city}}',
+	'bookmanagerv2-language-field' => 'JSON editor input field label.
+{{Identical|Language}}',
+	'bookmanagerv2-description-field' => 'JSON editor input field label.
+{{Identical|Description}}',
+	'bookmanagerv2-source-field' => 'JSON editor input field label.
+{{Identical|Source}}',
+	'bookmanagerv2-permission-field' => 'JSON editor input field label.
+{{Identical|Permission}}',
+	'bookmanagerv2-other-versions-field' => 'JSON editor input field label.
+{{Identical|Other version}}',
 	'bookmanagerv2-isbn-field' => 'JSON editor input field label. ISBN is the International Standard Book Number ([http://en.wikipedia.org/wiki/ISBN ISBN])',
 	'bookmanagerv2-lccn-field' => 'JSON editor input field label. LCCN is the Library of Congress Control Number ([http://en.wikipedia.org/wiki/LCCN LCCN])',
 	'bookmanagerv2-oclc-field' => 'JSON editor input field label. OCLC is the Online Computer Library Center ([http://en.wikipedia.org/wiki/OCLC OCLC])',
-	'bookmanagerv2-sections-field' => 'JSON editor input field label',
+	'bookmanagerv2-sections-field' => 'JSON editor input field label.
+{{Identical|Section}}',
+);
+
+/** Akan (Akan)
+ * @author Riches4christ
+ */
+$messages['ak'] = array(
+	'bookmanagerv2-remove-alt' => 'yi ha firi mu',
+	'bookmanagerv2-done' => 'awie',
+	'bookmanagerv2-language-field' => 'kasa',
 );
 
 /** Asturian (asturianu)
@@ -340,7 +378,39 @@ $messages['de'] = array(
 	'bookmanagerv2-source' => 'Quelle: $1',
 	'bookmanagerv2-permission' => 'Genehmigung: $1',
 	'bookmanagerv2-other-versions' => 'Andere {{PLURAL:$1|Version|Versionen}}: $2',
+	'bookmanagerv2-metadata-heading' => 'Metadaten',
+	'bookmanagerv2-sections-heading' => 'Abschnitte',
+	'bookmanagerv2-move-alt' => 'Diesen Abschnitt verschieben',
+	'bookmanagerv2-remove-alt' => 'Diesen Abschnitt entfernen',
+	'bookmanagerv2-rename' => 'umbenennen',
+	'bookmanagerv2-create' => 'erstellen',
+	'bookmanagerv2-done' => 'Fertig',
+	'bookmanagerv2-add' => 'hinzufügen',
 	'bookmanagerv2-read' => 'lesen',
+	'bookmanagerv2-section-name' => 'Abschnittsname:',
+	'bookmanagerv2-section-link' => 'Abschnittslink:',
+	'bookmanagerv2-title-field' => 'Titel',
+	'bookmanagerv2-alternate-titles-field' => 'Alternative Titel',
+	'bookmanagerv2-authors-field' => 'Autoren',
+	'bookmanagerv2-translators-field' => 'Übersetzer',
+	'bookmanagerv2-editors-field' => 'Redakteure',
+	'bookmanagerv2-illustrators-field' => 'Illustratoren',
+	'bookmanagerv2-subtitle-field' => 'Untertitel',
+	'bookmanagerv2-series-title-field' => 'Serientitel',
+	'bookmanagerv2-volume-field' => 'Auflage',
+	'bookmanagerv2-edition-field' => 'Ausgabe',
+	'bookmanagerv2-publisher-field' => 'Herausgeber',
+	'bookmanagerv2-printer-field' => 'Druck',
+	'bookmanagerv2-publication-year-field' => 'Veröffentlichungsjahr',
+	'bookmanagerv2-publication-month-field' => 'Veröffentlichungsmonat',
+	'bookmanagerv2-publication-day-field' => 'Veröffentlichungstag',
+	'bookmanagerv2-publication-city-field' => 'Veröffentlichungsort',
+	'bookmanagerv2-language-field' => 'Sprache',
+	'bookmanagerv2-description-field' => 'Beschreibung',
+	'bookmanagerv2-source-field' => 'Quelle',
+	'bookmanagerv2-permission-field' => 'Genehmigung',
+	'bookmanagerv2-other-versions-field' => 'Andere Versionen',
+	'bookmanagerv2-sections-field' => 'Abschnitte',
 );
 
 /** Greek (Ελληνικά)
@@ -468,7 +538,39 @@ $messages['fr'] = array(
 	'bookmanagerv2-source' => 'Source : $1',
 	'bookmanagerv2-permission' => 'Autorisation : $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Autre version|Autres versions}} : $2',
+	'bookmanagerv2-metadata-heading' => 'Métadonnées',
+	'bookmanagerv2-sections-heading' => 'Sections',
+	'bookmanagerv2-move-alt' => 'Déplacer cette section',
+	'bookmanagerv2-remove-alt' => 'Supprimer cette section',
+	'bookmanagerv2-rename' => 'renommer',
+	'bookmanagerv2-create' => 'créer',
+	'bookmanagerv2-done' => 'Terminé',
+	'bookmanagerv2-add' => 'ajouter',
 	'bookmanagerv2-read' => 'lire',
+	'bookmanagerv2-section-name' => 'Nom de la section :',
+	'bookmanagerv2-section-link' => 'Lien de la section :',
+	'bookmanagerv2-title-field' => 'Titre',
+	'bookmanagerv2-alternate-titles-field' => 'Autres titres',
+	'bookmanagerv2-authors-field' => 'Auteurs',
+	'bookmanagerv2-translators-field' => 'Traducteurs',
+	'bookmanagerv2-editors-field' => 'Contributeurs',
+	'bookmanagerv2-illustrators-field' => 'Illustrateurs',
+	'bookmanagerv2-subtitle-field' => 'Sous-titre',
+	'bookmanagerv2-series-title-field' => 'Titre de la série',
+	'bookmanagerv2-volume-field' => 'Volume',
+	'bookmanagerv2-edition-field' => 'Édition',
+	'bookmanagerv2-publisher-field' => 'Éditeur',
+	'bookmanagerv2-printer-field' => 'Imprimeur',
+	'bookmanagerv2-publication-year-field' => 'Année de publication',
+	'bookmanagerv2-publication-month-field' => 'Mois de publication',
+	'bookmanagerv2-publication-day-field' => 'Jour de publication',
+	'bookmanagerv2-publication-city-field' => 'Ville de publication',
+	'bookmanagerv2-language-field' => 'Langue',
+	'bookmanagerv2-description-field' => 'Description',
+	'bookmanagerv2-source-field' => 'Source',
+	'bookmanagerv2-permission-field' => 'Autorisation',
+	'bookmanagerv2-other-versions-field' => 'Autres versions',
+	'bookmanagerv2-sections-field' => 'Sections',
 );
 
 /** Galician (galego)
@@ -535,6 +637,7 @@ $messages['ia'] = array(
 
 /** Italian (italiano)
  * @author Beta16
+ * @author Gianfranco
  * @author Wim b
  */
 $messages['it'] = array(
@@ -564,7 +667,39 @@ $messages['it'] = array(
 	'bookmanagerv2-source' => 'Fonte: $1',
 	'bookmanagerv2-permission' => 'Autorizzazione: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Altra versione|Altre versioni}}: $2',
+	'bookmanagerv2-metadata-heading' => 'Metadati',
+	'bookmanagerv2-sections-heading' => 'Sezioni',
+	'bookmanagerv2-move-alt' => 'Sposta questa sezione',
+	'bookmanagerv2-remove-alt' => 'Rimuovi questa sezione',
+	'bookmanagerv2-rename' => 'rinomina',
+	'bookmanagerv2-create' => 'crea',
+	'bookmanagerv2-done' => 'Fatto',
+	'bookmanagerv2-add' => 'aggiungi',
 	'bookmanagerv2-read' => 'leggi',
+	'bookmanagerv2-section-name' => 'Nome della sezione:',
+	'bookmanagerv2-section-link' => 'Collegamento alla sezione:',
+	'bookmanagerv2-title-field' => 'Titolo',
+	'bookmanagerv2-alternate-titles-field' => 'Titoli alternativi',
+	'bookmanagerv2-authors-field' => 'Autori',
+	'bookmanagerv2-translators-field' => 'Traduttori',
+	'bookmanagerv2-editors-field' => 'Editori',
+	'bookmanagerv2-illustrators-field' => 'Illustratori',
+	'bookmanagerv2-subtitle-field' => 'Sottotitolo',
+	'bookmanagerv2-series-title-field' => 'Titolo della serie',
+	'bookmanagerv2-volume-field' => 'Volume',
+	'bookmanagerv2-edition-field' => 'Edizione',
+	'bookmanagerv2-publisher-field' => 'Editore',
+	'bookmanagerv2-printer-field' => 'Stampatore',
+	'bookmanagerv2-publication-year-field' => 'Anno di pubblicazione',
+	'bookmanagerv2-publication-month-field' => 'Mese di pubblicazione',
+	'bookmanagerv2-publication-day-field' => 'Giorno di pubblicazione',
+	'bookmanagerv2-publication-city-field' => 'Città di pubblicazione',
+	'bookmanagerv2-language-field' => 'Lingua',
+	'bookmanagerv2-description-field' => 'Descrizione',
+	'bookmanagerv2-source-field' => 'Fonte',
+	'bookmanagerv2-permission-field' => 'Permessi',
+	'bookmanagerv2-other-versions-field' => 'Altre versioni',
+	'bookmanagerv2-sections-field' => 'Sezioni',
 );
 
 /** Japanese (日本語)
@@ -595,12 +730,43 @@ $messages['ja'] = array(
 	'bookmanagerv2-language' => '言語: $1',
 	'bookmanagerv2-description' => '説明: $1',
 	'bookmanagerv2-source' => '出典: $1',
-	'bookmanagerv2-permission' => '許可: $1',
+	'bookmanagerv2-permission' => '許諾: $1',
 	'bookmanagerv2-other-versions' => 'その他の{{PLURAL:$1|バージョン}}: $2',
 	'bookmanagerv2-isbn' => 'ISBN: $1',
 	'bookmanagerv2-lccn' => 'LCCN: $1',
 	'bookmanagerv2-oclc' => 'OCLC: $1',
+	'bookmanagerv2-metadata-heading' => 'メタデータ',
+	'bookmanagerv2-sections-heading' => '節',
+	'bookmanagerv2-move-alt' => 'この節を移動する',
+	'bookmanagerv2-remove-alt' => 'この節を除去する',
+	'bookmanagerv2-rename' => '名前を変更',
+	'bookmanagerv2-create' => '作成',
+	'bookmanagerv2-done' => '完了',
+	'bookmanagerv2-add' => '追加',
 	'bookmanagerv2-read' => '閲覧',
+	'bookmanagerv2-section-name' => '節の名前:',
+	'bookmanagerv2-section-link' => '節リンク:',
+	'bookmanagerv2-title-field' => '書名',
+	'bookmanagerv2-authors-field' => '著者',
+	'bookmanagerv2-translators-field' => '翻訳者',
+	'bookmanagerv2-editors-field' => '編集者',
+	'bookmanagerv2-illustrators-field' => '挿絵画家',
+	'bookmanagerv2-subtitle-field' => '副題',
+	'bookmanagerv2-series-title-field' => 'シリーズ名',
+	'bookmanagerv2-volume-field' => '巻',
+	'bookmanagerv2-edition-field' => '版',
+	'bookmanagerv2-publisher-field' => '発行者',
+	'bookmanagerv2-printer-field' => '印刷者',
+	'bookmanagerv2-publication-year-field' => '発行年',
+	'bookmanagerv2-publication-month-field' => '発行月',
+	'bookmanagerv2-publication-day-field' => '発行日',
+	'bookmanagerv2-publication-city-field' => '発行地',
+	'bookmanagerv2-language-field' => '言語',
+	'bookmanagerv2-description-field' => '説明',
+	'bookmanagerv2-source-field' => '出典',
+	'bookmanagerv2-permission-field' => '許諾',
+	'bookmanagerv2-other-versions-field' => 'その他のバージョン',
+	'bookmanagerv2-sections-field' => '節',
 );
 
 /** Kurdish (Latin script) (Kurdî (latînî)‎)
@@ -636,7 +802,29 @@ $messages['lb'] = array(
 	'bookmanagerv2-source' => 'Quell: $1',
 	'bookmanagerv2-permission' => 'Autorisatioun: $1',
 	'bookmanagerv2-other-versions' => 'Aner {{PLURAL:$1|Versioun|Versiounen}}: $2',
+	'bookmanagerv2-sections-heading' => 'Abschnitter',
+	'bookmanagerv2-move-alt' => 'Dësen Abschnitt réckelen',
+	'bookmanagerv2-remove-alt' => 'Dësen Abschnitt ewechhuelen',
+	'bookmanagerv2-rename' => 'ëmbenennen',
+	'bookmanagerv2-create' => 'uleeën',
+	'bookmanagerv2-done' => 'Fäerdeg',
+	'bookmanagerv2-add' => 'derbäisetzen',
 	'bookmanagerv2-read' => 'liesen',
+	'bookmanagerv2-section-name' => 'Numm vum Abschnitt:',
+	'bookmanagerv2-title-field' => 'Titel',
+	'bookmanagerv2-alternate-titles-field' => 'Alternativ Titelen',
+	'bookmanagerv2-authors-field' => 'Auteuren',
+	'bookmanagerv2-translators-field' => 'Iwwersetzer',
+	'bookmanagerv2-editors-field' => 'Editeuren',
+	'bookmanagerv2-subtitle-field' => 'Ënnertitel',
+	'bookmanagerv2-edition-field' => 'Editioun',
+	'bookmanagerv2-printer-field' => 'Drécker',
+	'bookmanagerv2-publication-year-field' => 'Joer vun der Publikatioun',
+	'bookmanagerv2-language-field' => 'Sprooch',
+	'bookmanagerv2-description-field' => 'Beschreiwung',
+	'bookmanagerv2-source-field' => 'Quell',
+	'bookmanagerv2-other-versions-field' => 'Aner Versiounen',
+	'bookmanagerv2-sections-field' => 'Abschnitter',
 );
 
 /** Lithuanian (lietuvių)
@@ -644,11 +832,15 @@ $messages['lb'] = array(
  */
 $messages['lt'] = array(
 	'bookmanagerv2-invalid-json' => 'Neleistinas JSON',
+	'bookmanagerv2-metadata-header' => 'Metaduomenys',
+	'bookmanagerv2-contents' => 'Darbo turinys',
+	'bookmanagerv2-contents-header' => 'Turinys',
 	'bookmanagerv2-title' => 'Pavadinimas: $1',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autorius|Authoriai}}: $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Vertėjas|Vertėjai}}: $2',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|Redaktorius|Redaktoriai}}: $2',
 	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Iliustratorius|Iliusratoriai}}: $2',
+	'bookmanagerv2-subtitle' => 'Poraštė: $1',
 	'bookmanagerv2-volume' => 'Tomas: $1',
 	'bookmanagerv2-edition' => 'Leidimas: $1',
 	'bookmanagerv2-publisher' => 'Leidėjas: $1',
@@ -659,6 +851,39 @@ $messages['lt'] = array(
 	'bookmanagerv2-source' => 'Šaltinis: $1',
 	'bookmanagerv2-permission' => 'Leidimas: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Kita versija|Kitos versijos}}: $2',
+	'bookmanagerv2-metadata-heading' => 'Metaduomenys',
+	'bookmanagerv2-sections-heading' => 'Skyriai',
+	'bookmanagerv2-move-alt' => 'Perkelti šį skyrių',
+	'bookmanagerv2-remove-alt' => 'Pašalinti šį skyrių',
+	'bookmanagerv2-rename' => 'pervadinti',
+	'bookmanagerv2-create' => 'sukurti',
+	'bookmanagerv2-done' => 'Atlikta',
+	'bookmanagerv2-add' => 'pridėti',
+	'bookmanagerv2-read' => 'skaityti',
+	'bookmanagerv2-section-name' => 'Skyriaus pavadinimas:',
+	'bookmanagerv2-section-link' => 'Skyriaus nuoroda:',
+	'bookmanagerv2-title-field' => 'Pavadinimas',
+	'bookmanagerv2-alternate-titles-field' => 'Alternatyvūs pavadinimai',
+	'bookmanagerv2-authors-field' => 'Autoriai',
+	'bookmanagerv2-translators-field' => 'Vertėjai',
+	'bookmanagerv2-editors-field' => 'Redaktoriai',
+	'bookmanagerv2-illustrators-field' => 'Iliustratoriai',
+	'bookmanagerv2-subtitle-field' => 'Poraštė',
+	'bookmanagerv2-series-title-field' => 'Serijos pavadinimas',
+	'bookmanagerv2-volume-field' => 'Tomas',
+	'bookmanagerv2-edition-field' => 'Leidimas',
+	'bookmanagerv2-publisher-field' => 'Leidėjas',
+	'bookmanagerv2-printer-field' => 'Spausdintojas',
+	'bookmanagerv2-publication-year-field' => 'Paskelbimo metai',
+	'bookmanagerv2-publication-month-field' => 'Paskelbimo mėnesis',
+	'bookmanagerv2-publication-day-field' => 'Paskelbimo diena',
+	'bookmanagerv2-publication-city-field' => 'Leidymo miestas',
+	'bookmanagerv2-language-field' => 'Kalba',
+	'bookmanagerv2-description-field' => 'Aprašymas',
+	'bookmanagerv2-source-field' => 'Šaltinis',
+	'bookmanagerv2-permission-field' => 'Leidimas',
+	'bookmanagerv2-other-versions-field' => 'Kitos versijos',
+	'bookmanagerv2-sections-field' => 'Skyriai',
 );
 
 /** Macedonian (македонски)
@@ -691,7 +916,39 @@ $messages['mk'] = array(
 	'bookmanagerv2-source' => 'Извор: $1',
 	'bookmanagerv2-permission' => 'Дозвола: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Друга верзија|Други верзии}}: $2',
+	'bookmanagerv2-metadata-heading' => 'Метаподатоци',
+	'bookmanagerv2-sections-heading' => 'Делови',
+	'bookmanagerv2-move-alt' => 'Премести го делов',
+	'bookmanagerv2-remove-alt' => 'Отстрани го делов',
+	'bookmanagerv2-rename' => 'преименувај',
+	'bookmanagerv2-create' => 'создај',
+	'bookmanagerv2-done' => 'Готово',
+	'bookmanagerv2-add' => 'додај',
 	'bookmanagerv2-read' => 'прочитајте',
+	'bookmanagerv2-section-name' => 'Назив на делот:',
+	'bookmanagerv2-section-link' => 'Врска за делот:',
+	'bookmanagerv2-title-field' => 'Наслов',
+	'bookmanagerv2-alternate-titles-field' => 'Други наслови:',
+	'bookmanagerv2-authors-field' => 'Автори',
+	'bookmanagerv2-translators-field' => 'Преведувачи',
+	'bookmanagerv2-editors-field' => 'Уредници',
+	'bookmanagerv2-illustrators-field' => 'Илустратори',
+	'bookmanagerv2-subtitle-field' => 'Поднаслов',
+	'bookmanagerv2-series-title-field' => 'Едиција',
+	'bookmanagerv2-volume-field' => 'Том',
+	'bookmanagerv2-edition-field' => 'Издание',
+	'bookmanagerv2-publisher-field' => 'Издавач',
+	'bookmanagerv2-printer-field' => 'Печатница',
+	'bookmanagerv2-publication-year-field' => 'Година на издавање',
+	'bookmanagerv2-publication-month-field' => 'Месец на издавање',
+	'bookmanagerv2-publication-day-field' => 'Ден на издавање',
+	'bookmanagerv2-publication-city-field' => 'Град на издавање',
+	'bookmanagerv2-language-field' => 'Јазик',
+	'bookmanagerv2-description-field' => 'Опис',
+	'bookmanagerv2-source-field' => 'Извор',
+	'bookmanagerv2-permission-field' => 'Дозвола',
+	'bookmanagerv2-other-versions-field' => 'Други верзии',
+	'bookmanagerv2-sections-field' => 'Делови',
 );
 
 /** Marathi (मराठी)
