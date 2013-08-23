@@ -54,23 +54,32 @@ class JsonEditor extends EditPage {
 	) {
 		$key = htmlentities( $key );
 		$type = $val->type;
-		$i18n = $val->additionalProperties->i18n;
-		switch ( $type ) {
-		case 'string':
-		case 'array':
+		$i18n = $val->additionalProperties->i18n . '-field';
+		if ( $type === 'array' ) {
+			// TODO: Array handling
 			$inputType = 'text';
-			break;
-		case 'number':
-		case 'integer':
+		} else if ( $type === 'string' ) {
+			if ( isset( $val->additionalProperties->date_format ) ) {
+				$inputType = 'date';
+			} else {
+				$inputType = 'text';
+			}
+		} else if ( $type === 'number' || $type === 'integer' ) {
 			$inputType = 'number';
-			break;
 		}
-		$inputAttributes[ 'type' ] = $type;
+
 		$inputAttributes[ 'name' ] = 'json-editor-' . $key;
 		$inputAttributes[ 'id' ] = 'json-editor-' . $key;
 		if ( $val->required ) {
 			$inputAttributes[ 'required' ] = 'required';
 		}
+
+		if ( $inputType === 'date' ) {
+			// Handle dates separately
+			return self::addDateField( $key, $val, $original, $inputAttributes );
+		}
+
+		$inputAttributes[ 'type' ] = $type;
 		if ( $inputType === 'text' ) {
 			$inputAttributes[ 'size' ] = 60;
 		}
@@ -98,6 +107,99 @@ class JsonEditor extends EditPage {
 	 * @param string $id The ID to add to the link
 	 * @return HTML span element
 	 */
+	protected function addDateField( $key, $val, $original, $inputAttributes ) {
+		global $wgLang, $wgUser;
+		$inputFormat = $val->additionalProperties->date_format;
+		$preferenceFormat = $wgLang->getDateFormatString( 'date', $wgUser->getDatePreference() ? : 'default' );
+
+		$inputAttributes[ 'type' ] = 'number';
+		$tabindex = $inputAttributes[ 'tabindex' ];
+		$yearInput = $monthInput = $dayInput = null;
+
+		if ( stristr( $inputFormat, 'y' ) !== false ) {
+			$yearInputAttributes = $inputAttributes;
+			if ( strlen( $original ) >= 4 ) {
+				$yearInputAttributes[ 'value' ] = (int)substr( $original, 0, 4 );
+				$original = substr( $original, 4 );
+			}
+			$yearInputAttributes[ 'name' ] = $yearInputAttributes[ 'name' ] . '-year';
+			$yearInputAttributes[ 'tabindex' ] = $tabindex++;
+			$yearInputAttributes[ 'size' ] = 4;
+			$yearInputAttributes[ 'min' ] = 0;
+			$yearInputAttributes[ 'max' ] = 9999;
+			$yearInputAttributes[ 'placeholder' ] = wfMessage(
+				'bookmanagerv2-year-placeholder' )->escaped();
+			$yearInput = Html::element( 'input', $yearInputAttributes, '' );
+		} else {
+			// This must, at the very least, contain a year
+			return '';
+		 }
+
+		if ( stristr( $inputFormat, 'm' ) !== false ) {
+			$monthInputAttributes = $inputAttributes;
+			if ( strlen( $original ) >= 2 ) {
+				$monthInputAttributes[ 'value' ] = (int)substr( $original, 0, 2 );
+				$original = substr( $original, 2 );
+			}
+			$monthInputAttributes[ 'name' ] = $monthInputAttributes[ 'name' ] . '-month';
+			$monthInputAttributes[ 'tabindex' ] = $tabindex++;
+			$monthInputAttributes[ 'size' ] = 2;
+			$monthInputAttributes[ 'min' ] = 1;
+			$monthInputAttributes[ 'max' ] = 12;
+			$monthInputAttributes[ 'placeholder' ] = wfMessage(
+				'bookmanagerv2-month-placeholder' )->escaped();
+			$monthInput = Html::element( 'input', $monthInputAttributes, '' );
+		}
+
+		if ( stristr( $inputFormat, 'd' ) !== false ) {
+			$dayInputAttributes = $inputAttributes;
+			if ( strlen( $original ) >= 2 ) {
+				$dayInputAttributes[ 'value' ] = (int)substr( $original, 0, 2 );
+			}
+			$dayInputAttributes[ 'name' ] = $dayInputAttributes[ 'name' ] . '-day';
+			$dayInputAttributes[ 'tabindex' ] = $tabindex++;
+			$dayInputAttributes[ 'size' ] = 2;
+			$dayInputAttributes[ 'min' ] = 1;
+			$dayInputAttributes[ 'max' ] = 31;
+			$dayInputAttributes[ 'placeholder' ] = wfMessage(
+				'bookmanagerv2-day-placeholder' )->escaped();
+			$dayInput = Html::element( 'input', $dayInputAttributes, '' );
+		}
+
+		if ( $dayInput && !$monthInput ) {
+			// Having a date with a day and not a month doesn't make sense
+			$dayInput = null;
+		}
+
+		$yearInd = stripos( $preferenceFormat, 'y' );
+		$monthInd = stripos( $preferenceFormat, 'f' );
+		$dayInd = stripos( $preferenceFormat, 'j' );
+		$dateInputs = null;
+
+		if ( $dayInd < $monthInd && $monthInd < $yearInd ) {
+			// j F Y (day, month, year)
+			$dateInputs = $dayInput . $monthInput . $yearInput;
+		} else if ( $monthInd < $dayInd && $dayInd < $yearInd ) {
+			// F j, Y (month, day, year)
+			$dateInputs = $monthInput . $dayInput . $yearInput;
+		} else {
+			// Default to Y F j (year, month, day)
+			$dateInputs = $yearInput . $monthInput . $dayInput;
+		}
+
+		$html = Html::openElement( 'tr' )
+			. Html::openElement( 'th', array( 'scope' => 'row' ) )
+			. Html::element( 'label', array(
+				'for' => $key ),
+				wfMessage( $val->additionalProperties->i18n . '-field' )->text() )
+			. Html::closeElement( 'th' )
+			. Html::openElement( 'td' )
+			. $dateInputs
+			. Html::closeElement( 'td' )
+			. Html::closeElement( 'tr' );
+		return $html;
+	}
+
 	protected function addAddButton( $tabindex, $id = null ) {
 		$addHtml = Html::openElement( 'span', array(
 			'class' => 'mw-bookmanagerv2-add'
@@ -118,9 +220,6 @@ class JsonEditor extends EditPage {
 		return $addHtml;
 	}
 
-	/**
-	 * Create the edit form
-	 */
 	protected function showContentForm() {
 		global $wgOut;
 		$schema = self::getSchema();
@@ -166,7 +265,7 @@ class JsonEditor extends EditPage {
 
 		foreach ( $schema->properties as $key => $schemaAttribs ) {
 			if ( $key === 'sections' ) {
-				break;
+				continue;
 			}
 			$original = null;
 			if ( $originalJson ) {
@@ -189,7 +288,13 @@ class JsonEditor extends EditPage {
 					}
 				}
 			}
-			$inputAttributes[ 'tabindex' ] = $tabindex++;
+			if ( isset( $schemaAttribs->additionalProperties->date_format ) ) {
+				// Allow extra tabindices for dates
+				$inputAttributes[ 'tabindex' ] = $tabindex;
+				$tabindex += 3;
+			} else {
+				$inputAttributes[ 'tabindex' ] = $tabindex++;
+			}
 
 			// Add each property to the form, with the current value if there
 			// is one.
@@ -324,6 +429,43 @@ class JsonEditor extends EditPage {
 		$data = array();
 		foreach ( $schema->properties as $key => $val ) {
 			if ( $key === 'sections' ) {
+				continue;
+			}
+
+			if ( isset( $val->additionalProperties->date_format ) ) {
+				$format = $val->additionalProperties->date_format;
+				if ( stristr( $format, 'y' ) !== false ) {
+					$year = $this->safeUnicodeInput( $request,
+						'json-editor-' . $key . '-year' );
+				}
+				if ( stristr( $format, 'm' ) !== false ) {
+					$month = $this->safeUnicodeInput( $request,
+						'json-editor-' . $key . '-month' );
+					if ( (int)$month < 1 || (int)$month > 12 ) {
+						// Don't save invalid value
+						$month = '';
+					}
+				}
+				if ( stristr( $format, 'd' ) !== false ) {
+					$day = $this->safeUnicodeInput( $request,
+						'json-editor-' . $key . '-day' );
+					if ( (int)$day < 1 || (int)$day > 31 ) {
+						// Don't save invalid value
+						$day = '';
+					}
+				}
+				if ( strlen( $year ) > 0 ) {
+					$yearStr = str_pad( (string)$year, 4, "0", STR_PAD_LEFT );
+					$data[ $key ] = $yearStr;
+					if ( strlen( $month ) > 0 ) {
+						$monthStr = str_pad( (string)$month, 2, "0", STR_PAD_LEFT );
+						$data[ $key ] = $yearStr . $monthStr;
+						if ( strlen( $day ) > 0 ) {
+							$dayStr = str_pad( (string)$day, 2, "0", STR_PAD_LEFT );
+							$data[ $key ] = $yearStr . $monthStr . $dayStr;
+						}
+					}
+				}
 				continue;
 			}
 			$inputType = $val->type;

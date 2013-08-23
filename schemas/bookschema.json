@@ -6,7 +6,7 @@
             "type": "string",
             "required": true,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-title-field"
+                "i18n": "bookmanagerv2-title"
             }
         },
         "alternate_titles": {
@@ -20,7 +20,7 @@
                 }
             ],
             "additionalProperties": {
-                "i18n": "bookmanagerv2-alternate-titles-field"
+                "i18n": "bookmanagerv2-alternate-titles"
             }
         },
         "authors": {
@@ -34,7 +34,7 @@
                 }
             ],
             "additionalProperties": {
-                "i18n": "bookmanagerv2-authors-field"
+                "i18n": "bookmanagerv2-authors"
             }
         },
         "translators": {
@@ -48,7 +48,7 @@
                 }
             ],
             "additionalProperties": {
-                "i18n": "bookmanagerv2-translators-field"
+                "i18n": "bookmanagerv2-translators"
             }
         },
         "editors": {
@@ -62,7 +62,7 @@
                 }
             ],
             "additionalProperties": {
-                "i18n": "bookmanagerv2-editors-field"
+                "i18n": "bookmanagerv2-editors"
             }
         },
         "illustrators": {
@@ -76,7 +76,7 @@
                 }
             ],
             "additionalProperties": {
-                "i18n": "bookmanagerv2-illustrators-field"
+                "i18n": "bookmanagerv2-illustrators"
             }
         },
         "subtitle": {
@@ -84,7 +84,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-subtitle-field"
+                "i18n": "bookmanagerv2-subtitle"
             }
         },
         "series_title": {
@@ -92,7 +92,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-series-title-field"
+                "i18n": "bookmanagerv2-series-title"
             }
         },
         "volume": {
@@ -100,7 +100,7 @@
             "type": "number",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-volume-field"
+                "i18n": "bookmanagerv2-volume"
             }
         },
         "edition": {
@@ -108,7 +108,7 @@
             "type": "number",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-edition-field"
+                "i18n": "bookmanagerv2-edition"
             }
         },
         "publisher": {
@@ -116,7 +116,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-publisher-field"
+                "i18n": "bookmanagerv2-publisher"
             }
         },
         "printer": {
@@ -124,31 +124,16 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-printer-field"
+                "i18n": "bookmanagerv2-printer"
             }
         },
-        "publication_year": {
-            "description": "Year of publication of the work",
-            "type": "integer",
+        "publication_date": {
+            "description": "Date of publication of the work",
+            "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-publication-year-field"
-            }
-        },
-        "publication_month": {
-            "description": "Month of publication of the work",
-            "type": "integer",
-            "required": false,
-            "additionalProperties": {
-                "i18n": "bookmanagerv2-publication-month-field"
-            }
-        },
-        "publication_day": {
-            "description": "Day of publication of the work",
-            "type": "integer",
-            "required": false,
-            "additionalProperties": {
-                "i18n": "bookmanagerv2-publication-day-field"
+                "date_format": "YMD",
+                "i18n": "bookmanagerv2-publication-date"
             }
         },
         "publication_city": {
@@ -156,7 +141,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-publication-city-field"
+                "i18n": "bookmanagerv2-publication-city"
             }
         },
         "language": {
@@ -164,7 +149,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-language-field"
+                "i18n": "bookmanagerv2-language"
             }
         },
         "description": {
@@ -172,7 +157,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-description-field"
+                "i18n": "bookmanagerv2-description"
             }
         },
         "source": {
@@ -180,7 +165,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-source-field"
+                "i18n": "bookmanagerv2-source"
             }
         },
         "permission": {
@@ -188,7 +173,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-permission-field"
+                "i18n": "bookmanagerv2-permission"
             }
         },
         "other_versions": {
@@ -202,7 +187,7 @@
                 }
             ],
             "additionalProperties": {
-                "i18n": "bookmanagerv2-other-versions-field"
+                "i18n": "bookmanagerv2-other-versions"
             }
         },
         "isbn": {
@@ -210,7 +195,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-isbn-field"
+                "i18n": "bookmanagerv2-isbn"
             }
         },
         "lccn": {
@@ -218,7 +203,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-lccn-field"
+                "i18n": "bookmanagerv2-lccn"
             }
         },
         "oclc": {
@@ -226,7 +211,7 @@
             "type": "string",
             "required": false,
             "additionalProperties": {
-                "i18n": "bookmanagerv2-oclc-field"
+                "i18n": "bookmanagerv2-oclc"
             }
         },
         "sections": {
@@ -243,7 +228,7 @@
                             "type": "string",
                             "required": true,
                             "additionalProperties": {
-                                "i18n": "bookmanagerv2-name-field"
+                                "i18n": "bookmanagerv2-name"
                             }
                         },
                         "link": {
@@ -251,7 +236,7 @@
                             "type": "string",
                             "required": true,
                             "additionalProperties": {
-                                "i18n": "bookmanagerv2-link-field"
+                                "i18n": "bookmanagerv2-link"
                             }
                         },
                         "source": {
@@ -259,7 +244,7 @@
                             "required": false,
                             "type": "string",
                             "additionalProperties": {
-                                "i18n": "bookmanagerv2-source-field"
+                                "i18n": "bookmanagerv2-source"
                             }
                         }
                     },
@@ -267,10 +252,9 @@
                 }
             ],
             "additionalProperties": {
-                "i18n": "bookmanagerv2-sections-field"
+                "i18n": "bookmanagerv2-sections"
             }
         }
     },
     "additionalProperties": false
 }
-

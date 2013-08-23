@@ -19,6 +19,10 @@ table.mw-bookmanagerv2-edit-form th {
 	text-align: left;
 }
 
+table.mw-bookmanagerv2-edit-form td {
+	padding-left: 10px;
+}
+
 h2.mw-bookmanagerv2-sections-heading {
 	margin-top: 10px;
 }

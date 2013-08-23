@@ -24,7 +24,6 @@
  */
 
 class BookManagerv2Hooks {
-
 	/**
 	 * Validates that the revised contents of an NS_BOOK page are valid JSON.
 	 * If not valid, rejects edit with error message.
@@ -61,6 +60,7 @@ class BookManagerv2Hooks {
 		return true;
 	}
 
+
 	/**
 	 * Adds a navigation bar to the page
 	 *
@@ -73,7 +73,7 @@ class BookManagerv2Hooks {
 	 * @return string HTML string
 	 */
 	public static function readingInterfaceUX( $prev, $next, $chapterList, $metadata,
-   		$currentPageTitle
+		$currentPageTitle
 	) {
 		if ( $prev === null && $next === null && $chapterList === null
 				&& $metadata === null ) {
@@ -176,14 +176,14 @@ class BookManagerv2Hooks {
 	/**
 	 * Creates a list item element with a comma-separated list of the array values
 	 *
-	 * @param string $key Name of the JSON property
+	 * @param string $i18n Name of the JSON property
 	 * @param array $array Array of strings
 	 * @return string HTML list item element
 	 */
-	public static function addArray( $key, $array ) {
+	public static function addArray( $i18n, $array ) {
 		global $wgContLang;
 		$output = Html::element( 'li', array(),
-			wfMessage( 'bookmanagerv2-' . $key )
+			wfMessage( $i18n )
 				->numParams( count( $array ) )
 				->params( $wgContLang->commaList( $array ) )
 				->text() );
@@ -193,42 +193,48 @@ class BookManagerv2Hooks {
 	/**
 	 * Creates a list item element with a string
 	 *
-	 * @param string $key Name of the JSON property
+	 * @param string $i18n Name of the JSON property
 	 * @param string $string Name of the string value
 	 * @return string HTML list item element
 	 */
-	public static function addString( $key, $string ) {
+	public static function addString( $i18n, $string ) {
 		$output = Html::element( 'li', array(),
-			wfMessage( 'bookmanagerv2-' . $key, $string )->text() );
+			wfMessage( $i18n, $string )->text() );
 		return $output;
 	}
 
 	/**
 	 * Creates a list item element with a date.
 	 *
-	 * @param int|null $year Year
-	 * @param int|null $month Month
-	 * @param int|null $day Day
+	 * @param string $i18n The key name, to be used to label the value
+	 * @param string $date The date string, which must match the format
+	 * @param string $format The format, which is a string containing 'y',
+	 * 'm', or 'd' in any order.
 	 * @return string HTML list item element
 	 */
-	public static function addDate( $year, $month, $day ) {
+	public static function addDate( $i18n, $date, $format ) {
 		global $wgLang, $wgUser;
 
+		$year = $month = $day = null;
+		if ( strlen( $date ) >= 4 && stristr( $format, 'y' ) !== false ) {
+			$year = substr( $date, 0, 4 );
+			$date = substr( $date, 4 );
+		}
+		if ( strlen( $date ) >= 2 && stristr( $format, 'm' ) !== false ) {
+			$month = substr( $date, 0, 2 );
+			$date = substr( $date, 2 );
+		}
+		if ( strlen( $date ) >= 2 && stristr( $format, 'd' ) !== false ) {
+			$day = substr( $date, 0, 2 );
+		}
+
 		// Basic validation of inputs
-		if ( !$month || $month < 1 || $month > 12 ) {
+		if ( !$month || (int)$month < 1 || (int)$month > 12 ) {
 			$month = null;
-		} else {
-			$monthStr = str_pad( (string)$month, 2, "0", STR_PAD_LEFT );
 		}
 
-		if ( !$day || $day < 1 || $day > 31 ) {
+		if ( !$day || (int)$day < 1 || (int)$day > 31 ) {
 			$day = null;
-		} else {
-			$dayStr = str_pad( (string)$day, 2, "0", STR_PAD_LEFT );
-		}
-
-		if ( $year ) {
-			$yearStr = str_pad( (string)$year, 4, "0", STR_PAD_LEFT );
 		}
 
 		if ( $year && !$month ) {
@@ -236,26 +242,36 @@ class BookManagerv2Hooks {
 			$date = $year;
 			$datetime = $year;
 		} else if ( $year && $month && !$day ) {
-			$ts = $yearStr . $monthStr . "01000000";
+			$ts = $year . $month . "01000000";
 			$format = $wgLang->getDateFormatString( 'monthonly',
 				$wgUser->getDatePreference() ? : 'default' );
 			$date = $wgLang->sprintfDate( $format, $ts );
-			$datetime = $yearStr . "-" . $monthStr;
+			$datetime = $year . "-" . $month;
 		} else {
-			$ts = $yearStr . $monthStr . $dayStr . "000000";
+			$ts = $year . $month . $day . "000000";
 			$format = $wgLang->getDateFormatString( 'date',
 				$wgUser->getDatePreference() ? : 'default' );
 			$date = $wgLang->sprintfDate( $format, $ts );
-			$datetime = $yearStr . "-" . $monthStr . "-" . $dayStr;
+			$datetime = $year . "-" . $month . "-" . $day;
 		}
 		$output = Html::openElement( 'li', array() )
 			. Html::openElement( 'time', array( 'datetime' => $datetime ) )
-			. wfMessage( 'bookmanagerv2-publication-date', $date )->text()
+			. wfMessage( $i18n, $date )->text()
 			. Html::closeElement( 'time' )
 			. Html::closeElement( 'li' );
 		return $output;
 	}
 
+	/**
+	 * Adds a header to the dropdowns. The header labels the dropdown as
+	 * metadata or contents, and adds [read|edit] links that direct the
+	 * user to the JSON schema page.
+	 *
+	 * @param Title $jsonPageTitle Title object for the JSON page
+	 * @param string $title Localization message key for the title of the
+	 * dropdown
+	 * @return string HTML div element
+	 */
 	public static function addJsonPageLink( $jsonPageTitle, $title ) {
 		$html = Html::openElement( 'div', array(
 			'class' => 'mw-bookmanagerv2-dropdown-header' ) )
@@ -327,86 +343,37 @@ class BookManagerv2Hooks {
 	 * @return string HTML unordered list element
 	 */
 	public static function formatMetadata( $jsonBook, $jsonPageTitle = null ) {
+		$schema = FormatJson::decode(
+			file_get_contents( __DIR__ . '/schemas/bookschema.json' ) );
 		$metadata = '';
 		if ( $jsonPageTitle !== null ) {
 			$metadata = self::addJsonPageLink( $jsonPageTitle,
 				'bookmanagerv2-metadata-header' );
 		}
-		$metadata .= Html::openElement( 'ul', array() )
-		. Html::openElement( 'li', array() )
-		. wfMessage( 'bookmanagerv2-title',
-			$jsonBook->title )->text()
-		. Html::closeElement( 'li' );
-		if ( isset( $jsonBook->alternate_titles ) ) {
-			$metadata .= self::addArray( "alternate-titles",
-				$jsonBook->alternate_titles );
-		}
-		if ( isset( $jsonBook->authors ) ) {
-			$metadata .= self::addArray( "authors", $jsonBook->authors );
-		}
-		if ( isset( $jsonBook->translators ) ) {
-			$metadata .= self::addArray( "translators",
-				$jsonBook->translators );
-		}
-		if ( isset( $jsonBook->editors ) ) {
-			$metadata .= self::addArray( "editors", $jsonBook->editors );
-		}
-		if ( isset( $jsonBook->illustrators ) ) {
-			$metadata .= self::addArray( "illustrators",
-				$jsonBook->illustrators );
-		}
-		if ( isset( $jsonBook->subtitle ) ) {
-			$metadata .= self::addString( "subtitle", $jsonBook->subtitle );
-		}
-		if ( isset( $jsonBook->series_title ) ) {
-			$metadata .= self::addString( "series-title",
-				$jsonBook->series_title );
-		}
-		if ( isset( $jsonBook->volume ) ) {
-			$metadata .= self::addString( "volume",
-				(string)$jsonBook->volume );
-		}
-		if ( isset( $jsonBook->edition ) ) {
-			$metadata .= self::addString( "edition",
-				(string)$jsonBook->edition );
-		}
-		if ( isset( $jsonBook->publisher ) ) {
-			$metadata .= self::addString( "publisher", $jsonBook->publisher );
-		}
-		if ( isset( $jsonBook->publication_city ) ) {
-			$metadata .= self::addString( "publication-city",
-				$jsonBook->publication_city );
-		}
-		if ( isset( $jsonBook->publication_year ) ) {
-			$year = isset( $jsonBook->publication_year ) ?
-				$jsonBook->publication_year : null;
-			$month = isset( $jsonBook->publication_month ) ?
-				$jsonBook->publication_month : null;
-			$day = isset( $jsonBook->publication_day ) ?
-				$jsonBook->publication_day : null;
-			$metadata .= self::addDate( $year, $month, $day );
-		}
-		if ( isset( $jsonBook->printer ) ) {
-			$metadata .= self::addString( "printer", $jsonBook->printer );
-		}
-		if ( isset( $jsonBook->language ) ) {
-			// TODO: Transform the language code to the correct long-form language
-			$metadata .= self::addString( "language", $jsonBook->language );
-		}
-		if ( isset( $jsonBook->description ) ) {
-			$metadata .= self::addString( "description",
-				$jsonBook->description );
-		}
-		if ( isset( $jsonBook->isbn ) ) {
-			$metadata .= self::addString( "isbn", $jsonBook->isbn );
-		}
-		if ( isset( $jsonBook->lccn ) ) {
-			$metadata .= self::addString( "lccn", $jsonBook->lccn );
-		}
-		if ( isset( $jsonBook->oclc ) ) {
-			$metadata .= self::addString( "oclc", $jsonBook->oclc );
-		}
+		$metadata .= Html::openElement( 'ul', array() );
+		foreach ( $jsonBook as $key => $val ) {
+			if ( $key === 'sections' ) {
+				continue;
+			}
+			$schemaVal = $schema->properties->$key;
+			$type = $schemaVal->type;
 
+			$i18n = $schemaVal->additionalProperties->i18n;
+
+			if ( $type === 'string' ) {
+				if ( isset( $schemaVal->additionalProperties->date_format ) ) {
+					$format = $schemaVal->additionalProperties->date_format;
+					$date = $jsonBook->$key;
+					$metadata .= self::addDate( $i18n, $date, $format );
+				} else {
+					$metadata .= self::addString( $i18n, $jsonBook->$key );
+				}
+			} else if ( $type === 'array' ) {
+				$metadata .= self::addArray( $i18n, $jsonBook->$key );
+			} else if ( $type === 'number' || $type === 'integer' ) {
+				$metadata .= self::addString( $i18n, (string)$jsonBook->$key );
+			}
+		}
 		$metadata .= Html::closeElement( 'ul' );
 
 		return $metadata;
