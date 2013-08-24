@@ -29,11 +29,26 @@ class JsonEditor extends EditPage {
 		return false;
 	}
 
+	/**
+	 * Pulls the schema from the local schema file and decodes it.
+	 */
 	static function getSchema() {
 		return FormatJson::decode(
 			file_get_contents( __DIR__ . '/schemas/bookschema.json' ) );
 	}
 
+	/**
+	 * Adds a field (consisting of a label and an input field) to the
+	 * edit form.
+	 *
+	 * @param string $key The name of the JSON key
+	 * @param object $val The value of the key in the schema
+	 * @param string $original The current value of the key in this JSON
+	 * 		block
+	 * @param array $inputAttributes An array of HTML attributes to be
+	 * 		added to the input element
+	 * @return HTML tr element containing the label and input elements
+	 */
 	protected function addField( $key, $val, $original,
 		$inputAttributes = array()
 	) {
@@ -75,6 +90,14 @@ class JsonEditor extends EditPage {
 		return $html;
 	}
 
+	/**
+	 * Adds the [add] button to various places in the pages, such
+	 * as where new sections can be added to the section list.
+	 *
+	 * @param integer $tabindex The tabindex value to set for this link
+	 * @param string $id The ID to add to the link
+	 * @return HTML span element
+	 */
 	protected function addAddButton( $tabindex, $id = null ) {
 		$addHtml = Html::openElement( 'span', array(
 			'class' => 'mw-bookmanagerv2-add'
@@ -95,6 +118,9 @@ class JsonEditor extends EditPage {
 		return $addHtml;
 	}
 
+	/**
+	 * Create the edit form
+	 */
 	protected function showContentForm() {
 		global $wgOut;
 		$schema = self::getSchema();
@@ -287,6 +313,12 @@ class JsonEditor extends EditPage {
 		$wgOut->addModules( 'ext.BookManagerv2.editorjs' );
 	}
 
+	/**
+	 * Extract the form values
+	 *
+	 * @param $request WebRequest
+	 * @return JSON block
+	 */
 	protected function importContentFormData( &$request ) {
 		$schema = self::getSchema();
 		$data = array();
