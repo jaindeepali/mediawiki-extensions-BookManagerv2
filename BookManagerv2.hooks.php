@@ -124,14 +124,24 @@ class BookManagerv2Hooks {
 			$html .= Linker::link(
 				Title::newFromText( $prev->link ),
 				$prev->title,
-				array( 'class' => 'mw-bookmanagerv2-nav-prev' )
+				array(
+					'class' => 'mw-bookmanagerv2-nav-prev',
+					'title' => wfMessage( 'bookmanagerv2-prev-title' )
+						->params( $prev->title )
+						->escaped()
+			   	)
 			);
 		}
 		if ( $next ) {
 			$html .= Linker::link(
 				Title::newFromText( $next->link ),
 				$next->title,
-				array( 'class' => 'mw-bookmanagerv2-nav-next' )
+				array(
+					'class' => 'mw-bookmanagerv2-nav-next',
+					'title' => wfMessage( 'bookmanagerv2-next-title' )
+						->params( $next->title )
+						->escaped()
+				)
 			);
 		}
 		$html .= Html::closeElement( 'div' )

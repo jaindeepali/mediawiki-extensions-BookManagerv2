@@ -44,6 +44,8 @@ $messages['en'] = array(
 	'bookmanagerv2-oclc' => 'OCLC: $1',
 	'bookmanagerv2-read-json-block' => 'View the metadata and chapter list for this work',
 	'bookmanagerv2-edit-json-block' => 'Edit the metadata and chapter list for this work',
+	'bookmanagerv2-next-title' => 'Next section: $1',
+	'bookmanagerv2-prev-title' => 'Previous section: $2',
 	'bookmanagerv2-metadata-heading' => 'Metadata',
 	'bookmanagerv2-sections-heading' => 'Sections',
 	'bookmanagerv2-move-alt' => 'Move this section',
@@ -193,6 +195,14 @@ Parameters:
 
 See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
+	'bookmanagerv2-next-title' => 'Title text for the link to the next section in the work.
+
+Parameters:
+*$1 - Title of the next page in the section',
+	'bookmanagerv2-prev-title' => 'Title text for the link to the previous section in the work.
+
+Parameters:
+*$1 - Title of the previous page in the section',
 	'bookmanagerv2-read-json-block' => 'Title for a link to explain that clicking the \'read\' button will allow them to view the metadata and chapter list for this work',
 	'bookmanagerv2-edit-json-block' => 'Title for a link to explain that clicking the \'edit\' button will allow them to edit the metadata and chapter list for this work',
 	'bookmanagerv2-metadata-heading' => 'Heading for the collapsible section of the JSON editor that holds the metadata (everything but the sections information).
