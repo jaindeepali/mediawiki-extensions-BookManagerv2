@@ -1019,6 +1019,7 @@ $messages['nl'] = array(
 );
 
 /** Polish (polski)
+ * @author Chrumps
  * @author Woytecr
  */
 $messages['pl'] = array(
@@ -1036,6 +1037,19 @@ $messages['pl'] = array(
 	'bookmanagerv2-description' => 'Opis: $1',
 	'bookmanagerv2-source' => 'Źródło: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Inna wersja|Inne wersje}}: $2',
+	'bookmanagerv2-sections-heading' => 'Sekcje',
+	'bookmanagerv2-create' => 'utwórz',
+	'bookmanagerv2-add' => 'dodaj',
+	'bookmanagerv2-section-name' => 'Nazwa sekcji:',
+	'bookmanagerv2-title-field' => 'Tytuł',
+	'bookmanagerv2-authors-field' => 'Autorzy',
+	'bookmanagerv2-publication-year-field' => 'Rok publikacji',
+	'bookmanagerv2-publication-month-field' => 'Miesiąc publikacji',
+	'bookmanagerv2-publication-day-field' => 'Dzień publikacji',
+	'bookmanagerv2-language-field' => 'Język',
+	'bookmanagerv2-description-field' => 'Opis',
+	'bookmanagerv2-other-versions-field' => 'Inne wersje',
+	'bookmanagerv2-sections-field' => 'Sekcje',
 );
 
 /** Portuguese (português)
@@ -1265,6 +1279,42 @@ $messages['uk'] = array(
 	'bookmanagerv2-permission-field' => 'Права',
 	'bookmanagerv2-other-versions-field' => 'Інші версії',
 	'bookmanagerv2-sections-field' => 'Розділи',
+);
+
+/** Yiddish (ייִדיש)
+ * @author פוילישער
+ */
+$messages['yi'] = array(
+	'bookmanagerv2-metadata-heading' => 'מעטאַ־דאַטן',
+	'bookmanagerv2-sections-heading' => 'אפטיילן',
+	'bookmanagerv2-move-alt' => 'באוועגן דעם אפטייל',
+	'bookmanagerv2-remove-alt' => 'אַראָפּנעמען דעם אפטייל',
+	'bookmanagerv2-create' => 'שאַפֿן',
+	'bookmanagerv2-done' => 'ערליידיקט',
+	'bookmanagerv2-add' => 'צולייגן',
+	'bookmanagerv2-read' => 'לייענען',
+	'bookmanagerv2-section-name' => 'אפטייל נאמען:',
+	'bookmanagerv2-section-link' => 'אפטייל לינק:',
+	'bookmanagerv2-title-field' => 'טיטל',
+	'bookmanagerv2-authors-field' => 'שרייבער',
+	'bookmanagerv2-translators-field' => 'איבערזעצער',
+	'bookmanagerv2-editors-field' => 'רעדאַקטאָרן',
+	'bookmanagerv2-illustrators-field' => 'אילוסטרירער',
+	'bookmanagerv2-subtitle-field' => 'אונטער־טיטל',
+	'bookmanagerv2-series-title-field' => 'סעריע טיטל',
+	'bookmanagerv2-edition-field' => 'אויפֿלאַגע',
+	'bookmanagerv2-publisher-field' => 'פֿאַרלעגער',
+	'bookmanagerv2-printer-field' => 'דרוקער',
+	'bookmanagerv2-publication-year-field' => 'פארעפנטלעכונג יאר',
+	'bookmanagerv2-publication-month-field' => 'פארעפנטלעכונג מאנאט',
+	'bookmanagerv2-publication-day-field' => 'פארעפנטלעכונג טאג',
+	'bookmanagerv2-publication-city-field' => 'פארעפנטלעכונג שטאט',
+	'bookmanagerv2-language-field' => 'שפראַך',
+	'bookmanagerv2-description-field' => 'באַשרײַבונג',
+	'bookmanagerv2-source-field' => 'מקור',
+	'bookmanagerv2-permission-field' => 'דערלויבעניש',
+	'bookmanagerv2-other-versions-field' => 'אַנדערע ווערסיעס',
+	'bookmanagerv2-sections-field' => 'אפטיילן',
 );
 
 /** Simplified Chinese (中文（简体）‎)
