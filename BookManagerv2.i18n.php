@@ -195,6 +195,8 @@ Parameters:
 
 See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
+	'bookmanagerv2-read-json-block' => "Title for a link to explain that clicking the 'read' button will allow them to view the metadata and chapter list for this work",
+	'bookmanagerv2-edit-json-block' => "Title for a link to explain that clicking the 'edit' button will allow them to edit the metadata and chapter list for this work",
 	'bookmanagerv2-next-title' => 'Title text for the link to the next section in the work.
 
 Parameters:
@@ -203,8 +205,6 @@ Parameters:
 
 Parameters:
 *$1 - Title of the previous page in the section',
-	'bookmanagerv2-read-json-block' => 'Title for a link to explain that clicking the \'read\' button will allow them to view the metadata and chapter list for this work',
-	'bookmanagerv2-edit-json-block' => 'Title for a link to explain that clicking the \'edit\' button will allow them to edit the metadata and chapter list for this work',
 	'bookmanagerv2-metadata-heading' => 'Heading for the collapsible section of the JSON editor that holds the metadata (everything but the sections information).
 {{Identical|Metadata}}',
 	'bookmanagerv2-sections-heading' => 'Heading for the collapsible section of the JSON editor that holds information on the sections of the book.
@@ -627,6 +627,39 @@ $messages['gl'] = array(
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Outra versión|Outras versións}}: $2',
 );
 
+/** Guarani (Avañe'ẽ)
+ * @author P. S. F. Freitas
+ */
+$messages['gn'] = array(
+	'bookmanagerv2-metadata-heading' => 'Metadata',
+	'bookmanagerv2-sections-heading' => 'Vore',
+	'bookmanagerv2-move-alt' => 'Mbova ko vore',
+	'bookmanagerv2-rename' => 'mboherajey',
+	'bookmanagerv2-create' => 'japo',
+	'bookmanagerv2-done' => 'Oĩma',
+	'bookmanagerv2-section-name' => 'Vore heraː',
+	'bookmanagerv2-title-field' => 'Héra',
+	'bookmanagerv2-alternate-titles-field' => 'Héra ambueva',
+	'bookmanagerv2-authors-field' => 'Haihára kuéra',
+	'bookmanagerv2-translators-field' => "Ñe'ẽ mbohasahára",
+	'bookmanagerv2-editors-field' => 'Haijeyhára',
+	'bookmanagerv2-illustrators-field' => "Moha'angahára",
+	'bookmanagerv2-subtitle-field' => 'Teraguy',
+	'bookmanagerv2-series-title-field' => 'Tysýi hera',
+	'bookmanagerv2-volume-field' => "Mba'epu",
+	'bookmanagerv2-publisher-field' => 'Mbojekuaahára',
+	'bookmanagerv2-printer-field' => "Kuatiañe'ẽ jopyha",
+	'bookmanagerv2-publication-year-field' => 'Ary ojapova akue',
+	'bookmanagerv2-publication-month-field' => 'Jasy ojapova akue',
+	'bookmanagerv2-publication-day-field' => 'Ára ojapova akue',
+	'bookmanagerv2-publication-city-field' => 'Táva ojapova akue',
+	'bookmanagerv2-language-field' => "Ñe'ẽ",
+	'bookmanagerv2-description-field' => "Mombe'uanga",
+	'bookmanagerv2-permission-field' => "Mba'eheja",
+	'bookmanagerv2-other-versions-field' => 'Ambue ysaja',
+	'bookmanagerv2-sections-field' => 'Vore',
+);
+
 /** Interlingua (interlingua)
  * @author McDutchie
  */
@@ -1040,6 +1073,57 @@ $messages['nl'] = array(
 	'bookmanagerv2-other-versions' => 'Andere {{PLURAL:$1|versie|versies}}: $2',
 );
 
+/** Occitan (occitan)
+ * @author Cedric31
+ */
+$messages['oc'] = array(
+	'bookmanagerv2-metadata-header' => 'Metadonadas',
+	'bookmanagerv2-contents' => 'Contengut del trabalh',
+	'bookmanagerv2-contents-header' => 'Ensenhador',
+	'bookmanagerv2-title' => 'Títol : $1',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autors}} : $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Traductor|Traductors}} : $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Editor|Editors}} : $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Illustrator|Illustrators}}: $2',
+	'bookmanagerv2-subtitle' => 'Sostítol : $1',
+	'bookmanagerv2-volume' => 'Volum : $1',
+	'bookmanagerv2-edition' => 'Edition : $1',
+	'bookmanagerv2-publisher' => 'Editor : $1',
+	'bookmanagerv2-printer' => 'Imprimenta : $1',
+	'bookmanagerv2-metadata-heading' => 'Metadonadas',
+	'bookmanagerv2-sections-heading' => 'Seccions',
+	'bookmanagerv2-move-alt' => 'Desplaçar aquesta seccion',
+	'bookmanagerv2-remove-alt' => 'Suprimir aquesta seccion',
+	'bookmanagerv2-rename' => 'tornar nomenar',
+	'bookmanagerv2-create' => 'crear',
+	'bookmanagerv2-done' => 'Acabat',
+	'bookmanagerv2-add' => 'apondre',
+	'bookmanagerv2-read' => 'legir',
+	'bookmanagerv2-section-name' => 'Nom de la seccion :',
+	'bookmanagerv2-section-link' => 'Ligam de la seccion :',
+	'bookmanagerv2-title-field' => 'Títol',
+	'bookmanagerv2-alternate-titles-field' => 'Autres títols',
+	'bookmanagerv2-authors-field' => 'Autors',
+	'bookmanagerv2-translators-field' => 'Traductors',
+	'bookmanagerv2-editors-field' => 'Contributors',
+	'bookmanagerv2-illustrators-field' => 'Illustrators',
+	'bookmanagerv2-subtitle-field' => 'Sostítol',
+	'bookmanagerv2-volume-field' => 'Volum',
+	'bookmanagerv2-edition-field' => 'Edicion',
+	'bookmanagerv2-publisher-field' => 'Editor',
+	'bookmanagerv2-printer-field' => 'Imprimenta',
+	'bookmanagerv2-publication-year-field' => 'Annada de publicacion',
+	'bookmanagerv2-publication-month-field' => 'Mes de publicacion',
+	'bookmanagerv2-publication-day-field' => 'Jorn de publicacion',
+	'bookmanagerv2-publication-city-field' => 'Vila de publicacion',
+	'bookmanagerv2-language-field' => 'Lenga',
+	'bookmanagerv2-description-field' => 'Descripcion',
+	'bookmanagerv2-source-field' => 'Font',
+	'bookmanagerv2-permission-field' => 'Autorizacion',
+	'bookmanagerv2-other-versions-field' => 'Autras versions',
+	'bookmanagerv2-sections-field' => 'Seccions',
+);
+
 /** Polish (polski)
  * @author Chrumps
  * @author Woytecr
@@ -1268,6 +1352,10 @@ $messages['uk'] = array(
 	'bookmanagerv2-source' => 'Джерело: $1',
 	'bookmanagerv2-permission' => 'Дозвіл: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Інша версія|Інші версії}}: $2',
+	'bookmanagerv2-read-json-block' => 'Перегляд метаданих і списку глав для цієї роботи',
+	'bookmanagerv2-edit-json-block' => 'Редагування метаданих і списку глав для цієї роботи',
+	'bookmanagerv2-next-title' => 'Наступний розділ: $1',
+	'bookmanagerv2-prev-title' => 'Попередній розділ: $2',
 	'bookmanagerv2-metadata-heading' => 'Метадані',
 	'bookmanagerv2-sections-heading' => 'Розділи',
 	'bookmanagerv2-move-alt' => 'Перемістити цей розділ',
@@ -1301,6 +1389,10 @@ $messages['uk'] = array(
 	'bookmanagerv2-permission-field' => 'Права',
 	'bookmanagerv2-other-versions-field' => 'Інші версії',
 	'bookmanagerv2-sections-field' => 'Розділи',
+	'bookmanagerv2-add-section-title' => 'Додати новий розділ до цієї роботи',
+	'bookmanagerv2-edit-title' => 'Редагувати цей розділ',
+	'bookmanagerv2-create-title' => 'Створити цей розділ',
+	'bookmanagerv2-rename-title' => 'Перейменувати цей розділ',
 );
 
 /** Yiddish (ייִדיש)
@@ -1342,20 +1434,66 @@ $messages['yi'] = array(
 /** Simplified Chinese (中文（简体）‎)
  * @author Byfserag
  * @author Qiyue2001
+ * @author TianyinLee
  */
 $messages['zh-hans'] = array(
 	'bookmanagerv2-invalid-json' => '无效的JSON',
+	'bookmanagerv2-metadata' => '作品的源数据',
+	'bookmanagerv2-metadata-header' => '元数据',
+	'bookmanagerv2-contents' => '作品内容',
+	'bookmanagerv2-contents-header' => '内容',
 	'bookmanagerv2-title' => '标题：$1',
+	'bookmanagerv2-alternate-titles' => '又名{{PLURAL:$1标题}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|作者}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|翻译}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|编辑}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|插图师}}: $2',
 	'bookmanagerv2-subtitle' => '副标题:$1',
 	'bookmanagerv2-series-title' => '系列标题：$1',
 	'bookmanagerv2-volume' => '容量：$1',
+	'bookmanagerv2-edition' => '版本: $1',
 	'bookmanagerv2-publisher' => '出版商：$1',
+	'bookmanagerv2-printer' => '印刷: $1',
 	'bookmanagerv2-publication-date' => '出版日期：$1',
 	'bookmanagerv2-publication-city' => '出版城市：$1',
 	'bookmanagerv2-language' => '语言：$1',
+	'bookmanagerv2-description' => '描述: $1',
 	'bookmanagerv2-source' => '来源：$1',
 	'bookmanagerv2-permission' => '权限:$1',
-	'bookmanagerv2-other-versions' => '其他版本：$2', # Fuzzy
+	'bookmanagerv2-other-versions' => '其他 {{PLURAL:$1|version|versions}}: $2',
+	'bookmanagerv2-metadata-heading' => '元数据',
+	'bookmanagerv2-sections-heading' => '节',
+	'bookmanagerv2-move-alt' => '移动此节',
+	'bookmanagerv2-remove-alt' => '移除此节',
+	'bookmanagerv2-rename' => '重命名',
+	'bookmanagerv2-create' => '创建',
+	'bookmanagerv2-done' => '完成',
+	'bookmanagerv2-add' => '添加',
+	'bookmanagerv2-read' => '阅读',
+	'bookmanagerv2-section-name' => '章节名称：',
+	'bookmanagerv2-section-link' => '章节链接:',
+	'bookmanagerv2-title-field' => '标题',
+	'bookmanagerv2-alternate-titles-field' => '别名',
+	'bookmanagerv2-authors-field' => '作者',
+	'bookmanagerv2-translators-field' => '译者',
+	'bookmanagerv2-editors-field' => '编辑',
+	'bookmanagerv2-illustrators-field' => '插画师',
+	'bookmanagerv2-subtitle-field' => '副标题',
+	'bookmanagerv2-series-title-field' => '系列标题',
+	'bookmanagerv2-volume-field' => '卷',
+	'bookmanagerv2-edition-field' => '版',
+	'bookmanagerv2-publisher-field' => '出版商或发布者',
+	'bookmanagerv2-printer-field' => '印刷',
+	'bookmanagerv2-publication-year-field' => '出版年份',
+	'bookmanagerv2-publication-month-field' => '出版月份',
+	'bookmanagerv2-publication-day-field' => '发行日',
+	'bookmanagerv2-publication-city-field' => '发行城市',
+	'bookmanagerv2-language-field' => '语言',
+	'bookmanagerv2-description-field' => '描述',
+	'bookmanagerv2-source-field' => '来源',
+	'bookmanagerv2-permission-field' => '授权协议',
+	'bookmanagerv2-other-versions-field' => '其他版本',
+	'bookmanagerv2-sections-field' => '节',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
