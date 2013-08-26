@@ -108,6 +108,8 @@ class JsonEditor extends EditPage {
 		. Html::element( 'a', array(
 			'href' => '#',
 			'class' => 'mw-bookmanagerv2-add',
+			'title' => wfMessage(
+				'bookmanagerv2-add-section-title' )->escaped(),
 			'id' => $id,
 			'tabindex' => $tabindex
 		), wfMessage( 'bookmanagerv2-add' )->text() )
@@ -243,8 +245,12 @@ class JsonEditor extends EditPage {
 				$sectionTitle = Title::newFromText( $section->link );
 				if ( $sectionTitle->exists() ) {
 					$sectionLinkName = wfMessage( 'editlink' )->text();
+					$sectionLinkTitle = wfMessage(
+						'bookmanagerv2-edit-title' )->escaped();
 				} else {
 					$sectionLinkName = wfMessage( 'bookmanagerv2-create' )->text();
+					$sectionLinkTitle = wfMessage(
+						'bookmanagerv2-create-title' )->escaped();
 				}
 				$html .= Html::openElement( 'li', array(
 					'class' => 'mw-bookmanagerv2-section',
@@ -256,7 +262,7 @@ class JsonEditor extends EditPage {
 					$section->name,
 					array(
 						'class' => 'mw-bookmanagerv2-section-link',
-						'tabindex' => $tabindex++
+						'tabindex' => $tabindex++,
 					),
 					array(),
 					array()
@@ -270,7 +276,10 @@ class JsonEditor extends EditPage {
 				. Linker::link(
 					$sectionTitle,
 					$sectionLinkName,
-					array( 'tabindex' => $tabindex++ ),
+					array(
+						'tabindex' => $tabindex++,
+						'title' => $sectionLinkTitle
+					),
 					array( 'action' => 'edit' ),
 					array( 'noclasses' )
 				)
@@ -280,7 +289,9 @@ class JsonEditor extends EditPage {
 				. Html::element( 'a', array(
 					'class' => 'mw-bookmanagerv2-rename',
 					'href' => '#',
-					'tabindex' => $tabindex++
+					'tabindex' => $tabindex++,
+					'title' => wfMessage(
+						'bookmanagerv2-rename-title' )->escaped()
 				), wfMessage( 'bookmanagerv2-rename' ) )
 				. Html::element( 'span', array(
 					'class' => 'mw-bookmanagerv2-link-bracket'

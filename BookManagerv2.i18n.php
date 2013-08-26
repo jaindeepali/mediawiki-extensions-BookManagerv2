@@ -80,6 +80,10 @@ $messages['en'] = array(
 	'bookmanagerv2-lccn-field' => 'LCCN',
 	'bookmanagerv2-oclc-field' => 'OCLC',
 	'bookmanagerv2-sections-field' => 'Sections',
+	'bookmanagerv2-add-section-title' => 'Add a new section to this work',
+	'bookmanagerv2-edit-title' => 'Edit this section',
+	'bookmanagerv2-create-title' => 'Create this section',
+	'bookmanagerv2-rename-title' => 'Rename this section',
 );
 
 /** Message documentation (Message documentation)
@@ -251,6 +255,10 @@ See screenshot for an example of this dropdown.
 	'bookmanagerv2-oclc-field' => 'JSON editor input field label. OCLC is the Online Computer Library Center ([http://en.wikipedia.org/wiki/OCLC OCLC])',
 	'bookmanagerv2-sections-field' => 'JSON editor input field label.
 {{Identical|Section}}',
+	'bookmanagerv2-add-section-title' => 'Title for the "add" link that allows a user to add a new section to the current work',
+	'bookmanagerv2-edit-title' => 'Title for the "edit" link that appears on each section in the JSON editor that already has a page on the wiki. This explains that clicking "edit" will take them to the edit page for that section.',
+	'bookmanagerv2-create-title' => 'Title for the "create" link that appears on sections in the JSON editor that don\'t already have pages. It explains that clicking "create" will take them to create that section.',
+	'bookmanagerv2-rename-title' => 'Title for the "rename" link that appears on each section in the JSON editor. This explains that clicking "rename" will allow them to rename the section.',
 );
 
 /** Akan (Akan)
