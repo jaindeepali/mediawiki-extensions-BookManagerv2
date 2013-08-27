@@ -68,3 +68,23 @@ div.mw-bookmanagerv2-json-contents ol {
 	list-style: none;
 	margin: 0;
 }
+
+ol li.indent-1 {
+	margin-left: 10px;
+}
+
+ol li.indent-2 {
+	margin-left: 20px;
+}
+
+ol li.indent-3 {
+	margin-left: 30px;
+}
+
+ol li.indent-4 {
+	margin-left: 40px;
+}
+
+ol li.indent-5 {
+	margin-left: 50px;
+}

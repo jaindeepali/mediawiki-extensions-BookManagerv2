@@ -27,12 +27,12 @@
  */
 
 $wgExtensionCredits['parserhook'][] = array(
-	'path'          => __FILE__,
-	'name'          => 'BookManagerv2',
-	'author'        => array( 'Molly White', 'Ori Livneh' ),
-	'version'        => '0.0.1',
-	'url'            => 'http://www.mediawiki.org/wiki/Extension:BookManagerv2',
-	'descriptionmsg' => 'bookmanagerv2-desc',
+	'path'              => __FILE__,
+	'name'              => 'BookManagerv2',
+	'author'            => array( 'Molly White', 'Ori Livneh' ),
+	'version'           => '0.0.1',
+	'url'               => 'http://www.mediawiki.org/wiki/Extension:BookManagerv2',
+	'descriptionmsg'    => 'bookmanagerv2-desc',
 );
 
 // Declare namespace & associated content handler.
