@@ -50,7 +50,14 @@
 			.prop( 'class', 'mw-bookmanagerv2-remove' )
 			.prop( 'alt', removeAlt )
 			.prop( 'title', removeAlt ),
-		tabindex = $( 'li.mw-bookmanagerv2-section' ).last().prop( 'tabindex' ) + 10;
+		tabindex = $( 'li.mw-bookmanagerv2-section' ).last().prop( 'tabindex' ) + 10,
+		newSectionNumber = 1;
+
+	function initiate() {
+		$( 'li.mw-bookmanagerv2-section' ).on( 'click', removeSection );
+	}
+
+	initiate();
 
 	// Add move and remove section icons
 	$( 'li.mw-bookmanagerv2-section' ).prepend( $moveIcon ).append( $removeIcon );
@@ -70,7 +77,8 @@
 				sectionJson.splice( endIndex, 0, $temp );
 				updateJson( sectionJson );
 			}
-		}
+		},
+		items: '> li'
 	});
 
 	// Add tabindexes to remove buttons
@@ -89,15 +97,24 @@
 	$( 'input#wpDiff' ).prop( 'tabindex', tabindex++ );
 
 	// Remove a section when the remove icon is clicked
-	$( 'li.mw-bookmanagerv2-section img.mw-bookmanagerv2-remove' ).click( function() {
-		var $li = $( this ).parent(),
-			$sectionList = $( 'li.mw-bookmanagerv2-section' ),
-			index = $sectionList.index( $li );
-		sectionJson.splice( index, 1 );
-		$li.fadeOut();
-		$li.remove();
-		updateJson( sectionJson );
-	});
+	function removeSection() {
+		var $li = $(this).parent(),
+			id = $li.prop( 'id' ),
+				sortable = $('#sortable').sortable( 'toArray' ),
+				index = sortable.indexOf( id );
+		if ( !$li.is( 'li' ) ) {
+			$li = $(this);
+		}
+		if ( $li.hasClass( 'mw-bookmanagerv2-new-section' ) ) {
+			$li.remove();
+		} else {
+			if ( index >= 0 ) {
+				sectionJson.splice( index, 1 );
+				updateJson( sectionJson );
+				$li.remove();
+			}
+		}
+	}
 
 	// Allow users to rename sections
 	$(document).on( 'click', 'li.mw-bookmanagerv2-section a.mw-bookmanagerv2-rename', function() {
@@ -196,6 +213,7 @@
 			.prop( 'size', 30 ),
 			$submitButton = $( '<input>' ).prop( 'type', 'button' )
 				.prop( 'value', mw.message( 'bookmanagerv2-done' ).text() ),
+			$removeButton = $removeIcon.clone(),
 			$newSection = $( '<li>' )
 				.addClass( 'mw-bookmanagerv2-new-section' )
 				.append( $moveIcon.clone() )
@@ -218,22 +236,19 @@
 						.append( $sectionLink )
 					)
 				)
-				.append( $removeIcon.clone() )
+				.append( $removeButton )
 				.append( $( '<div>' )
 					.addClass( 'mw-bookmanagerv2-button-wrapper' )
 					.append( $submitButton )
 				);
 
+		$removeButton.on( 'click', removeSection );
+
 		if ( $(this).attr( 'id' ) === 'top-section' ) {
-			$( 'ul.mw-bookmanagerv2-section-list' ).prepend( $newSection );
+			$( 'input#json-editor-sections' ).after( $newSection );
 		} else {
 			$( 'ul.mw-bookmanagerv2-section-list' ).append( $newSection );
 		}
-
-		// Allow this added section to be removed before it's saved
-		$( 'li.mw-bookmanagerv2-new-section' ).on( 'click', 'img.mw-bookmanagerv2-remove', function() {
-			$newSection.remove();
-		});
 
 		$submitButton.click( function() {
 			if ( $sectionName.val() !== '' && $sectionLink.val() !== '' ) {
@@ -275,11 +290,13 @@
 				updateJson( sectionJson );
 
 				// Update the section styling
+				$newSection.prop( 'id', 'new-section-' + newSectionNumber.toString() );
 				$newSection.find( 'div.mw-bookmanagerv2-input-section' ).remove();
 				$newSection.find( 'div.mw-bookmanagerv2-button-wrapper' ).remove();
 				$newSection.removeClass( 'mw-bookmanagerv2-new-section' )
 					.addClass( 'mw-bookmanagerv2-section' );
 				$newSection.append( $link ).append( $editRename );
+				newSectionNumber++;
 			}
 		});
 		return false;
