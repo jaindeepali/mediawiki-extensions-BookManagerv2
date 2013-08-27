@@ -200,11 +200,15 @@ See screenshot for an example of this dropdown.
 	'bookmanagerv2-next-title' => 'Title text for the link to the next section in the work.
 
 Parameters:
-*$1 - Title of the next page in the section',
+* $1 - Title of the next page in the section
+See also:
+* {{msg-mw|Bookmanagerv2-prev-title}}',
 	'bookmanagerv2-prev-title' => 'Title text for the link to the previous section in the work.
 
 Parameters:
-*$1 - Title of the previous page in the section',
+* $1 - Title of the previous page in the section
+See also:
+* {{msg-mw|Bookmanagerv2-next-title}}',
 	'bookmanagerv2-metadata-heading' => 'Heading for the collapsible section of the JSON editor that holds the metadata (everything but the sections information).
 {{Identical|Metadata}}',
 	'bookmanagerv2-sections-heading' => 'Heading for the collapsible section of the JSON editor that holds information on the sections of the book.
@@ -402,6 +406,10 @@ $messages['de'] = array(
 	'bookmanagerv2-source' => 'Quelle: $1',
 	'bookmanagerv2-permission' => 'Genehmigung: $1',
 	'bookmanagerv2-other-versions' => 'Andere {{PLURAL:$1|Version|Versionen}}: $2',
+	'bookmanagerv2-read-json-block' => 'Die Metadaten und Kapitelliste für dieses Werk ansehen',
+	'bookmanagerv2-edit-json-block' => 'Die Metadaten und Kapitelliste für dieses Werk bearbeiten',
+	'bookmanagerv2-next-title' => 'Nächster Abschnitt: $1',
+	'bookmanagerv2-prev-title' => 'Vorheriger Abschnitt: $1',
 	'bookmanagerv2-metadata-heading' => 'Metadaten',
 	'bookmanagerv2-sections-heading' => 'Abschnitte',
 	'bookmanagerv2-move-alt' => 'Diesen Abschnitt verschieben',
@@ -435,6 +443,10 @@ $messages['de'] = array(
 	'bookmanagerv2-permission-field' => 'Genehmigung',
 	'bookmanagerv2-other-versions-field' => 'Andere Versionen',
 	'bookmanagerv2-sections-field' => 'Abschnitte',
+	'bookmanagerv2-add-section-title' => 'Diesem Werk einen neuen Abschnitt hinzufügen',
+	'bookmanagerv2-edit-title' => 'Diesen Abschnitt bearbeiten',
+	'bookmanagerv2-create-title' => 'Diesen Abschnitt erstellen',
+	'bookmanagerv2-rename-title' => 'Diesen Abschnitt umbenennen',
 );
 
 /** Greek (Ελληνικά)
@@ -562,6 +574,10 @@ $messages['fr'] = array(
 	'bookmanagerv2-source' => 'Source : $1',
 	'bookmanagerv2-permission' => 'Autorisation : $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Autre version|Autres versions}} : $2',
+	'bookmanagerv2-read-json-block' => 'Afficher les métadonnées et la liste des chapitres pour cette œuvre',
+	'bookmanagerv2-edit-json-block' => 'Modifier les métadonnées et la liste des chapitres pour cette œuvre',
+	'bookmanagerv2-next-title' => 'Section suivante : $1',
+	'bookmanagerv2-prev-title' => 'Section précédente : $1',
 	'bookmanagerv2-metadata-heading' => 'Métadonnées',
 	'bookmanagerv2-sections-heading' => 'Sections',
 	'bookmanagerv2-move-alt' => 'Déplacer cette section',
@@ -595,6 +611,10 @@ $messages['fr'] = array(
 	'bookmanagerv2-permission-field' => 'Autorisation',
 	'bookmanagerv2-other-versions-field' => 'Autres versions',
 	'bookmanagerv2-sections-field' => 'Sections',
+	'bookmanagerv2-add-section-title' => 'Ajouter une nouvelle section à cette œuvre',
+	'bookmanagerv2-edit-title' => 'Modifier cette section',
+	'bookmanagerv2-create-title' => 'Créer cette section',
+	'bookmanagerv2-rename-title' => 'Renommer cette section',
 );
 
 /** Galician (galego)
@@ -605,7 +625,9 @@ $messages['gl'] = array(
 	'bookmanagerv2-invalid-json' => 'JSON non válido',
 	'bookmanagerv2-example-nav' => 'A barra de navegación desta páxina aparece porque <code>$wgBookManagerv2ExampleNavigation</code> está definido como "<code>true</code>" en <code>LocalSettings.php</code>.',
 	'bookmanagerv2-metadata' => 'Metadatos da obra',
+	'bookmanagerv2-metadata-header' => 'Metadatos',
 	'bookmanagerv2-contents' => 'Contidos da obra',
+	'bookmanagerv2-contents-header' => 'Contidos',
 	'bookmanagerv2-title' => 'Título: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
@@ -625,6 +647,47 @@ $messages['gl'] = array(
 	'bookmanagerv2-source' => 'Fonte: $1',
 	'bookmanagerv2-permission' => 'Permisos: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Outra versión|Outras versións}}: $2',
+	'bookmanagerv2-read-json-block' => 'Mostrar os metadatos e a lista de capítulos desta obra',
+	'bookmanagerv2-edit-json-block' => 'Editar os metadatos e a lista de capítulos desta obra',
+	'bookmanagerv2-next-title' => 'Seguinte sección: $1',
+	'bookmanagerv2-prev-title' => 'Sección anterior: $1',
+	'bookmanagerv2-metadata-heading' => 'Metadatos',
+	'bookmanagerv2-sections-heading' => 'Seccións',
+	'bookmanagerv2-move-alt' => 'Mover esta sección',
+	'bookmanagerv2-remove-alt' => 'Eliminar esta sección',
+	'bookmanagerv2-rename' => 'renomear',
+	'bookmanagerv2-create' => 'crear',
+	'bookmanagerv2-done' => 'Feito',
+	'bookmanagerv2-add' => 'engadir',
+	'bookmanagerv2-read' => 'ler',
+	'bookmanagerv2-section-name' => 'Nome da sección:',
+	'bookmanagerv2-section-link' => 'Ligazón da sección:',
+	'bookmanagerv2-title-field' => 'Título',
+	'bookmanagerv2-alternate-titles-field' => 'Títulos alternativos',
+	'bookmanagerv2-authors-field' => 'Autores',
+	'bookmanagerv2-translators-field' => 'Tradutores',
+	'bookmanagerv2-editors-field' => 'Editores',
+	'bookmanagerv2-illustrators-field' => 'Ilustradores',
+	'bookmanagerv2-subtitle-field' => 'Subtítulo',
+	'bookmanagerv2-series-title-field' => 'Colección',
+	'bookmanagerv2-volume-field' => 'Volume',
+	'bookmanagerv2-edition-field' => 'Edición',
+	'bookmanagerv2-publisher-field' => 'Editor',
+	'bookmanagerv2-printer-field' => 'Impresor',
+	'bookmanagerv2-publication-year-field' => 'Ano de publicación',
+	'bookmanagerv2-publication-month-field' => 'Mes de publicación',
+	'bookmanagerv2-publication-day-field' => 'Día de publicación',
+	'bookmanagerv2-publication-city-field' => 'Cidade de publicación',
+	'bookmanagerv2-language-field' => 'Lingua',
+	'bookmanagerv2-description-field' => 'Descrición',
+	'bookmanagerv2-source-field' => 'Orixe',
+	'bookmanagerv2-permission-field' => 'Licenza',
+	'bookmanagerv2-other-versions-field' => 'Outras versións',
+	'bookmanagerv2-sections-field' => 'Seccións',
+	'bookmanagerv2-add-section-title' => 'Engadir unha nova sección a esta obra',
+	'bookmanagerv2-edit-title' => 'Editar esta sección',
+	'bookmanagerv2-create-title' => 'Crear esta sección',
+	'bookmanagerv2-rename-title' => 'Renomear esta sección',
 );
 
 /** Guarani (Avañe'ẽ)
@@ -757,6 +820,8 @@ $messages['it'] = array(
 	'bookmanagerv2-permission-field' => 'Permessi',
 	'bookmanagerv2-other-versions-field' => 'Altre versioni',
 	'bookmanagerv2-sections-field' => 'Sezioni',
+	'bookmanagerv2-create-title' => 'Crea questa sezione',
+	'bookmanagerv2-rename-title' => 'Rinomina questa sezione',
 );
 
 /** Japanese (日本語)
@@ -792,6 +857,10 @@ $messages['ja'] = array(
 	'bookmanagerv2-isbn' => 'ISBN: $1',
 	'bookmanagerv2-lccn' => 'LCCN: $1',
 	'bookmanagerv2-oclc' => 'OCLC: $1',
+	'bookmanagerv2-read-json-block' => 'この作品のメタデータおよび章一覧を閲覧',
+	'bookmanagerv2-edit-json-block' => 'この作品のメタデータおよび章一覧を編集',
+	'bookmanagerv2-next-title' => '次の節: $1',
+	'bookmanagerv2-prev-title' => '前の節: $1',
 	'bookmanagerv2-metadata-heading' => 'メタデータ',
 	'bookmanagerv2-sections-heading' => '節',
 	'bookmanagerv2-move-alt' => 'この節を移動する',
@@ -824,6 +893,10 @@ $messages['ja'] = array(
 	'bookmanagerv2-permission-field' => '許諾',
 	'bookmanagerv2-other-versions-field' => 'その他のバージョン',
 	'bookmanagerv2-sections-field' => '節',
+	'bookmanagerv2-add-section-title' => 'この作品に新しい節を追加',
+	'bookmanagerv2-edit-title' => 'この節を編集',
+	'bookmanagerv2-create-title' => 'この節を作成',
+	'bookmanagerv2-rename-title' => 'この節の名前を変更',
 );
 
 /** Kurdish (Latin script) (Kurdî (latînî)‎)
@@ -1090,6 +1163,11 @@ $messages['oc'] = array(
 	'bookmanagerv2-edition' => 'Edition : $1',
 	'bookmanagerv2-publisher' => 'Editor : $1',
 	'bookmanagerv2-printer' => 'Imprimenta : $1',
+	'bookmanagerv2-language' => 'Lenga : $1',
+	'bookmanagerv2-description' => 'Descripcion : $1',
+	'bookmanagerv2-source' => 'Font : $1',
+	'bookmanagerv2-permission' => 'Autorizacion : $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Autra version|Autras versions}} : $2',
 	'bookmanagerv2-metadata-heading' => 'Metadonadas',
 	'bookmanagerv2-sections-heading' => 'Seccions',
 	'bookmanagerv2-move-alt' => 'Desplaçar aquesta seccion',
@@ -1108,6 +1186,7 @@ $messages['oc'] = array(
 	'bookmanagerv2-editors-field' => 'Contributors',
 	'bookmanagerv2-illustrators-field' => 'Illustrators',
 	'bookmanagerv2-subtitle-field' => 'Sostítol',
+	'bookmanagerv2-series-title-field' => 'Títol de la seria',
 	'bookmanagerv2-volume-field' => 'Volum',
 	'bookmanagerv2-edition-field' => 'Edicion',
 	'bookmanagerv2-publisher-field' => 'Editor',
@@ -1323,6 +1402,7 @@ $messages['sv'] = array(
 
 /** Ukrainian (українська)
  * @author Andriykopanytsia
+ * @author Shirayuki
  * @author Ата
  */
 $messages['uk'] = array(
@@ -1355,7 +1435,7 @@ $messages['uk'] = array(
 	'bookmanagerv2-read-json-block' => 'Перегляд метаданих і списку глав для цієї роботи',
 	'bookmanagerv2-edit-json-block' => 'Редагування метаданих і списку глав для цієї роботи',
 	'bookmanagerv2-next-title' => 'Наступний розділ: $1',
-	'bookmanagerv2-prev-title' => 'Попередній розділ: $2',
+	'bookmanagerv2-prev-title' => 'Попередній розділ: $1',
 	'bookmanagerv2-metadata-heading' => 'Метадані',
 	'bookmanagerv2-sections-heading' => 'Розділи',
 	'bookmanagerv2-move-alt' => 'Перемістити цей розділ',
