@@ -218,3 +218,29 @@ $wgBookManagerv2ChapterList = true;
  * If set to false, this hides the previous/next links from the navigation bar.
  */
 $wgBookManagerv2PrevNext = true;
+
+/**
+ * @var string
+ * Location of the local JSON schema, relative to the extension directory.
+ */
+$wgBookManagerv2LocalSchema = '/schemas/bookschema.json';
+
+/**
+ * @var string|bool
+ * Title of the page containing the remote schema, or false if not set.
+ */
+$wgBookManagerv2SchemaTitle = false;
+
+/**
+ * @var string|bool
+ * URI of API.php on the schema wiki, or false if not set.
+ * @example string: 'http://meta.wikimedia.org/w/api.php'
+ */
+$wgBookManagerv2ApiUri = false;
+
+/**
+ * @var string|bool
+ * Value of $wgDBname for the MediaWiki instance housing schemas, or false if
+ * not set.
+ */
+$wgBookManagerv2SchemaDBname = false;

@@ -38,22 +38,27 @@ class RemoteSchema {
 	var $title;
 	var $content = false;
 
+
 	/**
-	 * @param string title
+	 * Constructor.
+	 * @param string $title
 	 * @param integer $revision
-	 * @param ObjectCache $cache (optional) cache client
-	 * @param Http $http (optional) HTTP client
+	 * @param ObjectCache $cache (optional) cache client.
+	 * @param Http $http (optional) HTTP client.
 	 */
-	function __construct( $title, $revision, $cache = NULL, $http = NULL ) {
-		$dbr = wfGetDB( DB_SLAVE );
-		$BookManagerv2DBName = $dbr->getDBname();
+	function __construct( $title, $revision = NULL, $cache = NULL, $http = NULL ) {
+		global $wgBookManagerv2SchemaDBname;
 
 		$this->title = $title;
-		$this->revision = $revision;
 		$this->cache = $cache ? : wfGetCache( CACHE_ANYTHING );
 		$this->http = $http ? : new Http();
-		$this->key = "schema:{$BookManagerv2DBname}:{$title}:{$revision}";
+		$this->revision = self::getLatestRevId();
+		if ( $this->revision === false ) {
+			return false;
+		}
+		$this->key = "schema:{$wgBookManagerv2SchemaDBname}:{$title}:{$revision}";
 	}
+
 
 	/**
 	 * Retrieves schema content.
@@ -77,13 +82,15 @@ class RemoteSchema {
 		return $this->content;
 	}
 
+
 	/**
 	 * Retrieves content from memcached.
-	 * @return array|bool: Schema or false if not in cache.
+	 * @return array:bool: Schema or false if not in cache.
 	 */
 	function memcGet() {
 		return $this->cache->get( $this->key );
 	}
+
 
 	/**
 	 * Store content in memcached.
@@ -91,6 +98,7 @@ class RemoteSchema {
 	function memcSet() {
 		return $this->cache->set( $this->key, $this->content );
 	}
+
 
 	/**
 	 * Acquire a mutex lock for HTTP retrieval.
@@ -100,9 +108,31 @@ class RemoteSchema {
 		return $this->cache->add( $this->key . ':lock', 1, self::LOCK_TIMEOUT );
 	}
 
+
+	/**
+	 * Gets the latest revision ID of the schema on the remote wiki.
+	 * @return int: Revision ID.
+	 */
+	function getLatestRevId() {
+		global $wgBookManagerv2SchemaApiUri, $wgBookManagerv2SchemaTitle;
+
+		$q = array(
+			'action' =>  'query',
+			'format' =>  'json',
+			'prop'   =>  'info',
+			'titles' =>  $wgBookManagerv2SchemaTitle,
+		);
+
+		$queryString = wfAppendQuery( $wgBookManagerv2SchemaApiUri, $q );
+		$result = FormatJson::decode( $this->http->get(
+			$queryString, self::LOCK_TIMEOUT * 0.8 ) );
+		$pageId = key( $result->query->pages );
+		return $result->query->pages->$pageId->lastrevid;
+	}
+
 	/**
 	 * Constructs URI for retrieving schema from remote wiki.
-	 * @return string: URI
+	 * @return string: URI.
 	 */
 	function getUri() {
 		global $wgBookManagerv2SchemaApiUri;
@@ -110,30 +140,32 @@ class RemoteSchema {
 		if ( substr( $wgBookManagerv2SchemaApiUri, -10 ) === '/index.php' ) {
 			// Old-style request (index.php)
 			$q = array(
-				'action' => 'raw',
-				'oldid' => $this->revision,
+				'action' =>  'raw',
+				'oldid'  =>  $this->revision,
 			);
 		} else {
 			// New-style request (api.php)
 			$q = array(
-				'action' => 'jsonschema',
-				'revid' => $this->revision,
+				'action' =>  'jsonschema',
+				'revid'  =>  $this->revision
 			);
 		}
 
 		return wfAppendQuery( $wgBookManagerv2SchemaApiUri, $q );
 	}
 
+
 	/**
 	 * Returns an object containing serializable properties.
-	 * @implements JsonSerializeable
+	 * @implements JsonSerializable
 	 */
 	function jsonSerialize() {
 		return array(
-			'schema' => $this->get() ? : new StdClass(),
+			'schema'   => $this->get() ? : new StdClass(),
 			'revision' => $this->revision
 		);
 	}
+
 
 	/**
 	 * Retrieves the schema using HTTP.
@@ -148,4 +180,3 @@ class RemoteSchema {
 		return FormatJson::decode( $raw, true ) ? : false;
 	}
 }
-

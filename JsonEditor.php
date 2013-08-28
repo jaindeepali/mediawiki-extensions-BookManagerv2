@@ -33,8 +33,22 @@ class JsonEditor extends EditPage {
 	 * Pulls the schema from the local schema file and decodes it.
 	 */
 	static function getSchema() {
+		global $wgBookManagerv2SchemaTitle, $wgBookManagerv2SchemaDBname,
+			$wgBookManagerv2LocalSchema;
+		if ( $wgBookManagerv2SchemaTitle && $wgBookManagerv2SchemaDBname ) {
+			$remoteSchema = new RemoteSchema( $wgBookManagerv2SchemaTitle );
+			if ( $remoteSchema !== false ) {
+				$schema = $remoteSchema->get();
+				if ( $schema !== false ) {
+					return FormatJson::decode(
+						FormatJson::encode( $schema ) );
+				}
+			}
+		}
+		// If we couldn't get the remote schema, fall back to the local
+		// schema.
 		return FormatJson::decode(
-			file_get_contents( __DIR__ . '/schemas/bookschema.json' ) );
+			file_get_contents( __DIR__ . $wgBookManagerv2LocalSchema ) );
 	}
 
 	/**
