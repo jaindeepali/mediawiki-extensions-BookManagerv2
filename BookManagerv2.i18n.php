@@ -69,9 +69,13 @@ $messages['en'] = array(
 	'bookmanagerv2-edition-field' => 'Edition',
 	'bookmanagerv2-publisher-field' => 'Publisher',
 	'bookmanagerv2-printer-field' => 'Printer',
+	'bookmanagerv2-publication-date-field' => 'Publication date',
 	'bookmanagerv2-publication-year-field' => 'Publication year',
 	'bookmanagerv2-publication-month-field' => 'Publication month',
 	'bookmanagerv2-publication-day-field' => 'Publication day',
+	'bookmanagerv2-year-placeholder' => 'YYYY',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
 	'bookmanagerv2-publication-city-field' => 'Publication city',
 	'bookmanagerv2-language-field' => 'Language',
 	'bookmanagerv2-description-field' => 'Description',
@@ -252,18 +256,15 @@ See also:
 	'bookmanagerv2-publication-year-field' => 'JSON editor input field label',
 	'bookmanagerv2-publication-month-field' => 'JSON editor input field label',
 	'bookmanagerv2-publication-day-field' => 'JSON editor input field label',
-	'bookmanagerv2-publication-city-field' => 'JSON editor input field label.
-{{Identical|Publication city}}',
-	'bookmanagerv2-language-field' => 'JSON editor input field label.
-{{Identical|Language}}',
-	'bookmanagerv2-description-field' => 'JSON editor input field label.
-{{Identical|Description}}',
-	'bookmanagerv2-source-field' => 'JSON editor input field label.
-{{Identical|Source}}',
-	'bookmanagerv2-permission-field' => 'JSON editor input field label.
-{{Identical|Permission}}',
-	'bookmanagerv2-other-versions-field' => 'JSON editor input field label.
-{{Identical|Other version}}',
+	'bookmanagerv2-year-placeholder' => 'Short prompt to appear in a year input box in the JSON editor to prompt the user to enter a four-digit year.',
+	'bookmanagerv2-month-placeholder' => 'Short prompt to appear in a month input box in the JSON editor to prompt the user to enter a two-digit month.',
+	'bookmanagerv2-day-placeholder' => 'Short prompt to appear in a day input box in the JSON editor to prompt the user to enter a two-digit month.',
+	'bookmanagerv2-publication-city-field' => 'JSON editor input field label',
+	'bookmanagerv2-language-field' => 'JSON editor input field label',
+	'bookmanagerv2-description-field' => 'JSON editor input field label',
+	'bookmanagerv2-source-field' => 'JSON editor input field label',
+	'bookmanagerv2-permission-field' => 'JSON editor input field label',
+	'bookmanagerv2-other-versions-field' => 'JSON editor input field label',
 	'bookmanagerv2-isbn-field' => 'JSON editor input field label. ISBN is the International Standard Book Number ([http://en.wikipedia.org/wiki/ISBN ISBN])',
 	'bookmanagerv2-lccn-field' => 'JSON editor input field label. LCCN is the Library of Congress Control Number ([http://en.wikipedia.org/wiki/LCCN LCCN])',
 	'bookmanagerv2-oclc-field' => 'JSON editor input field label. OCLC is the Online Computer Library Center ([http://en.wikipedia.org/wiki/OCLC OCLC])',
