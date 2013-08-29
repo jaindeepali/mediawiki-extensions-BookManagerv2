@@ -259,12 +259,18 @@ See also:
 	'bookmanagerv2-year-placeholder' => 'Short prompt to appear in a year input box in the JSON editor to prompt the user to enter a four-digit year.',
 	'bookmanagerv2-month-placeholder' => 'Short prompt to appear in a month input box in the JSON editor to prompt the user to enter a two-digit month.',
 	'bookmanagerv2-day-placeholder' => 'Short prompt to appear in a day input box in the JSON editor to prompt the user to enter a two-digit month.',
-	'bookmanagerv2-publication-city-field' => 'JSON editor input field label',
-	'bookmanagerv2-language-field' => 'JSON editor input field label',
-	'bookmanagerv2-description-field' => 'JSON editor input field label',
-	'bookmanagerv2-source-field' => 'JSON editor input field label',
-	'bookmanagerv2-permission-field' => 'JSON editor input field label',
-	'bookmanagerv2-other-versions-field' => 'JSON editor input field label',
+	'bookmanagerv2-publication-city-field' => 'JSON editor input field label.
+{{Identical|Publication city}}',
+	'bookmanagerv2-language-field' => 'JSON editor input field label.
+{{Identical|Language}}',
+	'bookmanagerv2-description-field' => 'JSON editor input field label.
+{{Identical|Description}}',
+	'bookmanagerv2-source-field' => 'JSON editor input field label.
+{{Identical|Source}}',
+	'bookmanagerv2-permission-field' => 'JSON editor input field label.
+{{Identical|Permission}}',
+	'bookmanagerv2-other-versions-field' => 'JSON editor input field label.
+{{Identical|Other version}}',
 	'bookmanagerv2-isbn-field' => 'JSON editor input field label. ISBN is the International Standard Book Number ([http://en.wikipedia.org/wiki/ISBN ISBN])',
 	'bookmanagerv2-lccn-field' => 'JSON editor input field label. LCCN is the Library of Congress Control Number ([http://en.wikipedia.org/wiki/LCCN LCCN])',
 	'bookmanagerv2-oclc-field' => 'JSON editor input field label. OCLC is the Online Computer Library Center ([http://en.wikipedia.org/wiki/OCLC OCLC])',
@@ -319,6 +325,79 @@ $messages['ast'] = array(
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Otra versión|Otres versiones}}: $2',
 );
 
+/** Bikol Central (Bikol Central)
+ * @author Geopoet
+ */
+$messages['bcl'] = array(
+	'bookmanagerv2-desc' => 'Minadugang nin punksyonalidad tanganing mai-entra asin maisaray an metadatos kan libro asin estruktura',
+	'bookmanagerv2-invalid-json' => 'Imbalidong JSON',
+	'bookmanagerv2-example-nav' => 'An baras kan nabigasyon na yaon sa pahinang ini minaluwas nin huli sa <code>$wgBookManagerv2ExampleNavigation</code>itinuytoy na <code>totoo</code> sa <code>LocalSettings.php</code>.',
+	'bookmanagerv2-metadata' => 'Metadatos sa trabaho',
+	'bookmanagerv2-metadata-header' => 'Metadatos',
+	'bookmanagerv2-contents' => 'Mga laog sa trabaho',
+	'bookmanagerv2-contents-header' => 'Mga laóg',
+	'bookmanagerv2-title' => 'Titulo: $1',
+	'bookmanagerv2-alternate-titles' => 'Kasalihid na {{PLURAL:$1|titulo|mga titulo}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Kagsurat|Mga Kagsurat}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Paradakit-taramon|Mga Paradakit-taramon}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Paraliwat|Mga Paraliwat}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Illustrador|Mga Illustrador}}: $2',
+	'bookmanagerv2-subtitle' => 'Sub-titulo: $1',
+	'bookmanagerv2-series-title' => 'Mga Seryeng titulo: $1',
+	'bookmanagerv2-volume' => 'Bulto: $1',
+	'bookmanagerv2-edition' => 'Edisyon: $1',
+	'bookmanagerv2-publisher' => 'Tagapublikar: $1',
+	'bookmanagerv2-printer' => 'Taga-imprinta: $1',
+	'bookmanagerv2-publication-date' => 'Petsa nin Publikasyon: $1',
+	'bookmanagerv2-publication-city' => 'Siyudad nin Publikasyon: $1',
+	'bookmanagerv2-language' => 'Lengguwahe: $1',
+	'bookmanagerv2-description' => 'Deskripsyon: $1',
+	'bookmanagerv2-source' => 'Ginikanan: $1',
+	'bookmanagerv2-permission' => 'Permiso: $1',
+	'bookmanagerv2-other-versions' => 'Ibang {{PLURAL:$1|bersyon|mga bersyon}}: $2',
+	'bookmanagerv2-read-json-block' => 'Tanawon an metadatos asin listahan kan tsapter para sa gibong ini',
+	'bookmanagerv2-edit-json-block' => 'Liwaton an metadatos asin listahan kan tsapter para sa gibong ini',
+	'bookmanagerv2-next-title' => 'Masunod na seksyon: $1',
+	'bookmanagerv2-prev-title' => 'Nakaaging seksyon: $1',
+	'bookmanagerv2-metadata-heading' => 'Metadatos',
+	'bookmanagerv2-sections-heading' => 'Mga Seksyon',
+	'bookmanagerv2-move-alt' => 'Balyuhon ining seksyon',
+	'bookmanagerv2-remove-alt' => 'Tangkason ining seksyon',
+	'bookmanagerv2-rename' => 'pangaranan liwat',
+	'bookmanagerv2-create' => 'Muknaon',
+	'bookmanagerv2-done' => 'Tinapos na',
+	'bookmanagerv2-add' => 'magdugang',
+	'bookmanagerv2-read' => 'basáha',
+	'bookmanagerv2-section-name' => 'Pangaran kan seksyon:',
+	'bookmanagerv2-section-link' => 'Kasugpon kan seksyon:',
+	'bookmanagerv2-title-field' => 'Titulo',
+	'bookmanagerv2-alternate-titles-field' => 'Kasalihid na mga titulo',
+	'bookmanagerv2-authors-field' => 'Mga Kagsurat',
+	'bookmanagerv2-translators-field' => 'Mga Paradakit-taramon',
+	'bookmanagerv2-editors-field' => 'Mga Paraliwat',
+	'bookmanagerv2-illustrators-field' => 'Mga Illustrador',
+	'bookmanagerv2-subtitle-field' => 'Sub-titulo',
+	'bookmanagerv2-series-title-field' => 'Mga Seryeng titulo',
+	'bookmanagerv2-volume-field' => 'Bulto',
+	'bookmanagerv2-edition-field' => 'Edisyon',
+	'bookmanagerv2-publisher-field' => 'Tagapublikar',
+	'bookmanagerv2-printer-field' => 'Taga-imprinta',
+	'bookmanagerv2-publication-year-field' => 'Taon nin Publikasyon',
+	'bookmanagerv2-publication-month-field' => 'Bulan nin Publikasyon',
+	'bookmanagerv2-publication-day-field' => 'Aldaw nin Publikasyon',
+	'bookmanagerv2-publication-city-field' => 'Siyudad nin Publikasyon',
+	'bookmanagerv2-language-field' => 'Lengguwahe',
+	'bookmanagerv2-description-field' => 'Deskripsyon',
+	'bookmanagerv2-source-field' => 'Ginikanan:',
+	'bookmanagerv2-permission-field' => 'Permiso',
+	'bookmanagerv2-other-versions-field' => 'Ibang mga bersyon',
+	'bookmanagerv2-sections-field' => 'Mga Seksyon',
+	'bookmanagerv2-add-section-title' => 'Magdugang nin baguhong seksyon sa gibong ini',
+	'bookmanagerv2-edit-title' => 'Liwaton ining seksyon',
+	'bookmanagerv2-create-title' => 'Muknaon ining seksyon',
+	'bookmanagerv2-rename-title' => 'Pangaranan liwat ining seksyon',
+);
+
 /** Bengali (বাংলা)
  * @author Aftab1995
  * @author Bellayet
@@ -348,9 +427,11 @@ $messages['bn'] = array(
 );
 
 /** Breton (brezhoneg)
+ * @author Fohanno
  * @author Y-M D
  */
 $messages['br'] = array(
+	'bookmanagerv2-invalid-json' => 'JSON diwiriek',
 	'bookmanagerv2-title' => 'Titl : $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Titl|Titloù}} all : $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Skrivagner|Skrivagnerien}}: $2',
@@ -933,6 +1014,8 @@ $messages['lb'] = array(
 	'bookmanagerv2-source' => 'Quell: $1',
 	'bookmanagerv2-permission' => 'Autorisatioun: $1',
 	'bookmanagerv2-other-versions' => 'Aner {{PLURAL:$1|Versioun|Versiounen}}: $2',
+	'bookmanagerv2-next-title' => 'Nächsten Abschnitt: $1',
+	'bookmanagerv2-prev-title' => 'Viregen Abschnitt: $1',
 	'bookmanagerv2-sections-heading' => 'Abschnitter',
 	'bookmanagerv2-move-alt' => 'Dësen Abschnitt réckelen',
 	'bookmanagerv2-remove-alt' => 'Dësen Abschnitt ewechhuelen',
@@ -942,6 +1025,7 @@ $messages['lb'] = array(
 	'bookmanagerv2-add' => 'derbäisetzen',
 	'bookmanagerv2-read' => 'liesen',
 	'bookmanagerv2-section-name' => 'Numm vum Abschnitt:',
+	'bookmanagerv2-section-link' => 'Link vum Abschnitt:',
 	'bookmanagerv2-title-field' => 'Titel',
 	'bookmanagerv2-alternate-titles-field' => 'Alternativ Titelen',
 	'bookmanagerv2-authors-field' => 'Auteuren',
@@ -954,8 +1038,13 @@ $messages['lb'] = array(
 	'bookmanagerv2-language-field' => 'Sprooch',
 	'bookmanagerv2-description-field' => 'Beschreiwung',
 	'bookmanagerv2-source-field' => 'Quell',
+	'bookmanagerv2-permission-field' => 'Autorisatioun',
 	'bookmanagerv2-other-versions-field' => 'Aner Versiounen',
 	'bookmanagerv2-sections-field' => 'Abschnitter',
+	'bookmanagerv2-add-section-title' => 'En neien Abschnitt bäi dëst Wierk derbäisetzen',
+	'bookmanagerv2-edit-title' => 'Dësen Abschnitt änneren',
+	'bookmanagerv2-create-title' => 'Dësen Abschnitt uleeën',
+	'bookmanagerv2-rename-title' => 'Dësen Abschnitt ëmbenennen',
 );
 
 /** Lithuanian (lietuvių)
@@ -1047,6 +1136,10 @@ $messages['mk'] = array(
 	'bookmanagerv2-source' => 'Извор: $1',
 	'bookmanagerv2-permission' => 'Дозвола: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Друга верзија|Други верзии}}: $2',
+	'bookmanagerv2-read-json-block' => 'Погл. метаподатоци и список на глави на делото',
+	'bookmanagerv2-edit-json-block' => 'Уреди метаподатоци и список на глави на делото',
+	'bookmanagerv2-next-title' => 'Следен дел: $1',
+	'bookmanagerv2-prev-title' => 'Претходен дел: $1',
 	'bookmanagerv2-metadata-heading' => 'Метаподатоци',
 	'bookmanagerv2-sections-heading' => 'Делови',
 	'bookmanagerv2-move-alt' => 'Премести го делов',
@@ -1080,6 +1173,10 @@ $messages['mk'] = array(
 	'bookmanagerv2-permission-field' => 'Дозвола',
 	'bookmanagerv2-other-versions-field' => 'Други верзии',
 	'bookmanagerv2-sections-field' => 'Делови',
+	'bookmanagerv2-add-section-title' => 'Додај нов дел во делово',
+	'bookmanagerv2-edit-title' => 'Уреди го делов',
+	'bookmanagerv2-create-title' => 'Создај нов дел',
+	'bookmanagerv2-rename-title' => 'Преименувај го делов',
 );
 
 /** Marathi (मराठी)
@@ -1151,24 +1248,32 @@ $messages['nl'] = array(
  * @author Cedric31
  */
 $messages['oc'] = array(
+	'bookmanagerv2-invalid-json' => 'JSON invalid',
+	'bookmanagerv2-metadata' => 'Metadonadas de trabalh',
 	'bookmanagerv2-metadata-header' => 'Metadonadas',
 	'bookmanagerv2-contents' => 'Contengut del trabalh',
 	'bookmanagerv2-contents-header' => 'Ensenhador',
 	'bookmanagerv2-title' => 'Títol : $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Títol alternatiu|Títols alternatius}} : $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autors}} : $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Traductor|Traductors}} : $2',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|Editor|Editors}} : $2',
 	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Illustrator|Illustrators}}: $2',
 	'bookmanagerv2-subtitle' => 'Sostítol : $1',
+	'bookmanagerv2-series-title' => 'Títol de la seria : $1',
 	'bookmanagerv2-volume' => 'Volum : $1',
 	'bookmanagerv2-edition' => 'Edition : $1',
 	'bookmanagerv2-publisher' => 'Editor : $1',
 	'bookmanagerv2-printer' => 'Imprimenta : $1',
+	'bookmanagerv2-publication-date' => 'Data de publicacion : $1',
+	'bookmanagerv2-publication-city' => 'Luòc de publicacion : $1',
 	'bookmanagerv2-language' => 'Lenga : $1',
 	'bookmanagerv2-description' => 'Descripcion : $1',
 	'bookmanagerv2-source' => 'Font : $1',
 	'bookmanagerv2-permission' => 'Autorizacion : $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Autra version|Autras versions}} : $2',
+	'bookmanagerv2-next-title' => 'Seccion seguenta : $1',
+	'bookmanagerv2-prev-title' => 'Seccion precedenta : $1',
 	'bookmanagerv2-metadata-heading' => 'Metadonadas',
 	'bookmanagerv2-sections-heading' => 'Seccions',
 	'bookmanagerv2-move-alt' => 'Desplaçar aquesta seccion',
@@ -1202,6 +1307,10 @@ $messages['oc'] = array(
 	'bookmanagerv2-permission-field' => 'Autorizacion',
 	'bookmanagerv2-other-versions-field' => 'Autras versions',
 	'bookmanagerv2-sections-field' => 'Seccions',
+	'bookmanagerv2-add-section-title' => 'Apondre una novèla seccion a aquela òbra',
+	'bookmanagerv2-edit-title' => 'Modificar aquesta seccion',
+	'bookmanagerv2-create-title' => 'Crear aquesta seccion',
+	'bookmanagerv2-rename-title' => 'Tornar nomenar aquesta seccion',
 );
 
 /** Polish (polski)
@@ -1460,9 +1569,13 @@ $messages['uk'] = array(
 	'bookmanagerv2-edition-field' => 'Видання',
 	'bookmanagerv2-publisher-field' => 'Видавництво',
 	'bookmanagerv2-printer-field' => 'Типографія',
+	'bookmanagerv2-publication-date-field' => 'Дата публікації',
 	'bookmanagerv2-publication-year-field' => 'Рік видання',
 	'bookmanagerv2-publication-month-field' => 'Місяць видання',
 	'bookmanagerv2-publication-day-field' => 'День видання',
+	'bookmanagerv2-year-placeholder' => 'РРРР',
+	'bookmanagerv2-month-placeholder' => 'ММ',
+	'bookmanagerv2-day-placeholder' => 'ДД',
 	'bookmanagerv2-publication-city-field' => 'Місто видання',
 	'bookmanagerv2-language-field' => 'Мова',
 	'bookmanagerv2-description-field' => 'Опис',
