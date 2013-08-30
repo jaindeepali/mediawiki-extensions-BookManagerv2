@@ -111,92 +111,150 @@ $messages['qqq'] = array(
 	'bookmanagerv2-title' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
 
 Parameters:
-* $1 - title
+* $1 - title of the work
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Title}}',
 	'bookmanagerv2-alternate-titles' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-[[File:BookManagerv2 navigation bar metadata dropdown.png]]
 
 Parameters:
-* $1 - the length of the array of titles',
+* $1 - number of other titles by which the work is known
+* $2 - list of other titles by which the work is known
+[[File:BookManagerv2 navigation bar metadata dropdown.png]]',
 	'bookmanagerv2-authors' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-[[File:BookManagerv2 navigation bar metadata dropdown.png]]
 
 Parameters:
-* $1 - the length of the array of authors
+* $1 - number of contributors to the work
+* $2 - list of contributors to the work
+[[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Author}}',
 	'bookmanagerv2-translators' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-[[File:BookManagerv2 navigation bar metadata dropdown.png]]
 
 Parameters:
-* $1 - the length of the array of translators
+* $1 - number of translators who contributed to the work
+* $2 - list of translators who contributed to the work
+[[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Translator}}',
-	'bookmanagerv2-editors' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown. $1 is the length of the array of editors.
+	'bookmanagerv2-editors' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+
+Parameters:
+* $1 - number of editors who contributed to the work
+* $2 - list of editors who contributed to the work
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Editor}}',
 	'bookmanagerv2-illustrators' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-[[File:BookManagerv2 navigation bar metadata dropdown.png]]
 
 Parameters:
-* $1 - the length of the array of illustrators
+* $1 - number of illustrators who contributed to the work
+* $2 - list of illustrators who contributed to the work
+[[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Illustrator}}',
 	'bookmanagerv2-subtitle' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+
+Parameters:
+* $1 - subtitle to the title of the work
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Subtitle}}',
 	'bookmanagerv2-series-title' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+
+Parameters:
+* $1 - title of the series of which this work is a member
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Series title}}',
 	'bookmanagerv2-volume' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+
+Parameters:
+* $1 - volume number of the work
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Volume}}',
 	'bookmanagerv2-edition' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+
+Parameters:
+* $1 - edition number of the work
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Edition}}',
 	'bookmanagerv2-publisher' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+
+Parameters:
+* $1 - name of the publisher of the work
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Publisher}}',
 	'bookmanagerv2-printer' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+
+Parameters:
+* $1 - name of the printer of the work
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Printer}}',
 	'bookmanagerv2-publication-date' => 'Label in the navigation bar metadata dropdown.
 
-The value following may be just a year, a month and a year, or a year, month, and day.
+Parameters:
+* $1 - date of publication of the work. Maybe any one of the following:
+** a year
+** a month and a year
+** a year, month, and day
 
 See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Publication date}}',
-	'bookmanagerv2-publication-city' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-[[File:BookManagerv2 navigation bar metadata dropdown.png]]
+	'bookmanagerv2-publication-city' => 'Label in the navigation bar metadata dropdown.
 
 Parameters:
-* $1 - ...
+* $1 - city in which the work was published
+See screenshot for an example of this dropdown.
+[[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Publication city}}',
-	'bookmanagerv2-language' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
+	'bookmanagerv2-language' => 'Label in the navigation bar metadata dropdown.
+
+Parameters:
+* $1 - primary language of the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Language}}',
-	'bookmanagerv2-description' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-[[File:BookManagerv2 navigation bar metadata dropdown.png]]
-{{Identical|Description}}',
-	'bookmanagerv2-source' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-[[File:BookManagerv2 navigation bar metadata dropdown.png]]
-{{Identical|Source}}',
-	'bookmanagerv2-permission' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-[[File:BookManagerv2 navigation bar metadata dropdown.png]]
-{{Identical|Permission}}',
-	'bookmanagerv2-other-versions' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-[[File:BookManagerv2 navigation bar metadata dropdown.png]]
+	'bookmanagerv2-description' => 'Label in the navigation bar metadata dropdown.
 
 Parameters:
-* $1 - number of versions
-* $2 - ...
+* $1 - short description of the work
+See screenshot for an example of this dropdown.
+[[File:BookManagerv2 navigation bar metadata dropdown.png]]
+{{Identical|Description}}',
+	'bookmanagerv2-source' => 'Label in the navigation bar metadata dropdown.
+
+Parameters:
+* $1 - source of the work
+See screenshot for an example of this dropdown.
+[[File:BookManagerv2 navigation bar metadata dropdown.png]]
+{{Identical|Source}}',
+	'bookmanagerv2-permission' => 'Label in the navigation bar metadata dropdown.
+
+Parameters:
+* $1 - licensing permission for works not created on-wiki
+See screenshot for an example of this dropdown.
+[[File:BookManagerv2 navigation bar metadata dropdown.png]]
+{{Identical|Permission}}',
+	'bookmanagerv2-other-versions' => 'Label in the navigation bar metadata dropdown.
+
+Parameters:
+* $1 - number of other versions of this work that are available on the wiki
+* $2 - lists of other versions of this work that are available on the wiki
+See screenshot for an example of this dropdown.
+[[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Other version}}',
-	'bookmanagerv2-isbn' => 'Label for the International Standard Book Number, in the navigation bar metadata dropdown. [http://en.wikipedia.org/wiki/ISBN ISBN]. See screenshot for an example of this dropdown.
+	'bookmanagerv2-isbn' => 'Label for the International Standard Book Number, in the navigation bar metadata dropdown. [http://en.wikipedia.org/wiki/ISBN ISBN].
+
+Parameters:
+* $1 - International Standard Book Number of the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|ISBN}}',
-	'bookmanagerv2-lccn' => 'Label for the Library of Congress Control Number, in the navigation bar metadata dropdown. [http://en.wikipedia.org/wiki/LCCN LCCN]. See screenshot for an example of this dropdown.
+	'bookmanagerv2-lccn' => 'Label for the Library of Congress Control Number, in the navigation bar metadata dropdown. [http://en.wikipedia.org/wiki/LCCN LCCN].
+
+Parameters:
+* $1 - Library of Congress Control Number of the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
 	'bookmanagerv2-oclc' => 'Label for the Online Computer Library Center, in the navigation bar metadata dropdown. [http://en.wikipedia.org/wiki/OCLC OCLC].
 
+Parameters:
+* $1 - Online Computer Library Center identifier of the work
 See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
 	'bookmanagerv2-read-json-block' => "Title for a link to explain that clicking the 'read' button will allow them to view the metadata and chapter list for this work",
@@ -253,12 +311,17 @@ See also:
 {{Identical|Publisher}}',
 	'bookmanagerv2-printer-field' => 'JSON editor input field label.
 {{Identical|Printer}}',
+	'bookmanagerv2-publication-date-field' => 'Used as label for the "Publication date" inputbox.
+{{Identical|Publication date}}',
 	'bookmanagerv2-publication-year-field' => 'JSON editor input field label',
 	'bookmanagerv2-publication-month-field' => 'JSON editor input field label',
 	'bookmanagerv2-publication-day-field' => 'JSON editor input field label',
-	'bookmanagerv2-year-placeholder' => 'Short prompt to appear in a year input box in the JSON editor to prompt the user to enter a four-digit year.',
-	'bookmanagerv2-month-placeholder' => 'Short prompt to appear in a month input box in the JSON editor to prompt the user to enter a two-digit month.',
-	'bookmanagerv2-day-placeholder' => 'Short prompt to appear in a day input box in the JSON editor to prompt the user to enter a two-digit month.',
+	'bookmanagerv2-year-placeholder' => 'Short prompt to appear in a year input box in the JSON editor to prompt the user to enter a four-digit year.
+{{Related|Bookmanagerv2-placeholder}}',
+	'bookmanagerv2-month-placeholder' => 'Short prompt to appear in a month input box in the JSON editor to prompt the user to enter a two-digit month.
+{{Related|Bookmanagerv2-placeholder}}',
+	'bookmanagerv2-day-placeholder' => 'Short prompt to appear in a day input box in the JSON editor to prompt the user to enter a two-digit month.
+{{Related|Bookmanagerv2-placeholder}}',
 	'bookmanagerv2-publication-city-field' => 'JSON editor input field label.
 {{Identical|Publication city}}',
 	'bookmanagerv2-language-field' => 'JSON editor input field label.
@@ -382,9 +445,13 @@ $messages['bcl'] = array(
 	'bookmanagerv2-edition-field' => 'Edisyon',
 	'bookmanagerv2-publisher-field' => 'Tagapublikar',
 	'bookmanagerv2-printer-field' => 'Taga-imprinta',
+	'bookmanagerv2-publication-date-field' => 'Petsa nin Publikasyon',
 	'bookmanagerv2-publication-year-field' => 'Taon nin Publikasyon',
 	'bookmanagerv2-publication-month-field' => 'Bulan nin Publikasyon',
 	'bookmanagerv2-publication-day-field' => 'Aldaw nin Publikasyon',
+	'bookmanagerv2-year-placeholder' => 'TTTT',
+	'bookmanagerv2-month-placeholder' => 'BB',
+	'bookmanagerv2-day-placeholder' => 'AA',
 	'bookmanagerv2-publication-city-field' => 'Siyudad nin Publikasyon',
 	'bookmanagerv2-language-field' => 'Lengguwahe',
 	'bookmanagerv2-description-field' => 'Deskripsyon',
@@ -515,9 +582,13 @@ $messages['de'] = array(
 	'bookmanagerv2-edition-field' => 'Ausgabe',
 	'bookmanagerv2-publisher-field' => 'Herausgeber',
 	'bookmanagerv2-printer-field' => 'Druck',
+	'bookmanagerv2-publication-date-field' => 'Veröffentlichungsdatum',
 	'bookmanagerv2-publication-year-field' => 'Veröffentlichungsjahr',
 	'bookmanagerv2-publication-month-field' => 'Veröffentlichungsmonat',
 	'bookmanagerv2-publication-day-field' => 'Veröffentlichungstag',
+	'bookmanagerv2-year-placeholder' => 'JJJJ',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'TT',
 	'bookmanagerv2-publication-city-field' => 'Veröffentlichungsort',
 	'bookmanagerv2-language-field' => 'Sprache',
 	'bookmanagerv2-description-field' => 'Beschreibung',
@@ -609,11 +680,15 @@ $messages['fo'] = array(
 	'bookmanagerv2-metadata-header' => 'Metadáta',
 	'bookmanagerv2-contents-header' => 'Innihaldsyvirlit',
 	'bookmanagerv2-title' => 'Heitið: $1',
+	'bookmanagerv2-alternate-titles' => 'Alternativt {{PLURAL:$1|heiti}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Rithøvundur|Rithøvundar}}: $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Týðari|Týðarar}}: $2',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|Redaktørur|Redaktørar}}: $2',
 	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Teknari|Teknarar}}: $2',
 	'bookmanagerv2-subtitle' => 'Undirheitið: $1',
+	'bookmanagerv2-series-title' => 'Heitið á bókarøð: $1',
+	'bookmanagerv2-volume' => 'Partur: $1',
+	'bookmanagerv2-edition' => 'Útgáva: $1',
 	'bookmanagerv2-publisher' => 'Útgevari: $1',
 	'bookmanagerv2-printer' => 'Prentað: $1',
 	'bookmanagerv2-publication-date' => 'Útgávudagur: $1',
@@ -623,6 +698,20 @@ $messages['fo'] = array(
 	'bookmanagerv2-source' => 'Kelda: $1',
 	'bookmanagerv2-permission' => 'Loyvið: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Onnur versjón|Aðrar versjónir}}: $2',
+	'bookmanagerv2-next-title' => 'Næsti partur: $1',
+	'bookmanagerv2-prev-title' => 'Fyrri partur: $1',
+	'bookmanagerv2-metadata-heading' => 'Metadáta',
+	'bookmanagerv2-sections-heading' => 'Partar',
+	'bookmanagerv2-move-alt' => 'Flyt henda partin',
+	'bookmanagerv2-remove-alt' => 'Tak burtur henda partin',
+	'bookmanagerv2-rename' => 'umdoyp',
+	'bookmanagerv2-create' => 'upprætta',
+	'bookmanagerv2-done' => 'Liðugt',
+	'bookmanagerv2-printer-field' => 'Printari',
+	'bookmanagerv2-publication-date-field' => 'Útgávudagur',
+	'bookmanagerv2-publication-year-field' => 'Útgávuár',
+	'bookmanagerv2-publication-month-field' => 'Útgávumánaður',
+	'bookmanagerv2-publication-day-field' => 'Útgávudagur',
 );
 
 /** French (français)
@@ -683,9 +772,13 @@ $messages['fr'] = array(
 	'bookmanagerv2-edition-field' => 'Édition',
 	'bookmanagerv2-publisher-field' => 'Éditeur',
 	'bookmanagerv2-printer-field' => 'Imprimeur',
+	'bookmanagerv2-publication-date-field' => 'Date de publication',
 	'bookmanagerv2-publication-year-field' => 'Année de publication',
 	'bookmanagerv2-publication-month-field' => 'Mois de publication',
 	'bookmanagerv2-publication-day-field' => 'Jour de publication',
+	'bookmanagerv2-year-placeholder' => 'AAAA',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'JJ',
 	'bookmanagerv2-publication-city-field' => 'Ville de publication',
 	'bookmanagerv2-language-field' => 'Langue',
 	'bookmanagerv2-description-field' => 'Description',
@@ -965,9 +1058,13 @@ $messages['ja'] = array(
 	'bookmanagerv2-edition-field' => '版',
 	'bookmanagerv2-publisher-field' => '発行者',
 	'bookmanagerv2-printer-field' => '印刷者',
+	'bookmanagerv2-publication-date-field' => '発行日',
 	'bookmanagerv2-publication-year-field' => '発行年',
 	'bookmanagerv2-publication-month-field' => '発行月',
 	'bookmanagerv2-publication-day-field' => '発行日',
+	'bookmanagerv2-year-placeholder' => 'YYYY',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
 	'bookmanagerv2-publication-city-field' => '発行地',
 	'bookmanagerv2-language-field' => '言語',
 	'bookmanagerv2-description-field' => '説明',
@@ -1035,6 +1132,9 @@ $messages['lb'] = array(
 	'bookmanagerv2-edition-field' => 'Editioun',
 	'bookmanagerv2-printer-field' => 'Drécker',
 	'bookmanagerv2-publication-year-field' => 'Joer vun der Publikatioun',
+	'bookmanagerv2-year-placeholder' => 'JJJJ',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
 	'bookmanagerv2-language-field' => 'Sprooch',
 	'bookmanagerv2-description-field' => 'Beschreiwung',
 	'bookmanagerv2-source-field' => 'Quell',
@@ -1163,9 +1263,13 @@ $messages['mk'] = array(
 	'bookmanagerv2-edition-field' => 'Издание',
 	'bookmanagerv2-publisher-field' => 'Издавач',
 	'bookmanagerv2-printer-field' => 'Печатница',
+	'bookmanagerv2-publication-date-field' => 'Датум на издавање',
 	'bookmanagerv2-publication-year-field' => 'Година на издавање',
 	'bookmanagerv2-publication-month-field' => 'Месец на издавање',
 	'bookmanagerv2-publication-day-field' => 'Ден на издавање',
+	'bookmanagerv2-year-placeholder' => 'ГГГГ',
+	'bookmanagerv2-month-placeholder' => 'ММ',
+	'bookmanagerv2-day-placeholder' => 'ДД',
 	'bookmanagerv2-publication-city-field' => 'Град на издавање',
 	'bookmanagerv2-language-field' => 'Јазик',
 	'bookmanagerv2-description-field' => 'Опис',
