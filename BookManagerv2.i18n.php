@@ -108,80 +108,68 @@ $messages['qqq'] = array(
 	'bookmanagerv2-contents' => "Alternate text for the navigation bar's table of contents icon.",
 	'bookmanagerv2-contents-header' => 'Name of the section header for the section holding the table of contents. This is shown when viewing the JSON block.
 {{Identical|Content}}',
-	'bookmanagerv2-title' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-title' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - title of the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Title}}',
-	'bookmanagerv2-alternate-titles' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-alternate-titles' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - number of other titles by which the work is known
 * $2 - list of other titles by which the work is known
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]',
-	'bookmanagerv2-authors' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-authors' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - number of contributors to the work
 * $2 - list of contributors to the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Author}}',
-	'bookmanagerv2-translators' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-translators' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - number of translators who contributed to the work
 * $2 - list of translators who contributed to the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Translator}}',
-	'bookmanagerv2-editors' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-editors' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - number of editors who contributed to the work
 * $2 - list of editors who contributed to the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Editor}}',
-	'bookmanagerv2-illustrators' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-illustrators' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - number of illustrators who contributed to the work
 * $2 - list of illustrators who contributed to the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Illustrator}}',
-	'bookmanagerv2-subtitle' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-subtitle' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - subtitle to the title of the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Subtitle}}',
-	'bookmanagerv2-series-title' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-series-title' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - title of the series of which this work is a member
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Series title}}',
-	'bookmanagerv2-volume' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-volume' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - volume number of the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Volume}}',
-	'bookmanagerv2-edition' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-edition' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - edition number of the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Edition}}',
-	'bookmanagerv2-publisher' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-publisher' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - name of the publisher of the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Publisher}}',
-	'bookmanagerv2-printer' => 'Label in the navigation bar metadata dropdown. See screenshot for an example of this dropdown.
-
-Parameters:
+	'bookmanagerv2-printer' => 'Label in the navigation bar metadata dropdown. Parameters:
 * $1 - name of the printer of the work
+See screenshot for an example of this dropdown.
 [[File:BookManagerv2 navigation bar metadata dropdown.png]]
 {{Identical|Printer}}',
 	'bookmanagerv2-publication-date' => 'Label in the navigation bar metadata dropdown.
@@ -849,9 +837,13 @@ $messages['gl'] = array(
 	'bookmanagerv2-edition-field' => 'Edición',
 	'bookmanagerv2-publisher-field' => 'Editor',
 	'bookmanagerv2-printer-field' => 'Impresor',
+	'bookmanagerv2-publication-date-field' => 'Data de publicación',
 	'bookmanagerv2-publication-year-field' => 'Ano de publicación',
 	'bookmanagerv2-publication-month-field' => 'Mes de publicación',
 	'bookmanagerv2-publication-day-field' => 'Día de publicación',
+	'bookmanagerv2-year-placeholder' => 'AAAA',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
 	'bookmanagerv2-publication-city-field' => 'Cidade de publicación',
 	'bookmanagerv2-language-field' => 'Lingua',
 	'bookmanagerv2-description-field' => 'Descrición',
@@ -928,6 +920,51 @@ $messages['ia'] = array(
 	'bookmanagerv2-source' => 'Fonte: $1',
 	'bookmanagerv2-permission' => 'Permission: $1',
 	'bookmanagerv2-other-versions' => 'Altere {{PLURAL:$1|version|versiones}}: $2',
+	'bookmanagerv2-read-json-block' => 'Vider le metadatos e lista de capitulos pro iste obra',
+	'bookmanagerv2-edit-json-block' => 'Modificar le metadatos e lista de capitulos pro iste obra',
+	'bookmanagerv2-next-title' => 'Proxime section: $1',
+	'bookmanagerv2-prev-title' => 'Previe section: $1',
+	'bookmanagerv2-metadata-heading' => 'Metadatos',
+	'bookmanagerv2-sections-heading' => 'Sectiones',
+	'bookmanagerv2-move-alt' => 'Displaciar iste section',
+	'bookmanagerv2-remove-alt' => 'Remover iste section',
+	'bookmanagerv2-rename' => 'renominar',
+	'bookmanagerv2-create' => 'crear',
+	'bookmanagerv2-done' => 'Finite',
+	'bookmanagerv2-add' => 'adder',
+	'bookmanagerv2-read' => 'leger',
+	'bookmanagerv2-section-name' => 'Nomine de section:',
+	'bookmanagerv2-section-link' => 'Ligamine al section:',
+	'bookmanagerv2-title-field' => 'Titulo',
+	'bookmanagerv2-alternate-titles-field' => 'Altere titulos',
+	'bookmanagerv2-authors-field' => 'Autores',
+	'bookmanagerv2-translators-field' => 'Traductores',
+	'bookmanagerv2-editors-field' => 'Redactores',
+	'bookmanagerv2-illustrators-field' => 'Illustratores',
+	'bookmanagerv2-subtitle-field' => 'Subtitulo',
+	'bookmanagerv2-series-title-field' => 'Titulo de serie',
+	'bookmanagerv2-volume-field' => 'Volumine',
+	'bookmanagerv2-edition-field' => 'Edition',
+	'bookmanagerv2-publisher-field' => 'Editor',
+	'bookmanagerv2-printer-field' => 'Impressor',
+	'bookmanagerv2-publication-date-field' => 'Data de publication',
+	'bookmanagerv2-publication-year-field' => 'Anno de publication',
+	'bookmanagerv2-publication-month-field' => 'Mense de publication',
+	'bookmanagerv2-publication-day-field' => 'Die de publication',
+	'bookmanagerv2-year-placeholder' => 'AAAA',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
+	'bookmanagerv2-publication-city-field' => 'Citate de publication',
+	'bookmanagerv2-language-field' => 'Lingua',
+	'bookmanagerv2-description-field' => 'Description',
+	'bookmanagerv2-source-field' => 'Fonte',
+	'bookmanagerv2-permission-field' => 'Permission',
+	'bookmanagerv2-other-versions-field' => 'Altere versiones',
+	'bookmanagerv2-sections-field' => 'Sectiones',
+	'bookmanagerv2-add-section-title' => 'Adder un nove section a iste obra',
+	'bookmanagerv2-edit-title' => 'Modificar iste section',
+	'bookmanagerv2-create-title' => 'Crear iste section',
+	'bookmanagerv2-rename-title' => 'Renominar iste section',
 );
 
 /** Italian (italiano)
@@ -1078,6 +1115,84 @@ $messages['ja'] = array(
 	'bookmanagerv2-rename-title' => 'この節の名前を変更',
 );
 
+/** Korean (한국어)
+ * @author AlexPark
+ * @author 아라
+ */
+$messages['ko'] = array(
+	'bookmanagerv2-desc' => '도서 메타데이터와 구조를 입력하고 저장하는 기능을 추가합니다',
+	'bookmanagerv2-invalid-json' => '잘못된 JSON',
+	'bookmanagerv2-example-nav' => '본 페이지의 알림 막대는 다음 이유 때문에 표시되었습니다.<code>LocalSettings.php</code>에 있는<code>$wgBookManagerv2ExampleNavigation</code>가 <code>true</code>로 설정되어 있음',
+	'bookmanagerv2-metadata' => '작품 메타데이터',
+	'bookmanagerv2-metadata-header' => '메타데이터',
+	'bookmanagerv2-contents' => '작품 내역',
+	'bookmanagerv2-contents-header' => '내용',
+	'bookmanagerv2-title' => '제목: $1',
+	'bookmanagerv2-alternate-titles' => '대안 {{PLURAL:$1|제목|제목들}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|저자|저자들}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|역자|역자들}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|편집자|편집자들}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|삽화가|삽화가들}}: $2',
+	'bookmanagerv2-subtitle' => '부제목: $1',
+	'bookmanagerv2-series-title' => '시리즈 제목: $1',
+	'bookmanagerv2-volume' => '권: $1',
+	'bookmanagerv2-edition' => '판수: $1',
+	'bookmanagerv2-publisher' => '출판사: $1',
+	'bookmanagerv2-printer' => '인쇄사: $1',
+	'bookmanagerv2-publication-date' => '출판일: $1',
+	'bookmanagerv2-publication-city' => '출판 도시: $1',
+	'bookmanagerv2-language' => '언어: $1',
+	'bookmanagerv2-description' => '설명: $1',
+	'bookmanagerv2-source' => '출처: $1',
+	'bookmanagerv2-permission' => '승인: $1',
+	'bookmanagerv2-other-versions' => '기타 {{PLURAL:$1|버전|버전들}}: $2',
+	'bookmanagerv2-read-json-block' => '이 작품에 대한 메타데이터 및 장 목록 보기',
+	'bookmanagerv2-edit-json-block' => '이 작품에 대한 메타데이터 및 장 목록 편집',
+	'bookmanagerv2-next-title' => '다음 섹션: $1',
+	'bookmanagerv2-prev-title' => '이전 섹션: $1',
+	'bookmanagerv2-metadata-heading' => '메타데이터',
+	'bookmanagerv2-sections-heading' => '섹션',
+	'bookmanagerv2-move-alt' => '이 섹션 이동',
+	'bookmanagerv2-remove-alt' => '이 섹션 삭제',
+	'bookmanagerv2-rename' => '이름 바꾸기',
+	'bookmanagerv2-create' => '만들기',
+	'bookmanagerv2-done' => '완료',
+	'bookmanagerv2-add' => '추가',
+	'bookmanagerv2-read' => '읽기',
+	'bookmanagerv2-section-name' => '섹션 이름:',
+	'bookmanagerv2-section-link' => '섹션 링크:',
+	'bookmanagerv2-title-field' => '제목',
+	'bookmanagerv2-alternate-titles-field' => '대체 제목',
+	'bookmanagerv2-authors-field' => '저자',
+	'bookmanagerv2-translators-field' => '번역자',
+	'bookmanagerv2-editors-field' => '편집자',
+	'bookmanagerv2-illustrators-field' => '삽화가',
+	'bookmanagerv2-subtitle-field' => '부제',
+	'bookmanagerv2-series-title-field' => '시리즈 제목',
+	'bookmanagerv2-volume-field' => '권',
+	'bookmanagerv2-edition-field' => '판',
+	'bookmanagerv2-publisher-field' => '출판사',
+	'bookmanagerv2-printer-field' => '인쇄사',
+	'bookmanagerv2-publication-date-field' => '출판일자',
+	'bookmanagerv2-publication-year-field' => '출판년',
+	'bookmanagerv2-publication-month-field' => '출판월',
+	'bookmanagerv2-publication-day-field' => '출판일',
+	'bookmanagerv2-year-placeholder' => 'YYYY',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
+	'bookmanagerv2-publication-city-field' => '출판 도시',
+	'bookmanagerv2-language-field' => '언어',
+	'bookmanagerv2-description-field' => '설명',
+	'bookmanagerv2-source-field' => '출처',
+	'bookmanagerv2-permission-field' => '승인',
+	'bookmanagerv2-other-versions-field' => '다른 버전',
+	'bookmanagerv2-sections-field' => '섹션',
+	'bookmanagerv2-add-section-title' => '이 작품에 새로운 섹션 추가',
+	'bookmanagerv2-edit-title' => '이 섹션 편집',
+	'bookmanagerv2-create-title' => '이 섹션 생성',
+	'bookmanagerv2-rename-title' => '이 섹션 이름 바꾸기',
+);
+
 /** Kurdish (Latin script) (Kurdî (latînî)‎)
  * @author George Animal
  */
@@ -1113,6 +1228,7 @@ $messages['lb'] = array(
 	'bookmanagerv2-other-versions' => 'Aner {{PLURAL:$1|Versioun|Versiounen}}: $2',
 	'bookmanagerv2-next-title' => 'Nächsten Abschnitt: $1',
 	'bookmanagerv2-prev-title' => 'Viregen Abschnitt: $1',
+	'bookmanagerv2-metadata-heading' => 'Metadaten',
 	'bookmanagerv2-sections-heading' => 'Abschnitter',
 	'bookmanagerv2-move-alt' => 'Dësen Abschnitt réckelen',
 	'bookmanagerv2-remove-alt' => 'Dësen Abschnitt ewechhuelen',
@@ -1733,65 +1849,80 @@ $messages['yi'] = array(
  * @author Byfserag
  * @author Qiyue2001
  * @author TianyinLee
+ * @author Xiaomingyan
  */
 $messages['zh-hans'] = array(
+	'bookmanagerv2-desc' => '添加功能以输入并储存图书的资料数据和结构',
 	'bookmanagerv2-invalid-json' => '无效的JSON',
-	'bookmanagerv2-metadata' => '作品的源数据',
-	'bookmanagerv2-metadata-header' => '元数据',
-	'bookmanagerv2-contents' => '作品内容',
-	'bookmanagerv2-contents-header' => '内容',
+	'bookmanagerv2-example-nav' => '本页面出现该导航栏是因为<code>LocalSettings.php</code>的<code>$wgBookManagerv2ExampleNavigation</code>值设为<code>true</code>。',
+	'bookmanagerv2-metadata' => '作品的资料数据',
+	'bookmanagerv2-metadata-header' => '资料数据',
+	'bookmanagerv2-contents' => '作品目录',
+	'bookmanagerv2-contents-header' => '目录',
 	'bookmanagerv2-title' => '标题：$1',
-	'bookmanagerv2-alternate-titles' => '又名{{PLURAL:$1标题}}: $2',
-	'bookmanagerv2-authors' => '{{PLURAL:$1|作者}}: $2',
-	'bookmanagerv2-translators' => '{{PLURAL:$1|翻译}}: $2',
-	'bookmanagerv2-editors' => '{{PLURAL:$1|编辑}}: $2',
-	'bookmanagerv2-illustrators' => '{{PLURAL:$1|插图师}}: $2',
-	'bookmanagerv2-subtitle' => '副标题:$1',
+	'bookmanagerv2-alternate-titles' => '其他{{PLURAL:$1|标题}}：$2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|作者}}：$2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|翻译}}：$2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|编辑}}：$2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|插图}}：$2',
+	'bookmanagerv2-subtitle' => '副标题：$1',
 	'bookmanagerv2-series-title' => '系列标题：$1',
-	'bookmanagerv2-volume' => '容量：$1',
-	'bookmanagerv2-edition' => '版本: $1',
-	'bookmanagerv2-publisher' => '出版商：$1',
-	'bookmanagerv2-printer' => '印刷: $1',
+	'bookmanagerv2-volume' => '卷数：$1',
+	'bookmanagerv2-edition' => '版次：$1',
+	'bookmanagerv2-publisher' => '出版：$1',
+	'bookmanagerv2-printer' => '印刷：$1',
 	'bookmanagerv2-publication-date' => '出版日期：$1',
 	'bookmanagerv2-publication-city' => '出版城市：$1',
 	'bookmanagerv2-language' => '语言：$1',
-	'bookmanagerv2-description' => '描述: $1',
+	'bookmanagerv2-description' => '说明：$1',
 	'bookmanagerv2-source' => '来源：$1',
-	'bookmanagerv2-permission' => '权限:$1',
-	'bookmanagerv2-other-versions' => '其他 {{PLURAL:$1|version|versions}}: $2',
-	'bookmanagerv2-metadata-heading' => '元数据',
-	'bookmanagerv2-sections-heading' => '节',
-	'bookmanagerv2-move-alt' => '移动此节',
-	'bookmanagerv2-remove-alt' => '移除此节',
+	'bookmanagerv2-permission' => '授权协议：$1',
+	'bookmanagerv2-other-versions' => '其他{{PLURAL:$1|版本}}：$2',
+	'bookmanagerv2-read-json-block' => '查看该作品的资料数据和章列表',
+	'bookmanagerv2-edit-json-block' => '编辑该作品的资料数据和章列表',
+	'bookmanagerv2-next-title' => '下一节：$1',
+	'bookmanagerv2-prev-title' => '上一节：$1',
+	'bookmanagerv2-metadata-heading' => '资料数据',
+	'bookmanagerv2-sections-heading' => '节数',
+	'bookmanagerv2-move-alt' => '移动该节',
+	'bookmanagerv2-remove-alt' => '删除该节',
 	'bookmanagerv2-rename' => '重命名',
 	'bookmanagerv2-create' => '创建',
 	'bookmanagerv2-done' => '完成',
 	'bookmanagerv2-add' => '添加',
 	'bookmanagerv2-read' => '阅读',
-	'bookmanagerv2-section-name' => '章节名称：',
-	'bookmanagerv2-section-link' => '章节链接:',
+	'bookmanagerv2-section-name' => '节名称：',
+	'bookmanagerv2-section-link' => '节链接：',
 	'bookmanagerv2-title-field' => '标题',
-	'bookmanagerv2-alternate-titles-field' => '别名',
+	'bookmanagerv2-alternate-titles-field' => '其他标题',
 	'bookmanagerv2-authors-field' => '作者',
-	'bookmanagerv2-translators-field' => '译者',
+	'bookmanagerv2-translators-field' => '翻译者',
 	'bookmanagerv2-editors-field' => '编辑',
-	'bookmanagerv2-illustrators-field' => '插画师',
+	'bookmanagerv2-illustrators-field' => '插画作者',
 	'bookmanagerv2-subtitle-field' => '副标题',
 	'bookmanagerv2-series-title-field' => '系列标题',
-	'bookmanagerv2-volume-field' => '卷',
-	'bookmanagerv2-edition-field' => '版',
-	'bookmanagerv2-publisher-field' => '出版商或发布者',
-	'bookmanagerv2-printer-field' => '印刷',
+	'bookmanagerv2-volume-field' => '卷数',
+	'bookmanagerv2-edition-field' => '版次',
+	'bookmanagerv2-publisher-field' => '出版社/出版商',
+	'bookmanagerv2-printer-field' => '印刷厂',
+	'bookmanagerv2-publication-date-field' => '出版日期',
 	'bookmanagerv2-publication-year-field' => '出版年份',
 	'bookmanagerv2-publication-month-field' => '出版月份',
-	'bookmanagerv2-publication-day-field' => '发行日',
-	'bookmanagerv2-publication-city-field' => '发行城市',
+	'bookmanagerv2-publication-day-field' => '出版日',
+	'bookmanagerv2-year-placeholder' => '年（4位）',
+	'bookmanagerv2-month-placeholder' => '月（2位）',
+	'bookmanagerv2-day-placeholder' => '日（2位）',
+	'bookmanagerv2-publication-city-field' => '出版城市',
 	'bookmanagerv2-language-field' => '语言',
-	'bookmanagerv2-description-field' => '描述',
+	'bookmanagerv2-description-field' => '说明',
 	'bookmanagerv2-source-field' => '来源',
 	'bookmanagerv2-permission-field' => '授权协议',
 	'bookmanagerv2-other-versions-field' => '其他版本',
-	'bookmanagerv2-sections-field' => '节',
+	'bookmanagerv2-sections-field' => '节数',
+	'bookmanagerv2-add-section-title' => '添加新节至该作品',
+	'bookmanagerv2-edit-title' => '编辑该节',
+	'bookmanagerv2-create-title' => '创建该节',
+	'bookmanagerv2-rename-title' => '重命名该节',
 );
 
 /** Traditional Chinese (中文（繁體）‎)
