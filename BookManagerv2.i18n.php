@@ -1316,6 +1316,7 @@ $messages['lb'] = array(
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Auteur|Auteuren}}: $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Iwwersetzer}}: $2',
 	'bookmanagerv2-subtitle' => 'Ënnertitel: $1',
+	'bookmanagerv2-volume' => 'Band: $1',
 	'bookmanagerv2-edition' => 'Editioun: $1',
 	'bookmanagerv2-publisher' => 'Editeur: $1',
 	'bookmanagerv2-printer' => 'Dréckerei: $1',
@@ -1345,6 +1346,7 @@ $messages['lb'] = array(
 	'bookmanagerv2-translators-field' => 'Iwwersetzer',
 	'bookmanagerv2-editors-field' => 'Editeuren',
 	'bookmanagerv2-subtitle-field' => 'Ënnertitel',
+	'bookmanagerv2-volume-field' => 'Band',
 	'bookmanagerv2-edition-field' => 'Editioun',
 	'bookmanagerv2-printer-field' => 'Drécker',
 	'bookmanagerv2-publication-year-field' => 'Joer vun der Publikatioun',
@@ -1568,7 +1570,9 @@ $messages['nl'] = array(
  * @author Cedric31
  */
 $messages['oc'] = array(
+	'bookmanagerv2-desc' => 'Apond una foncionalitat per picar e emmagazinar las metadonadas e la estructura d’un libre',
 	'bookmanagerv2-invalid-json' => 'JSON invalid',
+	'bookmanagerv2-example-nav' => 'La barra de navigacion apareis sus aquesta pagina perque <code>$wgBookManagerv2ExampleNavigation</code> es a verai dins <code>LocalSettings.php</code>.',
 	'bookmanagerv2-metadata' => 'Metadonadas de trabalh',
 	'bookmanagerv2-metadata-header' => 'Metadonadas',
 	'bookmanagerv2-contents' => 'Contengut del trabalh',
@@ -1592,6 +1596,8 @@ $messages['oc'] = array(
 	'bookmanagerv2-source' => 'Font : $1',
 	'bookmanagerv2-permission' => 'Autorizacion : $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Autra version|Autras versions}} : $2',
+	'bookmanagerv2-read-json-block' => 'Afichar las metadonadas e la lista dels capítols per aquesta òbra',
+	'bookmanagerv2-edit-json-block' => 'Modificar las metadonadas e la lista dels capítols per aquesta òbra',
 	'bookmanagerv2-next-title' => 'Seccion seguenta : $1',
 	'bookmanagerv2-prev-title' => 'Seccion precedenta : $1',
 	'bookmanagerv2-metadata-heading' => 'Metadonadas',
@@ -1617,9 +1623,13 @@ $messages['oc'] = array(
 	'bookmanagerv2-edition-field' => 'Edicion',
 	'bookmanagerv2-publisher-field' => 'Editor',
 	'bookmanagerv2-printer-field' => 'Imprimenta',
+	'bookmanagerv2-publication-date-field' => 'Data de publicacion',
 	'bookmanagerv2-publication-year-field' => 'Annada de publicacion',
 	'bookmanagerv2-publication-month-field' => 'Mes de publicacion',
 	'bookmanagerv2-publication-day-field' => 'Jorn de publicacion',
+	'bookmanagerv2-year-placeholder' => 'AAAA',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'JJ',
 	'bookmanagerv2-publication-city-field' => 'Vila de publicacion',
 	'bookmanagerv2-language-field' => 'Lenga',
 	'bookmanagerv2-description-field' => 'Descripcion',
@@ -1720,9 +1730,12 @@ $messages['pt'] = array(
 );
 
 /** Brazilian Portuguese (português do Brasil)
+ * @author Cainamarques
  * @author Luckas
  */
 $messages['pt-br'] = array(
+	'bookmanagerv2-invalid-json' => 'JSON inválido',
+	'bookmanagerv2-metadata-header' => 'Metadados',
 	'bookmanagerv2-contents-header' => 'Conteúdo',
 	'bookmanagerv2-title' => 'Título: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
@@ -1741,6 +1754,7 @@ $messages['pt-br'] = array(
 	'bookmanagerv2-source' => 'Fonte: $1',
 	'bookmanagerv2-permission' => 'Permissão: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Outra versão|Outras versões}}: $2',
+	'bookmanagerv2-metadata-heading' => 'Metadados',
 	'bookmanagerv2-sections-heading' => 'Seções',
 	'bookmanagerv2-move-alt' => 'Mover esta seção',
 	'bookmanagerv2-remove-alt' => 'Remover esta seção',
@@ -1761,12 +1775,18 @@ $messages['pt-br'] = array(
 	'bookmanagerv2-edition-field' => 'Edição',
 	'bookmanagerv2-publication-year-field' => 'Ano de publicação',
 	'bookmanagerv2-publication-month-field' => 'Mês de publicação',
+	'bookmanagerv2-year-placeholder' => 'AAAA',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
 	'bookmanagerv2-language-field' => 'Língua',
 	'bookmanagerv2-description-field' => 'Descrição',
 	'bookmanagerv2-source-field' => 'Fonte',
 	'bookmanagerv2-permission-field' => 'Permissão',
 	'bookmanagerv2-other-versions-field' => 'Outras versões',
 	'bookmanagerv2-sections-field' => 'Seções',
+	'bookmanagerv2-edit-title' => 'Editar esta seção',
+	'bookmanagerv2-create-title' => 'Criar esta seção',
+	'bookmanagerv2-rename-title' => 'Renomear esta seção',
 );
 
 /** tarandíne (tarandíne)
