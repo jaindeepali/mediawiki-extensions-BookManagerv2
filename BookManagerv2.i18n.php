@@ -1327,6 +1327,7 @@ $messages['lb'] = array(
 	'bookmanagerv2-source' => 'Quell: $1',
 	'bookmanagerv2-permission' => 'Autorisatioun: $1',
 	'bookmanagerv2-other-versions' => 'Aner {{PLURAL:$1|Versioun|Versiounen}}: $2',
+	'bookmanagerv2-edit-json-block' => "D'Metadonnéeën an d'Lëscht vun de Kapitele fir dëst Wierk änneren",
 	'bookmanagerv2-next-title' => 'Nächsten Abschnitt: $1',
 	'bookmanagerv2-prev-title' => 'Viregen Abschnitt: $1',
 	'bookmanagerv2-metadata-heading' => 'Metadaten',
