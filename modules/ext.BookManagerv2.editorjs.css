@@ -15,6 +15,13 @@
  * along with this program; if not, write to the Free Software
  * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301, USA.
  **/
+div.mw-bookmanagerv2-section-container {
+	position:relative;
+	top: -50px;
+	width: 870px;
+	height: 100%;
+}
+
 li.mw-bookmanagerv2-section img.mw-bookmanagerv2-move,
 li.mw-bookmanagerv2-new-section img.mw-bookmanagerv2-move {
 	display: inline-block;
@@ -39,6 +46,13 @@ li.mw-bookmanagerv2-new-section img.mw-bookmanagerv2-remove {
 	margin: 10px;
 	color: #666666;
 	cursor: pointer;
+}
+
+li.mw-bookmanagerv2-sortable-placeholder {
+	border: 1px dashed #919191;
+	width: 700px;
+	margin-bottom: 10px;
+	overflow: hidden;
 }
 
 input.mw-bookmanagerv2-rename-input {
@@ -79,4 +93,25 @@ li div.mw-bookmanagerv2-input-section {
 li div.mw-bookmanagerv2-button-wrapper {
 	float: right;
 	margin-top: 38px;
+}
+
+ul.mw-bookmanagerv2-section-list li.indent-1 {
+	margin-left: 30px;
+}
+
+ul.mw-bookmanagerv2-section-list li.indent-2 {
+	margin-left: 30px;
+	margin-left: 60px;
+}
+
+ul.mw-bookmanagerv2-section-list li.indent-3 {
+	margin-left: 90px;
+}
+
+ul.mw-bookmanagerv2-section-list li.indent-4 {
+	margin-left: 120px;
+}
+
+ul.mw-bookmanagerv2-section-list li.indent-5 {
+	margin-left: 150px;
 }

@@ -246,6 +246,14 @@
                             "additionalProperties": {
                                 "i18n": "bookmanagerv2-source"
                             }
+                        },
+                        "indentation": {
+                            "description": "The level of indentation for this section",
+                            "required": false,
+                            "type": "integer",
+                            "aditionalProperties": {
+                                "i18n": "bookmanagerv2-indentation-field"
+                            }
                         }
                     },
                     "additionalProperties": false

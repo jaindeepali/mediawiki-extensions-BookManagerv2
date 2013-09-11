@@ -68,17 +68,51 @@
 			var startIndex = ui.item.index() - 1;
 			ui.item.data( 'startIndex', startIndex );
 		},
-		update: function( event, ui ) {
+		stop: function( event, ui ) {
 			if ( ui.item.hasClass( 'mw-bookmanagerv2-section' ) ) {
 				var startIndex = ui.item.data( 'startIndex' ),
 					endIndex = $( ui.item ).index() - 1,
 					$temp = sectionJson[ startIndex ];
+				$temp.indentation = ui.item.data( 'position' );
 				sectionJson.splice( startIndex, 1 );
 				sectionJson.splice( endIndex, 0, $temp );
 				updateJson( sectionJson );
 			}
 		},
-		items: '> li'
+		sort: function( event, ui ) {
+			var position = Math.ceil( ui.position.left/30 ),
+				indentClass;
+			if ( position < 0 ) {
+				position = 0;
+			} else if ( position > 5 ) {
+				position = 5;
+			}
+			if ( position > 0 ) {
+				indentClass = 'indent-' + position.toString();
+				if ( !ui.item.hasClass( indentClass ) ) {
+					ui.placeholder.removeClass( 'indent-1' ).removeClass( 'indent-2' )
+						.removeClass( 'indent-3' ).removeClass( 'indent-4' )
+						.removeClass( 'indent-5' );
+					ui.item.removeClass( 'indent-1' ).removeClass( 'indent-2' )
+						.removeClass( 'indent-3' ).removeClass( 'indent-4' )
+						.removeClass( 'indent-5' );
+					ui.placeholder.addClass( indentClass );
+					ui.item.addClass( indentClass );
+				}
+			} else {
+				ui.placeholder.removeClass( 'indent-1' ).removeClass( 'indent-2' )
+					.removeClass( 'indent-3' ).removeClass( 'indent-4' )
+					.removeClass( 'indent-5' );
+				ui.item.removeClass( 'indent-1' ).removeClass( 'indent-2' )
+					.removeClass( 'indent-3' ).removeClass( 'indent-4' )
+					.removeClass( 'indent-5' );
+			}
+			ui.item.data( 'position', position );
+		},
+		placeholder: 'mw-bookmanagerv2-sortable-placeholder',
+		forcePlaceholderSize: true,
+		opacity: 0.8,
+		distance: 10
 	});
 
 	// Add tabindexes to remove buttons
@@ -250,6 +284,11 @@
 			$( 'ul.mw-bookmanagerv2-section-list' ).append( $newSection );
 		}
 
+		// Allow this added section to be removed before it's saved
+		$( 'li.mw-bookmanagerv2-new-section' ).on( 'click', 'img.mw-bookmanagerv2-remove', function() {
+			$newSection.remove();
+		});
+
 		$submitButton.click( function() {
 			if ( $sectionName.val() !== '' && $sectionLink.val() !== '' ) {
 				// Save to JSON block
@@ -259,7 +298,8 @@
 					querySeparator = sectionUrl.indexOf( '?' ) === -1 ? '?' : '&',
 					newSectionJson = {
 						name: sectionName,
-						link: sectionLink
+						link: sectionLink,
+						indentation: 0
 					},
 					index = $( 'ul.mw-bookmanagerv2-section-list li' ).index( $newSection ),
 					$link = $( '<a>' ).addClass( 'mw-bookmanagerv2-section-link' )
@@ -284,8 +324,14 @@
 						)
 						.append( $( '<span>' ).addClass( 'mw-bookmanagerv2-link-bracket' )
 							.text( ']' )
-						);
+						),
+					sectionClasses = $newSection.attr( 'class' ),
+					re = /indent-(\d)/,
+					match = re.exec( sectionClasses );
 
+				if ( match !== null ) {
+					newSectionJson.indentation = parseInt( match[1], 10 );
+				}
 				sectionJson.splice( index, 0, newSectionJson );
 				updateJson( sectionJson );
 

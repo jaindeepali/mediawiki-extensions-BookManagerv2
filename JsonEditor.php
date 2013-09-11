@@ -371,8 +371,19 @@ class JsonEditor extends EditPage {
 					$sectionLinkTitle = wfMessage(
 						'bookmanagerv2-create-title' )->escaped();
 				}
+				$indentClass = '';
+				$indentation = 0;
+				if ( isset( $section->indentation ) ) {
+					$indentation = (int)$section->indentation;
+					if ( $indentation > 0 && $indentation <= 5 ) {
+						$indentClass = 'indent-' . (string)$indentation;
+					}
+				}
 				$html .= Html::openElement( 'li', array(
-					'class' => 'mw-bookmanagerv2-section',
+					'class' => array(
+							'mw-bookmanagerv2-section',
+							$indentClass
+						),
 					'id' => 'section-' . (string)$index,
 					'tabindex' => $tabindex++
 				) )
