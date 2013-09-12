@@ -68,7 +68,7 @@ class JsonEditor extends EditPage {
 	) {
 		$key = htmlentities( $key );
 		$type = $val->type;
-		$i18n = $val->additionalProperties->i18n . '-field';
+		$i18n = $val->additionalProperties->i18n;
 		if ( $type === 'array' ) {
 			// TODO: Array handling
 			$inputType = 'text';

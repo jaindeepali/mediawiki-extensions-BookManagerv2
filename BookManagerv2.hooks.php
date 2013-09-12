@@ -345,10 +345,14 @@ class BookManagerv2Hooks {
 		$html .= Html::openElement( 'ol', array() );
 		foreach ( $sections as $key => $val ) {
 			if ( $val->link !== $currentPageTitle ) {
-				$html .= Html::openElement( 'li', array(
-					'class' => 'indent-' . (string)$val->indentation
-				) )
-				. Linker::link(
+				if ( isset( $val->indentation ) ) {
+					$html .= Html::openElement( 'li', array(
+						'class' => 'indent-' . (string)$val->indentation
+					) );
+				} else {
+					$html .= Html::openElement( 'li', array() );
+				}
+				$html .= Linker::link(
 						Title::newFromText( $val->link ),
 						$val->name
 					)
