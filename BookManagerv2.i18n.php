@@ -1350,10 +1350,14 @@ $messages['lb'] = array(
 	'bookmanagerv2-volume-field' => 'Band',
 	'bookmanagerv2-edition-field' => 'Editioun',
 	'bookmanagerv2-printer-field' => 'Drécker',
+	'bookmanagerv2-publication-date-field' => 'Datum vun der Publikatioun',
 	'bookmanagerv2-publication-year-field' => 'Joer vun der Publikatioun',
+	'bookmanagerv2-publication-month-field' => 'Mount vun der Publikatioun',
+	'bookmanagerv2-publication-day-field' => 'Dag vun der Publikatioun',
 	'bookmanagerv2-year-placeholder' => 'JJJJ',
 	'bookmanagerv2-month-placeholder' => 'MM',
 	'bookmanagerv2-day-placeholder' => 'DD',
+	'bookmanagerv2-publication-city-field' => 'Stad vun der Publikatioun',
 	'bookmanagerv2-language-field' => 'Sprooch',
 	'bookmanagerv2-description-field' => 'Beschreiwung',
 	'bookmanagerv2-source-field' => 'Quell',
@@ -1539,6 +1543,7 @@ $messages['ms'] = array(
 /** Dutch (Nederlands)
  * @author Hansmuller
  * @author Siebrand
+ * @author Southparkfan
  */
 $messages['nl'] = array(
 	'bookmanagerv2-desc' => 'Voegt functies toe om de metadata en structuur van boeken in te voeren en op te slaan',
@@ -1565,6 +1570,7 @@ $messages['nl'] = array(
 	'bookmanagerv2-source' => 'Bron: $1',
 	'bookmanagerv2-permission' => 'Toestemming: $1',
 	'bookmanagerv2-other-versions' => 'Andere {{PLURAL:$1|versie|versies}}: $2',
+	'bookmanagerv2-remove-alt' => 'Verwijder deze sectie',
 );
 
 /** Occitan (occitan)
@@ -1820,6 +1826,28 @@ $messages['roa-tara'] = array(
 	'bookmanagerv2-source' => 'Origgene: $1',
 	'bookmanagerv2-permission' => 'Permesse: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Otra versione|Otre versiune}}: $2',
+);
+
+/** Russian (русский)
+ * @author Okras
+ */
+$messages['ru'] = array(
+	'bookmanagerv2-language' => 'Язык: $1',
+	'bookmanagerv2-description' => 'Описание: $1',
+	'bookmanagerv2-source' => 'Источник: $1',
+	'bookmanagerv2-permission' => 'Разрешение: $1',
+	'bookmanagerv2-add' => 'добавить',
+	'bookmanagerv2-volume-field' => 'Том',
+	'bookmanagerv2-edition-field' => 'Издание',
+	'bookmanagerv2-year-placeholder' => 'ГГГГ',
+	'bookmanagerv2-month-placeholder' => 'ММ',
+	'bookmanagerv2-day-placeholder' => 'ДД',
+	'bookmanagerv2-description-field' => 'Описание',
+	'bookmanagerv2-source-field' => 'Источник',
+	'bookmanagerv2-other-versions-field' => 'Другие версии',
+	'bookmanagerv2-sections-field' => 'Разделы',
+	'bookmanagerv2-edit-title' => 'Редактировать этот раздел',
+	'bookmanagerv2-rename-title' => 'Переименовать этот раздел',
 );
 
 /** Swedish (svenska)
