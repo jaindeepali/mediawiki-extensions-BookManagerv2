@@ -420,7 +420,9 @@ class BookManagerv2Hooks {
 			$wgBookManagerv2PrevNext, $wgBookManagerv2JsonFrontend,
 			$wgBookManagerv2NavigationBars;
 
-		if ( !$wgBookManagerv2NavigationBars ) {
+		$request = $out->getRequest();
+
+		if ( !$wgBookManagerv2NavigationBars || !is_null( $request->getCheck( 'wpDiff' ) ) ) {
 			return true;
 		}
 
