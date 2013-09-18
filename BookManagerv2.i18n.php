@@ -1832,6 +1832,12 @@ $messages['roa-tara'] = array(
  * @author Okras
  */
 $messages['ru'] = array(
+	'bookmanagerv2-metadata-header' => 'Метаданные',
+	'bookmanagerv2-contents-header' => 'Содержание',
+	'bookmanagerv2-title' => 'Название: $1',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Переводчик|Переводчики}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Редактор|Редакторы}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Иллюстратор|Иллюстраторы}}: $2',
 	'bookmanagerv2-volume' => 'Том: $1',
 	'bookmanagerv2-language' => 'Язык: $1',
 	'bookmanagerv2-description' => 'Описание: $1',
@@ -1845,6 +1851,8 @@ $messages['ru'] = array(
 	'bookmanagerv2-create' => 'создать',
 	'bookmanagerv2-done' => 'Готово',
 	'bookmanagerv2-add' => 'добавить',
+	'bookmanagerv2-section-name' => 'Название раздела:',
+	'bookmanagerv2-section-link' => 'Ссылка на раздел:',
 	'bookmanagerv2-authors-field' => 'Авторы',
 	'bookmanagerv2-translators-field' => 'Переводчики',
 	'bookmanagerv2-editors-field' => 'Редакторы',
