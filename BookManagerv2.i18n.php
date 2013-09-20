@@ -1980,6 +1980,15 @@ $messages['uk'] = array(
 	'bookmanagerv2-rename-title' => 'Перейменувати цей розділ',
 );
 
+/** Wu (吴语)
+ * @author 十弌
+ */
+$messages['wuu'] = array(
+	'bookmanagerv2-year-placeholder' => '年（4個數字）',
+	'bookmanagerv2-month-placeholder' => '月（2個數字）',
+	'bookmanagerv2-day-placeholder' => '號（1個數字）',
+);
+
 /** Yiddish (ייִדיש)
  * @author פוילישער
  */
