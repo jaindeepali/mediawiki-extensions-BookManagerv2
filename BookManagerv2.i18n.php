@@ -692,12 +692,15 @@ $messages['el'] = array(
  * @author Larjona
  * @author Luis Felipe Schenone
  * @author Miguel2706
+ * @author Ovruni
  */
 $messages['es'] = array(
 	'bookmanagerv2-desc' => 'Agrega funcionalidad para ingresar y guardar metainformación sobre libros',
 	'bookmanagerv2-invalid-json' => 'JSON inválido',
 	'bookmanagerv2-example-nav' => 'La barra de navegación en esta página se muestra porque <code>$wgBookManagerv2ExampleNavigation</code> se establece en verdadero en <code>LocalSettings.php</code>.',
+	'bookmanagerv2-metadata-header' => 'Metadatos',
 	'bookmanagerv2-contents' => 'Contenido del trabajo',
+	'bookmanagerv2-contents-header' => 'Contenidos',
 	'bookmanagerv2-title' => 'Título: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autores}}: $2',
@@ -717,6 +720,48 @@ $messages['es'] = array(
 	'bookmanagerv2-source' => 'Fuente: $1',
 	'bookmanagerv2-permission' => 'Permiso: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Otra versión|Otras versiones}}: $2',
+	'bookmanagerv2-next-title' => 'Sección siguiente: $1',
+	'bookmanagerv2-prev-title' => 'Sección anterior: $1',
+	'bookmanagerv2-metadata-heading' => 'Metadatos',
+	'bookmanagerv2-sections-heading' => 'Secciones',
+	'bookmanagerv2-move-alt' => 'Mover esta sección',
+	'bookmanagerv2-remove-alt' => 'Eliminar esta sección',
+	'bookmanagerv2-rename' => 'renombrar',
+	'bookmanagerv2-create' => 'crear',
+	'bookmanagerv2-done' => 'Hecho',
+	'bookmanagerv2-add' => 'añadir',
+	'bookmanagerv2-read' => 'leer',
+	'bookmanagerv2-section-name' => 'Nombre de la sección:',
+	'bookmanagerv2-section-link' => 'Enlace de la sección:',
+	'bookmanagerv2-title-field' => 'Título',
+	'bookmanagerv2-alternate-titles-field' => 'Títulos alternativos',
+	'bookmanagerv2-authors-field' => 'Autores',
+	'bookmanagerv2-translators-field' => 'Traductores',
+	'bookmanagerv2-editors-field' => 'Editores',
+	'bookmanagerv2-illustrators-field' => 'Ilustradores',
+	'bookmanagerv2-subtitle-field' => 'Subtítulo',
+	'bookmanagerv2-volume-field' => 'Volumen',
+	'bookmanagerv2-edition-field' => 'Edición',
+	'bookmanagerv2-publisher-field' => 'Editor',
+	'bookmanagerv2-printer-field' => 'Impresora',
+	'bookmanagerv2-publication-date-field' => 'Fecha de publicación',
+	'bookmanagerv2-publication-year-field' => 'Año de publicación',
+	'bookmanagerv2-publication-month-field' => 'Mes de publicación',
+	'bookmanagerv2-publication-day-field' => 'Día de publicación',
+	'bookmanagerv2-year-placeholder' => 'YYYY',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
+	'bookmanagerv2-publication-city-field' => 'Ciudad de publicación',
+	'bookmanagerv2-language-field' => 'Idioma',
+	'bookmanagerv2-description-field' => 'Descripción',
+	'bookmanagerv2-source-field' => 'Fuente',
+	'bookmanagerv2-permission-field' => 'Permiso',
+	'bookmanagerv2-other-versions-field' => 'Otras versiones',
+	'bookmanagerv2-sections-field' => 'Secciones',
+	'bookmanagerv2-add-section-title' => 'Agregar una nueva sección a este trabajo',
+	'bookmanagerv2-edit-title' => 'Editar esta sección',
+	'bookmanagerv2-create-title' => 'Crear esta sección',
+	'bookmanagerv2-rename-title' => 'Renombrar esta sección',
 );
 
 /** Persian (فارسی)
@@ -1304,9 +1349,10 @@ $messages['ku-latn'] = array(
 
 /** Luxembourgish (Lëtzebuergesch)
  * @author Robby
+ * @author Soued031
  */
 $messages['lb'] = array(
-	'bookmanagerv2-desc' => "Setzt d'Fonctionalitéit derbäi fir Metadate a Strukture vu Bicher anzeginn",
+	'bookmanagerv2-desc' => "Setzt d'Funktionalitéit derbäi fir Metadate a Strukture vu Bicher anzeginn",
 	'bookmanagerv2-metadata' => 'Metadate vum Wierk',
 	'bookmanagerv2-metadata-header' => 'Metadaten',
 	'bookmanagerv2-contents' => 'Inhalter vum Wierk',
@@ -1570,7 +1616,7 @@ $messages['nl'] = array(
 	'bookmanagerv2-source' => 'Bron: $1',
 	'bookmanagerv2-permission' => 'Toestemming: $1',
 	'bookmanagerv2-other-versions' => 'Andere {{PLURAL:$1|versie|versies}}: $2',
-	'bookmanagerv2-remove-alt' => 'Verwijder deze sectie',
+	'bookmanagerv2-remove-alt' => 'Deze sectie verwijderen',
 );
 
 /** Occitan (occitan)
@@ -1832,6 +1878,7 @@ $messages['roa-tara'] = array(
  * @author Okras
  */
 $messages['ru'] = array(
+	'bookmanagerv2-invalid-json' => 'Недопустимый JSON',
 	'bookmanagerv2-metadata-header' => 'Метаданные',
 	'bookmanagerv2-contents-header' => 'Содержание',
 	'bookmanagerv2-title' => 'Название: $1',
@@ -1845,6 +1892,7 @@ $messages['ru'] = array(
 	'bookmanagerv2-description' => 'Описание: $1',
 	'bookmanagerv2-source' => 'Источник: $1',
 	'bookmanagerv2-permission' => 'Разрешение: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Другая версия|Другие версии}}: $2',
 	'bookmanagerv2-next-title' => 'Следующий раздел: $1',
 	'bookmanagerv2-prev-title' => 'Предыдущем разделе: $1',
 	'bookmanagerv2-metadata-heading' => 'Метаданные',
@@ -1884,6 +1932,11 @@ $messages['ru'] = array(
 $messages['sv'] = array(
 	'bookmanagerv2-desc' => 'Lägger till funktioner för att ange och lagra metadata och struktur för böcker',
 	'bookmanagerv2-invalid-json' => 'Ogiltig JSON',
+	'bookmanagerv2-example-nav' => 'Navigeringsfältet på denna sida visas eftersom <code>$wgBookManagerv2ExampleNavigation</code> är inställt på <code>true</code> i <code>LocalSettings.php</code>.',
+	'bookmanagerv2-metadata' => 'Verkets metadata',
+	'bookmanagerv2-metadata-header' => 'Metadata',
+	'bookmanagerv2-contents' => 'Verkets innehåll',
+	'bookmanagerv2-contents-header' => 'Innehåll',
 	'bookmanagerv2-title' => 'Titel: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Alternativ titel|Alternativa titlar}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Författare}}: $2',
@@ -1903,6 +1956,51 @@ $messages['sv'] = array(
 	'bookmanagerv2-source' => 'Källa: $1',
 	'bookmanagerv2-permission' => 'Behörighet: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Annan version|Andra versioner}}: $2',
+	'bookmanagerv2-read-json-block' => 'Visa metadata och listan över kapitel för detta arbete',
+	'bookmanagerv2-edit-json-block' => 'Redigera metadata och listan över kapitel för detta arbete',
+	'bookmanagerv2-next-title' => 'Nästa avsnitt: $1',
+	'bookmanagerv2-prev-title' => 'Tidigare avsnitt: $1',
+	'bookmanagerv2-metadata-heading' => 'Metadata',
+	'bookmanagerv2-sections-heading' => 'Avsnitt',
+	'bookmanagerv2-move-alt' => 'Flytta det här avsnittet',
+	'bookmanagerv2-remove-alt' => 'Ta bort det här avsnittet',
+	'bookmanagerv2-rename' => 'byt namn',
+	'bookmanagerv2-create' => 'skapa',
+	'bookmanagerv2-done' => 'Färdig',
+	'bookmanagerv2-add' => 'lägg till',
+	'bookmanagerv2-read' => 'läs',
+	'bookmanagerv2-section-name' => 'Avsnittets namn:',
+	'bookmanagerv2-section-link' => 'Avsnittets länk:',
+	'bookmanagerv2-title-field' => 'Titel',
+	'bookmanagerv2-alternate-titles-field' => 'Alternativa titlar',
+	'bookmanagerv2-authors-field' => 'Författare',
+	'bookmanagerv2-translators-field' => 'Översättare',
+	'bookmanagerv2-editors-field' => 'Redaktörer',
+	'bookmanagerv2-illustrators-field' => 'Illustratörer',
+	'bookmanagerv2-subtitle-field' => 'Undertitel',
+	'bookmanagerv2-series-title-field' => 'Serietitel',
+	'bookmanagerv2-volume-field' => 'Volym',
+	'bookmanagerv2-edition-field' => 'Utgåva',
+	'bookmanagerv2-publisher-field' => 'Utgivare',
+	'bookmanagerv2-printer-field' => 'Tryckare',
+	'bookmanagerv2-publication-date-field' => 'Utgivningsdatum',
+	'bookmanagerv2-publication-year-field' => 'Utgivningsår',
+	'bookmanagerv2-publication-month-field' => 'Utgivningsmånad',
+	'bookmanagerv2-publication-day-field' => 'Utgivningsdag',
+	'bookmanagerv2-year-placeholder' => 'ÅÅÅÅ',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
+	'bookmanagerv2-publication-city-field' => 'Utgivningsstad',
+	'bookmanagerv2-language-field' => 'Språk',
+	'bookmanagerv2-description-field' => 'Beskrivning',
+	'bookmanagerv2-source-field' => 'Källa',
+	'bookmanagerv2-permission-field' => 'Tillstånd',
+	'bookmanagerv2-other-versions-field' => 'Andra versioner',
+	'bookmanagerv2-sections-field' => 'Avsnitt',
+	'bookmanagerv2-add-section-title' => 'Lägg till ett nytt avsnitt i detta arbete',
+	'bookmanagerv2-edit-title' => 'Redigera detta avsnitt',
+	'bookmanagerv2-create-title' => 'Skapa detta avsnitt',
+	'bookmanagerv2-rename-title' => 'Byt namn på detta avsnitt',
 );
 
 /** Ukrainian (українська)
@@ -2111,9 +2209,17 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (中文（繁體）‎)
  * @author Openerror
+ * @author StephDC
  */
 $messages['zh-hant'] = array(
+	'bookmanagerv2-metadata-header' => '元數據',
+	'bookmanagerv2-contents' => '工作內容',
+	'bookmanagerv2-contents-header' => '內容',
 	'bookmanagerv2-title' => '主標題：$1',
+	'bookmanagerv2-alternate-titles' => '備用標題：$2', # Fuzzy
+	'bookmanagerv2-authors' => '作者：$2', # Fuzzy
+	'bookmanagerv2-translators' => '譯者：$2', # Fuzzy
+	'bookmanagerv2-editors' => '編輯者：$2', # Fuzzy
 	'bookmanagerv2-subtitle' => '副標題：$1',
 	'bookmanagerv2-publisher' => '出版商：$1',
 	'bookmanagerv2-printer' => '印刷商：$1',
