@@ -1590,6 +1590,7 @@ $messages['ms'] = array(
  * @author Hansmuller
  * @author Siebrand
  * @author Southparkfan
+ * @author TBloemink
  */
 $messages['nl'] = array(
 	'bookmanagerv2-desc' => 'Voegt functies toe om de metadata en structuur van boeken in te voeren en op te slaan',
@@ -1617,6 +1618,17 @@ $messages['nl'] = array(
 	'bookmanagerv2-permission' => 'Toestemming: $1',
 	'bookmanagerv2-other-versions' => 'Andere {{PLURAL:$1|versie|versies}}: $2',
 	'bookmanagerv2-remove-alt' => 'Deze sectie verwijderen',
+	'bookmanagerv2-title-field' => 'Titel',
+	'bookmanagerv2-alternate-titles-field' => 'Alternatieve titels',
+	'bookmanagerv2-authors-field' => 'Auteurs',
+	'bookmanagerv2-translators-field' => 'Vertalers',
+	'bookmanagerv2-year-placeholder' => 'JJJJ',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
+	'bookmanagerv2-language-field' => 'Taal',
+	'bookmanagerv2-description-field' => 'Beschrijving',
+	'bookmanagerv2-source-field' => 'Bron',
+	'bookmanagerv2-other-versions-field' => 'Andere versies',
 );
 
 /** Occitan (occitan)
