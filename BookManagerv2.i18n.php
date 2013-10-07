@@ -1355,6 +1355,8 @@ $messages['ku-latn'] = array(
  */
 $messages['lb'] = array(
 	'bookmanagerv2-desc' => "Setzt d'Funktionalitéit derbäi fir Metadate a Strukture vu Bicher anzeginn",
+	'bookmanagerv2-invalid-json' => 'JSON net valabel',
+	'bookmanagerv2-example-nav' => 'D\'Navigatiounsläischt gëtt op dëser Säit gewise well an den <code>LocalSettings.php</code> fir <code>$wgBookManagerv2ExampleNavigation</code> op <code>true</code> steet.',
 	'bookmanagerv2-metadata' => 'Metadate vum Wierk',
 	'bookmanagerv2-metadata-header' => 'Metadaten',
 	'bookmanagerv2-contents' => 'Inhalter vum Wierk',
@@ -1397,6 +1399,7 @@ $messages['lb'] = array(
 	'bookmanagerv2-subtitle-field' => 'Ënnertitel',
 	'bookmanagerv2-volume-field' => 'Band',
 	'bookmanagerv2-edition-field' => 'Editioun',
+	'bookmanagerv2-publisher-field' => 'Editeur',
 	'bookmanagerv2-printer-field' => 'Drécker',
 	'bookmanagerv2-publication-date-field' => 'Datum vun der Publikatioun',
 	'bookmanagerv2-publication-year-field' => 'Joer vun der Publikatioun',
