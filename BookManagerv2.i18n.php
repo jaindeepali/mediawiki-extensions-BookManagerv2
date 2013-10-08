@@ -1895,8 +1895,11 @@ $messages['roa-tara'] = array(
  * @author Okras
  */
 $messages['ru'] = array(
+	'bookmanagerv2-desc' => 'Добавляет функциональные возможности для ввода и сохранения метаданных и структуры книги',
 	'bookmanagerv2-invalid-json' => 'Недопустимый JSON',
+	'bookmanagerv2-metadata' => 'Метаданные работы',
 	'bookmanagerv2-metadata-header' => 'Метаданные',
+	'bookmanagerv2-contents' => 'Содержание работы',
 	'bookmanagerv2-contents-header' => 'Содержание',
 	'bookmanagerv2-title' => 'Название: $1',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Автор|Авторы}}: $2',
