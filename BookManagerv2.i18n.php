@@ -597,6 +597,13 @@ $messages['br'] = array(
 	'bookmanagerv2-rename-title' => 'Adenvel ar rann-mañ',
 );
 
+/** Chechen (нохчийн)
+ * @author Умар
+ */
+$messages['ce'] = array(
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Гочдархо|Гочдархой}}: $2',
+);
+
 /** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
