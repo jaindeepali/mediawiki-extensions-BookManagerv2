@@ -1919,6 +1919,7 @@ $messages['roa-tara'] = array(
 $messages['ru'] = array(
 	'bookmanagerv2-desc' => 'Добавляет функциональные возможности для ввода и сохранения метаданных и структуры книги',
 	'bookmanagerv2-invalid-json' => 'Недопустимый JSON',
+	'bookmanagerv2-example-nav' => 'На этой странице появляется панель навигации потому, что <code>$wgBookManagerv2ExampleNavigation</code> имеет значение <code>true</code> в <code>LocalSettings.php</code>.',
 	'bookmanagerv2-metadata' => 'Метаданные работы',
 	'bookmanagerv2-metadata-header' => 'Метаданные',
 	'bookmanagerv2-contents' => 'Содержание работы',
