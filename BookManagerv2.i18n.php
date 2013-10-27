@@ -604,6 +604,14 @@ $messages['ce'] = array(
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Гочдархо|Гочдархой}}: $2',
 );
 
+/** Czech (česky)
+ * @author Michaelbrabec
+ */
+$messages['cs'] = array(
+	'bookmanagerv2-invalid-json' => 'Neplatný JSON',
+	'bookmanagerv2-example-nav' => 'Navigační panel je na této stránce, protože <code>$wgBookManagerv2ExampleNavigation</code> je nastaven na <code>true</code> v souboru <code>LocalSettings.php</code>',
+);
+
 /** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
  * @author ОйЛ
  */
