@@ -1622,6 +1622,7 @@ $messages['ms'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author Flightmare
  * @author Hansmuller
  * @author Siebrand
  * @author Sjoerddebruin
@@ -1655,20 +1656,48 @@ $messages['nl'] = array(
 	'bookmanagerv2-source' => 'Bron: $1',
 	'bookmanagerv2-permission' => 'Toestemming: $1',
 	'bookmanagerv2-other-versions' => 'Andere {{PLURAL:$1|versie|versies}}: $2',
+	'bookmanagerv2-read-json-block' => 'De metagegevens en de lijst met hoofdstukken voor dit werk weergeven',
+	'bookmanagerv2-next-title' => 'Volgende sectie: $1',
+	'bookmanagerv2-prev-title' => 'Vorige sectie: $1',
+	'bookmanagerv2-metadata-heading' => 'Metagegevens',
+	'bookmanagerv2-sections-heading' => 'Secties',
+	'bookmanagerv2-move-alt' => 'Deze sectie verplaatsen',
 	'bookmanagerv2-remove-alt' => 'Deze sectie verwijderen',
 	'bookmanagerv2-rename' => 'hernoemen',
+	'bookmanagerv2-create' => 'aanmaken',
 	'bookmanagerv2-done' => 'Gereed',
+	'bookmanagerv2-add' => 'toevoegen',
+	'bookmanagerv2-read' => 'lezen',
+	'bookmanagerv2-section-name' => 'Sectienaam:',
+	'bookmanagerv2-section-link' => 'Sectielink:',
 	'bookmanagerv2-title-field' => 'Titel',
 	'bookmanagerv2-alternate-titles-field' => 'Alternatieve titels',
 	'bookmanagerv2-authors-field' => 'Auteurs',
 	'bookmanagerv2-translators-field' => 'Vertalers',
+	'bookmanagerv2-editors-field' => 'Redacteuren',
+	'bookmanagerv2-illustrators-field' => 'Illustratoren',
+	'bookmanagerv2-subtitle-field' => 'Ondertitel',
+	'bookmanagerv2-volume-field' => 'Volume',
+	'bookmanagerv2-edition-field' => 'Uitgave',
+	'bookmanagerv2-publisher-field' => 'Uitgever',
+	'bookmanagerv2-printer-field' => 'Drukker',
+	'bookmanagerv2-publication-date-field' => 'Publicatiedatum',
+	'bookmanagerv2-publication-year-field' => 'Publicatiejaar',
+	'bookmanagerv2-publication-month-field' => 'Publicatiemaand',
+	'bookmanagerv2-publication-day-field' => 'Publicatiedag',
 	'bookmanagerv2-year-placeholder' => 'JJJJ',
 	'bookmanagerv2-month-placeholder' => 'MM',
 	'bookmanagerv2-day-placeholder' => 'DD',
+	'bookmanagerv2-publication-city-field' => 'Publicatiestad',
 	'bookmanagerv2-language-field' => 'Taal',
 	'bookmanagerv2-description-field' => 'Beschrijving',
 	'bookmanagerv2-source-field' => 'Bron',
 	'bookmanagerv2-other-versions-field' => 'Andere versies',
+	'bookmanagerv2-sections-field' => 'Secties',
+	'bookmanagerv2-add-section-title' => 'Voeg een nieuwe sectie toe aan dit werk',
+	'bookmanagerv2-edit-title' => 'Deze sectie bewerken',
+	'bookmanagerv2-create-title' => 'Deze sectie aanmaken',
+	'bookmanagerv2-rename-title' => 'Deze sectie hernoemen',
 );
 
 /** Occitan (occitan)
