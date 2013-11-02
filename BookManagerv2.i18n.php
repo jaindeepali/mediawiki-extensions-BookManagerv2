@@ -604,7 +604,7 @@ $messages['ce'] = array(
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Гочдархо|Гочдархой}}: $2',
 );
 
-/** Czech (česky)
+/** Czech (čeština)
  * @author Michaelbrabec
  */
 $messages['cs'] = array(
@@ -720,6 +720,7 @@ $messages['el'] = array(
 );
 
 /** Spanish (español)
+ * @author Benfutbol10
  * @author Fitoschido
  * @author Larjona
  * @author Luis Felipe Schenone
@@ -730,6 +731,7 @@ $messages['es'] = array(
 	'bookmanagerv2-desc' => 'Agrega funcionalidad para ingresar y guardar metainformación sobre libros',
 	'bookmanagerv2-invalid-json' => 'JSON inválido',
 	'bookmanagerv2-example-nav' => 'La barra de navegación en esta página se muestra porque <code>$wgBookManagerv2ExampleNavigation</code> se establece en verdadero en <code>LocalSettings.php</code>.',
+	'bookmanagerv2-metadata' => 'Metadatos de trabajo',
 	'bookmanagerv2-metadata-header' => 'Metadatos',
 	'bookmanagerv2-contents' => 'Contenido del trabajo',
 	'bookmanagerv2-contents-header' => 'Contenidos',
@@ -1445,7 +1447,7 @@ $messages['lb'] = array(
 	'bookmanagerv2-permission-field' => 'Autorisatioun',
 	'bookmanagerv2-other-versions-field' => 'Aner Versiounen',
 	'bookmanagerv2-sections-field' => 'Abschnitter',
-	'bookmanagerv2-add-section-title' => 'En neien Abschnitt bäi dëst Wierk derbäisetzen',
+	'bookmanagerv2-add-section-title' => 'En neien Abschnitt bei dëst Wierk derbäisetzen',
 	'bookmanagerv2-edit-title' => 'Dësen Abschnitt änneren',
 	'bookmanagerv2-create-title' => 'Dësen Abschnitt uleeën',
 	'bookmanagerv2-rename-title' => 'Dësen Abschnitt ëmbenennen',
