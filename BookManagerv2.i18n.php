@@ -800,11 +800,15 @@ $messages['es'] = array(
 
 /** Persian (فارسی)
  * @author Alireza
+ * @author Ebraminio
  * @author Mahdiz
  * @author Taha
  */
 $messages['fa'] = array(
 	'bookmanagerv2-invalid-json' => 'JSON نامعتبر',
+	'bookmanagerv2-metadata-header' => 'فراداده',
+	'bookmanagerv2-contents' => 'مطالب کار',
+	'bookmanagerv2-contents-header' => 'محتویات',
 	'bookmanagerv2-title' => 'عنوان: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|دیگرعنوان|دیگر عناوین}}:$2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|نویسنده|نویسنده ها}}:$2',
@@ -824,6 +828,9 @@ $messages['fa'] = array(
 	'bookmanagerv2-source' => 'منبع: $1',
 	'bookmanagerv2-permission' => 'مجوز: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|نسخه دیگر|نسخه های دیگر}}: $2',
+	'bookmanagerv2-metadata-heading' => 'فراداده',
+	'bookmanagerv2-sections-heading' => 'بخش‌ها',
+	'bookmanagerv2-rename' => 'تغییر نام',
 );
 
 /** Faroese (føroyskt)
