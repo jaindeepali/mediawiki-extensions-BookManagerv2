@@ -722,6 +722,7 @@ $messages['el'] = array(
 /** Spanish (español)
  * @author Benfutbol10
  * @author Fitoschido
+ * @author Ihojose
  * @author Larjona
  * @author Luis Felipe Schenone
  * @author Miguel2706
@@ -754,6 +755,8 @@ $messages['es'] = array(
 	'bookmanagerv2-source' => 'Fuente: $1',
 	'bookmanagerv2-permission' => 'Permiso: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Otra versión|Otras versiones}}: $2',
+	'bookmanagerv2-read-json-block' => 'Ver la lista de metadatos y capítulos para este trabajo',
+	'bookmanagerv2-edit-json-block' => 'Editar la lista de metadatos y capítulos para este trabajo',
 	'bookmanagerv2-next-title' => 'Sección siguiente: $1',
 	'bookmanagerv2-prev-title' => 'Sección anterior: $1',
 	'bookmanagerv2-metadata-heading' => 'Metadatos',
@@ -774,6 +777,7 @@ $messages['es'] = array(
 	'bookmanagerv2-editors-field' => 'Editores',
 	'bookmanagerv2-illustrators-field' => 'Ilustradores',
 	'bookmanagerv2-subtitle-field' => 'Subtítulo',
+	'bookmanagerv2-series-title-field' => 'Título de series',
 	'bookmanagerv2-volume-field' => 'Volumen',
 	'bookmanagerv2-edition-field' => 'Edición',
 	'bookmanagerv2-publisher-field' => 'Editor',
@@ -1631,6 +1635,7 @@ $messages['ms'] = array(
 );
 
 /** Dutch (Nederlands)
+ * @author Effeietsanders
  * @author Flightmare
  * @author Hansmuller
  * @author Siebrand
@@ -1701,6 +1706,7 @@ $messages['nl'] = array(
 	'bookmanagerv2-language-field' => 'Taal',
 	'bookmanagerv2-description-field' => 'Beschrijving',
 	'bookmanagerv2-source-field' => 'Bron',
+	'bookmanagerv2-permission-field' => 'Rechten',
 	'bookmanagerv2-other-versions-field' => 'Andere versies',
 	'bookmanagerv2-sections-field' => 'Secties',
 	'bookmanagerv2-add-section-title' => 'Nieuwe sectie toevoegen aan dit werk',
