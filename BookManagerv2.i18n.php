@@ -605,11 +605,31 @@ $messages['ce'] = array(
 );
 
 /** Czech (čeština)
+ * @author Chmee2
  * @author Michaelbrabec
  */
 $messages['cs'] = array(
 	'bookmanagerv2-invalid-json' => 'Neplatný JSON',
 	'bookmanagerv2-example-nav' => 'Navigační panel je na této stránce, protože <code>$wgBookManagerv2ExampleNavigation</code> je nastaven na <code>true</code> v souboru <code>LocalSettings.php</code>',
+	'bookmanagerv2-metadata-header' => 'Metadata',
+	'bookmanagerv2-title' => 'Název: $1',
+	'bookmanagerv2-source' => 'Zdroj: $1',
+	'bookmanagerv2-next-title' => 'Další část: $1',
+	'bookmanagerv2-prev-title' => 'Předchozí část: $1',
+	'bookmanagerv2-metadata-heading' => 'Metadata',
+	'bookmanagerv2-sections-heading' => 'Části',
+	'bookmanagerv2-move-alt' => 'Přesunout tuto část',
+	'bookmanagerv2-remove-alt' => 'Odstranit tuto část',
+	'bookmanagerv2-rename' => 'přejmenovat',
+	'bookmanagerv2-create' => 'vytvořit',
+	'bookmanagerv2-done' => 'Hotovo',
+	'bookmanagerv2-add' => 'přidat',
+	'bookmanagerv2-read' => 'číst',
+	'bookmanagerv2-authors-field' => 'Autoři',
+	'bookmanagerv2-translators-field' => 'Překladatelé',
+	'bookmanagerv2-editors-field' => 'Editoři',
+	'bookmanagerv2-illustrators-field' => 'Ilustrátoři',
+	'bookmanagerv2-subtitle-field' => 'Podtitul',
 );
 
 /** Church Slavic (словѣ́ньскъ / ⰔⰎⰑⰂⰡⰐⰠⰔⰍⰟ)
@@ -777,7 +797,7 @@ $messages['es'] = array(
 	'bookmanagerv2-editors-field' => 'Editores',
 	'bookmanagerv2-illustrators-field' => 'Ilustradores',
 	'bookmanagerv2-subtitle-field' => 'Subtítulo',
-	'bookmanagerv2-series-title-field' => 'Título de series',
+	'bookmanagerv2-series-title-field' => 'Título de la serie',
 	'bookmanagerv2-volume-field' => 'Volumen',
 	'bookmanagerv2-edition-field' => 'Edición',
 	'bookmanagerv2-publisher-field' => 'Editor',
