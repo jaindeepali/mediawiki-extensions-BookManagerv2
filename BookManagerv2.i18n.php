@@ -857,6 +857,20 @@ $messages['fa'] = array(
 	'bookmanagerv2-rename' => 'تغییر نام',
 );
 
+/** Finnish (suomi)
+ * @author Stryn
+ */
+$messages['fi'] = array(
+	'bookmanagerv2-title' => 'Otsikko: $1',
+	'bookmanagerv2-language-field' => 'Kieli',
+	'bookmanagerv2-description-field' => 'Kuvaus',
+	'bookmanagerv2-source-field' => 'Lähde',
+	'bookmanagerv2-other-versions-field' => 'Muut versiot',
+	'bookmanagerv2-sections-field' => 'Osiot',
+	'bookmanagerv2-edit-title' => 'Muokkaa tätä osiota',
+	'bookmanagerv2-rename-title' => 'Uudelleennimeä tämä osio',
+);
+
 /** Faroese (føroyskt)
  * @author EileenSanda
  */
