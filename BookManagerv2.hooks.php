@@ -262,13 +262,13 @@ class BookManagerv2Hooks {
 		} else if ( $year && $month && !$day ) {
 			$ts = $year . $month . "01000000";
 			$format = $wgLang->getDateFormatString( 'monthonly',
-				$wgUser->getDatePreference() ? : 'default' );
+				$wgUser->getDatePreference() ?: 'default' );
 			$date = $wgLang->sprintfDate( $format, $ts );
 			$datetime = $year . "-" . $month;
 		} else {
 			$ts = $year . $month . $day . "000000";
 			$format = $wgLang->getDateFormatString( 'date',
-				$wgUser->getDatePreference() ? : 'default' );
+				$wgUser->getDatePreference() ?: 'default' );
 			$date = $wgLang->sprintfDate( $format, $ts );
 			$datetime = $year . "-" . $month . "-" . $day;
 		}

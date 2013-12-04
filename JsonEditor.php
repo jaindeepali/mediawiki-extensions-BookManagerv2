@@ -124,7 +124,7 @@ class JsonEditor extends EditPage {
 	protected function addDateField( $key, $val, $original, $inputAttributes ) {
 		global $wgLang, $wgUser;
 		$inputFormat = $val->additionalProperties->date_format;
-		$preferenceFormat = $wgLang->getDateFormatString( 'date', $wgUser->getDatePreference() ? : 'default' );
+		$preferenceFormat = $wgLang->getDateFormatString( 'date', $wgUser->getDatePreference() ?: 'default' );
 
 		$inputAttributes[ 'type' ] = 'number';
 		$tabindex = $inputAttributes[ 'tabindex' ];
@@ -358,7 +358,7 @@ class JsonEditor extends EditPage {
 				'type' => 'hidden',
 				'name' => 'json-editor-sections',
 				'id' => 'json-editor-sections',
-				'value' => FormatJson::encode( $sections ) ? : ''
+				'value' => FormatJson::encode( $sections ) ?: ''
 			) );
 			foreach ( $sections as $section ) {
 				$sectionTitle = Title::newFromText( $section->link );
