@@ -50,8 +50,8 @@ class RemoteSchema {
 		global $wgBookManagerv2SchemaDBname;
 
 		$this->title = $title;
-		$this->cache = $cache ? : wfGetCache( CACHE_ANYTHING );
-		$this->http = $http ? : new Http();
+		$this->cache = $cache ?: wfGetCache( CACHE_ANYTHING );
+		$this->http = $http ?: new Http();
 		$this->revision = self::getLatestRevId();
 		if ( $this->revision === false ) {
 			return false;
@@ -161,7 +161,7 @@ class RemoteSchema {
 	 */
 	function jsonSerialize() {
 		return array(
-			'schema'   => $this->get() ? : new StdClass(),
+			'schema'   => $this->get() ?: new StdClass(),
 			'revision' => $this->revision
 		);
 	}
@@ -177,6 +177,6 @@ class RemoteSchema {
 			return false;
 		}
 		$raw = $this->http->get( $this->getUri(), self::LOCK_TIMEOUT * 0.8 );
-		return FormatJson::decode( $raw, true ) ? : false;
+		return FormatJson::decode( $raw, true ) ?: false;
 	}
 }
