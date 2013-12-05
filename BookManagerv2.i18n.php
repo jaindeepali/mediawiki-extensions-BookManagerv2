@@ -2371,18 +2371,21 @@ $messages['zh-hans'] = array(
 );
 
 /** Traditional Chinese (中文（繁體）‎)
+ * @author Justincheng12345
  * @author Openerror
  * @author StephDC
  */
 $messages['zh-hant'] = array(
+	'bookmanagerv2-invalid-json' => '無效JSON',
 	'bookmanagerv2-metadata-header' => '元數據',
 	'bookmanagerv2-contents' => '工作內容',
 	'bookmanagerv2-contents-header' => '內容',
 	'bookmanagerv2-title' => '主標題：$1',
 	'bookmanagerv2-alternate-titles' => '備用標題：$2', # Fuzzy
 	'bookmanagerv2-authors' => '作者：$2', # Fuzzy
-	'bookmanagerv2-translators' => '譯者：$2', # Fuzzy
-	'bookmanagerv2-editors' => '編輯者：$2', # Fuzzy
+	'bookmanagerv2-translators' => '{{PLURAL:$1|譯者}}：$2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|編輯者}}：$2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|插圖}}：$2',
 	'bookmanagerv2-subtitle' => '副標題：$1',
 	'bookmanagerv2-publisher' => '出版商：$1',
 	'bookmanagerv2-printer' => '印刷商：$1',
@@ -2390,4 +2393,19 @@ $messages['zh-hant'] = array(
 	'bookmanagerv2-publication-city' => '出版城市：$1',
 	'bookmanagerv2-language' => '語言：$1',
 	'bookmanagerv2-description' => '內容簡介：$1',
+	'bookmanagerv2-next-title' => '下一節：$1',
+	'bookmanagerv2-prev-title' => '上一節：$1',
+	'bookmanagerv2-metadata-heading' => '元數據',
+	'bookmanagerv2-sections-heading' => '章節',
+	'bookmanagerv2-move-alt' => '移動此節',
+	'bookmanagerv2-remove-alt' => '移除此節',
+	'bookmanagerv2-rename' => '重命名',
+	'bookmanagerv2-create' => '創建',
+	'bookmanagerv2-done' => '完成',
+	'bookmanagerv2-add' => '添加',
+	'bookmanagerv2-read' => '閱讀',
+	'bookmanagerv2-section-name' => '章節名稱：',
+	'bookmanagerv2-section-link' => '章節連結：',
+	'bookmanagerv2-title-field' => '標題',
+	'bookmanagerv2-sections-field' => '章節',
 );
