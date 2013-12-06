@@ -228,10 +228,12 @@ class BookManagerv2Hooks {
 	 * @param string $date The date string, which must match the format
 	 * @param string $format The format, which is a string containing 'y',
 	 * 'm', or 'd' in any order.
+	 * @param IContextSource $context
 	 * @return string HTML list item element
 	 */
-	public static function addDate( $i18n, $date, $format ) {
-		global $wgLang, $wgUser;
+	public static function addDate( $i18n, $date, $format, $context ) {
+		$lang = $context->getLang();
+		$user = $context->getUser();
 
 		$year = $month = $day = null;
 		if ( strlen( $date ) >= 4 && stristr( $format, 'y' ) !== false ) {
@@ -261,15 +263,15 @@ class BookManagerv2Hooks {
 			$datetime = $year;
 		} else if ( $year && $month && !$day ) {
 			$ts = $year . $month . "01000000";
-			$format = $wgLang->getDateFormatString( 'monthonly',
-				$wgUser->getDatePreference() ?: 'default' );
-			$date = $wgLang->sprintfDate( $format, $ts );
+			$format = $lang->getDateFormatString( 'monthonly',
+				$user->getDatePreference() ?: 'default' );
+			$date = $lang->sprintfDate( $format, $ts );
 			$datetime = $year . "-" . $month;
 		} else {
 			$ts = $year . $month . $day . "000000";
-			$format = $wgLang->getDateFormatString( 'date',
-				$wgUser->getDatePreference() ?: 'default' );
-			$date = $wgLang->sprintfDate( $format, $ts );
+			$format = $lang->getDateFormatString( 'date',
+				$user->getDatePreference() ?: 'default' );
+			$date = $lang->sprintfDate( $format, $ts );
 			$datetime = $year . "-" . $month . "-" . $day;
 		}
 		$output = Html::openElement( 'li', array() )
@@ -368,10 +370,11 @@ class BookManagerv2Hooks {
 	/**
 	 * Generates HTML for the metadata list.
 	 *
+	 * @param IContextSource $context
 	 * @param object $jsonBook JSON representation of the book
 	 * @return string HTML unordered list element
 	 */
-	public static function formatMetadata( $jsonBook, $jsonPageTitle = null ) {
+	public static function formatMetadata( $context, $jsonBook, $jsonPageTitle = null ) {
 		$schema = FormatJson::decode(
 			file_get_contents( __DIR__ . '/schemas/bookschema.json' ) );
 		$metadata = '';
@@ -393,7 +396,7 @@ class BookManagerv2Hooks {
 				if ( isset( $schemaVal->additionalProperties->date_format ) ) {
 					$format = $schemaVal->additionalProperties->date_format;
 					$date = $jsonBook->$key;
-					$metadata .= self::addDate( $i18n, $date, $format );
+					$metadata .= self::addDate( $i18n, $date, $format, $context );
 				} else {
 					$metadata .= self::addString( $i18n, $jsonBook->$key );
 				}
@@ -523,7 +526,7 @@ class BookManagerv2Hooks {
 					$chapterList = null;
 				}
 				if ( $wgBookManagerv2Metadata ) {
-					$metadata = self::formatMetadata( $jsonBook, $jsonPageTitle );
+					$metadata = self::formatMetadata( $out, $jsonBook, $jsonPageTitle );
 				} else {
 					$metadata = null;
 				}
@@ -554,7 +557,7 @@ class BookManagerv2Hooks {
 				$out->clearHTML();
 				$metadata = Html::openElement( 'div',
 					array( 'class' => 'mw-bookmanagerv2-json-data' ) )
-					. self::formatMetadata( $json )
+					. self::formatMetadata( $out, $json )
 					. Html::closeElement( 'div' );
 				$chapterList = Html::openElement( 'div',
 				array( 'class' => 'mw-bookmanagerv2-json-contents' ) )
