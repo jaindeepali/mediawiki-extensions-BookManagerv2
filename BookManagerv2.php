@@ -244,3 +244,9 @@ $wgBookManagerv2ApiUri = false;
  * not set.
  */
 $wgBookManagerv2SchemaDBname = false;
+
+/**
+ * @var bool
+ * Whether to enable the JSON editor
+ */
+$wgBookManagerv2JsonEditor = true;
