@@ -333,6 +333,7 @@ class BookManagerv2Hooks {
 	 * will be linked.
 	 *
 	 * @param object $sections Sections property of the JSON
+	 * @param Title $jsonPageTitle
 	 * @param string $currentPageTitle Title of the page that's being viewed
 	 * @return string HTML ordered list element
 	 */
@@ -372,6 +373,7 @@ class BookManagerv2Hooks {
 	 *
 	 * @param IContextSource $context
 	 * @param object $jsonBook JSON representation of the book
+	 * @param Title $jsonPageTitle
 	 * @return string HTML unordered list element
 	 */
 	public static function formatMetadata( $context, $jsonBook, $jsonPageTitle = null ) {
@@ -446,7 +448,7 @@ class BookManagerv2Hooks {
 				$out->addModuleStyles( "ext.BookManagerv2" );
 				$out->addModules( "ext.BookManagerv2js" );
 				$currentPageTitle = $out->getTitle()->getText();
-				$prev = $next = $jsonBook = null;
+				$prev = $next = $jsonBook = $jsonPageTitle = null;
 				foreach ( $categories as $cat ) {
 					if ( substr( $cat, 0, strlen( $namespace ) ) === $namespace ) {
 						$jsonPageTitle = Title::newFromText( $cat );
