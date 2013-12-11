@@ -1867,6 +1867,7 @@ $messages['pl'] = array(
 );
 
 /** Portuguese (português)
+ * @author Giro720
  * @author Luckas
  */
 $messages['pt'] = array(
@@ -1887,6 +1888,8 @@ $messages['pt'] = array(
 	'bookmanagerv2-source' => 'Fonte: $1',
 	'bookmanagerv2-permission' => 'Permissão: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Outra versão|Outras versões}}: $2',
+	'bookmanagerv2-next-title' => 'Próxima seção:$1',
+	'bookmanagerv2-prev-title' => 'Seção anterior: $1',
 	'bookmanagerv2-metadata-heading' => 'Metadados',
 	'bookmanagerv2-sections-heading' => 'Seções',
 	'bookmanagerv2-move-alt' => 'Mover esta seção',
@@ -1909,6 +1912,7 @@ $messages['pt'] = array(
 	'bookmanagerv2-publication-year-field' => 'Ano de publicação',
 	'bookmanagerv2-publication-month-field' => 'Mês de publicação',
 	'bookmanagerv2-publication-day-field' => 'Dia de publicação',
+	'bookmanagerv2-year-placeholder' => 'YYYY',
 	'bookmanagerv2-publication-city-field' => 'Cidade de publicação',
 	'bookmanagerv2-language-field' => 'Língua',
 	'bookmanagerv2-description-field' => 'Descrição',
