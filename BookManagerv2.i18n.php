@@ -788,14 +788,19 @@ $messages['de'] = array(
 
 /** Zazaki (Zazaki)
  * @author Gorizon
+ * @author Marmase
  */
 $messages['diq'] = array(
 	'bookmanagerv2-metadata-header' => 'Metadata',
+	'bookmanagerv2-contents-header' => 'Muhtewayi',
 	'bookmanagerv2-title' => 'Sername: $1',
 	'bookmanagerv2-alternate-titles' => 'Alternatif {{PLURAL:$1|sername|sernamey}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Nuskar|Nuskari}}: $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Açerner|Açerneri}}: $2',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|Vırnoğ|Vırnoği}}: $2',
+	'bookmanagerv2-editors-field' => 'Vurner',
+	'bookmanagerv2-illustrators-field' => 'Xizer',
+	'bookmanagerv2-subtitle-field' => 'Bın name',
 	'bookmanagerv2-year-placeholder' => 'SSSS',
 	'bookmanagerv2-month-placeholder' => 'AA',
 	'bookmanagerv2-day-placeholder' => 'RR',
