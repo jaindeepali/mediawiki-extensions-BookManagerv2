@@ -671,6 +671,7 @@ $messages['ca'] = array(
  */
 $messages['ce'] = array(
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Гочдархо|Гочдархой}}: $2',
+	'bookmanagerv2-add' => 'тӀетоха',
 );
 
 /** Czech (čeština)
@@ -1176,6 +1177,52 @@ $messages['gn'] = array(
 	'bookmanagerv2-permission-field' => "Mba'eheja",
 	'bookmanagerv2-other-versions-field' => 'Ambue ysaja',
 	'bookmanagerv2-sections-field' => 'Vore',
+);
+
+/** Hebrew (עברית)
+ * @author Inkbug
+ */
+$messages['he'] = array(
+	'bookmanagerv2-invalid-json' => 'נתוני JSON בלתי־תקינים',
+	'bookmanagerv2-title' => 'כותרת: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|כותרת|כותרות}} חלופיים: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|מחבר|מחברים}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|מתרגם|מתרגמים}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|עורך|עורכים}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|מאייר|מאיירים}}: $2',
+	'bookmanagerv2-subtitle' => 'כותרת משנה: $1',
+	'bookmanagerv2-series-title' => 'כותרת הסדרה: $1',
+	'bookmanagerv2-volume' => 'כרך: $1',
+	'bookmanagerv2-edition' => 'מהדורה: $1',
+	'bookmanagerv2-publisher' => 'מוציא לאור: $1',
+	'bookmanagerv2-publication-date' => 'תאריך הפרסום: $1',
+	'bookmanagerv2-publication-city' => 'עיר הפרסום: $1',
+	'bookmanagerv2-language' => 'שפה: $1',
+	'bookmanagerv2-description' => 'תיאור: $1',
+	'bookmanagerv2-source' => 'מקור: $1',
+	'bookmanagerv2-permission' => 'הרשאה: $1',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|גרסה אחרת|גרסאות אחרות}}: $2',
+	'bookmanagerv2-done' => 'בוצע',
+	'bookmanagerv2-title-field' => 'כותרת',
+	'bookmanagerv2-authors-field' => 'מחברים',
+	'bookmanagerv2-translators-field' => 'מתרגמים',
+	'bookmanagerv2-editors-field' => 'עורכים',
+	'bookmanagerv2-illustrators-field' => 'מאיירים',
+	'bookmanagerv2-subtitle-field' => 'כותרת משנה',
+	'bookmanagerv2-series-title-field' => 'כותרת הסדרה',
+	'bookmanagerv2-volume-field' => 'כרך',
+	'bookmanagerv2-edition-field' => 'מהדורה',
+	'bookmanagerv2-publisher-field' => 'מוציא לאור',
+	'bookmanagerv2-publication-date-field' => 'תאריך פרסום',
+	'bookmanagerv2-publication-year-field' => 'שנת הפרסום',
+	'bookmanagerv2-publication-month-field' => 'חודש הפרסום',
+	'bookmanagerv2-publication-day-field' => 'יום הפרסום',
+	'bookmanagerv2-publication-city-field' => 'עיר הפרסום',
+	'bookmanagerv2-language-field' => 'שפה',
+	'bookmanagerv2-description-field' => 'תיאור',
+	'bookmanagerv2-source-field' => 'מקור',
+	'bookmanagerv2-permission-field' => 'הרשאה',
+	'bookmanagerv2-other-versions-field' => 'גרסאות אחרות',
 );
 
 /** Interlingua (interlingua)
