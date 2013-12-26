@@ -671,7 +671,9 @@ $messages['ca'] = array(
  */
 $messages['ce'] = array(
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Гочдархо|Гочдархой}}: $2',
+	'bookmanagerv2-description' => 'Цуьнах лаьцна: $1',
 	'bookmanagerv2-add' => 'тӀетоха',
+	'bookmanagerv2-description-field' => 'Цуьнах лаьцна',
 );
 
 /** Czech (čeština)
@@ -899,12 +901,17 @@ $messages['es'] = array(
 
 /** Persian (فارسی)
  * @author Alireza
+ * @author Armin1392
  * @author Ebraminio
  * @author Mahdiz
+ * @author Reza1615
  * @author Taha
  */
 $messages['fa'] = array(
+	'bookmanagerv2-desc' => 'عملکرد می‌افزاید برای ذخیره و ورود ابرداده و ساختار کتاب',
 	'bookmanagerv2-invalid-json' => 'JSON نامعتبر',
+	'bookmanagerv2-example-nav' => 'نوار جهت‌یابی در این صفحه ظاهر می‌شود زیرا <code>$wgBookManagerv2ExampleNavigation</code> به <code>true</code> در <code>LocalSettings.php</code> تنظیم می‌شود.',
+	'bookmanagerv2-metadata' => 'مجموعه اطلاعات گستردهٔ کار',
 	'bookmanagerv2-metadata-header' => 'فراداده',
 	'bookmanagerv2-contents' => 'مطالب کار',
 	'bookmanagerv2-contents-header' => 'محتویات',
@@ -927,9 +934,51 @@ $messages['fa'] = array(
 	'bookmanagerv2-source' => 'منبع: $1',
 	'bookmanagerv2-permission' => 'مجوز: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|نسخه دیگر|نسخه های دیگر}}: $2',
+	'bookmanagerv2-read-json-block' => 'مشاهدهٔ فهرست فراداده و فصل برای این کار',
+	'bookmanagerv2-edit-json-block' => 'ویرایش فهرست فراداده و فصل برای این کار',
+	'bookmanagerv2-next-title' => 'بخش بعدی: $1',
+	'bookmanagerv2-prev-title' => 'بخش قبلی: $1',
 	'bookmanagerv2-metadata-heading' => 'فراداده',
 	'bookmanagerv2-sections-heading' => 'بخش‌ها',
+	'bookmanagerv2-move-alt' => 'بستن این بخش',
+	'bookmanagerv2-remove-alt' => 'پاک کردن این بخش',
 	'bookmanagerv2-rename' => 'تغییر نام',
+	'bookmanagerv2-create' => 'ایجاد',
+	'bookmanagerv2-done' => 'انجام‌شد',
+	'bookmanagerv2-add' => 'افزودن',
+	'bookmanagerv2-read' => 'خواندن',
+	'bookmanagerv2-section-name' => 'نام بخش:',
+	'bookmanagerv2-section-link' => 'اتصال بخش:',
+	'bookmanagerv2-title-field' => 'عنوان',
+	'bookmanagerv2-alternate-titles-field' => 'عناوین پی‌در‌پی',
+	'bookmanagerv2-authors-field' => 'مؤلفان',
+	'bookmanagerv2-translators-field' => 'مترجمان',
+	'bookmanagerv2-editors-field' => 'ویرایشگران',
+	'bookmanagerv2-illustrators-field' => 'تصویرگران',
+	'bookmanagerv2-subtitle-field' => 'زیرنویس',
+	'bookmanagerv2-series-title-field' => 'عنوان مجموعه',
+	'bookmanagerv2-volume-field' => 'گنجایش',
+	'bookmanagerv2-edition-field' => 'چاپ',
+	'bookmanagerv2-publisher-field' => 'ناشر',
+	'bookmanagerv2-printer-field' => 'چاپگر',
+	'bookmanagerv2-publication-date-field' => 'تاریخ انتشار',
+	'bookmanagerv2-publication-year-field' => 'سال انتشار',
+	'bookmanagerv2-publication-month-field' => 'ماه انتشار',
+	'bookmanagerv2-publication-day-field' => 'روز انتشار',
+	'bookmanagerv2-year-placeholder' => 'YYYY',
+	'bookmanagerv2-month-placeholder' => 'میلی متر',
+	'bookmanagerv2-day-placeholder' => 'DD',
+	'bookmanagerv2-publication-city-field' => 'شهر انتشار',
+	'bookmanagerv2-language-field' => 'زبان',
+	'bookmanagerv2-description-field' => 'توصیف',
+	'bookmanagerv2-source-field' => 'منبع',
+	'bookmanagerv2-permission-field' => 'اجازه‌نامه',
+	'bookmanagerv2-other-versions-field' => 'نسخه‌های دیگر',
+	'bookmanagerv2-sections-field' => 'بخش‌ها',
+	'bookmanagerv2-add-section-title' => 'اضافه‌کردن یک بخش جدید به این کار',
+	'bookmanagerv2-edit-title' => 'وبرایش این بخش',
+	'bookmanagerv2-create-title' => 'ایجاد این بخش',
+	'bookmanagerv2-rename-title' => 'تغییر نام این بخش',
 );
 
 /** Finnish (suomi)
