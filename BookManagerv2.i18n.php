@@ -670,9 +670,10 @@ $messages['ca'] = array(
  * @author Умар
  */
 $messages['ce'] = array(
-	'bookmanagerv2-translators' => '{{PLURAL:$1|Гочдархо|Гочдархой}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|1=Гочдархо|Гочдархой}}: $2', # Fuzzy
 	'bookmanagerv2-description' => 'Цуьнах лаьцна: $1',
 	'bookmanagerv2-add' => 'тӀетоха',
+	'bookmanagerv2-translators-field' => 'Гочдархой',
 	'bookmanagerv2-description-field' => 'Цуьнах лаьцна',
 );
 
@@ -1230,6 +1231,7 @@ $messages['gn'] = array(
 
 /** Hebrew (עברית)
  * @author Inkbug
+ * @author ערן
  */
 $messages['he'] = array(
 	'bookmanagerv2-invalid-json' => 'נתוני JSON בלתי־תקינים',
@@ -1251,7 +1253,11 @@ $messages['he'] = array(
 	'bookmanagerv2-source' => 'מקור: $1',
 	'bookmanagerv2-permission' => 'הרשאה: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|גרסה אחרת|גרסאות אחרות}}: $2',
+	'bookmanagerv2-rename' => 'שינוי שם',
+	'bookmanagerv2-create' => 'יצירה',
 	'bookmanagerv2-done' => 'בוצע',
+	'bookmanagerv2-add' => 'הוספה',
+	'bookmanagerv2-read' => 'קריאה',
 	'bookmanagerv2-title-field' => 'כותרת',
 	'bookmanagerv2-authors-field' => 'מחברים',
 	'bookmanagerv2-translators-field' => 'מתרגמים',
@@ -2267,11 +2273,11 @@ $messages['ru'] = array(
 	'bookmanagerv2-contents' => 'Содержание работы',
 	'bookmanagerv2-contents-header' => 'Содержание',
 	'bookmanagerv2-title' => 'Название: $1',
-	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Альтернативное название|Альтернативные названия}}: $2',
-	'bookmanagerv2-authors' => '{{PLURAL:$1|Автор|Авторы}}: $2',
-	'bookmanagerv2-translators' => '{{PLURAL:$1|Переводчик|Переводчики}}: $2',
-	'bookmanagerv2-editors' => '{{PLURAL:$1|Редактор|Редакторы}}: $2',
-	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Иллюстратор|Иллюстраторы}}: $2',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|1=Альтернативное название|Альтернативные названия}}: $2', # Fuzzy
+	'bookmanagerv2-authors' => '{{PLURAL:$1|1=Автор|Авторы}}: $2', # Fuzzy
+	'bookmanagerv2-translators' => '{{PLURAL:$1|1=Переводчик|Переводчики}}: $2', # Fuzzy
+	'bookmanagerv2-editors' => '{{PLURAL:$1|1=Редактор|Редакторы}}: $2', # Fuzzy
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|1=Иллюстратор|Иллюстраторы}}: $2', # Fuzzy
 	'bookmanagerv2-subtitle' => 'Подзаголовок: $1',
 	'bookmanagerv2-series-title' => 'Название серии: $1',
 	'bookmanagerv2-volume' => 'Том: $1',
@@ -2284,7 +2290,7 @@ $messages['ru'] = array(
 	'bookmanagerv2-description' => 'Описание: $1',
 	'bookmanagerv2-source' => 'Источник: $1',
 	'bookmanagerv2-permission' => 'Разрешение: $1',
-	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Другая версия|Другие версии}}: $2',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|1=Другая версия|Другие версии}}: $2', # Fuzzy
 	'bookmanagerv2-read-json-block' => 'Посмотреть метаданные и список глав для этой работы',
 	'bookmanagerv2-edit-json-block' => 'Редактировать метаданные и список глав для этой работы',
 	'bookmanagerv2-next-title' => 'Следующий раздел: $1',
@@ -2425,11 +2431,11 @@ $messages['uk'] = array(
 	'bookmanagerv2-contents' => 'Зміст роботи',
 	'bookmanagerv2-contents-header' => 'Зміст',
 	'bookmanagerv2-title' => 'Назва: $1',
-	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Альтернативна назва|Альтернативні назви}}: $2',
-	'bookmanagerv2-authors' => '{{PLURAL:$1|Автор|Автори}}: $2',
-	'bookmanagerv2-translators' => '{{PLURAL:$1|Перекладач|Перекладачі}}: $2',
-	'bookmanagerv2-editors' => '{{PLURAL:$1|Редактор|Редактори}}: $2',
-	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Ілюстратор|Ілюстратори}}: $2',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|1=Альтернативна назва|Альтернативні назви}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|1=Автор|Автори}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|1=Перекладач|Перекладачі}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|1=Редактор|Редактори}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|1=Ілюстратор|Ілюстратори}}: $2',
 	'bookmanagerv2-subtitle' => 'Підзаголовок: $1',
 	'bookmanagerv2-series-title' => 'Назва серії: $1',
 	'bookmanagerv2-volume' => 'Том: $1',
@@ -2442,7 +2448,7 @@ $messages['uk'] = array(
 	'bookmanagerv2-description' => 'Опис: $1',
 	'bookmanagerv2-source' => 'Джерело: $1',
 	'bookmanagerv2-permission' => 'Дозвіл: $1',
-	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Інша версія|Інші версії}}: $2',
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|1=Інша версія|Інші версії}}: $2',
 	'bookmanagerv2-read-json-block' => 'Перегляд метаданих і списку глав для цієї роботи',
 	'bookmanagerv2-edit-json-block' => 'Редагування метаданих і списку глав для цієї роботи',
 	'bookmanagerv2-next-title' => 'Наступний розділ: $1',
