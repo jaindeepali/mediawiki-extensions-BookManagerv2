@@ -670,7 +670,7 @@ $messages['ca'] = array(
  * @author Умар
  */
 $messages['ce'] = array(
-	'bookmanagerv2-translators' => '{{PLURAL:$1|1=Гочдархо|Гочдархой}}: $2', # Fuzzy
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Гочдархо|Гочдархой}}: $2',
 	'bookmanagerv2-description' => 'Цуьнах лаьцна: $1',
 	'bookmanagerv2-add' => 'тӀетоха',
 	'bookmanagerv2-translators-field' => 'Гочдархой',
