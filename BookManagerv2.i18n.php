@@ -2262,6 +2262,7 @@ $messages['roa-tara'] = array(
 );
 
 /** Russian (русский)
+ * @author Lockal
  * @author Okras
  */
 $messages['ru'] = array(
@@ -2273,11 +2274,11 @@ $messages['ru'] = array(
 	'bookmanagerv2-contents' => 'Содержание работы',
 	'bookmanagerv2-contents-header' => 'Содержание',
 	'bookmanagerv2-title' => 'Название: $1',
-	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|1=Альтернативное название|Альтернативные названия}}: $2', # Fuzzy
-	'bookmanagerv2-authors' => '{{PLURAL:$1|1=Автор|Авторы}}: $2', # Fuzzy
-	'bookmanagerv2-translators' => '{{PLURAL:$1|1=Переводчик|Переводчики}}: $2', # Fuzzy
-	'bookmanagerv2-editors' => '{{PLURAL:$1|1=Редактор|Редакторы}}: $2', # Fuzzy
-	'bookmanagerv2-illustrators' => '{{PLURAL:$1|1=Иллюстратор|Иллюстраторы}}: $2', # Fuzzy
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|1=Альтернативное название|Альтернативные названия}}: $2',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|1=Автор|Авторы}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|1=Переводчик|Переводчики}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|1=Редактор|Редакторы}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|1=Иллюстратор|Иллюстраторы}}: $2',
 	'bookmanagerv2-subtitle' => 'Подзаголовок: $1',
 	'bookmanagerv2-series-title' => 'Название серии: $1',
 	'bookmanagerv2-volume' => 'Том: $1',
@@ -2290,7 +2291,7 @@ $messages['ru'] = array(
 	'bookmanagerv2-description' => 'Описание: $1',
 	'bookmanagerv2-source' => 'Источник: $1',
 	'bookmanagerv2-permission' => 'Разрешение: $1',
-	'bookmanagerv2-other-versions' => '{{PLURAL:$1|1=Другая версия|Другие версии}}: $2', # Fuzzy
+	'bookmanagerv2-other-versions' => '{{PLURAL:$1|1=Другая версия|Другие версии}}: $2',
 	'bookmanagerv2-read-json-block' => 'Посмотреть метаданные и список глав для этой работы',
 	'bookmanagerv2-edit-json-block' => 'Редактировать метаданные и список глав для этой работы',
 	'bookmanagerv2-next-title' => 'Следующий раздел: $1',
