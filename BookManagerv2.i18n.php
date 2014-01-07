@@ -791,6 +791,7 @@ $messages['de'] = array(
 );
 
 /** Zazaki (Zazaki)
+ * @author Asmen
  * @author Gorizon
  * @author Marmase
  */
@@ -802,9 +803,9 @@ $messages['diq'] = array(
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Nuskar|Nuskari}}: $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Açerner|Açerneri}}: $2',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|Vırnoğ|Vırnoği}}: $2',
-	'bookmanagerv2-editors-field' => 'Vurner',
-	'bookmanagerv2-illustrators-field' => 'Xizer',
-	'bookmanagerv2-subtitle-field' => 'Bın name',
+	'bookmanagerv2-editors-field' => 'Editori',
+	'bookmanagerv2-illustrators-field' => 'Resımvıraştoği',
+	'bookmanagerv2-subtitle-field' => 'Sernuştey bıni',
 	'bookmanagerv2-year-placeholder' => 'SSSS',
 	'bookmanagerv2-month-placeholder' => 'AA',
 	'bookmanagerv2-day-placeholder' => 'RR',
