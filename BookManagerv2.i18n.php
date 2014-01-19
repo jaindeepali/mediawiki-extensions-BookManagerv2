@@ -1678,6 +1678,14 @@ $messages['lb'] = array(
 	'bookmanagerv2-rename-title' => 'Dësen Abschnitt ëmbenennen',
 );
 
+/** لوری (لوری)
+ * @author Bonevarluri
+ */
+$messages['lrc'] = array(
+	'bookmanagerv2-language' => 'زون:$1',
+	'bookmanagerv2-language-field' => 'زون',
+);
+
 /** Lithuanian (lietuvių)
  * @author Eitvys200
  */
