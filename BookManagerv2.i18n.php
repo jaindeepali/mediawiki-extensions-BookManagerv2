@@ -670,10 +670,12 @@ $messages['ca'] = array(
  * @author Умар
  */
 $messages['ce'] = array(
+	'bookmanagerv2-authors' => '{{PLURAL:$1|1=Автор|Автораш}}: $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Гочдархо|Гочдархой}}: $2',
 	'bookmanagerv2-description' => 'Цуьнах лаьцна: $1',
 	'bookmanagerv2-done' => 'Кийчча ю',
 	'bookmanagerv2-add' => 'тӀетоха',
+	'bookmanagerv2-authors-field' => 'Автораш',
 	'bookmanagerv2-translators-field' => 'Гочдархой',
 	'bookmanagerv2-description-field' => 'Цуьнах лаьцна',
 );
