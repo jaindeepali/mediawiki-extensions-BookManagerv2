@@ -1235,10 +1235,12 @@ $messages['gn'] = array(
 
 /** Hebrew (עברית)
  * @author Inkbug
+ * @author Yona b
  * @author ערן
  */
 $messages['he'] = array(
 	'bookmanagerv2-invalid-json' => 'נתוני JSON בלתי־תקינים',
+	'bookmanagerv2-contents' => 'תכולת עבודה',
 	'bookmanagerv2-title' => 'כותרת: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|כותרת|כותרות}} חלופיים: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|מחבר|מחברים}}: $2',
