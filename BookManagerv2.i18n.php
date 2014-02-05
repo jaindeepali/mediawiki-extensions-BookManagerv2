@@ -1047,6 +1047,7 @@ $messages['fo'] = array(
 
 /** French (français)
  * @author Gomoko
+ * @author Verdy p
  * @author Wyz
  */
 $messages['fr'] = array(
@@ -1076,6 +1077,9 @@ $messages['fr'] = array(
 	'bookmanagerv2-source' => 'Source : $1',
 	'bookmanagerv2-permission' => 'Autorisation : $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Autre version|Autres versions}} : $2',
+	'bookmanagerv2-isbn' => 'ISBN : $1',
+	'bookmanagerv2-lccn' => 'LCCN : $1',
+	'bookmanagerv2-oclc' => 'OCLC : $1',
 	'bookmanagerv2-read-json-block' => 'Afficher les métadonnées et la liste des chapitres pour cette œuvre',
 	'bookmanagerv2-edit-json-block' => 'Modifier les métadonnées et la liste des chapitres pour cette œuvre',
 	'bookmanagerv2-next-title' => 'Section suivante : $1',
