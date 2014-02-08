@@ -904,6 +904,31 @@ $messages['es'] = array(
 	'bookmanagerv2-rename-title' => 'Renombrar esta sección',
 );
 
+/** Basque (euskara)
+ * @author Subi
+ */
+$messages['eu'] = array(
+	'bookmanagerv2-title' => 'Izenburua: $1',
+	'bookmanagerv2-language' => 'Hizkuntza: $1',
+	'bookmanagerv2-description' => 'Deskribapena: $1',
+	'bookmanagerv2-permission' => 'Baimena: $1',
+	'bookmanagerv2-other-versions' => 'Beste {{PLURAL:$1|bertsio bat|bertsioak}}: $2',
+	'bookmanagerv2-create' => 'sortu',
+	'bookmanagerv2-done' => 'Egina',
+	'bookmanagerv2-add' => 'gehitu',
+	'bookmanagerv2-read' => 'Irakurri',
+	'bookmanagerv2-title-field' => 'Izenburua',
+	'bookmanagerv2-authors-field' => 'Egileak',
+	'bookmanagerv2-translators-field' => 'Itzultzaileak',
+	'bookmanagerv2-year-placeholder' => 'UUUU',
+	'bookmanagerv2-month-placeholder' => 'HH',
+	'bookmanagerv2-day-placeholder' => 'EE',
+	'bookmanagerv2-language-field' => 'Hizkuntza',
+	'bookmanagerv2-description-field' => 'Deskribapena',
+	'bookmanagerv2-permission-field' => 'Baimena',
+	'bookmanagerv2-other-versions-field' => 'Beste bertsioak',
+);
+
 /** Persian (فارسی)
  * @author Alireza
  * @author Armin1392
