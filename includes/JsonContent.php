@@ -142,7 +142,7 @@ class JsonBookContent extends TextContent {
 	 * @return string: HTML representation
 	 */
 	function getHighlightHtml() {
-		$schema = $this->getJsonData();
+		$block = $this->getJsonData();
 		return is_array( $block ) ? self::objectTable( $block ) : '';
 	}
 }
