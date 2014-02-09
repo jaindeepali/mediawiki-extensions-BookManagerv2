@@ -1686,6 +1686,7 @@ $messages['lb'] = array(
 	'bookmanagerv2-authors-field' => 'Auteuren',
 	'bookmanagerv2-translators-field' => 'Iwwersetzer',
 	'bookmanagerv2-editors-field' => 'Editeuren',
+	'bookmanagerv2-illustrators-field' => 'Illustrateuren',
 	'bookmanagerv2-subtitle-field' => 'Ënnertitel',
 	'bookmanagerv2-volume-field' => 'Band',
 	'bookmanagerv2-edition-field' => 'Editioun',
