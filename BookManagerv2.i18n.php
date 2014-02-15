@@ -1313,6 +1313,8 @@ $messages['he'] = array(
 	'bookmanagerv2-source-field' => 'מקור',
 	'bookmanagerv2-permission-field' => 'הרשאה',
 	'bookmanagerv2-other-versions-field' => 'גרסאות אחרות',
+	'bookmanagerv2-edit-title' => 'עריכת פסקה',
+	'bookmanagerv2-create-title' => 'יצירת פסקה זו',
 );
 
 /** Interlingua (interlingua)
@@ -2123,6 +2125,7 @@ $messages['pl'] = array(
 	'bookmanagerv2-authors-field' => 'Autorzy',
 	'bookmanagerv2-translators-field' => 'Tłumacze',
 	'bookmanagerv2-illustrators-field' => 'Ilustratorzy',
+	'bookmanagerv2-publication-date-field' => 'Data publikacji',
 	'bookmanagerv2-publication-year-field' => 'Rok publikacji',
 	'bookmanagerv2-publication-month-field' => 'Miesiąc publikacji',
 	'bookmanagerv2-publication-day-field' => 'Dzień publikacji',
