@@ -2509,6 +2509,49 @@ $messages['sv'] = array(
 	'bookmanagerv2-rename-title' => 'Byt namn på detta avsnitt',
 );
 
+/** Telugu (తెలుగు)
+ * @author Ravichandra
+ */
+$messages['te'] = array(
+	'bookmanagerv2-sections-heading' => 'విభాగాలు',
+	'bookmanagerv2-move-alt' => 'ఈ విభాగాన్ని తరలించు',
+	'bookmanagerv2-remove-alt' => 'ఈ విభాగాన్ని తొలగించు',
+	'bookmanagerv2-rename' => 'పేరు మార్చు',
+	'bookmanagerv2-create' => 'సృష్టించు',
+	'bookmanagerv2-done' => 'పూర్తయ్యింది',
+	'bookmanagerv2-add' => 'చేర్చు',
+	'bookmanagerv2-read' => 'చదువు',
+	'bookmanagerv2-section-name' => 'విభాగం పేరు:',
+	'bookmanagerv2-section-link' => 'విభాగానికి లంకె:',
+	'bookmanagerv2-title-field' => 'శీర్షిక',
+	'bookmanagerv2-alternate-titles-field' => 'ప్రత్యామ్నాయ శీర్షికలు',
+	'bookmanagerv2-authors-field' => 'రచయితలు',
+	'bookmanagerv2-translators-field' => 'అనువాదకులు',
+	'bookmanagerv2-editors-field' => 'సంపాదకులు',
+	'bookmanagerv2-subtitle-field' => 'ఉపశీర్షిక',
+	'bookmanagerv2-volume-field' => 'పరిమాణం',
+	'bookmanagerv2-publisher-field' => 'ప్రచురణకర్త',
+	'bookmanagerv2-printer-field' => 'ముద్రణా యంత్రం',
+	'bookmanagerv2-publication-date-field' => 'ప్రచురణ తేదీ',
+	'bookmanagerv2-publication-year-field' => 'ప్రచురణ సంవత్సరం',
+	'bookmanagerv2-publication-month-field' => 'ప్రచురణ నెల',
+	'bookmanagerv2-publication-day-field' => 'ప్రచురణ రోజు',
+	'bookmanagerv2-year-placeholder' => 'YYYY',
+	'bookmanagerv2-month-placeholder' => 'MM',
+	'bookmanagerv2-day-placeholder' => 'DD',
+	'bookmanagerv2-publication-city-field' => 'ప్రచురణ నగరం',
+	'bookmanagerv2-language-field' => 'భాష',
+	'bookmanagerv2-description-field' => 'వివరణ',
+	'bookmanagerv2-source-field' => 'మూలం',
+	'bookmanagerv2-permission-field' => 'అనుమతి',
+	'bookmanagerv2-other-versions-field' => 'ఇతర కూర్పులు',
+	'bookmanagerv2-sections-field' => 'విభాగాలు',
+	'bookmanagerv2-add-section-title' => 'ఈ పనికి కొత్త విభాగాన్ని చేర్చు',
+	'bookmanagerv2-edit-title' => 'ఈ విభాగాన్ని సరిదిద్దు',
+	'bookmanagerv2-create-title' => 'ఈ విభాగాన్ని సృష్టించు',
+	'bookmanagerv2-rename-title' => 'ఈ విభాగం పేరు మార్చు',
+);
+
 /** Ukrainian (українська)
  * @author Andriykopanytsia
  * @author Shirayuki
