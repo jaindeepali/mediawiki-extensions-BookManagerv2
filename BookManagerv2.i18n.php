@@ -2513,6 +2513,20 @@ $messages['sv'] = array(
  * @author Ravichandra
  */
 $messages['te'] = array(
+	'bookmanagerv2-metadata-header' => 'మెటాడేటా',
+	'bookmanagerv2-title' => 'శీర్షిక: $1',
+	'bookmanagerv2-subtitle' => 'ఉపశీర్షిక: $1',
+	'bookmanagerv2-publisher' => 'ప్రచురణకర్త: $1',
+	'bookmanagerv2-printer' => 'ముద్రణ: $1',
+	'bookmanagerv2-publication-date' => 'ప్రచురణ తేదీ: $1',
+	'bookmanagerv2-publication-city' => 'ప్రచురణ నగరం: $1',
+	'bookmanagerv2-language' => 'భాష: $1',
+	'bookmanagerv2-description' => 'వివరణ: $1',
+	'bookmanagerv2-source' => 'మూలం: $1',
+	'bookmanagerv2-permission' => 'అనుమతి: $1',
+	'bookmanagerv2-next-title' => 'తరువాతి విభాగం: $1',
+	'bookmanagerv2-prev-title' => 'మునుపటి విభాగం: $1',
+	'bookmanagerv2-metadata-heading' => 'మెటాడేటా',
 	'bookmanagerv2-sections-heading' => 'విభాగాలు',
 	'bookmanagerv2-move-alt' => 'ఈ విభాగాన్ని తరలించు',
 	'bookmanagerv2-remove-alt' => 'ఈ విభాగాన్ని తొలగించు',
