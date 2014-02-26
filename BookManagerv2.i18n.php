@@ -2516,6 +2516,7 @@ $messages['te'] = array(
 	'bookmanagerv2-metadata-header' => 'మెటాడేటా',
 	'bookmanagerv2-contents-header' => 'విషయాలు',
 	'bookmanagerv2-title' => 'శీర్షిక: $1',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|సంపాదకుడు|సంపాదకులు}}: $2',
 	'bookmanagerv2-subtitle' => 'ఉపశీర్షిక: $1',
 	'bookmanagerv2-volume' => 'సంపుటం: $1',
 	'bookmanagerv2-edition' => 'సంచిక: $1',
