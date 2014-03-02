@@ -2105,6 +2105,7 @@ $messages['pl'] = array(
 	'bookmanagerv2-invalid-json' => 'Nieprawidłowy JSON',
 	'bookmanagerv2-metadata-header' => 'Metadane',
 	'bookmanagerv2-title' => 'Tytuł: $1',
+	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Tytuł alternatywny|Tytuły alternatywne}}: $2',
 	'bookmanagerv2-authors' => '{{PLURAL:$1|Autor|Autorów}}: $2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|Tłumacz|Tłumaczów}}: $2',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|Redaktor|Redaktorów}}: $2',
@@ -2184,15 +2185,17 @@ $messages['ps'] = array(
 /** Portuguese (português)
  * @author Fúlvio
  * @author Giro720
+ * @author Hamilton Abreu
+ * @author Imperadeiro98
  * @author Luckas
  */
 $messages['pt'] = array(
 	'bookmanagerv2-desc' => 'Adiciona uma ferramenta para inserir e guardar metadados e estruturas de livros',
 	'bookmanagerv2-invalid-json' => 'JSON inválido',
 	'bookmanagerv2-example-nav' => 'A barra de navegação nesta página está a aparecer porque <code>$wgBookManagerv2ExampleNavigation</code> está definido como  <code>true</code> em <code>LocalSettings.php</code>.',
-	'bookmanagerv2-metadata' => 'Metadados do trabalho',
+	'bookmanagerv2-metadata' => 'Metadados da obra',
 	'bookmanagerv2-metadata-header' => 'Metadados',
-	'bookmanagerv2-contents' => 'Conteúdo do trabalho',
+	'bookmanagerv2-contents' => 'Conteúdo da obra',
 	'bookmanagerv2-contents-header' => 'Conteúdo',
 	'bookmanagerv2-title' => 'Título: $1',
 	'bookmanagerv2-alternate-titles' => '{{PLURAL:$1|Título alternativo|Títulos alternativos}}: $2',
@@ -2213,21 +2216,21 @@ $messages['pt'] = array(
 	'bookmanagerv2-source' => 'Fonte: $1',
 	'bookmanagerv2-permission' => 'Permissão: $1',
 	'bookmanagerv2-other-versions' => '{{PLURAL:$1|Outra versão|Outras versões}}: $2',
-	'bookmanagerv2-read-json-block' => 'Ver a lista de metadados e capítulos para este trabalho',
-	'bookmanagerv2-edit-json-block' => 'Editar a lista de metadados e capítulos para este trabalho',
-	'bookmanagerv2-next-title' => 'Próxima seção:$1',
-	'bookmanagerv2-prev-title' => 'Seção anterior: $1',
+	'bookmanagerv2-read-json-block' => 'Ver a lista de metadados e capítulos desta obra',
+	'bookmanagerv2-edit-json-block' => 'Editar a lista de metadados e capítulos desta obra',
+	'bookmanagerv2-next-title' => 'Secção seguinte: $1',
+	'bookmanagerv2-prev-title' => 'Secção anterior: $1',
 	'bookmanagerv2-metadata-heading' => 'Metadados',
-	'bookmanagerv2-sections-heading' => 'Seções',
-	'bookmanagerv2-move-alt' => 'Mover esta seção',
-	'bookmanagerv2-remove-alt' => 'Remover esta seção',
+	'bookmanagerv2-sections-heading' => 'Secções',
+	'bookmanagerv2-move-alt' => 'Mover esta secção',
+	'bookmanagerv2-remove-alt' => 'Remover esta secção',
 	'bookmanagerv2-rename' => 'renomear',
 	'bookmanagerv2-create' => 'criar',
-	'bookmanagerv2-done' => 'Feito',
+	'bookmanagerv2-done' => 'Terminado',
 	'bookmanagerv2-add' => 'adicionar',
 	'bookmanagerv2-read' => 'ler',
-	'bookmanagerv2-section-name' => 'Nome da seção:',
-	'bookmanagerv2-section-link' => 'Ligação da seção:',
+	'bookmanagerv2-section-name' => 'Nome da secção:',
+	'bookmanagerv2-section-link' => 'Link da secção:',
 	'bookmanagerv2-title-field' => 'Título',
 	'bookmanagerv2-alternate-titles-field' => 'Títulos alternativos',
 	'bookmanagerv2-authors-field' => 'Autores',
@@ -2238,13 +2241,13 @@ $messages['pt'] = array(
 	'bookmanagerv2-series-title-field' => 'Título da série',
 	'bookmanagerv2-volume-field' => 'Volume',
 	'bookmanagerv2-edition-field' => 'Edição',
-	'bookmanagerv2-publisher-field' => 'Publicador',
-	'bookmanagerv2-printer-field' => 'Impressor',
+	'bookmanagerv2-publisher-field' => 'Editora',
+	'bookmanagerv2-printer-field' => 'Impressora',
 	'bookmanagerv2-publication-date-field' => 'Data de publicação',
 	'bookmanagerv2-publication-year-field' => 'Ano de publicação',
 	'bookmanagerv2-publication-month-field' => 'Mês de publicação',
 	'bookmanagerv2-publication-day-field' => 'Dia de publicação',
-	'bookmanagerv2-year-placeholder' => 'YYYY',
+	'bookmanagerv2-year-placeholder' => 'AAAA',
 	'bookmanagerv2-month-placeholder' => 'MM',
 	'bookmanagerv2-day-placeholder' => 'DD',
 	'bookmanagerv2-publication-city-field' => 'Cidade de publicação',
@@ -2253,10 +2256,10 @@ $messages['pt'] = array(
 	'bookmanagerv2-source-field' => 'Fonte',
 	'bookmanagerv2-permission-field' => 'Permissão',
 	'bookmanagerv2-other-versions-field' => 'Outras versões',
-	'bookmanagerv2-sections-field' => 'Seções',
-	'bookmanagerv2-add-section-title' => 'Adicionar uma nova seção neste trabalho',
-	'bookmanagerv2-edit-title' => 'Editar esta seção',
-	'bookmanagerv2-create-title' => 'Criar esta seção',
+	'bookmanagerv2-sections-field' => 'Secções',
+	'bookmanagerv2-add-section-title' => 'Adicionar uma nova secção a esta obra',
+	'bookmanagerv2-edit-title' => 'Editar esta secção',
+	'bookmanagerv2-create-title' => 'Criar esta secção',
 	'bookmanagerv2-rename-title' => 'Renomear esta seção',
 );
 
@@ -2510,14 +2513,17 @@ $messages['sv'] = array(
 );
 
 /** Telugu (తెలుగు)
+ * @author Chaduvari
  * @author Ravichandra
  */
 $messages['te'] = array(
+	'bookmanagerv2-invalid-json' => 'చెల్లని JSON',
 	'bookmanagerv2-metadata-header' => 'మెటాడేటా',
 	'bookmanagerv2-contents-header' => 'విషయాలు',
 	'bookmanagerv2-title' => 'శీర్షిక: $1',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|సంపాదకుడు|సంపాదకులు}}: $2',
 	'bookmanagerv2-subtitle' => 'ఉపశీర్షిక: $1',
+	'bookmanagerv2-series-title' => 'శ్రేణి శీర్షిక: $1',
 	'bookmanagerv2-volume' => 'సంపుటం: $1',
 	'bookmanagerv2-edition' => 'సంచిక: $1',
 	'bookmanagerv2-publisher' => 'ప్రచురణకర్త: $1',
@@ -2549,7 +2555,7 @@ $messages['te'] = array(
 	'bookmanagerv2-illustrators-field' => 'చిత్రకారులు',
 	'bookmanagerv2-subtitle-field' => 'ఉపశీర్షిక',
 	'bookmanagerv2-series-title-field' => 'శ్రేణి శీర్షిక',
-	'bookmanagerv2-volume-field' => 'పరిమాణం',
+	'bookmanagerv2-volume-field' => 'సంపుటి',
 	'bookmanagerv2-edition-field' => 'సంచిక',
 	'bookmanagerv2-publisher-field' => 'ప్రచురణకర్త',
 	'bookmanagerv2-printer-field' => 'ముద్రణా యంత్రం',
@@ -2779,27 +2785,35 @@ $messages['zh-hans'] = array(
 
 /** Traditional Chinese (中文（繁體）‎)
  * @author Justincheng12345
+ * @author Liuxinyu970226
  * @author Openerror
  * @author StephDC
  */
 $messages['zh-hant'] = array(
 	'bookmanagerv2-invalid-json' => '無效JSON',
+	'bookmanagerv2-metadata' => '工作元數據',
 	'bookmanagerv2-metadata-header' => '元數據',
 	'bookmanagerv2-contents' => '工作內容',
 	'bookmanagerv2-contents-header' => '內容',
 	'bookmanagerv2-title' => '主標題：$1',
-	'bookmanagerv2-alternate-titles' => '備用標題：$2', # Fuzzy
-	'bookmanagerv2-authors' => '作者：$2', # Fuzzy
+	'bookmanagerv2-alternate-titles' => '$1個備用標題：$2',
+	'bookmanagerv2-authors' => '$1個作者：$2',
 	'bookmanagerv2-translators' => '{{PLURAL:$1|譯者}}：$2',
 	'bookmanagerv2-editors' => '{{PLURAL:$1|編輯者}}：$2',
 	'bookmanagerv2-illustrators' => '{{PLURAL:$1|插圖}}：$2',
 	'bookmanagerv2-subtitle' => '副標題：$1',
+	'bookmanagerv2-series-title' => '系列標題：$1',
+	'bookmanagerv2-volume' => '卷：$1',
+	'bookmanagerv2-edition' => '版本：$1',
 	'bookmanagerv2-publisher' => '出版商：$1',
 	'bookmanagerv2-printer' => '印刷商：$1',
 	'bookmanagerv2-publication-date' => '出版日期：$1',
 	'bookmanagerv2-publication-city' => '出版城市：$1',
 	'bookmanagerv2-language' => '語言：$1',
 	'bookmanagerv2-description' => '內容簡介：$1',
+	'bookmanagerv2-source' => '來源：$1',
+	'bookmanagerv2-permission' => '權限：$1',
+	'bookmanagerv2-other-versions' => '其他$1個版本：$2',
 	'bookmanagerv2-next-title' => '下一節：$1',
 	'bookmanagerv2-prev-title' => '上一節：$1',
 	'bookmanagerv2-metadata-heading' => '元數據',
@@ -2814,5 +2828,29 @@ $messages['zh-hant'] = array(
 	'bookmanagerv2-section-name' => '章節名稱：',
 	'bookmanagerv2-section-link' => '章節連結：',
 	'bookmanagerv2-title-field' => '標題',
+	'bookmanagerv2-alternate-titles-field' => '備用標題',
+	'bookmanagerv2-authors-field' => '作者',
+	'bookmanagerv2-translators-field' => '譯者',
+	'bookmanagerv2-editors-field' => '編輯者',
+	'bookmanagerv2-illustrators-field' => '插圖者',
+	'bookmanagerv2-subtitle-field' => '副標題',
+	'bookmanagerv2-series-title-field' => '系列標題',
+	'bookmanagerv2-volume-field' => '卷',
+	'bookmanagerv2-edition-field' => '版本',
+	'bookmanagerv2-publisher-field' => '發佈者',
+	'bookmanagerv2-printer-field' => '列印者',
+	'bookmanagerv2-publication-date-field' => '出版日期',
+	'bookmanagerv2-publication-year-field' => '出版年',
+	'bookmanagerv2-publication-month-field' => '出版月',
+	'bookmanagerv2-publication-day-field' => '出版日',
+	'bookmanagerv2-year-placeholder' => '年',
+	'bookmanagerv2-month-placeholder' => '月',
+	'bookmanagerv2-day-placeholder' => '日',
+	'bookmanagerv2-publication-city-field' => '出版城市',
+	'bookmanagerv2-language-field' => '語言',
+	'bookmanagerv2-description-field' => '說明',
+	'bookmanagerv2-source-field' => '來源',
+	'bookmanagerv2-permission-field' => '權限',
+	'bookmanagerv2-other-versions-field' => '其他版本',
 	'bookmanagerv2-sections-field' => '章節',
 );
