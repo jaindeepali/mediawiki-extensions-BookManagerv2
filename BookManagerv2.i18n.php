@@ -2433,6 +2433,14 @@ $messages['ru'] = array(
 	'bookmanagerv2-rename-title' => 'Переименовать этот раздел',
 );
 
+/** Serbian (Cyrillic script) (српски (ћирилица)‎)
+ * @author Milicevic01
+ */
+$messages['sr-ec'] = array(
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Аутор|Аутори}}: $2',
+	'bookmanagerv2-authors-field' => 'Аутори',
+);
+
 /** Swedish (svenska)
  * @author Jopparn
  * @author Liftarn
