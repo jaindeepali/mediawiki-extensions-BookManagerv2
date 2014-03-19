@@ -2433,6 +2433,58 @@ $messages['ru'] = array(
 	'bookmanagerv2-rename-title' => 'Переименовать этот раздел',
 );
 
+/** Scots (Scots)
+ * @author John Reid
+ */
+$messages['sco'] = array(
+	'bookmanagerv2-desc' => 'Adds functionalitie tae enter n store buik metadata n structur',
+	'bookmanagerv2-invalid-json' => 'Onvalid JSON',
+	'bookmanagerv2-example-nav' => 'The naveegation baur oan this page is kithin cause <code>$wgBookManagerv2ExampleNavigation</code> is set til <code>true</code> in <code>LocalSettings.php</code>.',
+	'bookmanagerv2-metadata' => 'Metadata o waurk',
+	'bookmanagerv2-contents' => 'Contents o waurk',
+	'bookmanagerv2-authors' => '{{PLURAL:$1|Writer|Writers}}: $2',
+	'bookmanagerv2-translators' => '{{PLURAL:$1|Owerseter|Owerseters}}: $2',
+	'bookmanagerv2-editors' => '{{PLURAL:$1|Eediter|Eediters}}: $2',
+	'bookmanagerv2-illustrators' => '{{PLURAL:$1|Illustrater|Illustraters}}: $2',
+	'bookmanagerv2-edition' => 'Edeetion: $1',
+	'bookmanagerv2-printer' => 'Prenter: $1',
+	'bookmanagerv2-publication-date' => 'Publeecation date: $1',
+	'bookmanagerv2-publication-city' => 'Publeecation ceetie: $1',
+	'bookmanagerv2-language' => 'Leid: $1',
+	'bookmanagerv2-description' => 'Descreeption: $1',
+	'bookmanagerv2-source' => 'Soorce: $1',
+	'bookmanagerv2-permission' => 'Permeession: $1',
+	'bookmanagerv2-other-versions' => 'Ither {{PLURAL:$1|version|versions}}: $2',
+	'bookmanagerv2-read-json-block' => 'See the metadata n chaipter leet fer this waurk',
+	'bookmanagerv2-edit-json-block' => 'Eedit the metadata n chaipter leet fer this waurk',
+	'bookmanagerv2-next-title' => 'Nex section: $1',
+	'bookmanagerv2-prev-title' => 'Preeveeos section: $1',
+	'bookmanagerv2-move-alt' => 'Muiv this section',
+	'bookmanagerv2-remove-alt' => 'Remuiv this section',
+	'bookmanagerv2-create' => 'cræft',
+	'bookmanagerv2-done' => 'Dun',
+	'bookmanagerv2-authors-field' => 'Writers',
+	'bookmanagerv2-translators-field' => 'Owerseters',
+	'bookmanagerv2-editors-field' => 'Eediters',
+	'bookmanagerv2-illustrators-field' => 'Illustraters',
+	'bookmanagerv2-edition-field' => 'Edeetion',
+	'bookmanagerv2-publisher-field' => 'Publeesher',
+	'bookmanagerv2-printer-field' => 'Prenter',
+	'bookmanagerv2-publication-date-field' => 'Publeecation date',
+	'bookmanagerv2-publication-year-field' => 'Publeecation year',
+	'bookmanagerv2-publication-month-field' => 'Publeecation month',
+	'bookmanagerv2-publication-day-field' => 'Publeecation day',
+	'bookmanagerv2-publication-city-field' => 'Publeecation ceetie',
+	'bookmanagerv2-language-field' => 'Leid',
+	'bookmanagerv2-description-field' => 'Descreeption',
+	'bookmanagerv2-source-field' => 'Soorce',
+	'bookmanagerv2-permission-field' => 'Permeession',
+	'bookmanagerv2-other-versions-field' => 'Ither versions',
+	'bookmanagerv2-add-section-title' => 'Add ae new section til this waurk',
+	'bookmanagerv2-edit-title' => 'Eedit this section',
+	'bookmanagerv2-create-title' => 'Cræft this section',
+);
+
 /** Serbian (Cyrillic script) (српски (ћирилица)‎)
  * @author Milicevic01
  */
